@@ -1,0 +1,147 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  -moz-border-radius: 1.5em;
+  -webkit-border-radius: 1.5em;
+  border-radius: 1.5em;
+}
+
+p,dd,dt {font-size:14px;text-indent: 2em }
+li p    {font-size:14px;text-indent: 0em }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #990000;
+  font-family: Tahoma, Ariel, Helvetica, sans-serif;
+  font-weight: bold;
+}
+h1    {font-size:20pt;line-height:130%;font-weight:"bold";align:"center";}
+h2    {font-size:18pt;line-height:130%;letter-spacing: 2px;}
+h3    {font-size:16pt;line-height:130%;letter-spacing: 2px;}
+h4    {font-size:14px;line-height:130%;letter-spacing: 2px;}
+h5,h6 {font-size:9pt; line-height:130%;letter-spacing: 2px;}
+
+td,li,select,input {font-size:14px}
+
+pre.programlisting, pre.screen {
+  background: #E0E0E0;
+  padding: 6px;
+}
+
+table,
+tbody,thead,tfoot,
+tr,td {
+  /* border-color: #8F8F8F; */
+  border-color: #E0E0E0;
+}
+td,th,toc,select,input {font-size:9pt}
+th.segmentedlist {
+  background-color: #404040;
+  color: white;
+}
+td.segmentedlist {
+  color:#404040; margin-left: 100px; margin-right: 55px
+}
+
+table {
+  border: 1px;
+}
+table pre.programlisting {
+  background-color: #FFFFFF;
+}
+
+div.book div.titlepage {
+  border-top: 12px solid #BBBBBB;
+  border-left: 12px solid #DDDDDD;
+  border-right: 12px solid #DDDDDD;
+  border-bottom: 12px solid #F3F3F3;
+  background-color: #FFFFBB;
+  color: #000066;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+table.copyright {
+  font-style: italic;
+  font-size: 9pt;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  background-color: #FFFFBB;
+  align: right;
+}
+
+.navhead           { padding-top: 0; 
+                     margin-bottom: 0;
+                     padding-bottom: 0;
+                     font-size: 9pt;
+                   }
+
+.navhead           { color: #0000FF; }
+.navhead a:link    { color: #0000FF; text-decoration: none; }
+.navhead a:visited { color: #0000FF; text-decoration: none; }
+.navhead a:active  { color: #0000FF; text-decoration: none; }
+.navhead a:hover   { color: #0000FF; text-decoration: none; }
+
+.navheader {
+  font-family: Tahoma, Ariel, Helvetica, sans-serif;
+  background-color: #FFFFBB;
+  font-size: 9pt;
+  margin-top: 5px;
+}
+
+.navfooter {
+  font-family: Tahoma, Ariel, Helvetica, sans-serif;
+  font-size: 9pt;
+}
+
+.toc  {font-size:9pt;color="blue";font-weight:"bold";}
+
+div.toc span.part {
+  font-family: Tahoma, Ariel, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 1in;
+}
+div.toc span.glossary {
+  font-weight: bold;
+}
+div.toc span.index {
+  font-weight: bold;
+}
+div.toc span.preface {
+  font-weight: bold;
+}
+div.toc span.appendix {
+  font-weight: bold;
+}
+div.toc span.chapter {
+  font-weight: bold;
+}
+
+
+div.book div.titlepage h1.title {
+  font-family: Tahoma, Ariel, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36;
+}
+
+div.book div.titlepage h3.author {
+  font-family: Tahoma, Ariel, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 24;
+}
+
+div.book div.titlepage p.edition {
+  font-family: Tahoma, Ariel, Helvetica, sans-serif;
+  color: gray;
+  font-weight: bold;
+  font-size: 30;
+}
+span.lineannotation {
+    font-family: serif;
+    font-style: italic;
+}
+
+span.inlinemediaobject img {border: 0; } 

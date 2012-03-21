@@ -1,0 +1,46 @@
+---
+layout: master
+title: 咖啡兔
+full_posts: 3
+---
+
+<div class='home-box' id='home-left'>
+  <h2><a href='atom.xml' class='float-right'
+      ><img src='/images/subscribe-icon.gif' alt='Subscribe'/></a
+      >最新博客（<a href='/blog.html'>更多</a>）</h2>
+  
+{% for post in site.posts limit:page.full_posts %}
+  <div class='post'>
+    <span class='date'>{{post.date | date_to_string}}</span>
+    <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
+    <div class='body'>{{post.content}}</div>
+    <a href='{{post.url}}#disqus_thread'>View Comments</a>
+  </div>
+{% endfor %}
+
+</div>
+
+<div class='home-box' id='home-right'>
+  <h2>博客公告</h2>
+  <div class='sidebar'>
+    <div class="sidebar-item">
+      <ul>
+        <li>QQ：576525789</li>
+        <li>RIA交流群：23539326</li>
+        <li>Git交流群：23541011</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>联系方式</h2>
+  <div class='sidebar'>
+    <div class="sidebar-item">
+    <ul>
+      <li>邮件：yanhonglei[@]gmail.com </li>
+      <li>微博：<a href="http://weibo.com/kafeituzi" target="_blank">@kafeituzi</a></li>
+    </ul>
+
+    </div>
+  </div>
+
+</div>
