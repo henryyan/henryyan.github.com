@@ -1,0 +1,12 @@
+--- 
+layout: post
+title: "Twitter\xE7\x94\xA8\xE6\x88\xB7\xE5\x8F\x91\xE8\xB5\xB7\xE2\x80\x9C\xE6\x8B\x92\xE7\xBB\x9DIE6\xE2\x80\x9D\xE8\xAF\xB7\xE6\x84\xBF\xE6\xB4\xBB\xE5\x8A\xA8"
+wordpress_id: 645
+wordpress_url: http://www.wsria.com/?p=645
+date: 2009-07-18 13:42:32 +08:00
+---
+Mashable日前刊登分析文章称,IE6不支持当今的互联网标准,成为阻碍互联网创新的主要障碍,因此IE6必须死亡.这一观点得到了 Twitter用户的积极回应.一名名为James Lynch的Twitter用户通过名为Twibbon的第三方应用发起请愿活动,呼吁用户停止使用IE6.通过Twibbon,用户可以在个人主页图片 上添加了一个小的“拒绝IE6”图标.
+
+分析认为,如果希望终结IE6的使用,需要说服的并不是微软的领导者,而是那些过时的IT部门和网站的管理者,他们目前仍投入大量资源去支持IE6.
+
+<a href="http://www.wsria.com/wp-content/uploads/2009/07/noie6.gif"><img class="alignleft size-full wp-image-653" title="noie6" src="http://www.wsria.com/wp-content/uploads/2009/07/noie6.gif" alt="noie6" width="148" height="161" /></a>

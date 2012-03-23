@@ -1,0 +1,62 @@
+--- 
+layout: post
+title: "jQuery 1.4 \xE6\xAD\xA3\xE5\xBC\x8F\xE7\x89\x88\xE5\x8F\x91\xE5\xB8\x83\xE5\x95\xA6(14 Days of jQuery)"
+wordpress_id: 772
+wordpress_url: http://www.wsria.com/?p=772
+date: 2010-01-15 10:18:41 +08:00
+---
+[caption id="attachment_774" align="alignleft" width="426" caption="jquery 1.4"]<a href="http://www.wsria.com/wp-content/uploads/2010/01/jquery-1.4.png"><img class="size-full wp-image-774" title="jquery 1.4" src="http://www.wsria.com/wp-content/uploads/2010/01/jquery-1.4.png" alt="jquery 1.4" width="426" height="153" /></a>[/caption]
+
+发布了两个alpha版本，4小时前终于发布了1.4正式版，先放链接：
+<ul>
+	<li><a href="http://code.jquery.com/jquery-1.4.min.js">jQuery Minified</a> (23kb?<a href="http://www.julienlecomte.net/blog/2007/08/13/">Gzipped</a>)</li>
+	<li><a href="http://code.jquery.com/jquery-1.4.js">jQuery Regular</a> (154kb)</li>
+	<li><a href="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js </a></li>
+</ul>
+大致看了一下官网的更新文档：
+
+jQuery1.4对代码库进行了内部重写组织，开始建立一些风格规范。老的core.js文件被分为attribute.js, css.js, data.js, manipulation.js, traversing.js和queue.js。CSS和attribute的逻辑分离。并修正了207个老版本的错误。
+<h3>1、Easy Setter Functions（可以自定义一个function设置属性值）</h3>
+.css(), .attr(), .val(), .html(), .text(), .append(), .prepend(), .before(), .after(), .replaceWith(), .wrap(), .wrapInner(), .offset(), .addClass(), .removeClass(), and .toggleClass().这些setter方法可以传入一个function根据业务自定义需要设置的值
+<pre lang="javascript">// find all ampersands in A's and wrap with a span
+$('a').html(function(i,html){
+  return html.replace(/&amp;/gi,'<span class="amp">&amp;</span>');
+});
+// Add some information to the title of the anchors
+$('a[target]').attr("title", function(i,title){
+  return title + " (Opens in External Window)";
+});</pre>
+重写了这些常用方法，大幅度提升性能
+另外，attribute（改进了.attr()的性能）、jQuery()核心函数、CSS（.css()性能有两倍提升）、特效和事件、DOM操作等也有显著改进。
+
+<!--more-->
+<h3>2、Ajax增加[保持原有数据类型标示]</h3>
+在1.4版本之前如果想后台发送数据：{foo: ["bar", "baz"]}，则最后参数为foo=bar&amp;foo=baz
+<pre lang="javascript">// Enables for all serialization
+jQuery.ajaxSettings.traditional = true;
+
+// Enables for a single serialization
+jQuery.param( stuff, true );
+
+// Enables for a single Ajax requeset
+$.ajax({ data: stuff, traditional: true });</pre>
+<pre lang="javascript">使用traditional = true后参数为：foo[]=bar&amp;foo[]=baz</pre>
+<h3>3、Ajax请求数据类型为[JSON, JavaScript]会自动识别</h3>
+这一特性我认为做得很好，虽然现在还没有体验这个功能，之前开始用的时候也想过这个问题，为什么不能自动识别类型呢……
+
+现在终于实现了，呵呵
+
+如果在请求后台数据的时候没有设置类型，而后台返回的是JSON(application/json)或者JavaScript mime type (text/javascript or application/x-javascript)，如果类型为javascript则加载完成后会自动执行
+
+<hr />E文烂，简单说一下吧
+
+【<strong>其他新特性</strong>】：
+1、增加对HTML5的支持
+2、所有Ajax的Success回调增加XMLHttpRequest为第三个参数
+
+【官网1.4版本相关链接】
+jQuery1.4 API：<a href="http://api.jquery.com/category/version/1.4/" target="_blank">http://api.jquery.com/category/version/1.4</a>
+
+下载、版本特性请访问：<a href="http://jquery14.com/day-01/jquery-14" target="_blank">http://jquery14.com/day-01/jquery-14</a>
+
+<strong>期待中文API文档早日完成……</strong>

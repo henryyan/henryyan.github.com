@@ -1,0 +1,8 @@
+--- 
+layout: post
+title: "jQuery1.4 API \xE5\x8C\xBA\xE5\x88\xAB\xE4\xB8\x8E\xE6\x9B\xB4\xE6\x96\xB0\xE4\xB8\xAD\xE6\x96\x87\xE7\x89\x88"
+wordpress_id: 796
+wordpress_url: http://www.wsria.com/?p=796
+date: 2010-01-19 19:32:11 +08:00
+---
+前几天发不过jQuery1.4 正式版的简单更新说明，后来在网上找到 <strong>金山(一个网友) </strong>博客翻译了，现在这社会就得做自己所长的，所以借用过来供大家看看：<a title="jquery1.4 API 区别与更新中文版" href="http://js.007studio.net/?p=276" target="_blank">http://js.007studio.net/?p=276</a>
