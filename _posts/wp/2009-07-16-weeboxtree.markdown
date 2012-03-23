@@ -17,5 +17,5 @@ date: 2009-07-16 12:59:39 +08:00
 
 
 
-<blockquote>有问题请留言使用右边的联系方式CALL ME</blockquote>
+<pre>有问题请留言使用右边的联系方式CALL ME</pre>
 

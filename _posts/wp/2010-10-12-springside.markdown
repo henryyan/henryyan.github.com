@@ -12,13 +12,13 @@ date: 2010-10-12 00:45:38 +08:00
 关于这一点我是有过深的体会，去年给一个小公司开发一个小系统使用的架构就是我之前发布过的《<a href="http://www.wsria.com/archives/136" target="_blank">个人账务管理系统</a>》的架构，由于当时写这个架构的时候工作经验比较少，遇到的问题也不多，所以很多地方功能欠缺，而且不够灵活还有BUG……惭愧
 <h3>二、推荐Springside</h3>
 去年年底的一次偶然机会让我发现了<a href="http://www.springside.org.cn" target="_blank">Springside</a>，以下简称为SS；关于SS的详细资料大家请到SS的官网查看，有这非常详细的WIKI文档而且在最新的3.3.4版本中<a href="http://www.wsria.com/msg#comment-1553" target="_blank">白衣</a>重新检查、调整了代码注释，使使用者可以很容易理解代码的意图。
-<blockquote>SpringSide是以<a href="http://springside.org.cn/www.springframework.org" target="_blank">Spring Framework</a>为核心，提供Pragmatic之中又适合工业化大规模开发的企业应用Kickstart。
-如果说Sun的代码规范规定了大家在代码中如何命名变量，怎么编写注释的话，SpringSide则是以主流的技术选型、Pragmatic的编程实践来开发JavaEE企业级应用的总结与演示。</blockquote>
+<pre>SpringSide是以<a href="http://springside.org.cn/www.springframework.org" target="_blank">Spring Framework</a>为核心，提供Pragmatic之中又适合工业化大规模开发的企业应用Kickstart。
+如果说Sun的代码规范规定了大家在代码中如何命名变量，怎么编写注释的话，SpringSide则是以主流的技术选型、Pragmatic的编程实践来开发JavaEE企业级应用的总结与演示。</pre>
 <!--more-->
 刚刚说到了spring是Struts和Hibernate的解耦合框架，如果说spring是struts和hibernate的<strong>粘合剂</strong>，那么SS就是sturts、spring、hibernate的粘合剂，但是幸运的告诉你中奖了，springside中还提供了对于<span style="background-color: #ffcc00;">团队开发</span>和企业应用开发中经常使用的用例演示，很多功能你可以直接搬运过来再自己的项目中实施，包含了我们平常经常使用<strong>CRUD</strong>操作的-<a href="http://wiki.springside.org.cn/display/SpringSide3/SpringSide+Mini-Example" target="_blank">MiniWeb</a>模块，千奇百怪的企业应用演示-<a href="http://wiki.springside.org.cn/display/SpringSide3/SpringSide+Showcase" target="_blank">Showcase</a>模块，这两个模块都依赖于一个功能的模块——<a href="http://wiki.springside.org.cn/display/SpringSide3/Springside+Modules" target="_blank">Modules</a>，在Modules中就会看到了SS的核心功能<span style="background-color: #ff0000;">Core</span>、Showcase的依赖<span style="background-color: #ff0000;">Extension</span>，还有SS的的<span style="background-color: #ff0000;">Parent</span>
 
 <span style="font-size: medium;">这里就简单的说明SS的大体结构，引导，详细还是请看全面的<a href="http://wiki.springside.org.cn/display/SpringSide3/Home" target="_blank">SS WIKI文档</a>。</span>
-<blockquote>如果你只是想快速开发，那么你需要做的仅仅是<strong>拿来主义</strong>。如果想看源码白衣做了很详细的源码说明和详细的WIKI文档，各种企业应用的：选型、使用、注意事项、问题列表、规范等等尽在<a href="http://wiki.springside.org.cn/display/SpringSide3/Reference" target="_blank">WIKI</a>中写明。</blockquote>
+<pre>如果你只是想快速开发，那么你需要做的仅仅是<strong>拿来主义</strong>。如果想看源码白衣做了很详细的源码说明和详细的WIKI文档，各种企业应用的：选型、使用、注意事项、问题列表、规范等等尽在<a href="http://wiki.springside.org.cn/display/SpringSide3/Reference" target="_blank">WIKI</a>中写明。</pre>
 <h3>三、学习使用Springside</h3>
 既然推荐了SS那就要说说怎么使用了;
 
@@ -30,10 +30,10 @@ date: 2010-10-12 00:45:38 +08:00
 到了这里同样适用，使用Springside会进一步提升应用的开发进度和稳定性，毕竟是经过全方位测试的核心框架；对于提供的示例你只需要按照Springside团队的代码风格来写，当然如果需要你也可以修改源码扩展一些<span title="我在SS基础上扩展了jqGrid的CRUD功能，以后会写教程"><strong>功能</strong></span></li>
 	<li>
 <h4>Springside使用的构建工具——Maven</h4>
-<blockquote><strong>程序员的固定思想</strong>：在做某件事情之前会想想有没有工具可以帮我实现（自动化、代工）？很明显的体现出程序员的懒惰……</blockquote>
-<blockquote>关于Maven是说明东东或者刚刚接触的同学请看《<a href="http://www.wsria.com/archives/1072" target="_blank">Maven学习引导</a>》</blockquote>
+<pre><strong>程序员的固定思想</strong>：在做某件事情之前会想想有没有工具可以帮我实现（自动化、代工）？很明显的体现出程序员的懒惰……</pre>
+<pre>关于Maven是说明东东或者刚刚接触的同学请看《<a href="http://www.wsria.com/archives/1072" target="_blank">Maven学习引导</a>》</pre>
 如果你一直处于传统的开发模式或者公司技术落后的话你可能感觉怎么怪怪的呢，如果你没有接触过Maven首先会感觉目录结构为什么是这样的，和之前使用的WebRoot方式完全不一样，这个就是Maven的标准结构，Maven的设计思想是以<strong><span style="color: #800080;">约定优于配置</span></strong>为中心的，如果你接触过ruby on rails或者Struts2的话就能理解说明是约定由于配置，简单来说就是有工具、架构的设计者来制定一系列规则，开发人员只需要按照预设的规则书写、配置自己的功能，把注意力集中到业务上而不是分散部分注意力到架构或工具上，维基上有<a href="http://zh.wikipedia.org/zh/%E7%BA%A6%E5%AE%9A%E4%BC%98%E4%BA%8E%E9%85%8D%E7%BD%AE" target="_blank">详细解释</a>。
-<blockquote>一个设计(工具)的出现必定有它存在的道理，所以<strong>告诫</strong>一些人不要盲目的反驳，先研究一下这样的结构设计对自己有利还是有弊，或者是否是利大于弊！</blockquote>
+<pre>一个设计(工具)的出现必定有它存在的道理，所以<strong>告诫</strong>一些人不要盲目的反驳，先研究一下这样的结构设计对自己有利还是有弊，或者是否是利大于弊！</pre>
 </li>
 	<li>
 <h4>万变不离其宗</h4>

@@ -9,9 +9,9 @@ date: 2011-08-13 20:59:56 +08:00
 使用Springside（一下简称SS）有段时间了，之前一直都是用windows开发，正好SS提供了很方便一键安装（quick-start）和一键生成（generate-project）脚本（bat格式）；前段时间全面切换环境到Ubuntu，因为培训新员工的缘故需要给他们讲解SS（因为我们用SS作为公司的基础架构），所以我在本地需要操作SS，但是脚本仅限于Windows，好在这段时间看了一部分Bash的书籍，所以决定自己根据bat脚本修改一个bash的脚本。
 <h3>二、quick-start.sh</h3>
 
-<blockquote>
+<pre>
 复制以下脚本保存为quick-start.sh
-</blockquote>
+</pre>
 <!--more-->
 <pre>
 #!/bin/bash
@@ -80,24 +80,24 @@ echo [INFO] http://localhost:8085/showcase
 </pre>
 
 
-<blockquote>不要忘记为脚本添加执行权限：
+<pre>不要忘记为脚本添加执行权限：
 <pre>
 chmod a+x generate-project.sh
 </pre>
-</blockquote>
+</pre>
 
 <hr/>
 
-<blockquote><strong>脚本不足</strong>：
+<pre><strong>脚本不足</strong>：
 启动数据库和3个演示项目之后按Ctrl+C不能停止进程，因为进程都是在后台运行的，脚本运行完成后使用：
 <pre>ps -e | grep java</pre>
 然后结束这些java进程，或者使用：
 <pre>sudo netstat -tulnp | grep java</pre>
 根据端口结束进程：
 <pre>kill -9 xxx</pre>
-</blockquote>
+</pre>
 
-<blockquote>目前能力有限，如果有更好的办法解决上面这个问题欢迎回复完善此文章！</blockquote>
+<pre>目前能力有限，如果有更好的办法解决上面这个问题欢迎回复完善此文章！</pre>
 如果出现以下错误信息，请下载maven-ant-tasks.jar，<a href="http://maven.apache.org/ant-tasks/download.html" target="_blank">下载地址</a>：
 <pre>
 Buildfile: /home/kafeitu/work/sources/springside/springside-3.3.4/examples/mini-web/bin/build.xml
@@ -132,9 +132,9 @@ cd $gpdir
 mvn archetype:generate -DarchetypeCatalog=local
 </pre>
 
-<blockquote>不要忘记为脚本添加执行权限：
+<pre>不要忘记为脚本添加执行权限：
 <pre>
 chmod a+x generate-project.sh
-</pre></blockquote>
+</pre></pre>
 <h3>四、结束语</h3>
 好了，两个简单的脚本OK了，希望能帮助你解决问题，期待高手的意见和参与！

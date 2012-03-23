@@ -13,21 +13,21 @@ date: 2009-02-14 17:35:00 +08:00
 在这个特殊的日子还是继续宅男的生活，过着没有情人的情人节，但是今年这个没有情人的情人节要献给广大Java、jQuery技术爱好者一份大礼，半年来周末、下班时间学习使用的账务管理系统公开源代码了，关于系统的说明请参看本博客相关文章，废话不说了，googlecode地址公布如下：
 
 2009.02.25更新……
-<blockquote>版本库主页：<a href="http://code.google.com/p/finance-p/" target="_blank">http://code.google.com/p/finance-p/</a>
+<pre>版本库主页：<a href="http://code.google.com/p/finance-p/" target="_blank">http://code.google.com/p/finance-p/</a>
 匿名检出版本库：svn checkout http://finance-p.googlecode.com/svn/branches/v1-Final finance
 <a href="http://code.google.com/p/finance-p/downloads/list" target="_blank">googlecode</a>上去下载<!--，也可以从从本站[download id="4" format="1"]-->
 
-<a href="http://www.wsria.com/archives/73" target="_blank">预览系统演示视频</a></blockquote>
-<blockquote>关于系统功能的内部实现会陆续发布文章供大家研究、学习
+<a href="http://www.wsria.com/archives/73" target="_blank">预览系统演示视频</a></pre>
+<pre>关于系统功能的内部实现会陆续发布文章供大家研究、学习
 
 如果你想参与到此项目的继续开发请联系博主
 
-代码、功能仅供学习、参考，肯定存在一定问题，希望一块学习</blockquote>
+代码、功能仅供学习、参考，肯定存在一定问题，希望一块学习</pre>
 <h2>更新2009.2.26</h2>
-<blockquote>最近有一个网友下载了基于Java、jQuery开发的账务管理系统，上次的文档写的不完整，在这里向各位表示歉意，下面写一个完整的安装文档：
+<pre>最近有一个网友下载了基于Java、jQuery开发的账务管理系统，上次的文档写的不完整，在这里向各位表示歉意，下面写一个完整的安装文档：
 <p style="text-indent: 21pt;"><!--[if gte mso 9]><xml> <w:WordDocument> <w:View>Normal</w:View> <w:Zoom>0</w:Zoom> <w:PunctuationKerning /> <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing> <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery> <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery> <w:ValidateAgainstSchemas /> <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid> <w:IgnoreMixedContent>false</w:IgnoreMixedContent> <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText> <w:Compatibility> <w:SpaceForUL /> <w:BalanceSingleByteDoubleByteWidth /> <w:DoNotLeaveBackslashAlone /> <w:ULTrailSpace /> <w:DoNotExpandShiftReturn /> <w:AdjustLineHeightInTable /> <w:BreakWrappedTables /> <w:SnapToGridInCell /> <w:WrapTextWithPunct /> <w:UseAsianBreakRules /> <w:DontGrowAutofit /> <w:UseFELayout /> </w:Compatibility> <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel> </w:WordDocument> </xml><![endif]--><!--[if gte mso 9]><xml> <w:LatentStyles DefLockedState="false" LatentStyleCount="156"> </w:LatentStyles> </xml><![endif]--></p>
-</blockquote>
-<blockquote><strong>一、</strong><strong>一个仅供学习之用的账务管理系统</strong><strong>(</strong><strong>个人版</strong><strong>)</strong>
+</pre>
+<pre><strong>一、</strong><strong>一个仅供学习之用的账务管理系统</strong><strong>(</strong><strong>个人版</strong><strong>)</strong>
 
 <strong>系统简介</strong>： 1、实现了用户、组管理 2、实现了物品类别、详细管理 3、实现了基本账务(货币)管理
 
@@ -81,4 +81,4 @@ docBase根据自己的情况设置</li>
 如果有问题请联系作者：
 
 QQ：576525789
-MSN：yanhonglei@gmail.com</blockquote>
+MSN：yanhonglei@gmail.com</pre>

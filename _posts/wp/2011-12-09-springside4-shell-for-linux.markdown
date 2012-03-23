@@ -11,9 +11,9 @@ date: 2011-12-09 10:24:25 +08:00
 generate-project脚本在springside3和springside4一样，请参考上面的地址！
 </p>
 <h3>二、quick-start.sh</h3>
-<blockquote>
+<pre>
 复制以下脚本保存为quick-start.sh
-</blockquote>
+</pre>
 <!--more-->
 <pre>
 #!/bin/bash

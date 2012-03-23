@@ -12,7 +12,7 @@ date: 2010-01-12 16:17:56 +08:00
 目前开发的一个系统正好需要这样的功能所以推荐给大家
 
 官网：<a href="http://www.redredred.com.au/projects/jquery-week-calendar/">http://www.redredred.com.au/projects/jquery-week-calendar/</a>
-<blockquote>
+<pre>
 <h2>Live Demo</h2>
 The following live demonstration? has a basic calendar with a few events in it. It demonstrates most of the major functionality by triggering events that are displayed as messages in the top right hand corner of the screen.? More demos will? come soon…
 
@@ -40,4 +40,4 @@ The following live demonstration? has a basic calendar with a few events in it. 
 </ul>
 </li>
 </ul>
-</blockquote>
+</pre>

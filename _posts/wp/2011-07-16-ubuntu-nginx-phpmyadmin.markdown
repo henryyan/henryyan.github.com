@@ -100,7 +100,7 @@ server{
 }
 </pre>
 
-<blockquote>其中的日志文件位置和fastcgi_pass中的端口根据自己的环境修改</blockquote>
+<pre>其中的日志文件位置和fastcgi_pass中的端口根据自己的环境修改</pre>
 在nginx.conf中include phpmyadmin配置：
 <pre>
 sudo vi /usr/local/nginx/conf/nginx.conf

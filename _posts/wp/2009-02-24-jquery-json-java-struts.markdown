@@ -175,11 +175,11 @@ protected JSONObject readJson(HttpServletRequest request) throws Exception {
 		throw e;
 	}
 }</pre>
-<blockquote>这里有一点要说明，在获得输出流的时候有个小插曲，我在开发的时候使用的tomcat5.5.26版本，
+<pre>这里有一点要说明，在获得输出流的时候有个小插曲，我在开发的时候使用的tomcat5.5.26版本，
 当时的写法为：
 <pre lang="java">response.getOutputStream().print(info);</pre>
 后来源码开源后一个网友使用的tomcat6版本，说系统不能正常运行，后来他查到了原因，因为获得输出流时出了问题，
-改成getWriter就没有问题了，集体也没有搞清除为什么会是这样……</blockquote>
+改成getWriter就没有问题了，集体也没有搞清除为什么会是这样……</pre>
 基于java开发时会使用struts，struts需要返回一个ActionMapping对象，但是在ajax请求不需要返回特定页面，因为根本没有跳转页面的动作，解决办法很简单，直接<strong>return  null</strong>就可以了
 
 输出结果后jQuery的ajax的success方法就接收到了请求结果，然后就可以根据结果处理业务逻辑了O(∩_∩)O~

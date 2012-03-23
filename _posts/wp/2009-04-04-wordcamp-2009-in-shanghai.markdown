@@ -17,14 +17,14 @@ WP爱好者期待的<a href="http://wordcampchina.org/" target="_blank">wordcamp
 贴一些图片：
 
 [caption id="attachment_488" align="aligncenter" width="300" caption="matt在演讲"]<a href="http://www.wsria.com/wp-content/uploads/2009/04/20090404049.jpg"><img class="size-medium wp-image-488" title="matt.mullenweg在wordcamp 2009活动中演讲" src="http://www.wsria.com/wp-content/uploads/2009/04/20090404049-300x225.jpg" alt="matt.mullenweg在wordcamp 2009活动中演讲" width="300" height="225" /></a>[/caption]
-<blockquote>matt：wordpress开源博客系统的作者，Automattic公司
+<pre>matt：wordpress开源博客系统的作者，Automattic公司
 大概意思就是介绍wordpress的应用及以后的发展
-听matt的演讲真是有点吃力……，毕竟是英文的，惭愧学了近十年的英文还是很烂……</blockquote>
+听matt的演讲真是有点吃力……，毕竟是英文的，惭愧学了近十年的英文还是很烂……</pre>
 [caption id="attachment_490" align="aligncenter" width="300" caption="吴海林演讲：wordpress.com上最佳博客秘诀"]<a href="http://www.wsria.com/wp-content/uploads/2009/04/20090404051.jpg"><img class="size-medium wp-image-490" title="吴海林演讲：wordpress.com上最佳博客秘诀，WP团队的华人，主要开发视频插件" src="http://www.wsria.com/wp-content/uploads/2009/04/20090404051-300x225.jpg" alt="吴海林演讲：wordpress.com上最佳博客秘诀" width="300" height="225" /></a>[/caption]
-<blockquote>吴海林：留美博士，Automattic公司，主要开发wordpress下的视频插件。讲述了在 wordpress.com中优秀博客的特点，让我们也能吸取一些经验</blockquote>
+<pre>吴海林：留美博士，Automattic公司，主要开发wordpress下的视频插件。讲述了在 wordpress.com中优秀博客的特点，让我们也能吸取一些经验</pre>
 
 [caption id="attachment_495" align="aligncenter" width="300" caption="词酷：wordku.com站长，每日一词"]<a href="http://www.wsria.com/wp-content/uploads/2009/04/20090404053.jpg"><img src="http://www.wsria.com/wp-content/uploads/2009/04/20090404053-300x225.jpg" alt="词酷：wordku.com站长，每日一词" title="词酷站长,wordku.com" width="300" height="225" class="size-medium wp-image-495" /></a>[/caption]
-<blockquote>刘淼：使用WP开发了<a href="http://wordku.com/" target="_blank">词酷</a>，每日一词，很会讲故事引得台下欢声笑语，讲述了博客的诞生及后和韩国一大公司收购的事情到最后博客的发展方向</blockquote>
+<pre>刘淼：使用WP开发了<a href="http://wordku.com/" target="_blank">词酷</a>，每日一词，很会讲故事引得台下欢声笑语，讲述了博客的诞生及后和韩国一大公司收购的事情到最后博客的发展方向</pre>
 
 活动纪念品：
 [caption id="attachment_498" align="aligncenter" width="300" caption="wordcamp 2009之logo纪念品"]<a href="http://www.wsria.com/wp-content/uploads/2009/04/20090404062.jpg"><img src="http://www.wsria.com/wp-content/uploads/2009/04/20090404062-300x225.jpg" alt="wordcamp 2009之logo纪念品" title="wordcamp 2009之logo纪念品" width="300" height="225" class="size-medium wp-image-498" /></a>[/caption]

@@ -14,7 +14,7 @@ date: 2009-02-28 18:39:27 +08:00
 <h2>一、效果预览</h2>
 [caption id="attachment_387" align="aligncenter" width="416" caption="债务人详细页面效果预览"]<img class="size-full wp-image-387" title="userdetail1" src="http://www.wsria.com/wp-content/uploads/2009/02/userdetail1.png" alt="债务人详细页面效果预览" width="416" height="385" />[/caption]
 <h2>二、实现方式</h2>
-<blockquote>基本思想就是绑定列表中的人员名称触发事件，获得当前人员的ID发送ajax请求到后台，后台根据ID查询详细信息，返回JSON数据结果至前台，前台通过对话框组件显示人员详细</blockquote>
+<pre>基本思想就是绑定列表中的人员名称触发事件，获得当前人员的ID发送ajax请求到后台，后台根据ID查询详细信息，返回JSON数据结果至前台，前台通过对话框组件显示人员详细</pre>
 <strong>1、绑定click事件到列表的人员名称</strong>
 在项目中的iouser/js/iouser.js文件中有这样一个方法：
 <pre lang="javascript">/**
@@ -99,7 +99,7 @@ JSONObject jsonObject = JSONObject.fromObject(user, config);
 //向前台发送结果集
 print(response, jsonObject.toString());</pre>
 最中返回的结果集如下：
-<blockquote>{
+<pre>{
 "age" : 56,
 "companyAddress" : "32",
 "companyName" : "未知",
@@ -136,7 +136,7 @@ print(response, jsonObject.toString());</pre>
 "remark" : "香港富豪",
 "sex" : "1",
 "userName" : "李嘉诚"
-}</blockquote>
+}</pre>
 </li>
 </ul>
 </li>

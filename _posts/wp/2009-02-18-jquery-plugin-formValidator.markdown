@@ -16,7 +16,7 @@ date: 2009-02-18 19:41:13 +08:00
 在开发账务管理系统的时候开始想使用自己在公司项目中写的一个验证方法，但是后来想想感觉功能太单调了，虽然能够满足系统的要求但是用户体验不好，所有的错误提示都是使用的alert的方式提示用户，而且没有实时验证的功能，最终放弃了；然后就在<a href="http://plugins.jquery.com/" target="_blank">jQuery官网插件</a>上搜索关于验证的插件，刚刚说的几个功能都得满足，找了几个最终选择了<a href="http://www.yhuan.com/formvalidator/index.html?from=www.wsria.com" target="_blank">formValidator</a>，下面是摘自插件官网上的：
 
 <!--more-->
-<blockquote><span style="font-size: large;"><strong>本插件于其他校验控件最大的区别有3点：</strong></span>
+<pre><span style="font-size: large;"><strong>本插件于其他校验控件最大的区别有3点：</strong></span>
 
 <strong>1、校验功能可以扩展。</strong>
 <strong> </strong><strong> </strong> 对 中文、英文、数字、整数、实数、Email地址格式、基于HTTP协议的网址格式、电话号码格式、手机号码格式、货币格式、邮政编码、身份证号码、QQ号 码、日期等等这些控制，别的表单校验控件是代码里写死的，而formValidator是通过外部js文件来扩展的，<span style="color: #ff0000;"><em>你可以通过写正则表达式和函数来无限的扩展这些功能</em></span>。
@@ -39,7 +39,7 @@ date: 2009-02-18 19:41:13 +08:00
 	<li>支持服务器端校验。</li>
 	<li>支持输入格式的校验。</li>
 </ul>
-</blockquote>
+</pre>
 大家可以到<a href="http://www.yhuan.com/formvalidator/index.html?from=www.wsria.com" target="_blank">formValidator </a>官网上去查看具体效果及其使用方法，也可以在晚上7点之后访问我在<a href="http://yanhonglei.gicp.net/finance/" target="_blank">账务管理系统</a>中的实际应用效果供大家参考
 
 但是目前jQuery的版本更新到了1.3弃用了1.1和1.2版本中@写法，例如选择一个已选择的radio在1.1或者1.2版本中可以这样写：

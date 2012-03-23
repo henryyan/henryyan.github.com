@@ -15,7 +15,7 @@ date: 2010-07-26 09:47:09 +08:00
 
 我也乐意和大家分享我的WIKI，你可以通过RSS订阅的方式：
 
-<blockquote>
+<pre>
 RSS订阅：<a href="http://wiki.wsria.com/feed.php">http://wiki.wsria.com/feed.php</a>
-可以显示<strong>最近更新</strong>的内容</blockquote>
+可以显示<strong>最近更新</strong>的内容</pre>
 

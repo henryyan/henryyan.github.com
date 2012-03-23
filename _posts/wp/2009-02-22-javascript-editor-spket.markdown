@@ -29,5 +29,5 @@ date: 2009-02-22 18:12:45 +08:00
 	<li>单击右边列表的”jQuery“——&gt;点击”Add Library“——&gt;选择”jQuery“</li>
 	<li>点击第二级”jQuery“——&gt;"Add File"选择jQuery未压缩的源文件</li>
 </ol>
-<blockquote>注意：spket1.6.16版本有个BUG，如果在你关闭eclipse之前没有打开的javascript文件则在下次打开的时候显示的字体会很小，</blockquote>
-<blockquote>解决办法：在关闭eclipse之前打开一个javascript文件，下次打开eclipse之后显示的字体就可java文件一样大小了</blockquote>
+<pre>注意：spket1.6.16版本有个BUG，如果在你关闭eclipse之前没有打开的javascript文件则在下次打开的时候显示的字体会很小，</pre>
+<pre>解决办法：在关闭eclipse之前打开一个javascript文件，下次打开eclipse之后显示的字体就可java文件一样大小了</pre>

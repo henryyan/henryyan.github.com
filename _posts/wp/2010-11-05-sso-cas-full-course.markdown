@@ -27,28 +27,28 @@ date: 2010-11-05 20:25:51 +08:00
 <!--more-->
 <ol>
 	<li>用JDK自带的keytool工具生成证书：
-<blockquote>命令：keytool -genkey -alias wsria -keyalg RSA -keystore d:/keys/wsriakey</blockquote>
+<pre>命令：keytool -genkey -alias wsria -keyalg RSA -keystore d:/keys/wsriakey</pre>
 </li>
 </ol>
 无图不给力，有图有真相：[caption id="attachment_1358" align="alignleft" width="622" caption="用keytool生成证书"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/use-keytool-create-key.gif"><img src="http://www.wsria.com/wp-content/uploads/2010/11/use-keytool-create-key.gif" alt="用keytool生成证书" title="use-keytool-create-key" width="622" height="342" class="size-full wp-image-1358" /></a>[/caption]
 具体的输入项图片中都有说明，有一点我要解释一下；在输入完密码后提示输入域名是我输入的是sso.wsria.com，其实这个域名是不存在的，但是我为了演示所以虚拟了这个域名，技巧在于修改C:\Windows\System32\drivers\etc\hosts，添加内容如下：
-<blockquote>127.0.0.1	sso.wsria.com</blockquote>
+<pre>127.0.0.1	sso.wsria.com</pre>
 这样在访问sso.wsria.com的时候其实是访问的127.0.0.1也就是本机
 
 
-<blockquote><strong>严重提醒</strong>：提示输入域名的时候<strong>不能</strong>输入<strong>IP地址</strong></blockquote>
+<pre><strong>严重提醒</strong>：提示输入域名的时候<strong>不能</strong>输入<strong>IP地址</strong></pre>
 <h3>三、导出证书</h3>
-<blockquote>命令：D:\keys>keytool -export -file d:/keys/wsria.crt -alias wsria -keystore d:/keys/wsriakey</blockquote>
+<pre>命令：D:\keys>keytool -export -file d:/keys/wsria.crt -alias wsria -keystore d:/keys/wsriakey</pre>
 
 
-<blockquote><strong>特别提示：</strong>如果提示<p>keytool error: java.io.IOException: Keystore was tampered with, or password was incorrect</p>那么请输入密码：<strong>changeit</strong></blockquote>
+<pre><strong>特别提示：</strong>如果提示<p>keytool error: java.io.IOException: Keystore was tampered with, or password was incorrect</p>那么请输入密码：<strong>changeit</strong></pre>
 
 
 来点颜色：[caption id="attachment_1367" align="alignleft" width="600" caption="使用keytool导出证书"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/use-keytool-export-crt.gif"><img src="http://www.wsria.com/wp-content/uploads/2010/11/use-keytool-export-crt.gif" alt="使用keytool导出证书" title="use-keytool-export-crt" width="600" class="size-medium wp-image-1367" /></a>[/caption]
 至此导出证书完成，可以分发给应用的JDK使用了，接下来讲解客户端的JVM怎么导入证书
 
 <h3>四、为客户端的JVM导入证书</h3>
-<blockquote>命令：keytool -import -keystore D:\tools\jdk\1.6\jdk1.6.0_20\jre\lib\security\cacerts -file D:/keys/wsria.crt -alias wsria</blockquote>
+<pre>命令：keytool -import -keystore D:\tools\jdk\1.6\jdk1.6.0_20\jre\lib\security\cacerts -file D:/keys/wsria.crt -alias wsria</pre>
 来点颜色瞧瞧：[caption id="attachment_1371" align="alignleft" width="600" caption="为客户端JVM导入证书"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/use-keytool-import-crt-to-client-jvm.gif"><img src="http://www.wsria.com/wp-content/uploads/2010/11/use-keytool-import-crt-to-client-jvm.gif" alt="为客户端JVM导入证书" title="use-keytool-import-crt-to-client-jvm" width="600" height="242" class="size-full wp-image-1371" /></a>[/caption]
 <font color='red'><strong>特别说明</strong></font>：D:\tools\jdk\1.6\jdk1.6.0_20\jre\lib\security -- 是jre的目录；密码还是刚刚输入的密码。
 至此证书的创建、导出、导入到客户端JVM都已完成，下面开始使用证书到Web服务器中，本教程使用tomcat。
@@ -85,13 +85,13 @@ OK，接下来要配置CAS服务器了。
 你成功了吗？如果没有成功请再检查以上步骤！
 
 
-<blockquote><strong>2011-11-05更新说明</strong>：<span style='display:none'>对于3.4.10版本来官方没有直接提供war包而仅仅提供了源码，因为官方使用maven构建项目，所以需要读者自己构建打包，其实也比较简单，请参考文章最后面的构建说明。</span>
+<pre><strong>2011-11-05更新说明</strong>：<span style='display:none'>对于3.4.10版本来官方没有直接提供war包而仅仅提供了源码，因为官方使用maven构建项目，所以需要读者自己构建打包，其实也比较简单，请参考文章最后面的构建说明。</span>
 <h4>使用Maven构建：</h4>
 <p>使用cmd或者shell进入cas-server-3.4.10目录，运行：mvn package -pl cas-server-webapp,cas-server-support-jdbc</p>
 <p>意思是只需要构建cas-server-webapp和cas-server-support-jdbc，如果需要其他的请根据文件夹名称设置或者构建全部模块，打包全部模块命令：mvn package 即可。打包过程中会从网络下载需要的jar包，请耐心等待；如果在~/.m2/settings.xml中定义了mirror代理<mirrorOf>*</mirrorOf>，那么请把*随便修改一个字符，否则下载jar包会失败！
 </p>
 <p>打包完成后就可以从cas-server-webapp/target/cas.war复制到你的tomcat/webapp中；或者直接复制cas-server-webapp/target/cas-server-webapp-3.4.10目录到tomcat/webapp目录下，其他步骤和上面一样</p>
-</blockquote>
+</pre>
 
 <h3>七、CAS服务器深入配置</h3>
 上面的初体验仅仅是简单的身份验证，实际应用中肯定是要读取数据库的数据，下面我们来进一步配置CAS服务器怎么读取数据库的信息进行身份验证。
@@ -151,7 +151,7 @@ create table t_admin_user (
 		<li><strong>传统型</strong>：下载cas-client，地址：<a href="http://www.ja-sig.org/downloads/cas-clients/" target="_blank">http://www.ja-sig.org/downloads/cas-clients/</a>，然后解压cas-client-3.1.12.zip，在modules文件夹中有需要的jar包，请根据自己的项目情况选择使用
 
 
-<blockquote><strong>2011-11-05更新：</strong>3.2.1版本（只有源码的情况，包含maven的pom.xml），和用maven打包server的方式一样，在cas-client-3.2.1目录中运行命令：mvn package -pl cas-client-core -DskipTests=true<br/>
+<pre><strong>2011-11-05更新：</strong>3.2.1版本（只有源码的情况，包含maven的pom.xml），和用maven打包server的方式一样，在cas-client-3.2.1目录中运行命令：mvn package -pl cas-client-core -DskipTests=true<br/>
 然后从target目录中复制cas-client-core-3.2.1.jar到应用的WEB-INF/lib目录中
 </li>
 		<li><strong>Maven型</strong>：
@@ -294,10 +294,10 @@ CAS服务端(cas-server)的界面只能在测试的时候用一下，真正系�
 <ol>
 <li><b>javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: No name matching casserver found</b>
 
-<blockquote>
+<pre>
 <p>由于创建证书的域名和在应用中配置的cas服务域名不一致导致以下错误</p>
 详细请参考：<a href="https://gist.github.com/1717087" target="_blank" title="https://gist.github.com/1717087">https://gist.github.com/1717087</a>
-</blockquote>
+</pre>
 
 </ol>
 

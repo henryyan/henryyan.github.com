@@ -17,9 +17,9 @@ date: 2012-02-04 02:53:27 +08:00
 <p>下载Dokuwiki：<a href="http://www.splitbrain.org/projects/dokuwiki" target="_blank">http://www.splitbrain.org/projects/dokuwiki</a>，然后解压到/usr/share/dokuwiki目录中
 </p>
 <p>创建文件：/etc/nginx/conf.d/dokuwiki.conf</p>
-<blockquote>sudo vi /etc/nginx/conf.d/dokuwiki.conf</blockquote>
+<pre>sudo vi /etc/nginx/conf.d/dokuwiki.conf</pre>
 <p>复制以下内容到/etc/nginx/conf.d/dokuwiki.conf</p>
-[code highlight="11"]
+<pre>
 server{
 	 #listen 80;
 	 index index.html index.php doku.php;
@@ -46,14 +46,14 @@ server{
 	 location ~ ^/dokuwiki/data/ { deny all; }
 	 location ~ /\.ht            { deny all; }
  }
-[/code]
+</pre>
 
-<blockquote>
+<pre>
 这里要明确第11行的root是dokuwiki目录的上一级，也就是/usr/share，参考：<a href="http://sudone.com/nginx/nginx_alias.html" target="_blank">Nginx虚拟目录</a>
-</blockquote>
+</pre>
 
 启动php-fastcgi：
-<blockquote>sudo service php-fastcgi start</blockquote>
+<pre>sudo service php-fastcgi start</pre>
 现在访问：http://localhost/dokuwiki/install.php，按照提示安装就可以了。
 
 <h3 id="refers">参考资料：</h3>

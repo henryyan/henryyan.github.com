@@ -62,7 +62,7 @@ date: 2009-07-01 13:18:03 +08:00
 
 
 
-<blockquote>重要说明：后台必须要转码：java.net.URLDecoder.decode(request.getParameter("name"), "UTF-8")</blockquote>
+<pre>重要说明：后台必须要转码：java.net.URLDecoder.decode(request.getParameter("name"), "UTF-8")</pre>
 
 
 

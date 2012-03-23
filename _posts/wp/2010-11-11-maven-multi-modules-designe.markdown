@@ -10,9 +10,9 @@ date: 2010-11-11 14:14:47 +08:00
 使用Maven有段时间了，只能感慨真是个好东西，让我从传统模式体会到了严谨、规范、敏捷、方便的特性。
 如果你懂Maven或许看过Juven翻译的《<a href="http://www.juvenxu.com/mvn-def-guide/" target="_blank">Maven权威指南</a>》；
 发个牢骚：由于Maven的出身问题导致学习曲线陡峭，所有有些人就开始说Maven不好用；原因有二：一是排斥Maven，二是没有耐心和精下心来学习，引用老毛的话来提醒我说的那些人：
-<blockquote>没有调查就没有发言权</blockquote>
+<pre>没有调查就没有发言权</pre>
 到了Maven这里就是(适用于技术方面)：
-<blockquote>没有深入学习也没有发言权</blockquote>
+<pre>没有深入学习也没有发言权</pre>
 如果Maven不好那么Spring、Hibernate这些大家经常使用的框架为什么还是从ant转移到Maven？
 如果Maven不好那么为什么国外大多数项目都在使用Maven呢？
 原因自己考虑，我不废话！我的这些话就是告诫那些<strong>信口雌黄</strong>的人。
@@ -105,7 +105,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 ，根据上图介绍一下：除了data目录外其他的配置文件都是在测试期间使用的，根据不同需求使用不同配置文件，例如一些不需要spring启动时初始化的数据使用applicationContext-test-no-init-sql.xml，这个没有什么规定，根据项目来设置；<strong>data</strong>目录是存放一些使用dbunit导出的xml数据文件，作用是在单元测试时的数据初始化或者利用数据文件初始化指定的数据库，一般这些数据文件的类型包括：数据字典、系统配置参数等</li>
 	<li><strong>entity</strong>：这里说一下JPA注解的实体工具，开始我使用的是eclipse3.6的JPA工具，但是发现有些属性加不上@Column注解很是郁闷，只能手动加入；当然你也可以使用springside中提供的hibernatetools模板生成，但是我还是希望在生成期间能完全受控，所以最好想到了MyEclipse，配置好数据源然后从数据库中逆向生成JPA，所有字段都正确配置；</li>
 	<li><strong><em>parent</em></strong>：这里<strong>着重介绍</strong>一下，此模块是所有子模块需要继承的超级POM，举个例子容易理解：把本项目(denong-pb)当做是Java语言，那么parent模块就是Object类，此模块只负责定影其他子模块需要使用的一些公共设置，谨记：
-<blockquote>parent不负责管理子模块，只是被子模块集成，千万不要和denong-pb目录的pom.xml混淆</blockquote>
+<pre>parent不负责管理子模块，只是被子模块集成，千万不要和denong-pb目录的pom.xml混淆</pre>
 </li>
 	<li><strong>service</strong>：就是业务处理类，供web模块调用；</li>
 	<li><strong>web-parent</strong>：供web*模块继承，例如前后台都需要调用的Action接口，像数据字典、地区信息、系统属性等</li>
@@ -125,7 +125,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 	<url>https://192.168.1.111:8443/svn/denong/pb/trunk/模块名称</url>
 </scm>
 </pre>
-<blockquote>上面的scm配置在每一个模块中存在，因为每一个模块再svn目录中有单独的目录；</blockquote>
+<pre>上面的scm配置在每一个模块中存在，因为每一个模块再svn目录中有单独的目录；</pre>
 
 但是parent模块有点不同，因为除了parent模块其他子模块需要继承parent，如下代码：
 <pre lang="xml">
@@ -170,11 +170,11 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 </pre>
 在denong-pb目录中执行命令：
 
-<blockquote>D:\wsria\projects\denong\denong-pb>mvn release:prepare -Pdenong-product</blockquote>
+<pre>D:\wsria\projects\denong\denong-pb>mvn release:prepare -Pdenong-product</pre>
 在svn中自动打的tag结构为：
 [caption id="attachment_1448" align="aligncenter" width="164" caption="maven-release-plugin执行release:prepare后的svn结构"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/svn-tag-construction.jpg"><img src="http://www.wsria.com/wp-content/uploads/2010/11/svn-tag-construction.jpg" alt="maven-release-plugin执行release:prepare后的svn结构" title="svn-tag-construction" width="164" height="294" class="size-full wp-image-1448" /></a>[/caption]
 接下来就可以执行命令：
-<blockquote>D:\wsria\projects\denong\denong-pb>mvn release:perform</blockquote></li>
+<pre>D:\wsria\projects\denong\denong-pb>mvn release:perform</pre></li>
 </ol>
 
 <h3>六、多模块布局问题</h3>
@@ -190,14 +190,14 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 现在问题来了，在common模块下执行命令：mvn compile，得到的结果中包含了警告信息：
 
 
-<blockquote>[WARNING] 'parent.relativePath' points at com.wsria:dn-pb instead of com.wsria:dn-pb-parent, please verify your project structure @ line 4, column 10</blockquote>
+<pre>[WARNING] 'parent.relativePath' points at com.wsria:dn-pb instead of com.wsria:dn-pb-parent, please verify your project structure @ line 4, column 10</pre>
 意思是找不到dn-pb-parent这个模块……因为maven不知道dn-pb-parent模块存在的位置才会导致警告信息的出现，解决办法是手动指定dn-pb-parent模块的位置，所以最终的解决办法是在parent标签中加入：
 <pre lang="xml">
 <relativePath>../parent/pom.xml</relativePath>
 </pre>
 这样maven就知道继承的parent的具体位置了，
 
-<blockquote>relativePath默认值为../pom.xml，参考：<a href="http://maven.apache.org/ref/3.0/maven-model/maven.html" target="_blank">http://maven.apache.org/ref/3.0/maven-model/maven.html</a></blockquote>
+<pre>relativePath默认值为../pom.xml，参考：<a href="http://maven.apache.org/ref/3.0/maven-model/maven.html" target="_blank">http://maven.apache.org/ref/3.0/maven-model/maven.html</a></pre>
 
 完整的parent继承配置：
 <pre lang="xml">
@@ -211,10 +211,10 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 </pre>
 现在运行mvn命令一切正常了;
 
-<blockquote>记得每一个继承parent模块的子模块都需要添加relativePath设置</blockquote>
+<pre>记得每一个继承parent模块的子模块都需要添加relativePath设置</pre>
 <h3>七、多模块开发期间Debug</h3>
 一般我们在开发web模块的时候会启用tomcat或者jboss的debug模式来断点调试应用，但是你会发现如果web模块依赖了service模块想进入service模块debug但是eclipse却告诉你找不到class的源码，解决办法：
-<blockquote>把service模块加入到Build Path的Project列表中</blockquote>
+<pre>把service模块加入到Build Path的Project列表中</pre>
 
 <h3>八、其他方案</h3>
 如何布局是根据每一个项目组的安排定义的，比如
@@ -223,7 +223,7 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 	<li>或许web模块单独一个子模块，其他的entyty、dao、service集中在一个子模块model中</li>
 </ol>
 
-<blockquote><strong>怎么布局需要根据项目实际情况来定义</strong>，当然要考虑到单个子模块的重复利用，例如service模块在本例中被web-admin和web-site模块使用，如果以后再加入webservice模块那么webservice也要依赖，或许还有命令行(command)模块也要依赖</blockquote>
+<pre><strong>怎么布局需要根据项目实际情况来定义</strong>，当然要考虑到单个子模块的重复利用，例如service模块在本例中被web-admin和web-site模块使用，如果以后再加入webservice模块那么webservice也要依赖，或许还有命令行(command)模块也要依赖</pre>
 
 <h3>九、结束语</h3>
 这是一篇难产的文章，有些原因影响经过了3个晚上才出世，呵呵

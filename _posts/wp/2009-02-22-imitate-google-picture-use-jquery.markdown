@@ -13,8 +13,8 @@ date: 2009-02-22 16:57:07 +08:00
 下面介绍如何实现：
 
 1、在html中增加两个img
-<blockquote>&lt;img src="panda.jpg" border="0" alt="" width="231" height="300" /&gt;
-&lt;img src="no.jpg" alt="" width="231" height="300" /&gt;</blockquote>
+<pre>&lt;img src="panda.jpg" border="0" alt="" width="231" height="300" /&gt;
+&lt;img src="no.jpg" alt="" width="231" height="300" /&gt;</pre>
 2、准备一个提示信息使用的DIV层
 
 &lt;div id="tipInfo" style="display:none"&gt;&lt;/div&gt;

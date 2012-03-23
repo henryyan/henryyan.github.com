@@ -9,12 +9,12 @@ date: 2011-07-24 16:04:19 +08:00
 使用jQuery差不多3年了，开始只是简单的应用，后来发现了官网开发的jQuery UI；从去年的一个项目开始使用jQuery UI作为主要的UI插件，选择jQuery UI的主要原因是因为需要使用jqGrid这个插件，而这个插件又使用了jQuery UI的主题;再者jQuery UI提供主题的自定义，这样对于一些喜欢不同风格的客户来说就比较容易切换自己喜欢的主题了。
 写这篇博文的想法就是因为基于jQuery UI开发了两套系统，并且都运行正常，而且客户的反应也不错，所以整理以下和大家分享我的经验，同时也和正在使用的童鞋交流，希望起到抛砖引玉的作用。
 <h3>二、jQuery UI基础</h3>
-<blockquote>
+<pre>
 <strong>官网</strong>：<a href="http://jqueryui.com/" target="_blank">http://jqueryui.com/</a>
 <strong>演示</strong>：<a href="http://jqueryui.com/demos/" target="_blank">http://jqueryui.com/demos/</a>
 <strong>下载</strong>：<a href="http://jqueryui.com/download" target="_blank">http://jqueryui.com/download</a>
 <strong>在线主题自定义</strong>：<a href="http://jqueryui.com/themeroller/" target="_blank">http://jqueryui.com/themeroller/</a>
-</blockquote>
+</pre>
 在我们的系统中主要使用了Dialog、Tab、Button、Autocomplete等功能，下面会对于使用过程中遇到的问题进行列举：
 <!--more-->
 <ul>
@@ -90,28 +90,28 @@ $('#div_1').dialog({
 具体每个组件怎么使用看官网的demo和文档吧，还是比较详细的。
 
 <h3>三、jQuery UI扩展</h3>
-<blockquote>
+<pre>
 DEMO：<a href="http://quasipartikel.at/multiselect/">http://quasipartikel.at/multiselect/</a>
-</blockquote>
+</pre>
 
 另外一个类似的Multiselect插件：
-<blockquote>
+<pre>
 DEMO：<a href="http://www.erichynds.com/jquery/jquery-ui-multiselect-widget/">http://www.erichynds.com/jquery/jquery-ui-multiselect-widget/</a>
-</blockquote>
+</pre>
 这两个插件功能差不多，都可以过滤数据，而且完全使用jQuery UI主题，根据应用环境自己选择。
 
-<blockquote>
+<pre>
 还有一些扩展再jQuery UI官网的SVN的分支中，地址：<a href="http://jquery-ui.googlecode.com/svn/branches">http://jquery-ui.googlecode.com/svn/branches</a>
 希望能从中发现你需要的功能。
-</blockquote>
+</pre>
 
 <h3>四、jQuery UI扩展-jqGrid</h3>
 
-<blockquote>一个功能强大的grid插件，一个吸引我使用jQuery UI的插件，一个能满足日常需要的插件，一个特别想推荐给大家的插件，它就是jqGrid。<br/>
+<pre>一个功能强大的grid插件，一个吸引我使用jQuery UI的插件，一个能满足日常需要的插件，一个特别想推荐给大家的插件，它就是jqGrid。<br/>
 <strong>官网</strong>：<a href="http://www.trirand.com/blog/">http://www.trirand.com/blog/</a>
 <strong>DEMO</strong>：<a href="http://www.trirand.com/blog/jqgrid/jqgrid.html">http://www.trirand.com/blog/jqgrid/jqgrid.html</a>
 <strong>WIKI</strong>：<a href="http://www.trirand.com/jqgridwiki/doku.php">http://www.trirand.com/jqgridwiki/doku.php</a>
-</blockquote>
+</pre>
 使用jqGrid有段时间了，经常遇到有些童鞋问我具体怎么用，说实话jqGrid的DEMO和WIKI文档写的很清楚，而且有示例代码，所以对于怎么使用我就不做代码搬运工了，我讲的是经验。
 <h3>五、jQuery UI扩展-jqGrid高级应用(从正在运行项目中提取)</h3>
 <ol>
@@ -382,7 +382,7 @@ function listDatas(size) {
 </ol>
 <h3>六、结束语</h3>
 以上列出了经常使用的一些配置和问题解决办法，所以抱着详细学习插件使用方法的你失望了，因为各个插件的官网均有详细的文档和DEMO演示；
-<blockquote>以上的代码在<a href="http://code.google.com/p/wsria/source/browse/trunk/wsria-demo/src/main/webapp/js/common/common.js"><strong>这里</strong></a>可以找到，你可以从中提取，使用JSON扩展方式布局。<br/>
+<pre>以上的代码在<a href="http://code.google.com/p/wsria/source/browse/trunk/wsria-demo/src/main/webapp/js/common/common.js"><strong>这里</strong></a>可以找到，你可以从中提取，使用JSON扩展方式布局。<br/>
 基本上在我的每个页面都会引入<a href="http://code.google.com/p/wsria/source/browse/trunk/wsria-demo/src/main/webapp/js/common/common.js">common.js</a>，大家可以整理出一个自己的common.js
-</blockquote>
+</pre>
 

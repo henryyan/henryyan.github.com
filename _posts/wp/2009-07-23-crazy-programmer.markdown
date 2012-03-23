@@ -5,7 +5,7 @@ wordpress_id: 655
 wordpress_url: http://www.wsria.com/?p=655
 date: 2009-07-23 16:52:37 +08:00
 ---
-<blockquote>2008年年底买的《疯狂的程序员》一书，看了一多半，感觉写的很好；程序员是崇尚技术的，而且两个程序员在一起大多数时间都在谈技术，把它称为程序员版的奋斗一点也不为过，激励你、给你指路，看书的时候只是用笔标记了一下没有整理，正好我订阅的CSDN的RSS看到了这篇文章，整理的不错特意转载，原文来自<a href="http://blog.csdn.net/gisfarmer/archive/2009/07/22/4371153.aspx" target="_blank">http://blog.csdn.net/gisfarmer/archive/2009/07/22/4371153.aspx</a></blockquote>
+<pre>2008年年底买的《疯狂的程序员》一书，看了一多半，感觉写的很好；程序员是崇尚技术的，而且两个程序员在一起大多数时间都在谈技术，把它称为程序员版的奋斗一点也不为过，激励你、给你指路，看书的时候只是用笔标记了一下没有整理，正好我订阅的CSDN的RSS看到了这篇文章，整理的不错特意转载，原文来自<a href="http://blog.csdn.net/gisfarmer/archive/2009/07/22/4371153.aspx" target="_blank">http://blog.csdn.net/gisfarmer/archive/2009/07/22/4371153.aspx</a></pre>
 
 在此记录这本书中的精华（个人认为是精华！呵呵！如果有不对或遗漏的地方还希望大家莫怪，水平有限！）目的是以后方便时刻提醒自己！
 

@@ -93,9 +93,9 @@ public class UserAuthorityInterceptor implements MethodInterceptor {
 </li>
 <li>
 <h2>前端JS文件</h2>
-<blockquote>
+<pre>
 这是我们要设置全局的一个ajaxSetup来控制所有ajax请求，代码如下：
-</blockquote>
+</pre>
 <pre lang="javascript" line="1">
 $.ajaxSetup({
 		cache : false,
@@ -135,7 +135,7 @@ function getTopWin() {
 OK，启动服务测试，在没有登录的情况下打开主页面，执行一个保存动作发现直接跳转到了登录页面
 
 
-<blockquote>本文只是说明一下实现的思路及主要代码，细节代码请读者自己实现，有问题请留言或者MSN，谢谢您的关注</blockquote>
+<pre>本文只是说明一下实现的思路及主要代码，细节代码请读者自己实现，有问题请留言或者MSN，谢谢您的关注</pre>
 
 
 </ol>
