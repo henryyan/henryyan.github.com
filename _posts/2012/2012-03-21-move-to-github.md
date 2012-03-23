@@ -15,6 +15,8 @@ title: "从Wordpress迁移到Github"
 **Markdown**：“所见即所得”，和Wiki的语法类似，对于经常写Wiki的我来说容易上手，Markdown的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown是一种书写的格式。
 你可以不再关注html的各种标签、格式，只要一些简单的标记就可以生成整洁漂亮的网页。
 
+Markdown的语法可以参考riku翻译：[http://wowubuntu.com/markdown/](http://wowubuntu.com/markdown/)
+
 ## 迁移过程
 ### 开通Github Pages
 Github默认会开通yourname.github.com这个域名，所以只要创建一个yourname.github.com版本库用就可以生成站点，具体请参考官方文档：[Github Pages](http://pages.github.com/)
@@ -38,6 +40,8 @@ Github默认会开通yourname.github.com这个域名，所以只要创建一个y
 
 ## Jekyll使用提示
 运行Jekyll生成静态网页只需要使用<pre>jekyll --server</pre>即可，访问[http://localhost:4000](http://localhost:4000)即可，但是如果你在撰写的时候可能要写一部分看看效果，这个时候要在Shell中Ctrl+C然后再运行jekyll --server，能不能在文件被改动的时候自动生成呢？当然可以：<pre>jekyll --server --auto</pre>即可，控制台会输出如下内容：<pre>[2012-03-23 22:54:50] regeneration: 1 files changed</pre>，现在刷新网页就是最新编写的内容了。
+
+其他的选项参考[这里](https://github.com/mojombo/jekyll/wiki/configuration)
 
 ## Markdown编辑工具
 我使用的[Ubuntu](http://www.ubuntu.com, "Ubuntu Desktop x64")系统，有一个专门编写Markdown的可视化工具[ReText](http://sourceforge.net/p/retext/home/ReText/)，可以编写边预览，特定的语法可以直接显示效果，真正的“所见即所得”。
