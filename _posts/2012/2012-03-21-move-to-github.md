@@ -46,4 +46,7 @@ Github默认会开通yourname.github.com这个域名，所以只要创建一个y
 ## Markdown编辑工具
 我使用的[Ubuntu](http://www.ubuntu.com, "Ubuntu Desktop x64")系统，有一个专门编写Markdown的可视化工具[ReText](http://sourceforge.net/p/retext/home/ReText/)，可以编写边预览，特定的语法可以直接显示效果，真正的“所见即所得”。
 
+## 博客主题
+博客的主题来自[群英会|http://www.worldhello.net/](http://www.worldhello.net/)，我稍加了一些改动，如果你不想搞上面那么多步骤的话可以直接点击右上角的**Fork Me On Github**，使用git clone之后把_posts下面的文章删除，再把一些配置信息设置为自己的就可以了。
+
 来吧，Github已经为我们准备好了，你还等什么？
