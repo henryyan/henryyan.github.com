@@ -316,3 +316,5 @@ code {
 .float-right { float: right; }
 
 a img { border: 0; }
+
+.sidebar-posts li {padding: 2px 0 2px;}

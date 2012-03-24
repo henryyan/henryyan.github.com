@@ -24,7 +24,18 @@ full_posts: 3
   <h2>博客公告</h2>
   <div class='sidebar'>
     <div class="sidebar-item">
-      <ul>
+      <div id="cse" style="width: 100%;">Loading</div>
+      <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+      <script type="text/javascript"> 
+        google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.V2_DEFAULT});
+        google.setOnLoadCallback(function() {
+          var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+            '008448290842185643507:htbcp2-now4', customSearchOptions);
+          customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+          customSearchControl.draw('cse');
+        }, true);
+      </script>
+      <ul style="margin-top: -3px">
         <li>QQ：576525789</li>
         <li>RIA交流群：23539326</li>
         <li>Git交流群：23541011</li>
@@ -38,6 +49,17 @@ full_posts: 3
     <ul>
       <li>邮件：yanhonglei[@]gmail.com </li>
       <li>微博：<a href="http://weibo.com/kafeituzi" target="_blank">@kafeituzi</a></li>
+    </ul>
+    </div>
+  </div>
+
+  <h2>最新文章</h2>
+  <div class='sidebar'>
+    <div class="sidebar-item">
+    <ul class='sidebar-posts'>
+      {% for post in site.posts limit:5 %}
+      <li title='发布日期：{{post.date | date_to_string}}'><a href='{{post.url}}'>{{post.title}}</a></li>
+      {% endfor %}
     </ul>
     </div>
   </div>
