@@ -56,6 +56,8 @@ title: "工作流引擎Activiti使用总结(Writing...)"
 
 #### 2.1.2 使用压缩包方式部署
 
+Activiti支持部署*.bpmn20.xml、bar、zip格式的流程定义。
+
 使用Activit Deisigner工具设计流程图的时候会有三个类型的文件:
 
 * .activiti设计工具使用的文件
@@ -64,9 +66,23 @@ title: "工作流引擎Activiti使用总结(Writing...)"
 
 * .png流程图图片
 
+解决办法就是把xml文件和图片文件同时部署，因为在单独部署xml文件的时候Activiti会自动生成一张流程图的图片文件，但是这样在使用的时候坐标和图片对应不起来……
+
+所以把xml和图片同时部署的时候Activiti自动关联xml和图片，当需要获取图片的时候直接返回部署时压缩包里面的图片文件，而不是Activiti自动生成的图片文件
+
 ##### 2.1.2.1 使用工具打包Bar文件
 
+右键项目名称然后点击“Create deployment artifacts”，会在src目录中创建**deployment**文件夹，里面包含*.bar文件.
+
 ##### 2.2.2.2 使用Ant脚本打包Zip文件
+
+这也是我们采用的办法，你可以手动选择xml和png打包成zip格式的文件，也可以像我们一样采用ant target的方式打包这两个文件。
+
+<script src="https://gist.github.com/2179177.js"> </script>
+
+这样当修改流程定义文件后只要运行ant命令就可以打包了：<pre>ant workflow.package.oa.leave</pre>
+
+现在部署bar或者zip文件查看流程图图片就不是乱码了，而是你的压缩包里面的png文件。
 
 ### 2.2 业务和流程的关联方式
 
