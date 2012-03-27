@@ -30,7 +30,7 @@ date: 2010-11-05 20:25:51 +08:00
 
 无图不给力，有图有真相：
 
-![用keytool生成证书](/wpfiles/2010/11/use-keytool-create-key.gif)
+![用keytool生成证书](/files/2010/11/use-keytool-create-key.gif)
 
 具体的输入项图片中都有说明，有一点我要解释一下；在输入完密码后提示输入域名是我输入的是sso.wsria.com，其实这个域名是不存在的，但是我为了演示所以虚拟了这个域名，技巧在于修改
 <pre>C:\Windows\System32\drivers\etc\hosts</pre>
@@ -50,7 +50,7 @@ date: 2010-11-05 20:25:51 +08:00
 
 来点颜色：
 
-![用keytool导出证书](/wpfiles/2010/11/use-keytool-export-crt.gif)
+![用keytool导出证书](/files/2010/11/use-keytool-export-crt.gif)
 
 至此导出证书完成，可以分发给应用的JDK使用了，接下来讲解客户端的JVM怎么导入证书。
 
@@ -60,7 +60,7 @@ date: 2010-11-05 20:25:51 +08:00
 
 来点颜色瞧瞧：
 
-![用keytool导出证书](/wpfiles/2010/11/use-keytool-import-crt-to-client-jvm.gif)
+![用keytool导出证书](/files/2010/11/use-keytool-import-crt-to-client-jvm.gif)
 
 ### 特别说明
 
@@ -89,7 +89,7 @@ D:\tools\jdk\1.6\jdk1.6.0_20\jre\lib\security -- 是jre的目录；密码还是�
 好了，到此Tomcat的SSL启用完成，现在你可以启动tomcat试一下了，例如本教程输入地址：https://sso.wsria.com:8443/
 打开的是：
 
-![浏览器提示证书错误](/wpfiles/2010/11/explorer-tip-unsafe-crt-1.gif)
+![浏览器提示证书错误](/files/2010/11/explorer-tip-unsafe-crt-1.gif)
 
 好的，那么我们点击“继续浏览此网站(不推荐)。现在进入Tomcat目录了吧，如果是那么你又向成功迈进了一步。
 
@@ -103,7 +103,7 @@ OK，接下来要配置CAS服务器了。
 
 * 现在可以访问CAS应用了，当然要使用HTTPS加密协议访问，例如本教程地址：https://sso.wsria.com:8443/cas/login ，现在打开了CAS服务器的页面输入admin/admin点击登录（CAS默认的验证规则只要用户名和密码相同就通过）所以如果你看到下面的这张图片你就成功了
 
-![CAS登录成](/wpfiles/2010/11/cas-login-success.gif)
+![CAS登录成](/files/2010/11/cas-login-success.gif)
 
 你成功了吗？如果没有成功请再检查以上步骤！
 

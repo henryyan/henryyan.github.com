@@ -39,7 +39,7 @@ title: "工作流引擎Activiti使用总结"
 
 流程图的乱码如下图所示：
 
-![通过*.bpmn20.xml部署后中文出现乱码](/wpfiles/2012/03/activiti-process-messy-character.png)
+![通过*.bpmn20.xml部署后中文出现乱码](/files/2012/03/activiti-process-messy-character.png)
 
 解决办法有两种：
 
@@ -299,21 +299,21 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 
 申请界面的截图：
 
-![请假申请界面](/wpfiles/2012/03/leave-apply.png)
+![请假申请界面](/files/2012/03/leave-apply.png)
 
 ### 6.2 流程状态
 
-![包含业务和流程数据的界面](/wpfiles/2012/03/workflow-ui.png)
+![包含业务和流程数据的界面](/files/2012/03/workflow-ui.png)
 
 ### 6.3 流程跟踪
 
 图片方式显示当前节点：
 
-![图片方式显示当前节点](/wpfiles/2012/03/workflow-trace-img.png)
+![图片方式显示当前节点](/files/2012/03/workflow-trace-img.png)
 
 列表形式显示流程流转过程: 
 
-![列表形式显示流程流转过程](/wpfiles/2012/03/workflow-trace-text.png)
+![列表形式显示流程流转过程](/files/2012/03/workflow-trace-text.png)
 
 #### 6.3.1 当前节点定位JS
 
