@@ -111,7 +111,7 @@ Activiti官方的例子使用的就是在流程定义中设置每一个节点显
 当然在设置业务ID的时候也可以同时设置variables参数作为流程启动时的参数，在Task中可以获取它。
 
 其中**businessKey**就是业务ID，例如要申请请假，那么先填写登记信息，然后（保存+启动流程），因为请假是单独设计的数据表，所以保存后得到实体ID就可以把它传给**startProcessInstanceById**方法启动流程。当需要根据businessKey查询流程的时候就可以通过API查询:
-<pre>runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(processInstanceBusinessKey, processDefinitionKey)</pre>
+<pre class="brush: java">runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(processInstanceBusinessKey, processDefinitionKey)</pre>
 
 **建议数据库冗余设计**：在业务表设计的时候添加一列：**PROCESS_INSTANCE_ID varchar2(64)**，在流程启动之后把流程ID更新到业务表中，这样不管从业务还是流程都可以查询到对方！
 
@@ -161,7 +161,7 @@ Activiti提供了两个流程设计工具，但是面向对象不同。
 
 * 对于实现了org.activiti.engine.delegate包中的接口的类需要被事务控制的实现类需要被Spring代理，并且添加事务的Annotation或者在xml中配置，例如:
 
-<pre>
+<pre class="brush: java">
 /**
  * 创建缴费流程的时候自动创建实体
  * 
@@ -177,7 +177,7 @@ public class CreatePaymentProcessListener implements ExecutionListener {
 ## 4.使用单元测试
 
 单元测试均使用Spring的AbstractTransactionalJUnit4SpringContextTests作为SuperClass，并且在测试类添加：
-<pre>
+<pre class="brush: java">
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
 @RunWith(SpringJUnit4ClassRunner.class)
 </pre>
@@ -206,7 +206,7 @@ public class CreatePaymentProcessListener implements ExecutionListener {
 
 对应的API查询：
 
-<pre>
+<pre class="brush: java">
 /**
  * 获取未签收的任务查询对象
  * @param userId	用户ID
@@ -229,7 +229,7 @@ public TaskQuery createUnsignedTaskQuery(String userId) {
 
 对应的API查询：
 
-<pre>
+<pre class="brush: java">
 /**
  * 获取正在处理的任务查询对象
  * @param userId	用户ID
@@ -249,7 +249,7 @@ public TaskQuery createTodoTaskQuery(String userId) {
 
 对应的API查询：
 
-<pre>
+<pre class="brush: java">
 /**
  * 获取未经完成的流程实例查询对象
  * @param userId	用户ID
@@ -268,7 +268,7 @@ public ProcessInstanceQuery createUnFinishedProcessInstanceQuery(String userId) 
 
 从表**ACT_HI_PROCINST**中查询数据。
 
-<pre>
+<pre class="brush: java">
 /**
  * 获取已经完成的流程实例查询对象
  * @param userId	用户ID
