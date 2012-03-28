@@ -35,7 +35,10 @@
 						'sleep sort source split ssh strace su sudo sum symlink sync tail tar tee test time ' +
 						'times touch top traceroute trap tr true tsort tty type ulimit umask umount unalias ' +
 						'uname unexpand uniq units unset unshar useradd usermod users uuencode uudecode v vdir ' +
-						'vi watch wc whereis which who whoami Wget xargs yes git clone mvn ant'
+						'vi watch wc whereis which who whoami Wget xargs yes ' +
+						'git clone submodule init rebase remote ' +
+						'mvn compile clean package install deploy ' +
+						'ant svn commit update clean add'
 						;
 
 		this.regexList = [
