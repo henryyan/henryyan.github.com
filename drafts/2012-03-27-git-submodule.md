@@ -2,6 +2,7 @@
 layout: post
 title: "Git Submoudle总结"
 category: git
+published: true
 tags: 
  - scm
  - git
@@ -391,6 +392,10 @@ Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/ws/../repos/project1.git
    7157977..c96838a  master -> master
 </pre>
+
+OK，大功高成，我们完成了Submodule的修改并把**libs/lib1**的最新commit id提交到了仓库。
+
+接下来要看看**project1**怎么获取submodule了。
 
 ### 2.4 更新主项目的Submodules
 
