@@ -72,7 +72,7 @@ D:\tools\jdk\1.6\jdk1.6.0_20\jre\lib\security -- 是jre的目录；密码还是�
 准备好一个干净的tomcat，本教程使用的apache-tomcat-6.0.29
 打开tomcat目录的conf/server.xml文件，开启83和87行的注释代码，并设置keystoreFile、keystorePass修改结果如下：
 
-<pre>
+<pre class="brush: xml">
 <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
            maxThreads="150" scheme="https" secure="true"
            clientAuth="false" sslProtocol="TLS" 
