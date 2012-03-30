@@ -855,7 +855,7 @@ Git提示lib1和lib2有更新内容，这个判断的依据来源于submodule co
 把下面的脚本复制到**bin/update-submodules.sh**中：
 <pre class="brush: shell">
 #!/bin/bash
-grep submodule .gitmodules | sed -e 's/submodule//g' | sed -e 's/"//g' | sed -e 's/\[//g' | sed -e 's/\]//g' > /tmp/study-git-submodule-dirs
+grep path .gitmodules | awk '{ print $3}' > /tmp/study-git-submodule-dirs
 
 # read
 while read LINE
