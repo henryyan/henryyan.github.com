@@ -837,7 +837,7 @@ Git提示lib1和lib2有更新内容，这个判断的依据来源于submodule co
 #### 2.8.1 牛刀小试
 
 <pre class="brush: shell">
-➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ grep submodule .gitmodules | sed -e 's/submodule//g' | sed -e 's/"//g' | sed -e 's/\[//g' | sed -e 's/\]//g' > /tmp/study-git-submodule-dirs
+➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ grep path .gitmodules | awk '{ print $3 }' > /tmp/study-git-submodule-dirs
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ cat /tmp/study-git-submodule-dirs 
  libs/lib1
  libs/lib2
@@ -847,7 +847,7 @@ Git提示lib1和lib2有更新内容，这个判断的依据来源于submodule co
 
 #### 2.8.2 上路
 
-<pre>
+<pre class="brush: shell">
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ mkdir bin
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ vi bin/update-submodules.sh
 </pre>
@@ -855,7 +855,7 @@ Git提示lib1和lib2有更新内容，这个判断的依据来源于submodule co
 把下面的脚本复制到**bin/update-submodules.sh**中：
 <pre class="brush: shell">
 #!/bin/bash
-grep path .gitmodules | awk '{ print $3}' > /tmp/study-git-submodule-dirs
+grep path .gitmodules | awk '{ print $3 }' > /tmp/study-git-submodule-dirs
 
 # read
 while read LINE
