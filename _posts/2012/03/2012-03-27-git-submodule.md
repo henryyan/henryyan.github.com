@@ -2,7 +2,6 @@
 layout: post
 title: "Git Submoudle使用完整教程"
 category: git
-published: true
 tags: 
  - scm
  - git
