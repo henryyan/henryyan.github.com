@@ -73,7 +73,7 @@ D:\tools\jdk\1.6\jdk1.6.0_20\jre\lib\security -- 是jre的目录；密码还是�
 打开tomcat目录的conf/server.xml文件，开启83和87行的注释代码，并设置keystoreFile、keystorePass修改结果如下：
 
 <pre>
-&lt;Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+<Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
            maxThreads="150" scheme="https" secure="true"
            clientAuth="false" sslProtocol="TLS" 
        keystoreFile="D:/keys/wsriakey"
@@ -111,7 +111,7 @@ OK，接下来要配置CAS服务器了。
 
 #### 使用Maven构建：
 使用cmd或者shell进入cas-server-3.4.10目录，运行：
-<pre>mvn package -pl cas-server-webapp,cas-server-support-jdbc</pre>
+<pre class="brush: shell">mvn package -pl cas-server-webapp,cas-server-support-jdbc</pre>
 意思是只需要构建cas-server-webapp和cas-server-support-jdbc，如果需要其他的请根据文件夹名称设置或者构建全部模块，打包全部模块命令：mvn package 即可。打包过程中会从网络下载需要的jar包，请耐心等待；如果在~/.m2/settings.xml中定义了mirror代理<mirrorOf>*</mirrorOf>，那么请把*随便修改一个字符，否则下载jar包会失败！
 
 打包完成后就可以从cas-server-webapp/target/cas.war复制到你的tomcat/webapp中；或者直接复制cas-server-webapp/target/cas-server-webapp-3.4.10目录到tomcat/webapp目录下，其他步骤和上面一样。
@@ -123,9 +123,32 @@ OK，接下来要配置CAS服务器了。
 配置的地方如下：
 
 找到第92行处，注释掉：SimpleTestUsernamePasswordAuthenticationHandler这个验证Handler，这个是比较简单的，只是判断用户名和密码相同即可通过，这个肯定不能在实际应用中使用，弃用！
-----
-注释掉92行后在下面添加下面的代码：
-<script src="https://gist.github.com/2173231.js"> </script>
+
+注释掉92行后在下面添加下面的代码： 
+
+<pre class="brush:xml">
+<bean class="org.jasig.cas.adaptors.jdbc.QueryDatabaseAuthenticationHandler">
+	<property name="dataSource" ref="dataSource" />
+	<property name="sql" value="select password from t_admin_user where login_name=?" />
+	<property name="passwordEncoder" ref="MD5PasswordEncoder"/>
+</bean>
+</pre>
+
+在文件的末尾之前加入如下代码：
+<pre class="brush:xml">
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+   <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+   <property name="url"><value>jdbc:mysql:///wsriademo</value></property>
+   <property name="username"><value>root</value></property>
+   <property name="password"><value>root</value></property>
+</bean>
+
+<bean id="MD5PasswordEncoder" class="org.jasig.cas.authentication.handler.DefaultPasswordEncoder">
+<constructor-arg index="0">
+<value>MD5</value>
+</constructor-arg>
+</bean>
+</pre>
 
 复制cas-server-3.4.3.1\modules\cas-server-support-jdbc-3.4.3.1.jar和mysql驱动jar包到tomcat/webapp/cas/WEB-INF/lib目录
 
@@ -136,7 +159,8 @@ OK，接下来要配置CAS服务器了。
 * **dataSource**,我就不用解释了吧，就是使用JDBC查询时的数据源
 
 * **sql**，语句就是查询哪一张表，本例根据t_admin_user表的login_name字段查询密码，CAS会匹配用户输入的密码，如果匹配则通过；下面是t_admin_user的表结构：
-<pre>
+
+<pre class="brush: sql">
 create table t_admin_user (
 	id bigint not null auto_increment,
 	email varchar(255),
@@ -159,23 +183,116 @@ create table t_admin_user (
 
 ##### 2011-11-05更新：
 用maven打包server的方式一样，在cas-client-3.2.1目录中运行命令：
-<pre>mvn package -pl cas-client-core -DskipTests=true</pre>
+<pre class="brush: shell">mvn package -pl cas-client-core -DskipTests=true</pre>
 然后从target目录中复制cas-client-core-3.2.1.jar到应用的WEB-INF/lib目录中
 
 #### Maven型
 
-<pre>
-&lt;dependency>
-	&lt;groupId>org.jasig.cas.client&lt;/groupId>
-	&lt;artifactId>cas-client-core&lt;/artifactId>
-	&lt;version>3.1.12&lt;/version>
-&lt;/dependency>
+<pre class="brush:xml">
+<dependency>
+	<groupId>org.jasig.cas.client</groupId>
+	<artifactId>cas-client-core</artifactId>
+	<version>3.1.12</version>
+</dependency>
 </pre>
 
 ### 设置filter
 
 编辑web.xml，然后粘贴下面的代码：
-<script src="https://gist.github.com/2173319.js"> </script>
+<pre class="brush:xml">
+<!-- 用于单点退出，该过滤器用于实现单点登出功能，可选配置-->
+<listener>
+<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+</listener>
+
+<!-- 该过滤器用于实现单点登出功能，可选配置。 -->
+<filter>
+<filter-name>CAS Single Sign Out Filter</filter-name>
+<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>CAS Single Sign Out Filter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<!-- 该过滤器负责用户的认证工作，必须启用它 -->
+<filter>
+<filter-name>CASFilter</filter-name>
+<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+<init-param>
+<param-name>casServerLoginUrl</param-name>
+<param-value>https://sso.wsria.com:8443/cas/login</param-value>
+<!--这里的server是服务端的IP-->
+</init-param>
+<init-param>
+<param-name>serverName</param-name>
+<param-value>http://localhost:10000</param-value>
+</init-param>
+</filter>
+<filter-mapping>
+<filter-name>CASFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<!-- 该过滤器负责对Ticket的校验工作，必须启用它 -->
+<filter>
+<filter-name>CAS Validation Filter</filter-name>
+<filter-class>
+org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>
+<init-param>
+<param-name>casServerUrlPrefix</param-name>
+<param-value>https://sso.wsria.com:8443/cas</param-value>
+</init-param>
+<init-param>
+<param-name>serverName</param-name>
+<param-value>http://localhost:10000</param-value>
+</init-param>
+</filter>
+<filter-mapping>
+<filter-name>CAS Validation Filter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<!--
+该过滤器负责实现HttpServletRequest请求的包裹，
+比如允许开发者通过HttpServletRequest的getRemoteUser()方法获得SSO登录用户的登录名，可选配置。
+-->
+<filter>
+<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+<filter-class>
+org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<!--
+该过滤器使得开发者可以通过org.jasig.cas.client.util.AssertionHolder来获取用户的登录名。
+比如AssertionHolder.getAssertion().getPrincipal().getName()。
+-->
+<filter>
+<filter-name>CAS Assertion Thread Local Filter</filter-name>
+<filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>CAS Assertion Thread Local Filter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<!-- 自动根据单点登录的结果设置本系统的用户信息 -->
+<filter>
+<display-name>AutoSetUserAdapterFilter</display-name>
+<filter-name>AutoSetUserAdapterFilter</filter-name>
+<filter-class>com.wsria.demo.filter.AutoSetUserAdapterFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>AutoSetUserAdapterFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+<!-- ======================== 单点登录结束 ======================== -->
+</pre>
+
 
 每个Filter的功能我就不多说了，都有注释的，关键要解释一下AutoSetUserAdapterFilter的作用和原理.
 查看完整的web.xml请 [猛击这里](http://code.google.com/p/wsria/source/browse/branches/wsria-demo-sso/src/main/webapp/WEB-INF/web.xml)
@@ -239,10 +356,10 @@ cas\WEB-INF\view\jsp\default\ui的一些JSP文件，每一个文件的用途文�
 
 * **验证安装：**重新打开一个命令窗口，
 
-	* linux用户可以运行：<pre>. .bashrc</pre>或者<pre>. /etc/profile</pre>
+	* linux用户可以运行：<pre class="brush: shell">source .bashrc</pre>或者<pre class="brush: shell">source /etc/profile</pre>
 	* windows用户重新打开cmd窗口
 
-在cmd或者shell中进入解压的cas server目录后运行:mvn -version后如果看到打印系统信息和maven版本信息后证明配置ok
+在cmd或者shell中进入解压的cas server目录后运行:**mvn -version**后如果看到打印系统信息和maven版本信息后证明配置ok
 
 ## 十三、更新记录_2011-11-18
 
