@@ -3,6 +3,7 @@ layout: master
 ---
 <div class='post'>
   <span class='date'>{{page.date | date_to_string}}</span>
+  <a href='{{post.url}}#comments' title='分享文章、查看评论' style="float:right">Comments</a>
   <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
   <div class='body'>{{ content }}</div>
 </div>
