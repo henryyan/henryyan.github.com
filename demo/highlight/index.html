@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>index.html</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description" content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		
+		<!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+		<style type="text/css">
+		.odd {
+			background-color: red;
+		}
+		.hl {
+			background-color: blue;
+		}
+		.move {
+			background-color: green;
+		}
+		</style>
+		<script type="text/javascript" src="../jquery-1.3.2.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#datas tr:odd').addClass('odd');// 设置各行变色
+				
+				$('#datas tr:not(:eq(0))').click(function(){
+					$(this).toggleClass('hl');
+					if($(this).hasClass('hl')) {
+						$(':checkbox', this).attr('checked', true);
+					} else {
+						$(':checkbox', this).attr('checked', false);
+					}
+				});
+				
+				$('#datas tr:not(:eq(0))').hover(function() {
+					$(this).addClass('move');
+				}, function() {
+					$(this).removeClass('move');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<table width="100%" border="1" id="datas">
+			<thead>
+				<tr><td>&nbsp;</td>
+				<td>th one</td>
+				<td>th tow</td>
+				<td>th three</td>
+				<td>th four</td></tr>
+			</thead>
+			<tr>
+				<td><input type='checkbox' name='chk' value='1'/></td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+			</tr>
+			<tr>
+				<td><input type='checkbox' name='chk' value='2'/></td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+			</tr>
+			<tr>
+				<td><input type='checkbox' name='chk' value='3'/></td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+			</tr>
+			<tr>
+				<td><input type='checkbox' name='chk' value='4'/></td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+				<td>内容test</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jquery.scrollto演示</title>
+    <script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollto.pack.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#scrollto_bottom").click(function(){
+            $('#bottom').ScrollTo(500);
+            return false;//此句不能少，如果禁用js，将走普通的锚点跳转方式
+        });
+        
+        $("#scrollto_top").click(function(){
+            $('#top').ScrollTo(800);
+            return false;//此句不能少，如果禁用js，将走普通的锚点跳转方式
+        });
+    }); 
+    
+    </script>
+</head>
+<body>
+
+<div id="top" style="border:solid 1px red; height:1600px; width:200px;">
+<a id="scrollto_bottom" href="#bottom">到底部(速度500)</a>
+</div>
+
+<div id="bottom" style="border:solid 1px red; height:200px;">
+	我是底部<br/>
+	<a id="scrollto_top" href="#top">到头部(速度800)</a>
+	</div>
+</body>
+</html>

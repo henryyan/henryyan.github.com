@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/bgiframe.js"></script>
+<script type="text/javascript" src="../js/weebox.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/wee.css" />
+</head>
+<script type="text/javascript">
+$().ready(function(){
+	$("#test").click(function(){
+		$.weeboxs.open('#testbox', {
+			title: 'hello world',
+			position: 'element',
+			modal: false,
+			trigger: 'test',
+			width: 400,
+			height: 200,
+			clickClose: true,
+			type: 'wee'
+		});
+	});
+	$("#showdialog").click(function(){
+		$.weeboxs.open(
+			'The operation failed.',
+			{
+				onopen:function(){alert('opened!');},
+				onclose:function(){alert('closed!');},
+				onok:function(){alert('ok'); $.weeboxs.close();}
+			}
+		);
+	});
+	$("#ajaxdialog").click(function(){
+		$.weeboxs.open('/modules/test/testsession.php', {contentType:'ajax'});
+	});
+	
+	$("#l2bb").click(function(){
+		$.weeboxs.open('#l2box',{width:600,height:300});
+	});
+});
+</script>
+<body>
+<div id="testbox" style="display:none;">
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
+</div>
+<h1>Test Dialog</h1>
+Test Dialog Test Dialog Test fdsafddddddddddddddddddDialog Test Dialog Test Dialog Test Dialog Test Dialog Test Dialog
+<input type="button" value="Test  dfsafdsaf fdsa fds Dialog" id="test">
+<hr/>
+
+<div id="checkbox">
+	<label><input type="checkbox" value="1">1111</label>
+	<label><input type="checkbox" value="1">2222</label>
+	<label><input type="checkbox" value="1">3333</label>
+	<label><input type="checkbox" value="1">4444</label>
+</div>
+<a href="#" id="testcheckbox" onclick="$.weeboxs.open('#checkbox', {contentChange:true});">Test CheckBox</a>
+<hr/>		  
+<h1>Change Old Content Dialog</h1>
+<select>
+<option>aaaaa</option>
+<option>aaaaa</option>
+<option>aaaaa</option>
+<option>aaaaa</option>
+<option>aaaaa</option>
+<option>aaaaa</option>
+<option>aaaaa</option>
+<option>aaaaa</option>
+<option>aaaaa</option>
+</select>
+<div id="l2box" style="display:none">
+<input type="button" onclick="$.weeboxs.open('aaaaaaaa',{});" value="第二层">
+</div>						  
+<h1>Show Tow Level Dialog</h1>
+<a href="#" id="l2bb">Dialog</a>
+<hr/>
+
+<h1>Show Dialog</h1>
+<a href="#" id="showdialog">Dialog</a>
+<pre class="prettyprint">
+$.weeboxs.open('The operation failed.');
+</pre>
+<hr/>
+
+<h1>Show Ajax Dialog</h1>
+<a href="#" id="ajaxdialog">Dialog</a>
+<pre class="prettyprint">
+$.weeboxs.open('url', {contentType:'ajax'});
+</pre>
+<hr/>
+
+<h1>Show Error</h1>
+<a href="javascript:$.weeboxs.open('The operation failed.',{type:'error'});void(0);">Error</a>
+<pre class="prettyprint">
+javascript:$.weeboxs.open('The operation failed.',{type:'error'});
+</pre>
+<hr/>
+ 
+<h1>Show Warning</h1>
+<a href="javascript:$.weeboxs.open('There were problems processing the log file.', {type:'warning'});void(0);">Warning</a>
+<pre class="prettyprint">
+$.weeboxs.open('There were problems processing the log file.', {type:'warning'});
+</pre>
+<hr/>
+
+<h1>Show Success</h1>
+<a href="javascript:$.weeboxs.open('Great win detected in sector.', {type:'success'});void(0);">Success</a>
+<pre class="prettyprint">
+$.weeboxs.open('Great win detected in sector.', {type:'success'});
+</pre>
+<hr/>
+
+<h1>Show Prompt/Confirmation</h1>
+<a href="javascript:$.weeboxs.open('Are you sure you want to quit?',{type:'prompt'});void(0);">Prompt</a>
+
+<pre class="prettyprint">
+$.weeboxs.open('Are you sure you want to quit?',{type:'prompt'});
+</pre>
+<hr/>
+
+<h1>Set Title</h1>
+<a href="javascript:$.weeboxs.open('All files have been deleted.', { title: 'No Turning Back Now!' });void(0);">Set Title</a>
+<pre class="prettyprint">
+$.weeboxs.open('All files have been deleted.', { title: 'No Turning Back Now!' });
+</pre>
+<hr/>
+
+<h1>Set Dialog Width</h1>
+<a href="javascript:$.weeboxs.open('Not much here.', { width: 200 });void(0);">Dialog Width</a>
+
+<pre class="prettyprint">
+$.weeboxs.open('Not much here.', { width: 200 });
+</pre>
+<hr/>
+
+<h1>Set AutoClose Time</h1>
+<a href="javascript:$.weeboxs.open('Autoclosing in 5 seconds.', { timeout: 5 });void(0);">AutoClose</a>
+<pre class="prettyprint">
+$.weeboxs.open('Autoclosing in 5 seconds.', { timeout: 5 });
+</pre>
+<hr/>
+
+<h1>Set AutoClose Time and Hide Close Buttons</h1>
+<a href="javascript:$.weeboxs.open('Autoclosing in 5 seconds.', { timeout: 5, showClose: false });void(0);">AutoClose</a>
+
+<pre class="prettyprint">
+$.weeboxs.open('Autoclosing in 5 seconds.', { timeout: 5, showClose: false });
+</pre>
+<hr/>
+
+</body>
+</html>

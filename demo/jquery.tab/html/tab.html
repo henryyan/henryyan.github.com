@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<script type="text/javascript" src="../js/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.idTabs.min.js"></script>
+		<style type="text/css">
+/*主容器*/
+.usual {
+	background: #cee;
+	color: #111;
+	padding: 15px 20px;
+	width: 95%;
+	border: 1px solid #099;
+	margin: 8px auto;
+	position: absolute;
+	z-index: 20;
+	font-size: 12px;
+}
+
+/*选项卡*/
+.divmenu {
+	position: relative;
+	width: 100%;
+	top: 27px;
+	border-bottom: 4px solid #6395c6;
+	z-index: -100;
+}
+
+.usual ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 2em;
+	overflow: auto; /*火狐等清理浮动*/
+	_display: inline-block; /*ie6清理浮动*/
+}
+
+.usual li {
+	list-style: none;
+	float: left;
+	margin: 0 2px;
+	border: 1px solid #6395c6;
+	border-bottom: none;
+}
+
+.usual ul a {
+	display: block;
+	padding: 6px 10px;
+	text-decoration: none;
+	font: 12px Arial;
+	color: #FFF;
+	background: #22A4C4;
+	outline: none;
+}
+
+.usual ul a:hover {
+	color: #00a1ff;
+	background: #eff8fe;
+}
+
+.usual ul a.selected {
+	color: #000;
+	background: #f9f9f9;
+	cursor: default;
+	border-bottom: none;
+}
+
+/*tab页*/
+#content {
+	border: 1px solid #6395c6;
+	border-top: none;
+	padding: 4px;
+	background: #fff;
+}
+</style>
+	</head>
+	<body>
+		<div id="usual1" class="usual">
+			<div class="divmenu"></div>
+			<ul>
+				<li>
+					<a class="selected" href="#tab1">教育</a>
+				</li>
+				<li>
+					<a href="#tab2">儿童</a>
+				</li>
+				<li>
+					<a href="#tab3">育儿</a>
+				</li>
+			</ul>
+			<div id="content">
+				<div id="tab1">
+					金融危机致使校园招聘减少...金融危机致使校园招聘减少<br/>
+					金融危机致使校园招聘减少...金融危机致使校园招聘减少<br/>
+					金融危机致使校园招聘减少...金融危机致使校园招聘减少<br/>
+					金融危机致使校园招聘减少...金融危机致使校园招聘减少<br/>
+					金融危机致使校园招聘减少...金融危机致使校园招聘减少<br/>
+					金融危机致使校园招聘减少...金融危机致使校园招聘减少<br/>
+					金融危机致使校园招聘减少...金融危机致使校园招聘减少<br/>
+					
+				</div>
+				<div id="tab2">
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					青少年网上普法大赛...金融危机致使校园招聘减少<br/>
+					
+				</div>
+				<div id="tab3">
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					今天你为宝宝许愿了吗...金融危机致使校园招聘减少<br/>
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">    
+    $("#usual1 ul").idTabs();    
+</script>
+	</body>
+</html>
