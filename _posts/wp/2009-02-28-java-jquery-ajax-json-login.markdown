@@ -12,12 +12,12 @@ date: 2009-02-28 18:39:27 +08:00
 
 以本站的开源项目账务管理系统的“债务人”模块为例子讲解
 <h2>一、效果预览</h2>
-[caption id="attachment_387" align="aligncenter" width="416" caption="债务人详细页面效果预览"]<img class="size-full wp-image-387" title="userdetail1" src="http://www.wsria.com/wp-content/uploads/2009/02/userdetail1.png" alt="债务人详细页面效果预览" width="416" height="385" />[/caption]
+<img class="size-full wp-image-387" title="userdetail1" src="http://www.kafeitu.me/files/2009/02/userdetail1.png" alt="债务人详细页面效果预览" width="416" height="385" />
 <h2>二、实现方式</h2>
 <pre>基本思想就是绑定列表中的人员名称触发事件，获得当前人员的ID发送ajax请求到后台，后台根据ID查询详细信息，返回JSON数据结果至前台，前台通过对话框组件显示人员详细</pre>
 <strong>1、绑定click事件到列表的人员名称</strong>
 在项目中的iouser/js/iouser.js文件中有这样一个方法：
-<pre lang="javascript">/**
+<pre class="brush: js">/**
  * 点击名称弹出详细
  */
 function regShowDetail() {
@@ -26,12 +26,12 @@ function regShowDetail() {
 	});
 }</pre>
 通过regShowDetail绑定了点击人员时执行showDetail的事件，
-<pre lang="javascript">$(this).parent().parent().find('input[name=chk]').val()
+<pre class="brush: js">$(this).parent().parent().find('input[name=chk]').val()
 //上面这句话就是获得列表左侧的复选框的value值以便传送给后台</pre>
 <ul>
 	<li>下面介绍一下<strong>showDetail</strong><em>方法的功能实现：</em></li>
 </ul>
-<pre lang="javascript"> * 查看用户详细资料
+<pre class="brush: js"> * 查看用户详细资料
  * @param {} userId 用户ID
  */
 function showDetail(userId) {
@@ -141,7 +141,7 @@ print(response, jsonObject.toString());</pre>
 </ul>
 </li>
 	<li> 前台获得了结果集之后就可以根据key获得value来设置详细页面的内容了，代码如下：
-<pre lang="javascript">for (key in json) {
+<pre class="brush: js">for (key in json) {
 	if(key == 'id'){
 		$('#detailDiv #' + key).val(json[key]);
 	} else {

@@ -47,7 +47,7 @@ IT累是肯定的</pre>
 像这种态度是万万不能有的，既然你选择了这一行就要坚持做下去；所以这里说到了对于软件的兴趣，兴趣是我们大家的良师益友是我们事半功倍的利器，如果没有兴趣再聪明的人也成不了气候，看大这里问一下自己有兴趣吗？
 就像我一样初三的时候用借亲戚的学习机和同学的学习机说明书学习五笔，后来学习basic语言一样，你有这样的兴趣吗？
 
-<a href="http://www.wsria.com/wp-content/uploads/2010/07/it-select.png"><img class="size-full wp-image-1037 aligncenter" title="it-select" src="http://www.wsria.com/wp-content/uploads/2010/07/it-select.png" alt="" width="371" height="376" /></a>
+<a href="http://www.kafeitu.me/files/2010/07/it-select.png"><img class="size-full wp-image-1037 aligncenter" title="it-select" src="http://www.kafeitu.me/files/2010/07/it-select.png" alt="" width="371" height="376" /></a>
 看完这些如果是新人仔细考虑一下吧……#&amp;（#&amp;￥（##&amp;（#&amp;
 
 如果是选择了“没有”的人或许不再继续看下去了，那就留给那些选择“有”的童鞋们：

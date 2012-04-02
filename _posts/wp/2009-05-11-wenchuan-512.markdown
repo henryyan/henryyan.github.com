@@ -5,7 +5,7 @@ wordpress_id: 535
 wordpress_url: http://www.wsria.com/?p=535
 date: 2009-05-11 16:16:18 +08:00
 ---
-[caption id="attachment_536" align="alignleft" width="600" caption="汶川大地震一周年，我们集体默哀3分钟，纪念、哀思那些死难者"]<a href="http://www.wsria.com/wp-content/uploads/2009/05/wenchuanyizhounian.png" target="_blank"><img class="size-large wp-image-536" title="汶川大地震一周年，我们集体默哀3分钟，纪念、哀思那些死难者" src="http://www.wsria.com/wp-content/uploads/2009/05/wenchuanyizhounian-1024x217.png" alt="汶川大地震一周年，我们集体默哀3分钟，纪念、哀思那些死难者" width="600" height="110" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2009/05/wenchuanyizhounian.png" target="_blank"><img class="size-large wp-image-536" title="汶川大地震一周年，我们集体默哀3分钟，纪念、哀思那些死难者" src="http://www.kafeitu.me/files/2009/05/wenchuanyizhounian-1024x217.png" alt="汶川大地震一周年，我们集体默哀3分钟，纪念、哀思那些死难者" width="600" height="110" /></a>
 
 最新数据：<span style="text-decoration: line-through;"><span style="color: #ff0000;"><strong>2008年9月25日12时，汶川地震已确认69227人遇难，374643人受伤，失踪17923人</strong></span></span>
 

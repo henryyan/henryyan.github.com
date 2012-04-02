@@ -13,7 +13,7 @@ date: 2010-08-20 13:07:24 +08:00
 下面分享一下easy-ui的layout布局中把jqGrid列表页面嵌入到iframe的大小例子
 <!--more-->
 <h2>功能函数：</h2>
-<pre lang="javascript">function autoResize(options) {
+<pre class="brush: js">function autoResize(options) {
 // 第一次调用
 var size = getWidthAndHeigh();
 if ($.isFunction(options.callback)) {
@@ -59,10 +59,10 @@ function getWidthAndHeigh(resize) {
 }</pre>
 这里需要说明的是要根据浏览器的不同进行高度和宽度的调整！
 <h2>使用方法：</h2>
-<pre lang="javascript">autoResize({
+<pre class="brush: js">autoResize({
         dataGrid: '#list',
 	callback: listPropDatas
 });</pre>
-[caption id="attachment_1148" align="aligncenter" width="300" caption="最大化窗口后自动填充"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/full-size-for-jqgrid.png"><img class="size-medium wp-image-1148" title="full size for jqgrid" src="http://www.wsria.com/wp-content/uploads/2010/08/full-size-for-jqgrid-300x155.png" alt="" width="300" height="155" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/08/full-size-for-jqgrid.png"><img class="size-medium wp-image-1148" title="full size for jqgrid" src="http://www.kafeitu.me/files/2010/08/full-size-for-jqgrid-300x155.png" alt="" width="300" height="155" /></a>
 
-[caption id="attachment_1149" align="aligncenter" width="300" caption="窗口缩小之后，随意大小，自动填充"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/small-size-for-jqgrid.png"><img class="size-medium wp-image-1149" title="small size for jqgrid" src="http://www.wsria.com/wp-content/uploads/2010/08/small-size-for-jqgrid-300x160.png" alt="" width="300" height="160" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/08/small-size-for-jqgrid.png"><img class="size-medium wp-image-1149" title="small size for jqgrid" src="http://www.kafeitu.me/files/2010/08/small-size-for-jqgrid-300x160.png" alt="" width="300" height="160" /></a>

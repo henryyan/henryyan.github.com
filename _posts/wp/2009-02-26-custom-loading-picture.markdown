@@ -8,4 +8,4 @@ date: 2009-02-26 23:31:34 +08:00
 ---
 自己动手定制ajax 加载等待图片，点击图片打开网址
 
-[caption id="attachment_376" align="alignleft" width="420" caption="ajax loading图片定制"]<a href="http://www.ajaxload.info/" target="_blank"><img class="size-full wp-image-376" title="ajaxloading" src="http://www.wsria.com/wp-content/uploads/2009/02/ajaxloading.png" alt="ajax loading图片定制" width="420" height="263" /></a>[/caption]
+<a href="http://www.ajaxload.info/" target="_blank"><img class="size-full wp-image-376" title="ajaxloading" src="http://www.kafeitu.me/files/2009/02/ajaxloading.png" alt="ajax loading图片定制" width="420" height="263" /></a>

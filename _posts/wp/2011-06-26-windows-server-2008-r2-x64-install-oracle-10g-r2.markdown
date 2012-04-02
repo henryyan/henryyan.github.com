@@ -10,7 +10,7 @@ date: 2011-06-26 12:12:46 +08:00
 客户刚刚到的一台新服务器，型号为：IBM X3850，自带的操作系统为：Windows Server 2008 R2 X64；需要安装版本为10.2.0.4版本的Oracle数据库。
 <h3>二、遇到问题</h3>
 找到Oracle提供的安装光盘后安装数据库一路next，到了最后<strong>创建数据库</strong>的时候遇到了问题，进度停止不前，如下图：
-<a href="http://www.wsria.com/wp-content/uploads/2011/06/oracle-create-db.png"><img src="http://www.wsria.com/wp-content/uploads/2011/06/oracle-create-db.png" alt="oracle创建数据库时等待状态--停滞不前" title="oracle创建数据库时等待状态--停滞不前" width="575" height="423" class="alignright size-full wp-image-1522" /></a><br/>
+<a href="http://www.kafeitu.me/files/2011/06/oracle-create-db.png"><img src="http://www.kafeitu.me/files/2011/06/oracle-create-db.png" alt="oracle创建数据库时等待状态--停滞不前" title="oracle创建数据库时等待状态--停滞不前" width="575" height="423" class="alignright size-full wp-image-1522" /></a><br/>
 查看trace.log内容如下：
 <!--more-->
 <pre>

@@ -19,11 +19,11 @@ date: 2010-08-15 00:06:37 +08:00
 
 先来一张本次路演的牌子：
 
-[caption id="attachment_1113" align="aligncenter" width="261" caption="Apache Roadshow 201 LOGO"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/Apache-Roadshow-2010-1.png"><img class="size-medium wp-image-1113 " title="Apache Roadshow 2010-1" src="http://www.wsria.com/wp-content/uploads/2010/08/Apache-Roadshow-2010-1-261x300.png" alt="Apache Roadshow 201 LOGO" width="261" height="300" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/08/Apache-Roadshow-2010-1.png"><img class="size-medium wp-image-1113 " title="Apache Roadshow 2010-1" src="http://www.kafeitu.me/files/2010/08/Apache-Roadshow-2010-1-261x300.png" alt="Apache Roadshow 201 LOGO" width="261" height="300" /></a>
 <p style="text-align: center;"></p>
 
 
-[caption id="attachment_1114" align="aligncenter" width="267" caption="我在Apache Roadshow 2010会场"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/Apache-Roadshow-2010-me.png"><img class="size-medium wp-image-1114" title="Apache Roadshow 2010-me" src="http://www.wsria.com/wp-content/uploads/2010/08/Apache-Roadshow-2010-me-267x300.png" alt="我在Apache Roadshow 2010会场" width="267" height="300" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/08/Apache-Roadshow-2010-me.png"><img class="size-medium wp-image-1114" title="Apache Roadshow 2010-me" src="http://www.kafeitu.me/files/2010/08/Apache-Roadshow-2010-me-267x300.png" alt="我在Apache Roadshow 2010会场" width="267" height="300" /></a>
 
 随后去报到、注册，这里面还有一个小插曲，本来是没有注册的人没有T恤、饭票的，但是有一个购书可以立即注册的机会，在大厅有几个童鞋负责卖书（真会找商机），看到《开源软件之道》这本书就有了想买的欲望，大致看了一下内容还可以就花了30大洋拿下这本书……买了书人家告诉俺说你可以注册了，也就是可以领取T恤和饭票了，我想还不错……30元买一本书、一件T恤外加一顿午餐……呵呵，言归正传
 
@@ -33,9 +33,9 @@ date: 2010-08-15 00:06:37 +08:00
 
 上午10:00准时开始本次巡演，首先由Apache基金会的J Aaron Farr介绍Apache开源之道，这里有一个惊喜，本人E文烂反正不好……勉强看懂英文文档……让我意想不到的是J Aaron Farr的中文竟然说的比较流利虽然有一些词语要用英文，但是已经是天上掉馅饼的事情了……J Aaron Farr说他一直在香港，好像有3年了吧
 
-[caption id="attachment_1116" align="aligncenter" width="300" caption="J Aaron Farr简述The Apache Way"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/apache-way-1.png"><img class="size-medium wp-image-1116" title="apache way-1" src="http://www.wsria.com/wp-content/uploads/2010/08/apache-way-1-300x135.png" alt="J Aaron Farr简述The Apache Way" width="300" height="135" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/08/apache-way-1.png"><img class="size-medium wp-image-1116" title="apache way-1" src="http://www.kafeitu.me/files/2010/08/apache-way-1-300x135.png" alt="J Aaron Farr简述The Apache Way" width="300" height="135" /></a>
 
-[caption id="attachment_1117" align="aligncenter" width="300" caption="apache way-2"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/apache-way-2.png"><img class="size-medium wp-image-1117" title="apache way-2" src="http://www.wsria.com/wp-content/uploads/2010/08/apache-way-2-300x223.png" alt="apache way-2" width="300" height="223" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/08/apache-way-2.png"><img class="size-medium wp-image-1117" title="apache way-2" src="http://www.kafeitu.me/files/2010/08/apache-way-2-300x223.png" alt="apache way-2" width="300" height="223" /></a>
 
 之后就是上海市软件行业协会开源软件专业委员会一个XX博士倡议上海的高校高开源项目，最后是：Jason Gartner: Open Source and Business和Tim Ellison: Open Source Java and its Future
 
@@ -55,7 +55,7 @@ date: 2010-08-15 00:06:37 +08:00
 
 培训完了之后和Juven的合影，本人长的蟋蟀，别K俺：
 
-[caption id="attachment_1122" align="aligncenter" width="263" caption="me and juven"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/me-and-juven.png"><img class="size-medium wp-image-1122" title="me and juven" src="http://www.wsria.com/wp-content/uploads/2010/08/me-and-juven-263x300.png" alt="me and juven" width="263" height="300" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/08/me-and-juven.png"><img class="size-medium wp-image-1122" title="me and juven" src="http://www.kafeitu.me/files/2010/08/me-and-juven-263x300.png" alt="me and juven" width="263" height="300" /></a>
 <h2>四、其他演讲</h2>
 听完了Juven的Maven演讲又去听了IBM的Wei Huang讲的：Enterprise Open RIA Solution - Introduction to Dojo Advanced Features，和Jing Lv讲的：Towards new world of Java - JDK7 features and Harmony Select
 

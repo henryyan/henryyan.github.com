@@ -16,7 +16,7 @@ date: 2009-07-01 13:18:03 +08:00
 <ul>
 	<li>打开1.2.6版本的源文件</li>
 	<li>找到第2911、2921、2924行，分别修改对应参数值的地方包裹一层encodeURIComponent即可，修改后的结果如下：
-<pre lang="javascript">param: function( a ) {
+<pre class="brush: js">param: function( a ) {
 		var s = [];
 
 		// If an array was passed in, assume that it is an array
@@ -51,7 +51,7 @@ date: 2009-07-01 13:18:03 +08:00
 1.3.2的就不用这么麻烦了，因为这个版本简化了param方法的结构，只需要修改一行代码即可，因为只有一个地方转码了
 
 找到第3737行，同样包裹一层encodeURIComponent，结果如下：
-<pre lang="javascript">	param: function( a ) {
+<pre class="brush: js">	param: function( a ) {
 		var s = [ ];
 
 		function add( key, value ){

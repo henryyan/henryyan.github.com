@@ -34,7 +34,7 @@ date: 2010-08-10 11:37:33 +08:00
 <h2>3、问题原因</h2>
 <p>我一向喜欢“工欲善其事必先利其器”；因为基于Maven的WTP工程默认只有一个</p>
 <pre lang='xml'><wb-resource deploy-path="/" source-path="/src/main/webapp"/></pre>
-<p>看截图[caption id="attachment_1086" align="aligncenter" width="314" caption="Maven + WTP默认的WebResources"]<a href="http://www.wsria.com/wp-content/uploads/2010/08/默认.png"><img src="http://www.wsria.com/wp-content/uploads/2010/08/默认.png" alt="" title="Maven + WTP默认的WebResources" width="314" height="298" class="size-full wp-image-1086" /></a>[/caption]<br />
+<p>看截图<a href="http://www.kafeitu.me/files/2010/08/默认.png"><img src="http://www.kafeitu.me/files/2010/08/默认.png" alt="" title="Maven + WTP默认的WebResources" width="314" height="298" class="size-full wp-image-1086" /></a><br />
 所以默认的.settings/org.eclipse.wst.common.component的配置如下：</p>
 <pre lang='xml' line='1'>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -52,7 +52,7 @@ date: 2010-08-10 11:37:33 +08:00
 </project-modules>
 </pre>
 <p>现在比较一下就比较清楚了，原因是我DIY的配置多了3行，所以我DIY的配置如下：<br />
-<a href="http://www.wsria.com/wp-content/uploads/2010/08/diy.png"><img src="http://www.wsria.com/wp-content/uploads/2010/08/diy.png" alt="" title="maven + wpt配置diy后" width="293" height="114" class="aligncenter size-full wp-image-1087" /></a></p>
+<a href="http://www.kafeitu.me/files/2010/08/diy.png"><img src="http://www.kafeitu.me/files/2010/08/diy.png" alt="" title="maven + wpt配置diy后" width="293" height="114" class="aligncenter size-full wp-image-1087" /></a></p>
 <p>还有另外一个原因就是因为我的通过m2eclipse插件提供的SCM功能checkout项目，原本DIY配置好的项目被eclipse改动了，从svn信息看得出来，所以导致了问题的发生</p>
 <h2>4、问题关键所在</h2>
 <p>保证项目的<strong>.settings/org.eclipse.wst.common.component</strong>文件中的

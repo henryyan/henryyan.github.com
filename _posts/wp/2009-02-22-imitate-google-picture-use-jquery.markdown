@@ -24,7 +24,7 @@ date: 2009-02-22 16:57:07 +08:00
 这里一定要主意<em>把tipInfo的position设置为absolute</em>，我在做的时候就卡到这里了，后来发现原来忘了设置……
 
 3、javascript代码：
-<pre lang="javascript">$(function() {
+<pre class="brush: js">$(function() {
         //$('#content img:not(:eq(0))')的意思是不显示第一张图片的信息
 	$('#content img:not(:eq(0))').hover(
 		function() {
@@ -44,6 +44,6 @@ date: 2009-02-22 16:57:07 +08:00
 		}
 	);
 });</pre>
-测试通过，代码很简单，<a href="http://www.wsria.com/demo/imgtip/index.html" target="_blank">点击这里查看演示</a>
+测试通过，代码很简单，<a href="http://www.kafeitu.me/demo/imgtip/index.html" target="_blank">点击这里查看演示</a>
 
 源码[download#12#format=1]

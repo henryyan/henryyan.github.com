@@ -20,7 +20,7 @@ date: 2010-11-19 09:57:46 +08:00
 <pre>你是否早已厌倦了日复一日的手工构建工作？你是否对各个项目风格迥异的构建系统感到恐惧？Maven——这一Java社区事实标准的项目管理工具，能帮你从琐碎的手工劳动中解脱出来，帮你规范整个组织的构建系统。不仅如此，它还有依赖管理、自动生成项目站点等超酷的特性。已经有无数的开源项目使用它来构建项目，促进团队交流。每天都由数以万计的开发者在访问中央仓库以获取他们需要的依赖。
 
 由国内的Maven权威亲自执笔，《Maven实战》告诉你Maven的本质是什么，深入阐述Maven的依赖管理、仓库、生命周期、插件等核心概念。你还能看到实际的案例演变，以及诸如多模块组织、建立Nexus私服、使用Hudson进行持续集成等企业开发的最佳实践。
-[caption id="attachment_1481" align="aligncenter" width="229" caption="Maven实战封面"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/maven-in-action.jpg"><img src="http://www.wsria.com/wp-content/uploads/2010/11/maven-in-action-229x300.jpg" alt="Maven实战封面" title="maven-in-action" width="229" height="300" class="size-medium wp-image-1481" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/11/maven-in-action.jpg"><img src="http://www.kafeitu.me/files/2010/11/maven-in-action-229x300.jpg" alt="Maven实战封面" title="maven-in-action" width="229" height="300" class="size-medium wp-image-1481" /></a>
 </pre>
 
 

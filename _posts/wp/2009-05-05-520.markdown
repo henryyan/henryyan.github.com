@@ -5,7 +5,7 @@ wordpress_id: 520
 wordpress_url: http://www.wsria.com/?p=520
 date: 2009-05-05 22:57:30 +08:00
 ---
-[caption id="" align="alignleft" width="384" caption="2009.5.1杭州之旅"]<a href="http://lh4.ggpht.com/_wEOi-oqPSNE/Sf-Wt72R4cI/AAAAAAAADus/6726CGxMrGk/s512/%E6%88%91%E5%9C%A8%E6%B2%B3%E5%9D%8A%E8%A1%97%E7%9A%84%E5%BF%A0%E4%B9%89%E4%BA%AD.jpg"><img title="驴友在杭州" src="http://lh4.ggpht.com/_wEOi-oqPSNE/Sf-Wt72R4cI/AAAAAAAADus/6726CGxMrGk/s512/%E6%88%91%E5%9C%A8%E6%B2%B3%E5%9D%8A%E8%A1%97%E7%9A%84%E5%BF%A0%E4%B9%89%E4%BA%AD.jpg" alt="2009.5.1杭州之旅" width="384" height="512" /></a>[/caption]
+<a href="http://lh4.ggpht.com/_wEOi-oqPSNE/Sf-Wt72R4cI/AAAAAAAADus/6726CGxMrGk/s512/%E6%88%91%E5%9C%A8%E6%B2%B3%E5%9D%8A%E8%A1%97%E7%9A%84%E5%BF%A0%E4%B9%89%E4%BA%AD.jpg"><img title="驴友在杭州" src="http://lh4.ggpht.com/_wEOi-oqPSNE/Sf-Wt72R4cI/AAAAAAAADus/6726CGxMrGk/s512/%E6%88%91%E5%9C%A8%E6%B2%B3%E5%9D%8A%E8%A1%97%E7%9A%84%E5%BF%A0%E4%B9%89%E4%BA%AD.jpg" alt="2009.5.1杭州之旅" width="384" height="512" /></a>
 
 发表了三次都出现首页布局问题，晕倒……
 

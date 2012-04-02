@@ -7,4 +7,4 @@ date: 2010-10-27 17:10:22 +08:00
 ---
 千呼万唤始出来，真是不易，等了近2个月，最新消息《Maven实战》定于11月初出版。
 大图尝鲜：
-<a href="http://www.wsria.com/wp-content/uploads/2010/10/maven-in-action.jpg"><img src="http://www.wsria.com/wp-content/uploads/2010/10/maven-in-action.jpg" alt="" title="maven in action" width="661" height="858" class="alignleft size-full wp-image-1289" /></a>
+<a href="http://www.kafeitu.me/files/2010/10/maven-in-action.jpg"><img src="http://www.kafeitu.me/files/2010/10/maven-in-action.jpg" alt="" title="maven in action" width="661" height="858" class="alignleft size-full wp-image-1289" /></a>

@@ -114,7 +114,7 @@ Struts2本身就支持文件下载的输出类型，所以有一个type叫做“
 
 这里在开发的时候又被乱码问题玩了一把，最终的解决办法也是最可靠的办法就是前后台编码和解码，具体实现如下：
 在前台下载的时候用<strong>encodeURI</strong>方法编码下载路径，把中文字符转换为UTF-8编码，为了统一不出问题所以我写了一个方法：
-<pre lang="javascript">function download(fileName){
+<pre class="brush: js">function download(fileName){
     var downUrl = $.common.custom.getCtx() + '/file/download.action?fileName=' + fileName;
     open(encodeURI(encodeURI(downUrl)));
 }</pre>

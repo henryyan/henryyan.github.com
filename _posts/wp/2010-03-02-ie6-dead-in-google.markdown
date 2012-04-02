@@ -7,7 +7,7 @@ date: 2010-03-02 14:12:15 +08:00
 ---
 <strong>由于家族的激烈竞争，IE6于2010年3月1日在美国加州山景城谷歌总部去世，这款毁誉参半的Web浏览器享年8.5岁。</strong>
 
-<a href="http://www.wsria.com/wp-content/uploads/2010/03/IE6的葬礼.jpg"><img class="aligncenter size-full wp-image-925" title="IE6的葬礼" src="http://www.wsria.com/wp-content/uploads/2010/03/IE6的葬礼.jpg" alt="" width="274" height="392" /></a>
+<a href="http://www.kafeitu.me/files/2010/03/IE6的葬礼.jpg"><img class="aligncenter size-full wp-image-925" title="IE6的葬礼" src="http://www.kafeitu.me/files/2010/03/IE6的葬礼.jpg" alt="" width="274" height="392" /></a>
 
 众所周知，微软公司于2001年8月27日发布IE6浏览器，并由Windows  XP系统推向全世界用户。IE6历经了IE7和IE8两个时代。IE6葬礼活动由Aten Design设计公司主办，Aten  Design首席设计师Justin Toupin表示：“这是一个由爱到恨的过程。IE6的辉煌和逝去已是不争的事实。”IE6是微软浏览器第6个版本。IE6发布后便迅速成为世界第一大浏览器。但随着时间流逝，IE6脆弱的安全性便不断受到用户的指责，而且一些Web开发 者也经常抱怨IE6缺乏对Web标准的兼容。
 

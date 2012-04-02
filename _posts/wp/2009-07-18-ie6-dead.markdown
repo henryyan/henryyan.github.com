@@ -9,4 +9,4 @@ Mashable日前刊登分析文章称,IE6不支持当今的互联网标准,成为�
 
 分析认为,如果希望终结IE6的使用,需要说服的并不是微软的领导者,而是那些过时的IT部门和网站的管理者,他们目前仍投入大量资源去支持IE6.
 
-<a href="http://www.wsria.com/wp-content/uploads/2009/07/noie6.gif"><img class="alignleft size-full wp-image-653" title="noie6" src="http://www.wsria.com/wp-content/uploads/2009/07/noie6.gif" alt="noie6" width="148" height="161" /></a>
+<a href="http://www.kafeitu.me/files/2009/07/noie6.gif"><img class="alignleft size-full wp-image-653" title="noie6" src="http://www.kafeitu.me/files/2009/07/noie6.gif" alt="noie6" width="148" height="161" /></a>

@@ -14,4 +14,4 @@ date: 2009-02-08 11:48:43 +08:00
 <div class="mceTemp">gmail:yanhonglei@gmail.com(使用googlecode必须要有一个google账户)</div>
 <div class="mceTemp">[download#15#format=1]</div>
 
-[caption id="attachment_55" align="alignleft" width="446" caption="账务管理系统(个人版)演示"]<a href="http://wsria.com/wp-content/uploads/2009/02/finance.png"><img class="size-full wp-image-55" title="finance" src="http://wsria.com/wp-content/uploads/2009/02/finance.png" alt="账务管理系统(个人版)演示" width="446" height="360" /></a>[/caption]
+<a href="http://wsria.com/wp-content/uploads/2009/02/finance.png"><img class="size-full wp-image-55" title="finance" src="http://wsria.com/wp-content/uploads/2009/02/finance.png" alt="账务管理系统(个人版)演示" width="446" height="360" /></a>

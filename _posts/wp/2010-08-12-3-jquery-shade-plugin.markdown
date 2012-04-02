@@ -6,7 +6,7 @@ wordpress_url: http://www.wsria.com/?p=1100
 date: 2010-08-12 23:25:51 +08:00
 ---
 <h2>第一枚：Fancybox</h2>
-<a href="http://www.wsria.com/wp-content/uploads/2010/08/fancybox2.png"><img class="aligncenter size-medium wp-image-1098" title="fancybox2" src="http://www.wsria.com/wp-content/uploads/2010/08/fancybox2-300x248.png" alt="" width="300" height="248" /></a>
+<a href="http://www.kafeitu.me/files/2010/08/fancybox2.png"><img class="aligncenter size-medium wp-image-1098" title="fancybox2" src="http://www.kafeitu.me/files/2010/08/fancybox2-300x248.png" alt="" width="300" height="248" /></a>
 <ul>
 	<li><strong>点评</strong>：简介实用，麻雀虽小五脏俱全；有详细的说明文档</li>
 	<li><strong>体积</strong>：<em>pack</em>版本只有14K，算是比较小的</li>
@@ -16,14 +16,14 @@ date: 2010-08-12 23:25:51 +08:00
 支持 Esc关闭、散入淡出</li>
 </ul>
 <h2>第二枚：FaceBox</h2>
-<a href="http://www.wsria.com/wp-content/uploads/2010/08/facebox2.png"><img class="aligncenter size-medium wp-image-1102" title="facebox2" src="http://www.wsria.com/wp-content/uploads/2010/08/facebox2-300x136.png" alt="" width="300" height="136" /></a>
+<a href="http://www.kafeitu.me/files/2010/08/facebox2.png"><img class="aligncenter size-medium wp-image-1102" title="facebox2" src="http://www.kafeitu.me/files/2010/08/facebox2-300x136.png" alt="" width="300" height="136" /></a>
 <ul>
 	<li><strong>点评</strong>：超轻量，体积只有10K，很简单的功能，所以没有像fancybox那样的文档</li>
 	<li><strong>网址</strong>：<a href="http://defunkt.github.com/facebox/">http://defunkt.github.com/facebox/</a></li>
 	<li><strong>功能</strong>：展示图片、DIV、Ajax</li>
 </ul>
 <h2>第三枚：ColorBox</h2>
-<p style="text-align: center;"><a href="http://www.wsria.com/wp-content/uploads/2010/08/colorbox2.png"><img class="size-medium wp-image-1104 aligncenter" title="colorbox2" src="http://www.wsria.com/wp-content/uploads/2010/08/colorbox2-300x270.png" alt="" width="300" height="270" /></a><a href="http://www.wsria.com/wp-content/uploads/2010/08/colorbox1.png"><img class="size-medium wp-image-1103 aligncenter" title="colorbox1" src="http://www.wsria.com/wp-content/uploads/2010/08/colorbox1-300x208.png" alt="" width="300" height="208" /></a></p>
+<p style="text-align: center;"><a href="http://www.kafeitu.me/files/2010/08/colorbox2.png"><img class="size-medium wp-image-1104 aligncenter" title="colorbox2" src="http://www.kafeitu.me/files/2010/08/colorbox2-300x270.png" alt="" width="300" height="270" /></a><a href="http://www.kafeitu.me/files/2010/08/colorbox1.png"><img class="size-medium wp-image-1103 aligncenter" title="colorbox1" src="http://www.kafeitu.me/files/2010/08/colorbox1-300x208.png" alt="" width="300" height="208" /></a></p>
 
 <ul>
 	<li><strong>点评</strong>：超轻量，体积只有9K，而且文档齐全，并且有多种风格可以选择</li>

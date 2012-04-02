@@ -19,7 +19,7 @@ date: 2009-02-24 21:55:29 +08:00
 2、对应后台JSON的数据处理工具<a title="java解析JSON数据使用的工具包" href="http://json-lib.sourceforge.net/" target="_blank">json-lib</a>，包含各种格式数据的工具类，比如：JavaBean、数组、集合(Collection)等，<a href="http://json-lib.sourceforge.net/apidocs/jdk15/index.html" target="_blank">参考API文档</a>。
 
 3、jQuery框架中的数据表现形式，如果你熟悉jQuery的话就会发现jQuery的使用的数据传输都是JSON格式，比如我们经常使用的$.ajax方法：
-<pre lang="javascript">$.ajax({
+<pre class="brush: js">$.ajax({
 	url : url,
 	data : {
 		id : chkValue
@@ -42,7 +42,7 @@ date: 2009-02-24 21:55:29 +08:00
 密码：
 <input id="password" name="password" size="20" type="password" /></pre>
 2、登录javascript文件 login.js
-<pre lang="javascript">/**
+<pre class="brush: js">/**
  * 设置表单验证规则
  */
 function regFormValidator() {

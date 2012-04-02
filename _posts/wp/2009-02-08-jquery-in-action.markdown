@@ -11,7 +11,7 @@ date: 2009-02-08 02:32:55 +08:00
 
 ?
 
-[caption id="attachment_47" align="alignleft" width="238" caption="jQuery in Action"]<img class="size-medium wp-image-47" title="jqueryinaction" src="http://wsria.com/wp-content/uploads/2009/02/jqueryinaction-238x300.jpg" alt="jQuery in Action" width="238" height="300" />[/caption]
+<img class="size-medium wp-image-47" title="jqueryinaction" src="http://wsria.com/wp-content/uploads/2009/02/jqueryinaction-238x300.jpg" alt="jQuery in Action" width="238" height="300" />
 
 ?
 

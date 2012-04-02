@@ -9,7 +9,7 @@ date: 2010-10-18 21:16:42 +08:00
 公司的一个二期项目需要使用地区信息的级联选择功能，因为本来有数据库设计所以就根据数据库设计构建了本次要发布的插件：jquery.area2select，算是真正意义上的第一个jQuery插件吧。
 插件的开发目的一是为了公司的项目试用，另外一个就是把各种我平常开发积累的东西分享给大家，也就是我创建的<a href="http://code.google.com/p/wsria/" target="_blank">wsria</a>项目。
 <h3>一、文档以及API</h3>
-如果看着累直接点击<a href="http://www.wsria.com/demo/plugins/area2select/area-plugin-caption.html" target="_blank"><strong>这里</strong></a>，在新窗口打开。
+如果看着累直接点击<a href="http://www.kafeitu.me/demo/plugins/area2select/area-plugin-caption.html" target="_blank"><strong>这里</strong></a>，在新窗口打开。
 <h3>二、配套演示地址</h3>
 因为是和后台配合使用，所以专门搭建了一个部署在tomcat上的演示程序；
 <strong>演示地址：</strong><a href="http://kafeitu.gicp.net:10000/demo" target="_blank">http://kafeitu.gicp.net:10000/demo</a>，进入页面后在<strong>左侧</strong>的“地区信息”栏目中。

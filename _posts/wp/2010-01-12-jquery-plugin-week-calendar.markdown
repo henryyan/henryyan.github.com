@@ -5,7 +5,7 @@ wordpress_id: 762
 wordpress_url: http://www.wsria.com/?p=762
 date: 2010-01-12 16:17:56 +08:00
 ---
-[caption id="" align="alignnone" width="500" caption="jQuery Week Calendar"]<img title="jQuery Week Calendar" src="http://www.redredred.com.au/wp-content/uploads/2009/05/calendar.jpg" alt="jQuery Week Calendar" width="500" height="310" />[/caption]
+<img title="jQuery Week Calendar" src="http://www.redredred.com.au/wp-content/uploads/2009/05/calendar.jpg" alt="jQuery Week Calendar" width="500" height="310" />
 
 在open-open上发现的，试了一下很不错，对于日常开发中对计划安排或者对操作性要求较高的可以使用这个插件
 

@@ -60,7 +60,7 @@ date: 2011-07-24 16:04:19 +08:00
 这样IE和Firefox打开的对话框高度就一致了……IE的容错性不高呀，不过这样也严格要求了我们的代码规整性，谨记不要犯类似错误。
 </li>
 <li><strong>为Dialog的Button添加图标(Icon)</strong>
-<pre lang="javascript">
+<pre class="brush: js">
 /**
  * 为dialog中的button设置icon
  * @param {Object} options
@@ -75,7 +75,7 @@ setIcons: function(options) {
 }
 </pre>
 调用方式：
-<pre lang="javascript">
+<pre class="brush: js">
 $('#div_1').dialog({
 	open: function() {
 		$.common.plugin.jqui.dialog.button.setIcons({
@@ -117,7 +117,7 @@ DEMO：<a href="http://www.erichynds.com/jquery/jquery-ui-multiselect-widget/">h
 <ol>
 	<li><strong>列表高度和宽度自动调整</strong>
 这个话题是经常有人问到的，因为jqGrid的列表高度和宽度是可以自定义的，所以要做到可以充满整个窗口或者iframe，并且最重要的是可以根据窗口的调整自动设置grid的高度和宽度，下面列出我的配置。
-<pre lang="javascript">
+<pre class="brush: js">
 //-- 浏览器工具 --//
 $.common.browser = {
 	// 检测是否是IE浏览器
@@ -309,7 +309,7 @@ function listDatas(size) {
 </li>
 <li><strong>如果可以尽量使用继承式配置</strong><br/>
 使用继承方式的目的主要是修改一处配置整个项目都可以起到作用，除非特殊情况才覆盖公共的配置。例如刚刚的<a href="http://code.google.com/p/wsria/source/browse/trunk/wsria-demo/src/main/webapp/js/module/demo/jqgrid/datalibrary-list.js">例子</a>，提供我的例子：
-<pre lang="javascript">
+<pre class="brush: js">
 /**
  * 加载列表
  * 

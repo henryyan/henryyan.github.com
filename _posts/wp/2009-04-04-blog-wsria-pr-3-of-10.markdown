@@ -10,7 +10,7 @@ date: 2009-04-04 18:51:02 +08:00
 
 难道是因为wordcamp大会……O(∩_∩)O~
 
-[caption id="attachment_503" align="aligncenter" width="308" caption="google pagerank 3/10"]<a href="http://www.wsria.com/wp-content/uploads/2009/04/pagerank.jpg"><img class="size-full wp-image-503" title="google pagerank 3/10" src="http://www.wsria.com/wp-content/uploads/2009/04/pagerank.jpg" alt="google pagerank 3/10" width="308" height="61" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2009/04/pagerank.jpg"><img class="size-full wp-image-503" title="google pagerank 3/10" src="http://www.kafeitu.me/files/2009/04/pagerank.jpg" alt="google pagerank 3/10" width="308" height="61" /></a>
 
 看来咱在google心中也有一席之地了
 

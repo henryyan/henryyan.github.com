@@ -44,7 +44,7 @@ date: 2009-02-14 17:35:00 +08:00
 	<li>mysql，本人使用版本是5.0.18</li>
 	<li>建立数据库名称为：finance，字符集设置为UTF-8，然后导入bak/finance.sql文件</li>
 </ul>
-[caption id="attachment_337" align="aligncenter" width="275" caption="mysql数据库属性"]<img class="size-full wp-image-337" title="dbinfo" src="http://www.wsria.com/wp-content/uploads/2009/02/dbinfo.png" alt="mysql数据库属性" width="275" height="171" />[/caption]
+<img class="size-full wp-image-337" title="dbinfo" src="http://www.kafeitu.me/files/2009/02/dbinfo.png" alt="mysql数据库属性" width="275" height="171" />
 
 2、<strong>编译项目</strong>
 
@@ -54,8 +54,8 @@ date: 2009-02-14 17:35:00 +08:00
 	<li>SVN版本库和压缩包中没有class文件，即/WEB-INF目录下没有classes目录，<strong><em>需要自己使用eclipse编译</em></strong>，所有用到的jar包都在WEB-INF/lib目录下，即<span style="color: #0000ff;"><em>eclipse中build path--&gt;libraries</em></span>设置，各个框架的版本上面都已说明</li>
 	<li>编译时如果使用MyEclipse的话使用J2EE1.4这个library</li>
 	<li>使用tomcat或者weblogic等服务器jar包的请自行引入</li>
-[caption id="attachment_338" align="alignleft" width="162" caption="eclipse编译环境"]<a href="http://www.wsria.com/wp-content/uploads/2009/02/eclipsedir.png"><img class="size-full wp-image-338" title="eclipsedir" src="http://www.wsria.com/wp-content/uploads/2009/02/eclipsedir.png" alt="配置完成的eclipse目录" width="162" height="430" /></a>
-<div class="mceTemp mceIEcenter"><dl id="attachment_357" class="wp-caption aligncenter" style="width: 510px;"> <dt class="wp-caption-dt"><a href="http://www.wsria.com/wp-content/uploads/2009/02/eclipselib.png" target="_blank"><img class="size-medium wp-image-357" title="eclipselib" src="http://www.wsria.com/wp-content/uploads/2009/02/eclipselib-300x169.png" alt="eclipse编译环境" width="500" height="200" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2009/02/eclipsedir.png"><img class="size-full wp-image-338" title="eclipsedir" src="http://www.kafeitu.me/files/2009/02/eclipsedir.png" alt="配置完成的eclipse目录" width="162" height="430" /></a>
+<div class="mceTemp mceIEcenter"><dl id="attachment_357" class="wp-caption aligncenter" style="width: 510px;"> <dt class="wp-caption-dt"><a href="http://www.kafeitu.me/files/2009/02/eclipselib.png" target="_blank"><img class="size-medium wp-image-357" title="eclipselib" src="http://www.kafeitu.me/files/2009/02/eclipselib-300x169.png" alt="eclipse编译环境" width="500" height="200" /></a>
 
 </dt> <dd class="wp-caption-dd">配置完成的eclipse目录</dd> </dl></div></ul>
 3、<strong>设置、启动服务</strong>
@@ -71,7 +71,7 @@ docBase根据自己的情况设置</li>
 </li>
 	<li>做完上面两步后就可以启动服务了，如果应用名设置为finance就直接可以访问了，如果自己另外定了应用名称则需要修改common/js/plugin/weebox.js中第17行，改为：url: '/<strong><em>应用名称</em></strong>/common/js/plugin/bgiframe.js'即可</li>
 	<li>访问系统最好使用Firefox浏览器，因为FF内置的JS引擎机制速度比IE快的多，或者google的Chrome浏览器也不错，其内置的JS8引擎比FF的性能还要好</li>
-[caption id="attachment_55" align="alignleft" width="491" caption="账务管理系统(个人版)演示"]<a href="http://www.wsria.com/wp-content/uploads/2009/02/finance.png"><img class="size-full wp-image-55" title="finance" src="http://www.wsria.com/wp-content/uploads/2009/02/finance.png" alt="账务管理系统(个人版)演示" width="491" height="371" /></a>[/caption]</ul>
+<a href="http://www.kafeitu.me/files/2009/02/finance.png"><img class="size-full wp-image-55" title="finance" src="http://www.kafeitu.me/files/2009/02/finance.png" alt="账务管理系统(个人版)演示" width="491" height="371" /></a></ul>
 <strong>4</strong><strong>、更新最新版本</strong><strong> </strong>
 
 <em><strong><a href="http://finance-p.googlecode.com/svn/trunk/">http://finance-p.googlecode.com/svn/trunk/</a></strong></em><tt></tt>

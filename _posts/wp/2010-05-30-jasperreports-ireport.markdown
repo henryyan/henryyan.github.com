@@ -21,26 +21,26 @@ pdf enccoding: UniGB-UCS2-H (Chinese Simplified)
 
 <!--more-->
 
-<a href="http://www.wsria.com/wp-content/uploads/2010/05/1.jpg"><img class="alignnone size-full  wp-image-982" title="1" src="http://www.wsria.com/wp-content/uploads/2010/05/1.jpg" alt="iReport缺少iTextAsian.jar包时" width="579" height="270" /></a>
+<a href="http://www.kafeitu.me/files/2010/05/1.jpg"><img class="alignnone size-full  wp-image-982" title="1" src="http://www.kafeitu.me/files/2010/05/1.jpg" alt="iReport缺少iTextAsian.jar包时" width="579" height="270" /></a>
 
 如果出现上面错误，应该就是iReport缺少iTextAsian.jar包。工具-&gt;选项-&gt;iReport-&gt;Fonts 看到下面的pdf
 
 font path里面没有iTextAsian.jar如图：
 
-<a href="http://www.wsria.com/wp-content/uploads/2010/05/2.jpg"><img class="alignnone size-full wp-image-983" title="2" src="http://www.wsria.com/wp-content/uploads/2010/05/2.jpg" alt="" width="486" height="376" /></a>
+<a href="http://www.kafeitu.me/files/2010/05/2.jpg"><img class="alignnone size-full wp-image-983" title="2" src="http://www.kafeitu.me/files/2010/05/2.jpg" alt="" width="486" height="376" /></a>
 <h2><span style="color: #99cc00;">二、设置iReport的字体Classpath</span></h2>
 复制iTextAsian.jar包到iReport的libs目录里面，并添加到classpath中。
 
 工具-&gt;选项-&gt;iReport-&gt;classpath -&gt;add iTextAsian.jar -&gt;确定
 
-<a href="http://www.wsria.com/wp-content/uploads/2010/05/3.jpg"><img class="alignnone size-full wp-image-984" title="3" src="http://www.wsria.com/wp-content/uploads/2010/05/3.jpg" alt="" width="547" height="342" /></a>
+<a href="http://www.kafeitu.me/files/2010/05/3.jpg"><img class="alignnone size-full wp-image-984" title="3" src="http://www.kafeitu.me/files/2010/05/3.jpg" alt="" width="547" height="342" /></a>
 
 设置完成后再检查一下Font标签的<strong>pdf font path</strong> 发现是否有iTextAsian.jar了
 
-<a href="http://www.wsria.com/wp-content/uploads/2010/05/4.jpg"><img class="alignnone size-full wp-image-985" title="4" src="http://www.wsria.com/wp-content/uploads/2010/05/4.jpg" alt="" width="475" height="355" /></a>
+<a href="http://www.kafeitu.me/files/2010/05/4.jpg"><img class="alignnone size-full wp-image-985" title="4" src="http://www.kafeitu.me/files/2010/05/4.jpg" alt="" width="475" height="355" /></a>
 <h2><span style="color: #99cc00;">三、重启iReport并重新导出PDF文档</span></h2>
 到此设置完成了iReport导出PDF时的Classpath，现在可以试一试是否能够成功导出含有中文的PDF文档了
 
-<a href="http://www.wsria.com/wp-content/uploads/2010/05/5.jpg"><img class="alignnone size-full wp-image-986" title="5" src="http://www.wsria.com/wp-content/uploads/2010/05/5.jpg" alt="" width="581" height="249" /></a>
+<a href="http://www.kafeitu.me/files/2010/05/5.jpg"><img class="alignnone size-full wp-image-986" title="5" src="http://www.kafeitu.me/files/2010/05/5.jpg" alt="" width="581" height="249" /></a>
 
 控制台没有任何错误，明确的指出了导出PDF时使用iText，OK，大功告成！

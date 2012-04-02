@@ -28,7 +28,7 @@ $.jgrid.ajaxOptions.type = 'post';
 2、查询中文后台时得到的参数是乱码
 
 然后就考虑了，如果是开发环境问题那肯定全部都有乱码问题，所以问题应该在jqGrid的查询函数里面，最后通过Firebug找到了：
-<pre lang="javascript">c.find(".ui-search").click(function() {</pre>
+<pre class="brush: js">c.find(".ui-search").click(function() {</pre>
 这一行是查询功能的开始也就是点击“查询”的触发函数
 
 所以根据以往的经验在这里<strong>把参数值编码一次</strong>就可以了，也就是<strong>encodeURIComponent</strong>函数具体修改如下：

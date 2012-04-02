@@ -9,6 +9,6 @@ date: 2009-03-11 22:20:09 +08:00
 <div>官方下载地址:<a href="http://www.thundermain.com/FullSource.html" target="_blank">http://www.thundermain.com/FullSource.html</a></div>
 <div>
 
-[caption id="" align="alignleft" width="160" caption="fullsource截图"]<img title="fullsource截图" src="http://www.thundermain.com/MenuExt.png" alt="fullsource截图" width="160" height="150" />[/caption]
+<img title="fullsource截图" src="http://www.thundermain.com/MenuExt.png" alt="fullsource截图" width="160" height="150" />
 
 </div>

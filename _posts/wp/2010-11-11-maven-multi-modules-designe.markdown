@@ -20,18 +20,18 @@ date: 2010-11-11 14:14:47 +08:00
 详细属性Maven的童鞋们都看过《Maven权威指南》，里面也讲解如何搭建多模块的Maven项目，但是那个毕竟是比较简单的，在实际应用中就有点水土不服了；
 后来又参考了Juven的一篇《<a href="http://juvenshun.javaeye.com/blog/305865" target="_blank">Maven最佳实践：划分模块</a>》博文，相对权威指南来说介绍的比较详细了，但是这还是不能满足我真正在企业应用的需求，等你看完Juven的博文后再看看下面这个实际应用中的项目布局有什么异同：
 
-[caption id="attachment_1409" align="aligncenter" width="471" caption="Maven多模块布局概图"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-constructor2.jpg"><img class="size-full wp-image-1409" title="maven-multi-module-constructor2" src="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-constructor2.jpg" alt="Maven多模块布局概图" width="471" height="420" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/11/maven-multi-module-constructor2.jpg"><img class="size-full wp-image-1409" title="maven-multi-module-constructor2" src="http://www.kafeitu.me/files/2010/11/maven-multi-module-constructor2.jpg" alt="Maven多模块布局概图" width="471" height="420" /></a>
 
 OK，现在应该看出来有什么不同了，我的项目结构比权威指南里面的介绍复杂、比Juven的那篇文章说的也复杂，接下来再看看这张图片：
 
-[caption id="attachment_1411" align="aligncenter" width="319" caption="plexus-security项目结构"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/juven-maven-multi-construction.png"><img class="size-full wp-image-1411" title="juven-maven-multi-construction" src="http://www.wsria.com/wp-content/uploads/2010/11/juven-maven-multi-construction.png" alt="plexus-security项目结构" width="319" height="338" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/11/juven-maven-multi-construction.png"><img class="size-full wp-image-1411" title="juven-maven-multi-construction" src="http://www.kafeitu.me/files/2010/11/juven-maven-multi-construction.png" alt="plexus-security项目结构" width="319" height="338" /></a>
 <!--more-->
 上面这张图片是我在写这篇文章的时候刚刚找到的：《<a href="http://juvenshun.javaeye.com/blog/565240" target="_blank">按需构建多模块，玩转Maven反应堆</a>》，和上面的<strong>Maven多模块布局概图</strong>对比一下是不是基本一样？真是后悔当初怎么没有看到Juven的这篇文章，后来把hibernate的项目checkout下来分析他的maven多模块结构布局然后再结合实际应用得出的<strong>Maven多模块布局概图</strong>。
 OK，现在你对多模块布局有了初步的印象了，接下来才是重点，逐个击破、逐个分析。
 <h3>三、多模块布局详解</h3>
 无图无真相，有图才给力：(如果想真正了解多模块那么请先看着图片和说明揣摩一下含义……)
 
-[caption id="attachment_1417" align="aligncenter" width="593" caption="Maven多模块布局概述图"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-construction.jpg"><img class="size-full wp-image-1417" title="maven-multi-module-construction" src="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-construction.jpg" alt="Maven多模块布局概述图" width="593" height="281" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/11/maven-multi-module-construction.jpg"><img class="size-full wp-image-1417" title="maven-multi-module-construction" src="http://www.kafeitu.me/files/2010/11/maven-multi-module-construction.jpg" alt="Maven多模块布局概述图" width="593" height="281" /></a>
 
 <strong>声明</strong>：由于是本例是根据实际应用的项目来分析的，所以会比之前说的教程和Juven的文章实例复杂一些。
 <ol>
@@ -100,7 +100,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 	<li><strong>dao</strong>：每个模块的数据存取类，因为本项目是根据springside基础上构建的，所以都是继承HibernateDao，如果涉及到大数据量或者存储过程的调用会再加入相应的*JdbcDao；</li>
 	<li><strong>data</strong>：
 
-[caption id="attachment_1435" align="aligncenter" width="276" caption="data模块结构"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-data.jpg"><img class="size-full wp-image-1435" title="maven-multi-module-data" src="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-data.jpg" alt="data模块结构" width="276" height="286" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/11/maven-multi-module-data.jpg"><img class="size-full wp-image-1435" title="maven-multi-module-data" src="http://www.kafeitu.me/files/2010/11/maven-multi-module-data.jpg" alt="data模块结构" width="276" height="286" /></a>
 
 ，根据上图介绍一下：除了data目录外其他的配置文件都是在测试期间使用的，根据不同需求使用不同配置文件，例如一些不需要spring启动时初始化的数据使用applicationContext-test-no-init-sql.xml，这个没有什么规定，根据项目来设置；<strong>data</strong>目录是存放一些使用dbunit导出的xml数据文件，作用是在单元测试时的数据初始化或者利用数据文件初始化指定的数据库，一般这些数据文件的类型包括：数据字典、系统配置参数等</li>
 	<li><strong>entity</strong>：这里说一下JPA注解的实体工具，开始我使用的是eclipse3.6的JPA工具，但是发现有些属性加不上@Column注解很是郁闷，只能手动加入；当然你也可以使用springside中提供的hibernatetools模板生成，但是我还是希望在生成期间能完全受控，所以最好想到了MyEclipse，配置好数据源然后从数据库中逆向生成JPA，所有字段都正确配置；</li>
@@ -114,7 +114,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 </ol>
 <h3>四、模块之间依赖关系</h3>
 直观教程图片最给力：
-[caption id="attachment_1444" align="aligncenter" width="410" caption="Maven多模块关系依赖图"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-relation.png"><img src="http://www.wsria.com/wp-content/uploads/2010/11/maven-multi-module-relation.png" alt="Maven多模块关系依赖图" title="maven-multi-module-relation" width="410" height="324" class="size-full wp-image-1444" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/11/maven-multi-module-relation.png"><img src="http://www.kafeitu.me/files/2010/11/maven-multi-module-relation.png" alt="Maven多模块关系依赖图" title="maven-multi-module-relation" width="410" height="324" class="size-full wp-image-1444" /></a>
 <h3>五、和SVN的整合——maven-release-plugin</h3>
 <a href="http://maven.apache.org/plugins/maven-release-plugin/" target="_blank">maven-release-plugin</a>是经常使用的插件，这里简单介绍一下，要点：
 <ol>
@@ -172,7 +172,7 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 
 <pre>D:\wsria\projects\denong\denong-pb>mvn release:prepare -Pdenong-product</pre>
 在svn中自动打的tag结构为：
-[caption id="attachment_1448" align="aligncenter" width="164" caption="maven-release-plugin执行release:prepare后的svn结构"]<a href="http://www.wsria.com/wp-content/uploads/2010/11/svn-tag-construction.jpg"><img src="http://www.wsria.com/wp-content/uploads/2010/11/svn-tag-construction.jpg" alt="maven-release-plugin执行release:prepare后的svn结构" title="svn-tag-construction" width="164" height="294" class="size-full wp-image-1448" /></a>[/caption]
+<a href="http://www.kafeitu.me/files/2010/11/svn-tag-construction.jpg"><img src="http://www.kafeitu.me/files/2010/11/svn-tag-construction.jpg" alt="maven-release-plugin执行release:prepare后的svn结构" title="svn-tag-construction" width="164" height="294" class="size-full wp-image-1448" /></a>
 接下来就可以执行命令：
 <pre>D:\wsria\projects\denong\denong-pb>mvn release:perform</pre></li>
 </ol>
