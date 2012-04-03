@@ -43,9 +43,9 @@ date: 2009-02-18 19:41:13 +08:00
 大家可以到<a href="http://www.yhuan.com/formvalidator/index.html?from=www.wsria.com" target="_blank">formValidator </a>官网上去查看具体效果及其使用方法，也可以在晚上7点之后访问我在<a href="http://yanhonglei.gicp.net/finance/" target="_blank">账务管理系统</a>中的实际应用效果供大家参考
 
 但是目前jQuery的版本更新到了1.3弃用了1.1和1.2版本中@写法，例如选择一个已选择的radio在1.1或者1.2版本中可以这样写：
-<pre lang="javascript" line="1">alert($(":radio[@checked]").length);</pre>
+<pre class="brush: js" line="1">alert($(":radio[@checked]").length);</pre>
 但是在1.3中就不可以这样写，1.3的写法：
-<pre lang="javascript" line="1">alert($(":radio:checked").length);</pre>
+<pre class="brush: js" line="1">alert($(":radio:checked").length);</pre>
 所以当我前段时间更新到1.3版本中就出现问题了，我上传一个我修改过的版本供大家下载:
 
 [download#10#format=1]

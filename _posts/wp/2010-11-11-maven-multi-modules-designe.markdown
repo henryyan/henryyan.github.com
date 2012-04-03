@@ -36,7 +36,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 <strong>声明</strong>：由于是本例是根据实际应用的项目来分析的，所以会比之前说的教程和Juven的文章实例复杂一些。
 <ol>
 	<li><strong>denong-pb</strong>：先看实例pom.xml：
-<pre lang="xml">
+<pre class="brush: xml">
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -119,7 +119,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 <a href="http://maven.apache.org/plugins/maven-release-plugin/" target="_blank">maven-release-plugin</a>是经常使用的插件，这里简单介绍一下，要点：
 <ol>
 	<li><strong>每个模块的scm配置</strong>：
-<pre lang="xml">
+<pre class="brush: xml">
 <scm>
 	<connection>scm:svn:https://192.168.1.111:8443/svn/denong/pb/trunk/模块名称</connection>
 	<url>https://192.168.1.111:8443/svn/denong/pb/trunk/模块名称</url>
@@ -128,7 +128,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 <pre>上面的scm配置在每一个模块中存在，因为每一个模块再svn目录中有单独的目录；</pre>
 
 但是parent模块有点不同，因为除了parent模块其他子模块需要继承parent，如下代码：
-<pre lang="xml">
+<pre class="brush: xml">
 <parent>
 	<groupId>com.wsria</groupId>
 	<artifactId>parent</artifactId>
@@ -139,7 +139,7 @@ OK，现在你对多模块布局有了初步的印象了，接下来才是重点
 </pre>
 
 parent模块设定了一些被子模块集成的插件，maven-release-plugin当然也在列，除了GAV之外最重要的就是tagBase标签：
-<pre lang="xml">
+<pre class="brush: xml">
 <!-- release插件 -->
 <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
@@ -153,7 +153,7 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 </plugin>
 </pre>
 本地的settings.xml中配置(替换${svn.name}和${svn.pwd}，也就是svn提交时的用户名和密码)：
-<pre lang="xml">
+<pre class="brush: xml">
 <settings>
 ...
 <profiles>
@@ -179,7 +179,7 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 
 <h3>六、多模块布局问题</h3>
 如果你够细心可能发现了上面出现了relativePath属性，这个再多模块的配置中经常遇到的问题，根据目前的案例来说子模块和parent是同级的目录，但是每个子模块又都需要继承parent模块的一些配置，比如上面介绍的到common模块会使用如下配置：
-<pre lang="xml">
+<pre class="brush: xml">
 <parent>
 	<groupId>com.wsria</groupId>
 	<artifactId>parent</artifactId>
@@ -192,7 +192,7 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 
 <pre>[WARNING] 'parent.relativePath' points at com.wsria:dn-pb instead of com.wsria:dn-pb-parent, please verify your project structure @ line 4, column 10</pre>
 意思是找不到dn-pb-parent这个模块……因为maven不知道dn-pb-parent模块存在的位置才会导致警告信息的出现，解决办法是手动指定dn-pb-parent模块的位置，所以最终的解决办法是在parent标签中加入：
-<pre lang="xml">
+<pre class="brush: xml">
 <relativePath>../parent/pom.xml</relativePath>
 </pre>
 这样maven就知道继承的parent的具体位置了，
@@ -200,7 +200,7 @@ parent模块设定了一些被子模块集成的插件，maven-release-plugin当
 <pre>relativePath默认值为../pom.xml，参考：<a href="http://maven.apache.org/ref/3.0/maven-model/maven.html" target="_blank">http://maven.apache.org/ref/3.0/maven-model/maven.html</a></pre>
 
 完整的parent继承配置：
-<pre lang="xml">
+<pre class="brush: xml">
 <parent>
 	<groupId>com.wsria</groupId>
 	<artifactId>dn-pb-parent</artifactId>

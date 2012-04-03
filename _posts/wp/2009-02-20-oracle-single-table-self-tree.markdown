@@ -13,7 +13,7 @@ Start with...Connect By子句递归查询
 下面是从网上转载的内容：
 
 <!--more-->
-<pre lang="sql" line="1">
+<pre class="brush: sql" line="1">
 CREATE TABLE TBL_TEST
 (
 ID    NUMBER,

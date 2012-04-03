@@ -11,7 +11,7 @@ date: 2009-06-22 11:26:58 +08:00
 <pre>那么服务器如果区别这个请求是ajax呢？因为同步和异步ajax的请求的头文件是一样的。我们如果通过X-Requested-With"="XMLHttpRequest”来标识这个请求是ajax的请求。如果服务器硬是要区分的话，就可以通过获取该头部来判断。</pre>
 这是来自一篇JQUERY的AJAX请求的文章，这样我在后台获取header属性中的"X-Requested-With"就可以知道是什么类型的请求了
 附上Java代码：
-<pre lang="java">
+<pre class="brush: java">
 /**
  * 判断是否为Ajax请求
  * @param request	HttpServletRequest

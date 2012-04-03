@@ -19,7 +19,7 @@ date: 2010-10-03 21:32:49 +08:00
 <h3>三、具体实现</h3>
 <!--more-->
 不说废话，直接上代码，下面再讲解；如果想下载猛击<a href="http://code.google.com/p/wsria/source/browse/trunk/wsria-demo/src/main/java/cn/wsria/demo/web/file/DownloadAction.java" target="_blank">这里</a>
-<pre lang="java">package cn.wsria.demo.web.file;
+<pre class="brush: java">package cn.wsria.demo.web.file;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;

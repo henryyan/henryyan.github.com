@@ -35,12 +35,12 @@ $.jgrid.ajaxOptions.type = 'post';
 <ol>
 	<li>找到第6202行</li>
 	<li>找到代码
-<pre lang="javascript" line="6201">var p = jQuery(this).find("select[name='field'] :selected").val(),
+<pre class="brush: js" line="6201">var p = jQuery(this).find("select[name='field'] :selected").val(),
 g = jQuery(this).find("select[name='op'] :selected").val(),
 f = jQuery(this).find("input.vdata,select.vdata :selected").val();</pre>
 </li>
 	<li>现在看到这里的3行代码就是查询时获取参数的3个变量，我们要修改的就是这里，最终代码：
-<pre lang="javascript" line="6202">var p = encodeURIComponent(jQuery(this).find("select[name='field'] :selected").val()),
+<pre class="brush: js" line="6202">var p = encodeURIComponent(jQuery(this).find("select[name='field'] :selected").val()),
 g = encodeURIComponent(jQuery(this).find("select[name='op'] :selected").val()),
 f = encodeURIComponent(jQuery(this).find("input.vdata,select.vdata :selected").val());</pre>
 </li>

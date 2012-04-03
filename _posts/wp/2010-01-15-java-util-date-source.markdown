@@ -8,7 +8,7 @@ date: 2010-01-15 14:27:34 +08:00
 平常开发中积累了一些，可能会和其他有重复，发上来按需取舍
 包括：日期格式化、日期相加、日期排序等
 因为在项目中要对一组无序日期排序并分组就写了一个方法，
-<pre lang="java">
+<pre class="brush: java">
 /**
  * 日期分组<br/>
  * 能够对指定日期列表按照连续性分组<br/>
@@ -28,7 +28,7 @@ public static List<List<Date>> groupDates(List<Date> dates) {}
 <!--more-->
 下面是源码，也可以访问：<a href="http://code.google.com/p/finance-p/source/browse/trunk/WEB-INF/src/net/yanhl/util/DateUtil.java">http://code.google.com/p/finance-p/source/browse/trunk/WEB-INF/src/net/yanhl/util/DateUtil.java</a>下载
 
-<pre lang="java" line="1">import java.text.DateFormat;
+<pre class="brush: java" line="1">import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

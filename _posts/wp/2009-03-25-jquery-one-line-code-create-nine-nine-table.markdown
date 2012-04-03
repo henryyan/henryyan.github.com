@@ -18,7 +18,7 @@ date: 2009-03-25 19:30:46 +08:00
 这个程序有两个递归循环，外层的是建立九个，内层的是建立9个，在创建p的时候，把99口诀打出来。
 代码如下：
 <!--more-->
-<pre lang="javascript" line="1">
+<pre class="brush: js" line="1">
 $(document).ready(function(){
 	
 	$("<div>").data('fact',8).css('margin','10px')

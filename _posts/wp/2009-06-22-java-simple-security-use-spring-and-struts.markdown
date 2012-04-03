@@ -14,7 +14,7 @@ date: 2009-06-22 13:28:38 +08:00
 <ol>
 	<li>
 <h2>struts的拦截器</h2>
-<pre lang="java" line="1">package net.yanhl.struts.authority;
+<pre class="brush: java" line="1">package net.yanhl.struts.authority;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -70,7 +70,7 @@ public class UserAuthorityInterceptor implements MethodInterceptor {
 基本功能就是检查用户是否已经登录</li>
 	<li>
 <h2>配置拦截路径</h2>
-<pre lang="xml"><!--  用户权限拦截器生成代理  -->
+<pre class="brush: xml"><!--  用户权限拦截器生成代理  -->
     <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
     	<property name="beanNames">
             <list>
@@ -96,7 +96,7 @@ public class UserAuthorityInterceptor implements MethodInterceptor {
 <pre>
 这是我们要设置全局的一个ajaxSetup来控制所有ajax请求，代码如下：
 </pre>
-<pre lang="javascript" line="1">
+<pre class="brush: js" line="1">
 $.ajaxSetup({
 		cache : false,
 		global : true,

@@ -24,7 +24,7 @@ OUI-18001: 不支持操作系统 'Windows Vista 版本 6.1'。
 <pre><strong>修改</strong> .\database\stage\prereq\db\refhost.xml
 
 添加如下域:
-<pre lang="xml">
+<pre class="brush: xml">
 <!--Microsoft Windows 7-->
 <OPERATING_SYSTEM>
   <VERSION VALUE="6.1"/>

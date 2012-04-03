@@ -15,7 +15,7 @@ hibernate使用CGLIB把POJO的domain对象动态代理，实现它的魔法，�
 	<li>写一个自定义的JsonBeanProcessor</li>
 </ol>
 1. 实现JSONString接口是侵入性最强的方法
-<pre lang="java">public class Person implements JSONString {
+<pre class="brush: java">public class Person implements JSONString {
    private String name;
    private String lastname;
    private Address address;
@@ -26,9 +26,9 @@ hibernate使用CGLIB把POJO的domain对象动态代理，实现它的魔法，�
       return "{name:'"+name+"',lastname:'"+lastname+"'}";
    }
 }</pre>
-<pre lang="java"><!--more--></pre>
+<pre class="brush: java"><!--more--></pre>
 2.第二种方法通过jsonconfig实例，对包含和需要排除的属性进行方便添加删除
-<pre lang="java">public class Person {
+<pre class="brush: java">public class Person {
    private String name;
    private String lastname;
    private Address address;
@@ -43,7 +43,7 @@ JSON json = JSONSerializer.toJSON( bean, jsonConfig );</pre>
 注意：这种方法不区分目标类，就是说如果有2个bean当中都存在“address”属性，那么采用这种方法，这两个bean中的address属性都将被排除
 
 3. 使用propertyFilter可以允许同时对需要排除的属性和类进行控制，这种控制还可以是双向的，也可以应用到json字符串到java对象
-<pre lang="java">public class Person {
+<pre class="brush: java">public class Person {
    private String name;
    private String lastname;
    private Address address;
@@ -61,7 +61,7 @@ jsonConfig.setJsonPropertyFilter( new PropertyFilter(){
 Person bean = /* initialize */;
 JSON json = JSONSerializer.toJSON( bean, jsonConfig )</pre>
 4.  最后来看JsonBeanProcessor,这种方式和实现JsonString很类似，返回一个代表原来的domain类的合法JSONOBJECT
-<pre lang="java">public class Person {
+<pre class="brush: java">public class Person {
    private String name;
    private String lastname;
    private Address address;

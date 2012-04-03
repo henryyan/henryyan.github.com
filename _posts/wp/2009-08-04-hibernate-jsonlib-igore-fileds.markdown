@@ -6,7 +6,7 @@ wordpress_url: http://www.wsria.com/?p=670
 date: 2009-08-04 22:58:20 +08:00
 ---
 在使用Java语言开发项目的时候一般都是使用SSH架构，基本上大家没有例外，目前流利的Ajax技术给我们开发的系统了带来了不少的改善和性能方面的提高，去年开始学习了jQuery框架，因为使用Java语言做为后台而且jQuery中使用是目前数据结构良好的且方便的JSON做为数据传输方式，所以就在JSON官网找到了json-lib这个第三方JAR包，后来学习了一下就在finance系统中试用了一下，感觉不错；但是也遇到了一些问题，比如当我们映射了hibernate对象后，两个表做了关联，如下例子：
-<pre lang="sql" line="1">
+<pre class="brush: sql" line="1">
 create table people(id bigint not null auto_increment primary key,
         name varchar(20) not null);   
 
@@ -15,7 +15,7 @@ create table location(id bigint not null auto_increment,
 </pre>
 <!--more-->
 People类：
-<pre lang="xml" line="1">
+<pre class="brush: xml" line="1">
   <?xml version="1.0"?>  
  <!DOCTYPE hibernate-mapping PUBLIC    
      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"   
@@ -37,7 +37,7 @@ People类：
 </pre>
 
 Location 类：
-<pre lang="xml" line="1">
+<pre class="brush: xml" line="1">
  <?xml version="1.0"?>  
  <!DOCTYPE hibernate-mapping PUBLIC    
      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"   
@@ -59,7 +59,7 @@ Location 类：
 从上面来看很明显Person和Location是一对多的关系，这样我们就可以这样做：
 
 伪代码：
-<pre lang="java">
+<pre class="brush: java">
 People people= session.get(People.class, 20);
 JSONObject fromObject = JSONObject.fromObject(person );
 response.getWriter().print(fromObject.toString());
@@ -68,7 +68,7 @@ response.getWriter().print(fromObject.toString());
 如果我们现在只需要把person对象的属性输出到前台，而上面的代码是把整个Person对象所有的属性都输出到前台了，
 根据需求这不是我们要的结果，比如只需要一个people对象的name属性即可，如果你用过json-lib的话就知道 JSONObject输出的时候是输出整个对象的所有属性（在没有任何设置的情况下），看看people类的属性中有一个locations的集合中里面，假如现在people对象中有10个Location对象而我们现在不需要Location的任何信息该怎么办呢？
 看看json-lib的API就知道了，提供了一系列的自定义属性、对象处理接口供我们实现，后来就发现了这个PropertyFilter接口，然后就写了一个实现类出来：
-<pre lang="java" line="1">
+<pre class="brush: java" line="1">
 package net.sf.json.processors;
 
 import java.lang.reflect.Field;
@@ -197,7 +197,7 @@ public class IgnoreFieldProcessorImpl implements PropertyFilter {
 
 </pre>
 方法的功能都写清楚了，相信不用我解释了，下面来使用一下：
-<pre lang="java">
+<pre class="brush: java">
 JsonConfig config = new JsonConfig();
 config.setJsonPropertyFilter(new IgnoreFieldProcessorImpl(true)); // 忽略掉集合对象
 
@@ -208,7 +208,7 @@ response.getWriter().print(fromObject.toString());
 上面的代码就会忽略掉集合属性locations，<strong>忽略location的原因还有一个原因就是当集合中的lazy="true"时会出现session关闭的问题，因为当加载完一个对象后session就关闭了，然后我们再输入调用关联对象时就会抛出session close异常，所以忽略掉集合类是较好的选择</strong>
 
 到这里还一个问题就是不需要people对象的nam值，只需要id，当然你可以直接getId()输出，这里为了演示请读者不要追究
-<pre lang="java">
+<pre class="brush: java">
 JsonConfig config = new JsonConfig();
 config.setJsonPropertyFilter(new IgnoreFieldProcessorImpl(true, new String[]{"name"})); // 忽略掉name属性及集合对象
 

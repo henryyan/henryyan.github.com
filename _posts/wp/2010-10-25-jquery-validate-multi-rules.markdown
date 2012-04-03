@@ -51,13 +51,13 @@ remote: {
 <h3>四、解决问题</h3>
 问题找出来了，那么怎么解决呢……我的经验是Google无果后直接看源码分析问题的原因；
 然后查看源码中remote函数的具体操作，发现了问题的所在，大家可以查看第932行处：
-<pre lang="javascript" line="932">
+<pre class="brush: js" line="932">
 if ( previous.old !== value ) {
 </pre>
 哦，原来妖怪在这里，如果第一次验证失败后更改验证条件后再次校验就处问题了，因为这里判断了本次的值和上一次出错的值是否一样，如果一样直接返回上次的验证错误信息；难怪我验证不通过……
 那要想一个办法跳过这里，但是要温柔一点，做快捷的办法是给插件加入一个参数来忽略相同值的验证，也就是说当第一次验证失败后更改了验证依赖条件再次验证时忽略相同值的判断而直接再次请求后台验证；
 所以我加入了一个<b>ignoreSameValue</b>参数来实现我的想法，更改第932行代码如下：
-<pre lang="javascript" line="932">
+<pre class="brush: js" line="932">
 if ( previous.old !== value || param.ignoreSameValue) {
 </pre>
 然后再remote验证调用的代码处设置参数为true即可，

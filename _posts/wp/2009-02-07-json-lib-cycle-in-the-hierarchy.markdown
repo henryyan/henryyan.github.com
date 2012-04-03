@@ -11,7 +11,7 @@ date: 2009-02-07 18:33:22 +08:00
 net.sf.json.JSONException: There is a cycle in the hierarchy!
 
 <!--more-->
-<pre lang="java" line="1">
+<pre class="brush: java" line="1">
 at net.sf.json.util.CycleDetectionStrategy$StrictCycleDetectionStrategy.handleRepeatedReferenceAsObject(CycleDetectionStrategy.java:97)
 at net.sf.json.JSONObject._fromBean(JSONObject.java:857)
 at net.sf.json.JSONObject.fromObject(JSONObject.java:192)
@@ -39,14 +39,14 @@ at net.yanhl.iouser.action.IOUserAction.loadUser(IOUserAction.java:142)
 </pre>
 因为Hibernate中设置了自身关联：
 Iouser.hbm.xml:
-<pre lang="xml" line="25">
+<pre class="brush: xml" line="25">
 <many-to-one name="group" class="net.yanhl.iouser.pojo.GroupRelation" lazy="false" cascade="none">
 <column name="group_id" />
 </many-to-one>
 </pre>
 
 //设置自身关联的组对象
-<pre lang="java" line="5">
+<pre class="brush: java" line="5">
 public class GroupRelation implements Serializable {
 
 private static final long serialVersionUID = 6202253180943473205L;
@@ -58,7 +58,7 @@ private GroupRelation parentGroup;
 private Set<GroupRelation> childGroups = new HashSet<GroupRelation>();
 </pre>
 
-<pre lang="xml" line="10">
+<pre class="brush: xml" line="10">
 <many-to-one name="parentGroup" column="parent_id" lazy="false"
 class="net.yanhl.iouser.pojo.GroupRelation">
 </many-to-one>
@@ -70,7 +70,7 @@ class="net.yanhl.iouser.pojo.GroupRelation">
 </pre>
 
 起初想通过hibernate来解决问题，就是想过滤掉自身关联后来查资料发现不可能实现，最后找到通过JSON-LIB来过滤关联的集合属性，代码如下：
-<pre lang="java" line="56">
+<pre class="brush: java" line="56">
 JsonConfig config = new JsonConfig();
 config.setJsonPropertyFilter(new PropertyFilter(){
 	public boolean apply(Object source, String name, Object value) {

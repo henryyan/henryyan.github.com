@@ -36,7 +36,7 @@ date: 2009-02-24 21:55:29 +08:00
 为了能够容易理解以系统登录讲解，最后会以一个实例的方式讲解
 1、登录页面
 代码请参见 <a href="http://code.google.com/p/finance-p/source/browse/trunk/login.jsp" target="_blank">http://code.google.com/p/finance-p/source/browse/trunk/login.jsp</a>
-<pre lang="xml">用户名：
+<pre class="brush: xml">用户名：
 <input id="loginName" name="loginName" size="20" type="text" />
 
 密码：
@@ -112,7 +112,7 @@ $(function() {
 这我们主要讲解怎么通过json-lib获取参数
 
 首先我们来写一个公共的方法，可以返回一个<a title="查看API文档" href="http://json-lib.sourceforge.net/apidocs/jdk15/net/sf/json/JSONObject.html" target="_blank">net.sf.json.JSONObject</a>对象，具体代码如下：
-<pre lang="java">/**
+<pre class="brush: java">/**
  * 读取请求参数转换JSONObject对象
  *
  * @param request HttpServletRequest 对象
@@ -142,7 +142,7 @@ protected JSONObject readJson(HttpServletRequest request) throws Exception {
 通过这个方法我们可以获得一个JSONObject对象，然后就可以通过key获得对应的value；
 
 2、登录处理Action
-<pre lang="java">public ActionForward login(ActionMapping mapping, ActionForm actionForm,
+<pre class="brush: java">public ActionForward login(ActionMapping mapping, ActionForm actionForm,
              HttpServletRequest request,HttpServletResponse response) throws Exception {
 	JSONObject jsonObject = readJson(request);
 	String name = jsonObject.getString("loginName");
@@ -167,7 +167,7 @@ protected JSONObject readJson(HttpServletRequest request) throws Exception {
 
 在34行我们通过刚刚准备好的readJson方法获得一个JSONObject对象，接下来通过key获得用户名和密码，接下来就是业务逻辑的验证工作了，通过后我们向前台返回请求结果。
 我们还需要一个小方法向前台写结果，如上面44、46行
-<pre lang="java">protected void print(HttpServletResponse response, String info) throws IOException {
+<pre class="brush: java">protected void print(HttpServletResponse response, String info) throws IOException {
 	try {
 		response.getWriter().print(info);
 	} catch (IOException e) {
@@ -177,7 +177,7 @@ protected JSONObject readJson(HttpServletRequest request) throws Exception {
 }</pre>
 <pre>这里有一点要说明，在获得输出流的时候有个小插曲，我在开发的时候使用的tomcat5.5.26版本，
 当时的写法为：
-<pre lang="java">response.getOutputStream().print(info);</pre>
+<pre class="brush: java">response.getOutputStream().print(info);</pre>
 后来源码开源后一个网友使用的tomcat6版本，说系统不能正常运行，后来他查到了原因，因为获得输出流时出了问题，
 改成getWriter就没有问题了，集体也没有搞清除为什么会是这样……</pre>
 基于java开发时会使用struts，struts需要返回一个ActionMapping对象，但是在ajax请求不需要返回特定页面，因为根本没有跳转页面的动作，解决办法很简单，直接<strong>return  null</strong>就可以了

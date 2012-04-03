@@ -90,7 +90,7 @@ function showDetail(userId) {
 <ul>
 	<li> 怎么查询一个POJO对象就介绍了，重点说明怎么返回JSON格式的数据</li>
 	<li>这里还是使用java语言使用的JSON工具json-lib，关于json-lib的资料上篇文章也已介绍，这里不再重复；
-<pre lang="java">// 获取一个Iouser对象，包含债务人的信息
+<pre class="brush: java">// 获取一个Iouser对象，包含债务人的信息
 Iouser user = (Iouser) getBaseManager().get(Iouser.class, iouserId);
 
 //使用json-lib工具把一个POJO对象解析为一个JSON格式数据
