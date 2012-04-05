@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "在Ubuntu 12.04 LTS上安装Git1.7.10-rc4(中文化)"
+title: "在Ubuntu上安装Git1.7.10-rc4(中文化)"
 category: git
 tags: 
  - git
