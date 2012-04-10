@@ -20,7 +20,7 @@ layout: nil
    <link href="http://www.kafeitu.me{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>http://www.kafeitu.me{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <content type="html">{{ post.content | xml_escape }}<strong>原创文章，转载请注明：</strong>转载自：<a href='http://www.kafeitu.me{{post.url}}'>{{post.title}}</a></content>
  </entry>
  {% endfor %}
  
