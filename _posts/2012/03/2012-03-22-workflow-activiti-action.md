@@ -19,13 +19,13 @@ title: "工作流引擎Activiti使用总结"
 
 ### 1.3 Activiti资料
 
-* 官网：http://www.activiti.org/
+* 官网：[http://www.activiti.org/](http://www.activiti.org/)
 
-* 下载：http://www.activiti.org/download.html
+* 下载：[http://www.activiti.org/download.html](http://www.activiti.org/download.html)
 
 * 版本：Activiti的版本是从**5**开始的，因为Activiti是使用jBPM4的源码；**版本发布**：两个月发布一次。
 
-* Eclipse Plugin: http://activiti.org/designer/update/
+* Eclipse Plugin: [http://activiti.org/designer/update/](http://activiti.org/designer/update/)
 
 * QQ群：5435716
 
@@ -184,15 +184,15 @@ public class CreatePaymentProcessListener implements ExecutionListener {
 
 虽然Activiti也提供了测试的一些超类，但是感觉不好用，所以自己封装了一些方法。
 
-代码请转移：https://gist.github.com/2182847
+代码请转移：[https://gist.github.com/2182847](https://gist.github.com/2182847)
 
 ### 4.1 验证流程图设计是否正确
 
-代码请转移：https://gist.github.com/2182869
+代码请转移：[https://gist.github.com/2182869](https://gist.github.com/2182869)
 
 ### 4.2 业务对象和流程关联测试
 
-代码请转移：https://gist.github.com/2182973
+代码请转移：[https://gist.github.com/2182973](https://gist.github.com/2182973)
 
 ## 5.各种状态的任务查询以及和业务对象关联
 
@@ -287,7 +287,7 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 
 思路：现在可以利用这个字段查询了，不管是Task还是ProcessInstance都可以得到流程实例ID，可以根据流程实例ID查询实体然后把流程对象设置到实体的一个属性中由Action或者Controller输出到前台。
 
-代码请参考：https://gist.github.com/2183557
+代码请参考：[https://gist.github.com/2183557](https://gist.github.com/2183557)
 
 ## 6.UI及截图
 
@@ -317,10 +317,11 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 
 #### 6.3.1 当前节点定位JS
 
-Java代码请移步：https://gist.github.com/2183712
+**Java**代码请移步：[https://gist.github.com/2183712](https://gist.github.com/2183712)
 
-Javascript思路：先通过Ajax获取当前节点的坐标，在指定位置添加红色边框，然后加载图片。
-代码移步：https://gist.github.com/2183804
+**Javascript**思路：先通过Ajax获取当前节点的坐标，在指定位置添加红色边框，然后加载图片。
+
+代码移步：[https://gist.github.com/2183804](https://gist.github.com/2183804)
 
 ## 7.结束
 
