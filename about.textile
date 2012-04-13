@@ -46,6 +46,10 @@ h2. 联系我
 * Weibo: http://weibo.com/kafeituzi
 * Blog: http://www.kafeitu.me
 
+h2. Github项目
+
+* https://github.com/henryyan
+
 h2. 关于版权
 
 除特别说明外，本博客内容皆为原创，可以自由转载传播，但请署名及注明出处！
