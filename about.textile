@@ -43,12 +43,12 @@ h2. 联系我
 
 * QQ：576525789
 * MSN、Email：yanhonglei[@]gmail.com
-* Weibo: [@kafeituzi](http://weibo.com/kafeituzi)
-* Blog: [http://www.kafeitu.me](http://www.kafeitu.me)
+* Weibo: <a href='http://weibo.com/kafeituzi'>@kafeituzi</a>
+* Blog: <a href='http://www.kafeitu.me'>http://www.kafeitu.me</a>
 
 h2. Github项目
 
-* [https://github.com/henryyan](https://github.com/henryyan)
+* <a href='https://github.com/henryyan'>https://github.com/henryyan</a>
 
 h2. 关于版权
 
