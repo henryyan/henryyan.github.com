@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "在Linux(Ubuntu)+Nginx安装配置AjaXplorer"
-category: ajaxplorer
+category: tools
 tags: 
  - ajaxplorer
  - linux
