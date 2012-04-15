@@ -206,6 +206,7 @@ server {
 
     root /usr/share/nginx/www;
     index index.html index.htm;
+    client_max_body_size    1G;
 
     # Make site accessible from http://localhost/
     server_name localhost;
