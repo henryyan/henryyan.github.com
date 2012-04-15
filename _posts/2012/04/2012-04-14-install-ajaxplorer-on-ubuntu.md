@@ -190,11 +190,20 @@ sudo usermod -a henryyan -G www-data
 把下面的配置信息添加到**server**块中：
 <pre class="brush: shell">
 location ~ ^/ajaxplorer/.*\.php {
+    root        /home/ajaxplorer;
     include        fastcgi_params;
     fastcgi_pass   127.0.0.1:9000;
     fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
     access_log  /var/log/ajaxplorer_access.log;
     error_log   /var/log/ajaxplorer_error.log;
+}
+
+location ~ ^/ajaxplorer/plugins {
+    root    /home/ajaxplorer;
+}
+
+location ~ ^/ajaxplorer/data {
+    root    /home/ajaxplorer;
 }
 </pre>
 
@@ -229,6 +238,10 @@ server {
     }
 
     location ~ ^/ajaxplorer/plugins {
+        root    /home/ajaxplorer;
+    }
+
+    location ~ ^/ajaxplorer/data {
         root    /home/ajaxplorer;
     }
 
