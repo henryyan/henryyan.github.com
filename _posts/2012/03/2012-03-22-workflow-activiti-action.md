@@ -27,7 +27,7 @@ title: "工作流引擎Activiti使用总结"
 
 * Eclipse Plugin: [http://activiti.org/designer/update/](http://activiti.org/designer/update/)
 
-* QQ群：5435716
+* Activit中文群：219704109
 
 ## 2.初次使用遇到问题收集
 
