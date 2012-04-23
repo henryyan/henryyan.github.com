@@ -1,0 +1,240 @@
+---
+layout: post
+title: "同步或者重构Activiti Identify用户数据的多种方案比较"
+category: activiti
+tags: 
+ - activiti
+ - workflow
+ - identify
+ - 同步
+---
+
+相信每个涉及到用户的系统都有一套用户权限管理平台或者模块，用来维护用户以及在系统内的功能、数据权限，我们使用的Activiti工作流引擎配套设计了包括**User、Group**的Identify模块，怎么和业务数据同步呢，这个问题是每个新人必问的问题之一，下面介绍几种同步方案，最后总结比较。
+
+	如果你在考虑直接使用Activiti引擎的Identify模块作为系统的用户数据管理模块，您真是奇才～开个玩笑
+
+## 方案一：调用IdentifyService接口完成同步
+
+参考IdentifyService接口Javadoc：[http://www.activiti.org/javadocs/org/activiti/engine/IdentityService.html](http://www.activiti.org/javadocs/org/activiti/engine/IdentityService.html)
+
+### 接口定义：
+<pre class="brush: java">
+package com.foo.arch.service.id;
+import java.util.List;
+
+import com.foo.arch.entity.id.User;
+import com.foo.arch.service.ServiceException;
+
+/**
+ * 维护用户、角色、权限接口
+ * 
+ * @author HenryYan
+ *
+ */
+public interface AccountService {
+
+	/**
+	 * 添加用户并[同步其他数据库]
+	 * <ul>
+	 * <li>step 1: 保存系统用户，同时设置和部门的关系</li>
+	 * <li>step 2: 同步用户信息到activiti的identity.User，同时设置角色</li>
+	 * </ul>
+	 * 
+	 * @param user				用户对象
+	 * @param orgId				部门ID
+	 * @param roleIds			角色ID集合
+	 * @param synToActiviti		是否同步到Activiti数据库，通过配置文件方式设置，使用属性：account.user.add.syntoactiviti
+	 * @throws OrganizationNotFoundException	关联用户和部门的时候从数据库查询不到哦啊部门对象
+	 * @throws	Exception						其他未知异常
+	 */
+	public void save(User user, Long orgId, List<Long> roleIds, boolean synToActiviti)
+			throws  OrganizationNotFoundException, ServiceException, Exception;
+	
+	/**
+	 * 删除用户
+	 * @param userId		用户ID
+	 * @param synToActiviti		是否同步到Activiti数据库，通过配置文件方式设置，使用属性：account.user.add.syntoactiviti
+	 * @throws Exception
+	 */
+	public void delete(Long userId, boolean synToActiviti) throws ServiceException, Exception;
+}
+</pre>
+
+### 接口实现片段：
+<pre class="brush: java">
+@Service
+@Transactional
+public class AccountServiceImpl implements AccountService {	
+	/**
+	 * 保存用户信息，并且同步用户信息到activiti的identity.User和identify.Group
+	 * @param user				用户对象{@link User}
+	 * @param roleIds			用户拥有的角色ID集合
+	 * @param synToActiviti		是否同步数据到Activiti
+	 * @see Role
+	 */
+	public void saveUser(User user, List<Long> roleIds, boolean synToActiviti) {
+		String userId = ObjectUtils.toString(user.getId());
+
+		// 保存系统用户
+		accountManager.saveEntity(user);
+
+		// 同步数据到Activiti Identify模块
+		if (synToActiviti) {
+			UserQuery userQuery = identityService.createUserQuery();
+			List<org.activiti.engine.identity.User> activitiUsers = userQuery.userId(userId).list();
+
+			if (activitiUsers.size() == 1) {
+				updateActivitiData(user, roleIds, activitiUsers.get(0));
+			} else if (activitiUsers.size() > 1) {
+				String errorMsg = "发现重复用户：id=" + userId;
+				logger.error(errorMsg);
+				throw new RuntimeException(errorMsg);
+			} else {
+				newActivitiUser(user, roleIds);
+			}
+		}
+
+	}
+
+	/**
+	 * 添加工作流用户以及角色
+	 * @param user		用户对象{@link User}
+	 * @param roleIds	用户拥有的角色ID集合
+	 */
+	private void newActivitiUser(User user, List<Long> roleIds) {
+		String userId = user.getId().toString();
+
+		// 添加用户
+		saveActivitiUser(user);
+
+		// 添加membership
+		addMembershipToIdentify(roleIds, userId);
+	}
+
+	/**
+	 * 添加一个用户到Activiti {@link org.activiti.engine.identity.User}
+	 * @param user	用户对象, {@link User}
+	 */
+	private void saveActivitiUser(User user) {
+		String userId = user.getId().toString();
+		org.activiti.engine.identity.User activitiUser = identityService.newUser(userId);
+		cloneAndSaveActivitiUser(user, activitiUser);
+		logger.debug("add activiti user: {}", ToStringBuilder.reflectionToString(activitiUser));
+	}
+
+	/**
+	 * 添加Activiti Identify的用户于组关系
+	 * @param roleIds	角色ID集合
+	 * @param userId	用户ID
+	 */
+	private void addMembershipToIdentify(List<Long> roleIds, String userId) {
+		for (Long roleId : roleIds) {
+			Role role = roleManager.getEntity(roleId);
+			logger.debug("add role to activit: {}", role);
+			identityService.createMembership(userId, role.getEnName());
+		}
+	}
+
+	/**
+	 * 更新工作流用户以及角色
+	 * @param user			用户对象{@link User}
+	 * @param roleIds		用户拥有的角色ID集合
+	 * @param activitiUser	Activiti引擎的用户对象，{@link org.activiti.engine.identity.User}
+	 */
+	private void updateActivitiData(User user, List<Long> roleIds, org.activiti.engine.identity.User activitiUser) {
+
+		String userId = user.getId().toString();
+
+		// 更新用户主体信息
+		cloneAndSaveActivitiUser(user, activitiUser);
+
+		// 删除用户的membership
+		List<Group> activitiGroups = identityService.createGroupQuery().groupMember(userId).list();
+		for (Group group : activitiGroups) {
+			logger.debug("delete group from activit: {}", ToStringBuilder.reflectionToString(group));
+			identityService.deleteMembership(userId, group.getId());
+		}
+
+		// 添加membership
+		addMembershipToIdentify(roleIds, userId);
+	}
+
+	/**
+	 * 使用系统用户对象属性设置到Activiti User对象中
+	 * @param user			系统用户对象
+	 * @param activitiUser	Activiti User
+	 */
+	private void cloneAndSaveActivitiUser(User user, org.activiti.engine.identity.User activitiUser) {
+		activitiUser.setFirstName(user.getName());
+		activitiUser.setLastName(StringUtils.EMPTY);
+		activitiUser.setPassword(StringUtils.EMPTY);
+		activitiUser.setEmail(user.getEmail());
+		identityService.saveUser(activitiUser);
+	}
+
+	@Override
+	public void delete(Long userId, boolean synToActiviti, boolean synToChecking) throws ServiceException, Exception {
+		// 查询需要删除的用户对象
+		User user = accountManager.getEntity(userId);
+		if (user == null) {
+			throw new ServiceException("删除用户时，找不到ID为" + userId + "的用户");
+		}
+
+		/**
+		 * 同步删除Activiti User Group
+		 */
+		if (synToActiviti) {
+			// 同步删除Activiti User
+			List<Role> roleList = user.getRoleList();
+			for (Role role : roleList) {
+				identityService.deleteMembership(userId.toString(), role.getEnName());
+			}
+
+			// 同步删除Activiti User
+			identityService.deleteUser(userId.toString());
+		}
+
+		// 删除本系统用户
+		accountManager.deleteUser(userId);
+
+		// 删除考勤机用户
+		if (synToChecking) {
+			checkingAccountManager.deleteEntity(userId);
+		}
+	}
+}
+</pre>
+
+## 方案二：覆盖IdentifyService接口的实现
+
+此方法覆盖**IdentifyService**接口的默认实现类：**org.activiti.engine.impl.IdentityServiceImpl**。
+
+读者可以根据现有的用户管理接口实现覆盖**IdentityServiceImpl**的每个方法的默认实现，这样就等于放弃使用系列表：ACT_ID_。
+
+此方法不再提供代码，请读者自行根据现有接口逐一实现接口定义的功能。
+
+## 方案三：用视图覆盖同名的ACT_ID_系列表
+
+此方案和第二种类似，放弃使用系列表：ACT_ID_；但是做法不正规，需要修改源码并且创建同名的视图。
+
+视图：
+
+* ACT_ID_GROUP
+* ACT_ID_INFO
+* ACT_ID_INFO
+* ACT_ID_INFO
+
+笔者按照表结构创建了以上几个同名的视图，但是Activiti具有自我保护机制，导致引擎不能初始化，需要需改源码才可以正常使用。
+
+修改的方法如下：
+
+* org.activiti.engine.impl.db.DbSqlSessionFactory的**isDbIdentityUsed=false**
+* org.activiti.engine.impl.db.DbSqlSession的**681**行代码处：<pre class="brush: java">public boolean isIdentityTablePresent(){return true;//isTablePresent("ACT_ID_USER");}</pre>
+
+## 总结
+
+* 方案**一**：不破坏、不修改源码，**面向接口编程**，**推荐**；
+
+* 方案**二**：放弃原有的Identify模块，使用自定义的实现，特殊情况可以使用此方式；
+
+* 方案**三**：不仅破坏源码，而且破坏数据库结构，不推荐。
