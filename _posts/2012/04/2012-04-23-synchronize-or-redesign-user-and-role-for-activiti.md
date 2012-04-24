@@ -57,10 +57,22 @@ public interface AccountService {
 	 * @throws Exception
 	 */
 	public void delete(Long userId, boolean synToActiviti) throws ServiceException, Exception;
+
+	/**
+	 * 同步用户、角色数据到工作流
+	 * @throws Exception
+	 */
+	public void synAllUserAndRoleToActiviti() throws Exception;
+
+	/**
+	 * 删除工作流引擎Activiti的用户、角色以及关系
+	 * @throws Exception
+	 */
+	public void deleteAllActivitiIdentifyData() throws Exception;
 }
 </pre>
 
-### 接口实现片段：
+#### 同步单个接口实现片段：
 <pre class="brush: java">
 @Service
 @Transactional
@@ -201,6 +213,144 @@ public class AccountServiceImpl implements AccountService {
 		if (synToChecking) {
 			checkingAccountManager.deleteEntity(userId);
 		}
+	}
+}
+</pre>
+
+#### 同步全部数据接口实现片段：
+
+同步全部数据步骤：
+
+* 删除Activiti的User、Group、Membership数据
+
+* 复制Role对象数据到Group
+
+* 复制用户数据以及Membership数据
+
+##### ActivitiIdentifyCommonDao.java
+<pre class="brush: java">
+public class ActivitiIdentifyCommonDao {
+
+	protected Logger logger = LoggerFactory.getLogger(getClass());
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	/**
+	 * 删除用户和组的关系
+	 */
+	public void deleteAllUser() {
+		String sql = "delete from ACT_ID_USER";
+		jdbcTemplate.execute(sql);
+		logger.debug("deleted from activiti user.");
+	}
+
+	/**
+	 * 删除用户和组的关系
+	 */
+	public void deleteAllRole() {
+		String sql = "delete from ACT_ID_GROUP";
+		jdbcTemplate.execute(sql);
+		logger.debug("deleted from activiti group.");
+	}
+
+	/**
+	 * 删除用户和组的关系
+	 */
+	public void deleteAllMemerShip() {
+		String sql = "delete from ACT_ID_MEMBERSHIP";
+		jdbcTemplate.execute(sql);
+		logger.debug("deleted from activiti membership.");
+	}
+
+}
+</pre>
+
+##### ActivitiIdentifyService.java
+<pre class="brush: java">
+public class ActivitiIdentifyService extends AbstractBaseService {
+	
+	@Autowired
+	protected ActivitiIdentifyCommonDao activitiIdentifyCommonDao;
+	
+	/**
+	 * 删除用户和组的关系
+	 */
+	public void deleteAllUser() {
+		activitiIdentifyCommonDao.deleteAllUser();
+	}
+	
+	/**
+	 * 删除用户和组的关系
+	 */
+	public void deleteAllRole() {
+		activitiIdentifyCommonDao.deleteAllRole();
+	}
+	
+	/**
+	 * 删除用户和组的关系
+	 */
+	public void deleteAllMemerShip() {
+		activitiIdentifyCommonDao.deleteAllMemerShip();
+	}
+}
+</pre>
+
+##### AccountServiceImpl.java
+<pre class="brush: java">
+public class AccountServiceImpl implements AccountService {
+@Override
+	public void synAllUserAndRoleToActiviti() throws Exception {
+
+		// 清空工作流用户、角色以及关系
+		deleteAllActivitiIdentifyData();
+
+		// 复制角色数据
+		synRoleToActiviti();
+
+		// 复制用户以及关系数据
+		synUserWithRoleToActiviti();
+	}
+
+	/**
+	 * 复制用户以及关系数据
+	 */
+	private void synUserWithRoleToActiviti() {
+		List<User> allUser = accountManager.getAll();
+		for (User user : allUser) {
+			String userId = user.getId().toString();
+
+			// 添加一个用户到Activiti
+			saveActivitiUser(user);
+
+			// 角色和用户的关系
+			List<Role> roleList = user.getRoleList();
+			for (Role role : roleList) {
+				identityService.createMembership(userId, role.getEnName());
+				logger.debug("add membership {user: {}, role: {}}", userId, role.getEnName());
+			}
+		}
+	}
+
+	/**
+	 * 同步所有角色数据到{@link Group}
+	 */
+	private void synRoleToActiviti() {
+		List<Role> allRole = roleManager.getAll();
+		for (Role role : allRole) {
+			String groupId = role.getEnName().toString();
+			Group group = identityService.newGroup(groupId);
+			group.setName(role.getName());
+			group.setType(role.getType());
+			identityService.saveGroup(group);
+		}
+	}
+
+	@Override
+	public void deleteAllActivitiIdentifyData() throws Exception {
+		activitiIdentifyService.deleteAllMemerShip();
+		activitiIdentifyService.deleteAllRole();
+		activitiIdentifyService.deleteAllUser();
 	}
 }
 </pre>
