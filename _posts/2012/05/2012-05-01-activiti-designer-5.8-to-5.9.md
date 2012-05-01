@@ -51,6 +51,6 @@ Eclipse切换到**Activiti**视图，右键项目选择**Create deployment artif
 
 由原来的foo.activiti变成了foo.bpmn的确是进步，直接编辑最终的bpmn20.xml文件，如果之前需要手动修改bpmn20.xml内容，下次用GUI方式设计流程定义的时候可能会丢失手动添加的内容(有些功能设计器还没有界面操作)。
 
-如果有懂Eclipse Plugin开发的可以把5.9之前的自动生成图片功能加上去，同时我也会向官方提意见，希望下次更新能恢复自动生成图片的功能。
+官方明确表示：不再自动生成图片了；[http://forums.activiti.org/en/viewtopic.php?f=8&t=3867](http://forums.activiti.org/en/viewtopic.php?f=8&t=3867)
 
-如果功能恢复了再更新博客提醒大家。
+如果有懂Eclipse Plugin开发的可以把5.9之前的自动生成图片功能加上去。
