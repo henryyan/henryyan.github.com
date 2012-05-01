@@ -53,4 +53,6 @@ Eclipse切换到**Activiti**视图，右键项目选择**Create deployment artif
 
 官方明确表示：不再自动生成图片了；[http://forums.activiti.org/en/viewtopic.php?f=8&t=3867](http://forums.activiti.org/en/viewtopic.php?f=8&t=3867)
 
-如果有懂Eclipse Plugin开发的可以把5.9之前的自动生成图片功能加上去。
+不过大家可以多去这个帖子表达自己的请求：[http://forums.activiti.org/en/viewtopic.php?f=8&t=3867&start=0](http://forums.activiti.org/en/viewtopic.php?f=8&t=3867&start=0) 有可能下个版本能恢复也不一定。
+
+如果有懂Eclipse Plugin开发的可以先把5.9之前的自动生成图片功能加上去。
