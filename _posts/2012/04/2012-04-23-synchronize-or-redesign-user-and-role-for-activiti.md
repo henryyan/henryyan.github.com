@@ -371,8 +371,8 @@ public class AccountServiceImpl implements AccountService {
 
 * ACT_ID_GROUP
 * ACT_ID_INFO
-* ACT_ID_INFO
-* ACT_ID_INFO
+* ACT_ID_MEMBERSHIP
+* ACT_ID_USER
 
 笔者按照表结构创建了以上几个同名的视图，但是Activiti具有自我保护机制，导致引擎不能初始化，需要需改源码才可以正常使用。
 
