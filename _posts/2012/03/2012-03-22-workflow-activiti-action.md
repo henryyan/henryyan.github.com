@@ -104,16 +104,38 @@ Activiti官方的例子使用的就是在流程定义中设置每一个节点显
 
 ### 2.3 业务和流程的关联方式
 
-这个问题在群里面很多人都问过，这也是我刚刚开始迷惑的地方；后来看了以下API发现RuntimeService有一个方法：**startProcessInstanceById**，javadoc对其说明：
-<pre>startProcessInstanceById(String processDefinitionId, String businessKey, Map<String,Object> variables) 
-        Starts a new process instance in the exactly specified version of the process definition with the given id.
-</pre>
-当然在设置业务ID的时候也可以同时设置variables参数作为流程启动时的参数，在Task中可以获取它。
+这个问题在群里面很多人都问过，这也是我刚刚开始迷惑的地方；
 
-其中**businessKey**就是业务ID，例如要申请请假，那么先填写登记信息，然后（保存+启动流程），因为请假是单独设计的数据表，所以保存后得到实体ID就可以把它传给**startProcessInstanceById**方法启动流程。当需要根据businessKey查询流程的时候就可以通过API查询:
+后来看了以下API发现RuntimeService有两个方法：
+
+### 2.3.1 startProcessInstanceByKey
+
+javadoc对其说明：
+<pre>startProcessInstanceByKey(String processDefinitionKey, Map<String,Object> variables) 
+          Starts a new process instance in the latest version of the process definition with the given key
+</pre>
+
+其中**businessKey**就是业务ID，例如要申请请假，那么先填写登记信息，然后（保存+启动流程），因为请假是单独设计的数据表，所以保存后得到实体ID就可以把它传给**processInstanceBusinessKey**方法启动流程。当需要根据businessKey查询流程的时候就可以通过API查询:
 <pre class="brush: java">runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(processInstanceBusinessKey, processDefinitionKey)</pre>
 
 **建议数据库冗余设计**：在业务表设计的时候添加一列：**PROCESS_INSTANCE_ID varchar2(64)**，在流程启动之后把流程ID更新到业务表中，这样不管从业务还是流程都可以查询到对方！
+
+**特别说明：** 此方法启动时自动选择最新版本的流程定义。
+
+### 2.3.2 startProcessInstanceById
+
+javadoc对其说明：
+<pre>startProcessInstanceById(String processDefinitionId, String businessKey, Map<String,Object> variables) 
+          Starts a new process instance in the exactly specified version of the process definition with the given id.
+</pre>
+
+**processDefinitionId**：这个参数的值可以通过**repositoryService.createProcessDefinitionQuery()**方法查询，对应数据库：**ACT_RE_PROCDEF**；每次部署一次流程定义就会添加一条数据，同名的版本号累加。
+
+**特别说明：** 此可以指定不同版本的流程定义，让用户多一层选择。
+
+### 2.3.3 如何选择
+
+建议使用**startProcessInstanceByKey**，特殊情况需要使用以往的版本选择使用**startProcessInstanceById**。
 
 ### 2.4 同步用户数据
 
