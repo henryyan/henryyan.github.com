@@ -56,3 +56,7 @@ Eclipse切换到**Activiti**视图，右键项目选择**Create deployment artif
 不过大家可以多去这个帖子表达自己的请求：[http://forums.activiti.org/en/viewtopic.php?f=8&t=3867&start=0](http://forums.activiti.org/en/viewtopic.php?f=8&t=3867&start=0) 有可能下个版本能恢复也不一定。
 
 如果有懂Eclipse Plugin开发的可以先把5.9之前的自动生成图片功能加上去。
+
+## 6.更新记录
+
+1. <font color='red'>2012-05-19</font>：已经在**5.9.2**版本修复次不能自动生成图片问题，**_等待更新_**；JIRA：[https://jira.codehaus.org/browse/ACT-1210](https://jira.codehaus.org/browse/ACT-1210)
