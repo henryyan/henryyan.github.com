@@ -263,9 +263,9 @@ ln -s apache-maven-3.0.4 maven
 
 请移步之前的博文：[在Ubuntu(Debian)上安装最新版Git](http://www.kafeitu.me/git/2012/04/10/install-lastest-git-on-ubuntu.html)
 
-Git的CLI交互方式已经很好用了，而且自带GUI工具；Eclipse中可以安装Egit（我仅仅用来查看文件的修改状态、还原文件的修改）。
+Git的CLI交互方式已经很好用了，而且自带GUI工具；如果不差钱可以购买[SmartGit](http://www.syntevo.com/smartgit/index.html)；Eclipse中可以安装Egit（我仅仅用来查看文件的修改状态、还原文件的修改）。
 
-另外再推荐一个文本模式的Git浏览器工具-Tig：sudo apt-get install tig
+另外再推荐一个文本模式的Git浏览器工具-**Tig**：sudo apt-get install tig
 
 ### 4.6 安装Eclipse
 
@@ -276,6 +276,12 @@ Git的CLI交互方式已经很好用了，而且自带GUI工具；Eclipse中可�
 关于插件方面就不介绍了，有需要的可以交流。
 
 	新版的Eclipse自带了Maven插件，但是没有安装**Maven Integration WTP**，需要自己手动安装。
+
+有几个插件推荐：
+
+* Path Tools：[http://marketplace.eclipse.org/content/path-tools](http://marketplace.eclipse.org/content/path-tools)，快速打开指定目录、文件的终端窗口
+
+ viPlugin：[http://marketplace.eclipse.org/content/viplugin](http://marketplace.eclipse.org/content/viplugin)，VIM控必备
 
 ### 4.7 安装数据库
 
