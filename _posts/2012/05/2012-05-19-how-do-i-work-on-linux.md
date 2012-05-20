@@ -281,7 +281,7 @@ Git的CLI交互方式已经很好用了，而且自带GUI工具；如果不差�
 
 * Path Tools：[http://marketplace.eclipse.org/content/path-tools](http://marketplace.eclipse.org/content/path-tools)，快速打开指定目录、文件的终端窗口
 
- viPlugin：[http://marketplace.eclipse.org/content/viplugin](http://marketplace.eclipse.org/content/viplugin)，VIM控必备
+* viPlugin：[http://marketplace.eclipse.org/content/viplugin](http://marketplace.eclipse.org/content/viplugin)，VIM控必备
 
 ### 4.7 安装数据库
 
