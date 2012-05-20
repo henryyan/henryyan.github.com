@@ -97,6 +97,70 @@ Zsh的确好用，但是配置起来比较复杂，之后又在Github上发现�
 
 对于oh-my-zsh的安装配置请参考本博客的文章：[我最喜爱的工具-oh-my-zsh](http://www.kafeitu.me/shell/2012/03/25/oh-my-zsh.html)
 
+我的zsh(oh-my-zsh)配置分享：
+<pre class="brush:shell">
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="kafeitu"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# hashs
+#路径别名 进入相应的路径时只要 cd ~xxx
+hash -d WWW="/home/lighttpd/html"
+hash -d ARCH="/mnt/arch"
+hash -d PKG="/var/cache/pacman/pkg"
+hash -d E="/etc/env.d"
+hash -d C="/etc/conf.d"
+hash -d I="/etc/rc.d"
+hash -d X="/etc/X11"
+hash -d BK="/home/r00t/config_bak"
+hash -d down="/home/henryyan/Downloads"
+hash -d ss4="/home/henryyan//work/sources/springside/springside4"
+hash -d aia="/home/henryyan/work/books/activiti-in-action"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(ant mvn svn git git-flow)
+
+source $ZSH/oh-my-zsh.sh
+source ~/.bash_aliases
+source /etc/envs
+
+# Customize to your needs...
+export CXF_HOME=/home/henryyan/work/sources/cxf/apache-cxf-2.6.0
+export MULE_HOME=/home/henryyan/work/sources/mule/mule-standalone-3.2.0
+export PATH=$PATH:$CXF_HOME/bin:$MULE_HOME/bin
+</pre>
+
+其中使用hash定义的别名有两种办法进入：
+
+* cd ~foo
+
+* 直接输入foo回车即可
+
 ### 3.2 必要软件安装与配置
 
 很多人在计划迁移Linux环境的时候问的最多的问题就是在Linux下面有和windows对应的软件吗？我的回答是：**有**，而且有很多软件比Win的还好用。
@@ -120,6 +184,10 @@ Zsh的确好用，但是配置起来比较复杂，之后又在Github上发现�
 * Shell下面的浏览器：sudo apt-get install elinks，有时有用……
 
 * Shell下面音乐播放器：sudo apt-get install cmus，我很少用GUI界面的音乐播放器；我在IPOD上安装了一个软件用来SSH登录我的笔记本，早上在床上用IPOD控制电脑播放音乐……^_^
+
+* 任务管理器：sudo apt-get install htop，比自带的top好用
+
+* 另类终端guake，可以一键隐藏/显示，适用于一些后台任务（我的cmus就是用guake运行的）：sudo apt-get install guake
 
 ## 4.工作环境
 
@@ -191,9 +259,13 @@ tar xzvf apache-maven-3.0.4-bin.tar.gz
 ln -s apache-maven-3.0.4 maven
 </pre>
 
-### 4.5 安装Git
+### 4.5 安装、配置Git
 
 请移步之前的博文：[在Ubuntu(Debian)上安装最新版Git](http://www.kafeitu.me/git/2012/04/10/install-lastest-git-on-ubuntu.html)
+
+Git的CLI交互方式已经很好用了，而且自带GUI工具；Eclipse中可以安装Egit（我仅仅用来查看文件的修改状态、还原文件的修改）。
+
+另外再推荐一个文本模式的Git浏览器工具-Tig：sudo apt-get install tig
 
 ### 4.6 安装Eclipse
 
@@ -336,6 +408,12 @@ Comment[en_US]=Eclipse With JAVAEE
 差点忘记了，这么重要的世界之窗……
 
 我们的系统都是基于jQuery的，所以对于多个浏览器之间差异不大，在开发阶段先用Firefox调试（Firebug）；因为客户的环境都是IE(无视IE6)，当在Firefox下面调试完成一个功能模块之后在虚拟机环境中使用IE调试一下就可以了，所以虚拟机不是一直打开的。
+
+### 4.11 安装系统后
+
+分享一下我的Evernote的《安装、配置Ubuntu》：[https://www.evernote.com/shard/s22/sh/9892aab0-8cd9-4998-95a7-4ef4ee34c2ee/33b425a0953d9ba64a822dc219b43586](https://www.evernote.com/shard/s22/sh/9892aab0-8cd9-4998-95a7-4ef4ee34c2ee/33b425a0953d9ba64a822dc219b43586)
+
+不过记得有点乱，不知道是什么软件Google之
 
 ## 5.学习Linux
 
