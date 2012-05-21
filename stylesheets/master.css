@@ -5,7 +5,7 @@ body {
   color: #353B40;
   margin: 0;
   padding: 0;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 a {
@@ -73,6 +73,8 @@ a:visited {
 #menu ul li a#weibo-link { background-image: url(/images/weibo.gif); }
 #menu ul li a#home-link { background-image: url(/images/home.gif); }
 #menu ul li a#docs-link { background-image: url(/images/docs.gif); }
+#menu ul li a#categories-link { background-image: url(/images/categories.gif); }
+#menu ul li a#tags-link { background-image: url(/images/tags.gif); }
 
 #content {
   padding: 2em 0;
@@ -81,7 +83,7 @@ a:visited {
 #content h2 {
   margin: 0 0 0.5em 0;
   color: black;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 #content p {
@@ -145,7 +147,7 @@ div.post h3 {
   color: black;
   margin: 1em 0 0.7em 0;
   font-weight: normal;
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 pre {
@@ -330,3 +332,5 @@ a img { border: 0; }
   background: yellow;
   padding: .5em;
 }
+
+
