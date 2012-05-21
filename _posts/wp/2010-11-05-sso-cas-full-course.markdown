@@ -308,7 +308,11 @@ org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
 #### 补充一下：
 如果是为一个老项目添加单点登录功能，那么基本不需要其他的修改，设置好上面的filter即可；当然最好获取用户信息的地方都调用一个工具类，统一管理不容易出错。
 
-## 九、美化CAS服务器界面
+## 九、单点退出
+
+这个比较简单，把你的退出链接设置为：http://sso.wsria.com/cas/logout即可。
+
+## 十、美化CAS服务器界面
 
 CAS服务端(cas-server)的界面只能在测试的时候用一下，真正系统上线肯定需要定制开发自己的页面，就像[网易](http://reg.163.com)和[CSDN](http://passport.csdn.net/UserLogin.aspx)的统一认证平台一样，所有子系统的认证都通过此平台来转接，大家可以根据他们的页面自己定制出适合所属应用或者公司的界面；简单介绍一下吧，复制
 cas\WEB-INF\view\jsp\default\ui的一些JSP文件，每一个文件的用途文件名已经区分了，自己修改了替换一下就可以了。
@@ -318,7 +322,7 @@ cas\WEB-INF\view\jsp\default\ui的一些JSP文件，每一个文件的用途文�
 * 登录成功：casGenericSuccess.jsp
 * 登出界面：casLogoutView.jsp
 
-## 十、结束语
+## 十一、结束语
 
 花了一下午时间终于写完了，总共十项也算完美了。
 现在看来起始利用CAS实现单点登录其实不难，不要畏惧，更不要排斥！
@@ -331,7 +335,7 @@ cas\WEB-INF\view\jsp\default\ui的一些JSP文件，每一个文件的用途文�
 
 到此本教程全部结束，希望看完后对你有帮助，如果有帮助还望继续推荐给其他人，有说明意见或者问题请回复或者IM[联系我](http://www.kafeitu.me/about.html)。
 
-## 十一、疑难问题
+## 十二、疑难问题
 
 如果遇到了意料之外的问题请参考文章的评论部分，或许能找到问题的原因以及解决办法！
 
@@ -340,7 +344,7 @@ cas\WEB-INF\view\jsp\default\ui的一些JSP文件，每一个文件的用途文�
 由于创建证书的域名和在应用中配置的cas服务域名不一致导致以下错误，详细请参考：
 <script src="https://gist.github.com/1717087.js"> </script>
 
-## 十二、更新记录_2011-11-05
+## 十三、更新记录_2011-11-05
 
 整整一年之后因为需要为客户搭建CAS换季再次更新本文章，不知道碰巧呢碰巧呢还是碰巧呢，反正就是11.5号了……
 在这里还要感谢大家对我的支持，要不然这篇教程也不会一直处于本博客的第一位……
@@ -361,7 +365,7 @@ cas\WEB-INF\view\jsp\default\ui的一些JSP文件，每一个文件的用途文�
 
 在cmd或者shell中进入解压的cas server目录后运行:**mvn -version**后如果看到打印系统信息和maven版本信息后证明配置ok
 
-## 十三、更新记录_2011-11-18
+## 十四、更新记录_2011-11-18
 
 你也可以申请免费的StartSSL CA证书:
 StartSSL(公司名：StartCom)也是一家CA机构，它的根证书很久之前就被一些具有开源背景的浏览器支持(Firefox浏览器、谷歌Chrome浏览器、苹果Safari浏览器等)。
