@@ -6,6 +6,12 @@ excerpt: "\xE4\xB8\xBB\xE8\xA6\x81\xE8\xAE\xB2\xE8\xA7\xA3\xE5\x9C\xA8java\xE7\x
 wordpress_id: 300
 wordpress_url: http://www.wsria.com/?p=300
 date: 2009-02-24 21:55:29 +08:00
+category: jquery
+tags: 
+ - json
+ - jqury
+ - java
+ - struts
 ---
 <span style="color: #008000;">本文主要讲解在java环境下使用jQuery进行JSON数据传送的交互过程</span>
 

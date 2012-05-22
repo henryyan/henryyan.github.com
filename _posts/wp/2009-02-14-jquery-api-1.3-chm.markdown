@@ -4,6 +4,9 @@ title: "jQuery1.3\xE4\xB8\xAD\xE6\x96\x87API\xE4\xB8\x8B\xE8\xBD\xBD(HTML\xE3\x8
 wordpress_id: 151
 wordpress_url: http://www.wsria.com/?p=151
 date: 2009-02-14 19:19:10 +08:00
+category: jquery
+tags: 
+ - API
 ---
 jQuery 1.3自从2009年1月14日发布后，后引来了各界的关注，附上离线API的HTML版、CHM版下载地址
 

@@ -4,6 +4,13 @@ title: "CAS单点登录(SSO)完整教程(2012-02-01更新)"
 wordpress_id: 1349
 wordpress_url: http://www.wsria.com/?p=1349
 date: 2010-11-05 20:25:51 +08:00
+category: sso
+tags: 
+ - cas
+ - sso
+ - java
+ - 单点登录
+ - 教程
 ---
 
 ## 一、教程说明

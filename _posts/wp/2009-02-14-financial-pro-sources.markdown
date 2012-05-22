@@ -5,6 +5,10 @@ excerpt: "\xE5\x9C\xA8\xE8\xBF\x99\xE4\xB8\xAA\xE7\x89\xB9\xE6\xAE\x8A\xE7\x9A\x
 wordpress_id: 136
 wordpress_url: http://www.wsria.com/?p=136
 date: 2009-02-14 17:35:00 +08:00
+category: financial
+tags: 
+ - 演示
+ - 财务
 ---
 基于Java、jQuery开发的账务管理系统(个人版)系统演示及源码共享，致力于企业级RIA应用……
 

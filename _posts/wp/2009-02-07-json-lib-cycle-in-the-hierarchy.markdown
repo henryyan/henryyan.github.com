@@ -5,6 +5,10 @@ excerpt: "json-lib \xE5\x87\xBA\xE7\x8E\xB0net.sf.json.JSONException: There is a
 wordpress_id: 14
 wordpress_url: http://wsria.com/?p=14
 date: 2009-02-07 18:33:22 +08:00
+category: json
+tags: 
+ - hibernate
+ - json-lib
 ---
 因为项目中使用了AJAX技术，JAR包为：json-lib.jar，?在开发过程中遇到了一个JSON-LIB和Hibernate有关的问题：
 

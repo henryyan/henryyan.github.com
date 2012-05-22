@@ -5,6 +5,9 @@ excerpt: "\xE7\xA8\x8B\xE5\xBA\x8F\xE5\x91\x98\xE7\x9A\x84\xE5\x8D\x81\xE7\xA7\x
 wordpress_id: 109
 wordpress_url: http://www.wsria.com/?p=109
 date: 2009-02-14 00:48:21 +08:00
+category: programmer
+tags: 
+ - level
 ---
 第一级：神人，天资过人而又是技术狂热者同时拥有过人的商业头脑，高瞻远瞩，技术过人，大器也。如丁磊，求伯君。?
 

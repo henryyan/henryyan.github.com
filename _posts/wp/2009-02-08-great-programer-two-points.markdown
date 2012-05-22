@@ -4,6 +4,9 @@ title: "\xE4\xBC\x98\xE7\xA7\x80\xE7\xA8\x8B\xE5\xBA\x8F\xE5\x91\x98\xE7\x9A\x84
 wordpress_id: 67
 wordpress_url: http://wsria.com/?p=67
 date: 2009-02-08 11:12:15 +08:00
+category: programmer
+tags: 
+ - 懒
 ---
 懒 只有懒惰的程序员才会去编写那些可以最终代替自己工作的自动化工具，才不会成天为了实现相似的功能去编写大段大段冗余重复的代码 - 这种代码往往是软件后期维护和重构的天敌。通常来说，由于惰性的驱使所产生出来的工具和程序将最终极大的提高生产开发的速度。
 

@@ -4,6 +4,13 @@ title: "\xE5\x85\xB3\xE4\xBA\x8EWEB\xE5\xBC\x80\xE5\x8F\x91\xE4\xB8\xAD\xE5\xBC\
 wordpress_id: 12
 wordpress_url: http://wsria.com/?p=12
 date: 2009-02-07 18:24:46 +08:00
+category: javascript
+tags: 
+ - jquery
+ - prototype
+ - dojo
+ - ext
+ - 建议
 ---
 平常我们开发WEB应用是会用到第三方工具包，例如：jQuery、prototype、dojo、ext等等，第三方工具包有个特点就是在发布的时候文件名都是以版本号命名文件，例如：jquery-1.2.6.js，其中1.2.6就是版本号。
 

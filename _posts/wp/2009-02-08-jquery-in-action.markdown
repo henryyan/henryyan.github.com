@@ -4,6 +4,9 @@ title: "\xE3\x80\x8AjQuery in Action\xE3\x80\x8B\xE4\xB8\xAD\xE6\x96\x87\xE7\x89
 wordpress_id: 46
 wordpress_url: http://wsria.com/?p=46
 date: 2009-02-08 02:32:55 +08:00
+category: jquery
+tags: 
+ - 图书
 ---
 消息称2月中旬《jQuery in Action》中文版就要上市了
 

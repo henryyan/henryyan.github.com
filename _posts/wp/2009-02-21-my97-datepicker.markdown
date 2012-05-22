@@ -4,6 +4,10 @@ title: "\xE6\x8E\xA8\xE8\x8D\x90\xE6\x97\xA5\xE6\x9C\x9F\xE9\x80\x89\xE6\x8B\xA9
 wordpress_id: 263
 wordpress_url: http://www.wsria.com/?p=263
 date: 2009-02-21 21:18:47 +08:00
+category: plugins
+tags: 
+ - my97
+ - 日期
 ---
 <img class="aligncenter" title="my97 datepicker示例图" src="http://www.my97.net/dp/demo/resource/pic3.jpg" alt="" width="180" height="197" />
 

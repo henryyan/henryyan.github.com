@@ -5,6 +5,10 @@ excerpt: "\xE8\x87\xAA\xE5\xB7\xB1\xE5\x8A\xA8\xE6\x89\x8B\xE5\xAE\x9A\xE5\x88\x
 wordpress_id: 375
 wordpress_url: http://www.wsria.com/?p=375
 date: 2009-02-26 23:31:34 +08:00
+category: ajax
+tags: 
+ - ajax
+ - 图片
 ---
 自己动手定制ajax 加载等待图片，点击图片打开网址
 

@@ -5,6 +5,9 @@ excerpt: "\xE9\x9A\x8F\xE7\x9D\x80\xE7\x94\xA8JavaScript\xE7\xBC\x96\xE7\xA8\x8B
 wordpress_id: 255
 wordpress_url: http://www.wsria.com/?p=255
 date: 2009-02-21 20:03:38 +08:00
+category: javascript
+tags: 
+ - 调试
 ---
 随着用JavaScript编程的深入，你会开始理解那些JavaScript给出的不透明错误信息。一旦你理解了你常犯的一般性错误，你就会很快知 道怎样避免它们，这样你写的代码中的错误将越来越少。编程实际上是一种能随着时间不断飞快进步的技术。但是不管变得多么熟练，你仍然要花一些时间调试你的 代码。如果你做过家庭作业，或有过JacaScript编程经验，你会知道相当多的时间是花在调试上。这很正常 - 这只是编程者必须做的事之一。实际上，按照大量的研究，程序员平均百分之五十的时间花在解决代码中的错误。
 

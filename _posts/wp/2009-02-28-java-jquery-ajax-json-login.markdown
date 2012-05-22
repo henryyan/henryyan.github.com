@@ -5,6 +5,11 @@ excerpt: "\xE5\xAE\x9E\xE4\xBE\x8B\xE8\xA7\xA3\xE6\x9E\x90Java\xE3\x80\x81jQuery
 wordpress_id: 369
 wordpress_url: http://www.wsria.com/?p=369
 date: 2009-02-28 18:39:27 +08:00
+category: jquery
+tags: 
+ - jquery
+ - json
+ - struts
 ---
 前天刚刚写的一篇关于《<a title=" 实例解析java + ajax(jQuery) + json工作过程(登录) " href="http://www.wsria.com/archives/300" target="_blank">实例解析java + ajax(jQuery) + json工作过程(登录)</a>》的文章引起了网友们的关注和好评，
 

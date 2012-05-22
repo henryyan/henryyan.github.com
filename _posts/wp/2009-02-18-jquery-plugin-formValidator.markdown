@@ -10,6 +10,10 @@ excerpt: "jQuery formValidator\xE8\xA1\xA8\xE5\x8D\x95\xE6\xA0\xA1\xE9\xAA\x8C\x
 wordpress_id: 214
 wordpress_url: http://www.wsria.com/?p=214
 date: 2009-02-18 19:41:13 +08:00
+category: jquery
+tags: 
+ - plugin
+ - 验证
 ---
 在开发各种BS架构的系统时表单验证是每个系统、网站都要做的一件事情，在客户端拦截用户的输入、选择是否合法从而降低对服务端的压力也增加用户体验，一般来说都会简单的验证必输项是否为空，或者必选项是否已选择，复杂一点的比如在注册时实时验证用户名是否重复，如此等等
 

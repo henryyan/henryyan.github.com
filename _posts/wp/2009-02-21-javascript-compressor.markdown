@@ -4,6 +4,9 @@ title: "\xE5\x88\x86\xE4\xBA\xAB\xEF\xBC\x9AJavaScript\xE5\x9C\xA8\xE7\xBA\xBF\x
 wordpress_id: 249
 wordpress_url: http://www.wsria.com/?p=249
 date: 2009-02-21 18:27:03 +08:00
+category: javascript
+tags: 
+ - 压缩
 ---
 <strong>第一个：YUI Compressor Online</strong>
 <ul>

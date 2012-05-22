@@ -4,6 +4,9 @@ title: "\xE4\xBB\x8EGoogle\xE6\x90\x9C\xE7\xB4\xA2\xE8\x81\x94\xE6\x83\xB3\xE5\x
 wordpress_id: 245
 wordpress_url: http://www.wsria.com/?p=245
 date: 2009-02-20 22:10:17 +08:00
+category: google
+tags: 
+ - google
 ---
 在用<a href="http://www.google.com/reader/shared/03764621998712729908" target="_blank">google阅读器</a>阅读新闻时看到一篇文章让我想到了很多，文章的标题《越Google，越无知？》，让我想到了前端程序员热爱的轻量级ajax框架jQuery，它以简单、快速编写javascript的方式方便了万万个程序员，而且我们不用考虑各种浏览器直接的差异，从而极大提高了开发效率；并且被微软、Nokia所使用，你有没有考虑过另外一方面呢？……
 <!--more-->

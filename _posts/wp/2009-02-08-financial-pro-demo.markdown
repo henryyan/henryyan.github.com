@@ -4,6 +4,10 @@ title: "\xE5\x9F\xBA\xE4\xBA\x8EjQuery\xE5\xBC\x80\xE5\x8F\x91\xE7\x9A\x84\xE8\x
 wordpress_id: 73
 wordpress_url: http://wsria.com/?p=73
 date: 2009-02-08 11:48:43 +08:00
+category: financial
+tags: 
+ - 演示
+ - 视频
 ---
 <div class="mceTemp">开发此系统的初衷在于学习前台技术，然后就想到开发一个小系统，边开发边学习</div>
 <div class="mceTemp">后来一天突然想到做账务系统(个人版)，然后计划使用什么技术来实现，在公司待了也快两年了最看不惯的就是用户界面、体验，所以就计划使用目前比较成熟的Ajax框架来做前台，后台还是使用基于Java语言的SSH架构来实现</div>

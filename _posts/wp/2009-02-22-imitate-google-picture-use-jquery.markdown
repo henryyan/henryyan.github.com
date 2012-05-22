@@ -5,6 +5,10 @@ excerpt: "\xE6\xA8\xA1\xE6\x8B\x9Fgoogle\xE7\x9B\xB8\xE5\x86\x8C\xE9\xBC\xA0\xE6
 wordpress_id: 285
 wordpress_url: http://www.wsria.com/?p=285
 date: 2009-02-22 16:57:07 +08:00
+category: jquery
+tags: 
+ - google
+ - 悬浮
 ---
 在jQuery中文社区中看到一篇帖子提问，<a href="http://bbs.jquery.org.cn/read.php?tid-3992.html" target="_blank">http://bbs.jquery.org.cn/read.php?tid-3992.html</a>
 

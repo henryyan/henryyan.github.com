@@ -7,6 +7,10 @@ excerpt: "\xE5\xBC\x80\xE5\x8F\x91\xE5\x9F\xBA\xE4\xBA\x8EJava\xE7\x9A\x84RIA\xE
 wordpress_id: 296
 wordpress_url: http://www.wsria.com/?p=296
 date: 2009-02-22 18:12:45 +08:00
+category: eclipse
+tags: 
+ - eclipse
+ - spket
 ---
 开发基于Java的RIA应用必不可少的javascript代码工具
 

@@ -4,6 +4,10 @@ title: " \xE7\xBB\x8F\xE5\x85\xB8\xEF\xBC\x9A\xE4\xBB\x8E\xE8\xBF\xBDMM\xE8\xB0\
 wordpress_id: 20
 wordpress_url: http://wsria.com/?p=20
 date: 2009-02-07 18:45:18 +08:00
+category: design
+tags: 
+ - 设计模式
+ - java
 ---
 从追MM谈Java的23种设计模式
 

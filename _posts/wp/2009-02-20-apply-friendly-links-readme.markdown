@@ -5,6 +5,10 @@ excerpt: "\xE4\xB8\xBA\xE4\xBA\x86\xE6\x96\xB9\xE4\xBE\xBF\xE5\x90\x84\xE4\xBD\x
 wordpress_id: 237
 wordpress_url: http://www.wsria.com/?p=237
 date: 2009-02-20 11:33:31 +08:00
+category: blog
+tags: 
+ - 友链
+ - 博客
 ---
 为了方便各位网友的学习、查找资料，本站开始征集到访者的学习网站、博客，要求内容丰富，语言包括：java、javascript、css、html、jQuery等前台开发技术，如有意者请至本文留言，本站会逐个增加到链接专区供大家方便访问，提供快捷的一站式服务。
 

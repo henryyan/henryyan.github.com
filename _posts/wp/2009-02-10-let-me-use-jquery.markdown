@@ -4,6 +4,7 @@ title: "\xE6\x8E\xA8\xE8\x8D\x90\xE4\xBD\xBF\xE7\x94\xA8\xE8\xBD\xBB\xE9\x87\x8F
 wordpress_id: 84
 wordpress_url: http://wsria.com/?p=84
 date: 2009-02-10 14:19:09 +08:00
+category: ria
 ---
 小而强大是我们在系统开发的时候所追求的，用少量代码解决复杂问题这是优秀代码的灵魂；
 而我们平常使用的架构、框架正是这种思想的实例化；

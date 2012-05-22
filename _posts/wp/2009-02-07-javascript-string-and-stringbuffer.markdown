@@ -4,6 +4,10 @@ title: " javascript\xE4\xB8\xAD\xE5\xAD\x97\xE7\xAC\xA6\xE4\xB8\xB2\xE7\xB4\xAF\
 wordpress_id: 17
 wordpress_url: http://wsria.com/?p=17
 date: 2009-02-07 18:38:39 +08:00
+category: javascript
+tags: 
+ - string
+ - StringBuffer
 ---
 <p class="highlighter">在JAVA中操作N个字符串累加或许会使用:</p>
 
