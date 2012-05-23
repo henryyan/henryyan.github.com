@@ -1,6 +1,13 @@
 ---
 layout: post
 title: "工作流引擎Activiti使用总结"
+category: activiti
+tags:
+ - activiti
+ - 工作流
+ - 引擎
+ - jbpm
+ - 乱码
 ---
 
 ## 1.简单介工作流引擎与Activiti

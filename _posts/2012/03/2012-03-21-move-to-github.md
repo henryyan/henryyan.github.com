@@ -1,6 +1,11 @@
 ---
 layout: post
 title: "从Wordpress迁移到Github"
+category: blog
+tags:
+ - github
+ - wordpress
+ - 迁移
 ---
 
 ## 迁移原因
