@@ -49,3 +49,7 @@ tags:
 我曾经考虑过降低门槛，但是我没有这么做；因为Activiti官方的实例以及源代码都是在Maven下面构建，所以你有必要去学习一下如何使用Maven。
 
 因为是演示项目，目的就是让大家理解流程与业务的结合，特定功能使用哪个接口完成，项目里面的Web层使用SpringMVC，有Struts2经验的人来说SpringMVC也不难。
+
+## 4.更新记录
+
+1.<font color='red'>2012-05-27</font>：为了让更多人能快速入门，我做了妥协。创建了**no-maven**分支，以便让不懂maven的也可以快速运行项目。[https://github.com/henryyan/kft-activiti-demo/tree/no-maven](https://github.com/henryyan/kft-activiti-demo/tree/no-maven)
