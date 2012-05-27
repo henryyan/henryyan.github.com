@@ -9,17 +9,17 @@ h2. 关于我
 
 * 擅长B/S系统开发，使用技术：Java及其(SS、SSH2)架构、Ajax(jQuery)、Xhtml、Css；CAS、Spring Security
 
-* 喜欢*nix、开源
+* 喜欢*nix、CLI控、开源、技术宅
 
 h2. 软硬环境
 
-* 操作系统：Ubuntu 11.10 x64
+* 操作系统：Ubuntu 12.04 LTS x64
 
 * Shell: zsh(oh-my-zsh)
 
-* 编辑器：VIM && Sublime Text 2
+* 编辑器：VIM && gedit
 
-* IDE：Eclipse JAVAEE
+* IDE：Eclipse With JAVAEE
 
 * 浏览器：Firefox(开发)、Chrome
 
@@ -31,7 +31,7 @@ h2. 关于www.kafeitu.me
 
 * 以xhtml、css、javascript、ajax、jQuery为前端技术
 
-* 以Java、SSH、Springside为后台基础
+* 以Java、SSH(SpringMVC)、Springside为后台基础
 
 * 以Maven、Ant、CI(Jenkins)、Sonar为辅助工具
 
