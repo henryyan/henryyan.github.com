@@ -81,15 +81,15 @@ var jiathis_config={
   <div class='sidebar'>
     <div class="sidebar-item">
     <ul class='sidebar-posts'>
-      {% for post in site.posts limit:5 %}
+      {% for post in site.posts limit:10 %}
       <li title='发布日期：{{post.date | date_to_string}}'><a href='{{post.url}}'>{{post.title}}</a></li>
       {% endfor %}
     </ul>
     </div>
   </div>
 
-  <h2>近期计划</h2>
-  <div class='sidebar'>
+  <h2 style="display:none">近期计划</h2>
+  <div class='sidebar' style="display:none">
     <div class="sidebar-item">
     <ul>
       <li>CAS升级篇，和spring security整合</li>
