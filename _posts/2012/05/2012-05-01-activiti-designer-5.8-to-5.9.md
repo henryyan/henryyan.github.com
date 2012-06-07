@@ -67,8 +67,8 @@ Windows->Preferences->Activiti->Save，勾选复选框，如下图：
 
 ## 7.更新记录
 
-1. <font color='red'>2012-05-19</font>：**Fixed**：已经在**5.9.2**版本修复次不能自动生成图片问题，**_等待更新_**；JIRA：[https://jira.codehaus.org/browse/ACT-1210](https://jira.codehaus.org/browse/ACT-1210)
+1. <font color='red'>2012-05-19</font>：**Fixed**：已经在**5.9.2**版本修复次不能自动生成图片问题；JIRA：[https://jira.codehaus.org/browse/ACT-1210](https://jira.codehaus.org/browse/ACT-1210)
 
 2. <font color='red'>2012-05-25</font>，**Bug**：安装了5.9.2版本插件之后在JAVAEE视图不能显示项目列表，JIRA:[https://jira.codehaus.org/browse/ACT-1227](https://jira.codehaus.org/browse/ACT-1227)
 
-3. <font color='red'>2012-05-27</font>，**Bug**：流程的标签定位不正确问题，JIRA：[http://jira.codehaus.org/browse/ACT-1233](http://jira.codehaus.org/browse/ACT-1233)
+3. <font color='red'>2012-05-27</font>，**Bug**：流程的标签定位不正确问题，JIRA：[http://jira.codehaus.org/browse/ACT-1233](http://jira.codehaus.org/browse/ACT-1233)，因为重复报告已被关闭：[http://jira.codehaus.org/browse/ACT-1200](http://jira.codehaus.org/browse/ACT-1200)
