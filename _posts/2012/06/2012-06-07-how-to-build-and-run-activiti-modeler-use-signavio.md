@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "如何使用Signavio打包构建Activiti Modeler"
+title: "如何使用Signavio打包Activiti Modeler"
 category: activiti 
 tags: 
  - activiti
