@@ -57,7 +57,15 @@ Eclipse切换到**Activiti**视图，右键项目选择**Create deployment artif
 
 如果有懂Eclipse Plugin开发的可以先把5.9之前的自动生成图片功能加上去。
 
-## 6.更新记录
+## 6.Activiti Designer 5.9之后版本中设置自动生成图片
+
+5.9版本中禁用了自动生成图片功能之后在5.9.2中又恢复了此功能，但是需要配置之后才能使用，配置方式比较简单。
+
+Windows->Preferences->Activiti->Save，勾选复选框，如下图：
+
+![Eclipse中设置自动生成图片](/files/2012/05/activiti-designer-5.9-auto-generate-image.png)
+
+## 7.更新记录
 
 1. <font color='red'>2012-05-19</font>：**Fixed**：已经在**5.9.2**版本修复次不能自动生成图片问题，**_等待更新_**；JIRA：[https://jira.codehaus.org/browse/ACT-1210](https://jira.codehaus.org/browse/ACT-1210)
 
