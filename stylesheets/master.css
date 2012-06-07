@@ -339,3 +339,6 @@ a img { border: 0; }
   padding: .5em;
 }
 
+.categories, .tags {list-style-type:none;}
+.categories li, .tags li {display:inline; margin: 0.2em 0.5em;}
+.categories li a:hover, .tags li a:hover {color: blue;}
