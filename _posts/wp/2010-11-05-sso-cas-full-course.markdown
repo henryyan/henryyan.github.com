@@ -317,7 +317,7 @@ org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
 
 ## 九、单点退出
 
-这个比较简单，把你的退出链接设置为：http://sso.wsria.com/cas/logout即可。
+这个比较简单，把你的退出链接设置为：https://sso.wsria.com/cas/logout 即可。
 
 ## 十、美化CAS服务器界面
 
