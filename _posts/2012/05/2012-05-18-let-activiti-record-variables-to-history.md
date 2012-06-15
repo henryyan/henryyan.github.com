@@ -58,8 +58,18 @@ ProcessEngine processEngine = ProcessEngineConfiguration
   .buildProcessEngine();
 </pre>
 
-## 4.结束
+## 4.读取历史变量
 
 现在再重启你的应用，启动流程或者在任务**complete**之后查看**ACT_HI_DETAIL**表的数据已经记录了。
 
 ![开始full历史级别后保存的历史信息](/files/2012/05/activiti-history-detail.png)
+
+### 4.1 Java代码
+
+<pre class="brush:java">
+List<HistoricDetail> list = historyService.createHistoricDetailQuery().processInstanceId(processInstance.getId()).list();
+for (HistoricDetail historicDetail : list) {
+	HistoricVariableUpdateEntity variable = (HistoricVariableUpdateEntity) historicDetail;
+	System.out.println(variable.getName() + " = " + variable.getValue());
+}
+</pre>
