@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git Submoudle使用完整教程"
+title: "Git Submodule使用完整教程"
 category: git
 tags: 
  - scm
