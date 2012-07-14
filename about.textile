@@ -13,7 +13,7 @@ h2. 关于我
 
 h2. 软硬环境
 
-* 操作系统：Ubuntu 12.04 LTS x64
+* 操作系统：Mac OS X
 
 * Shell: zsh(oh-my-zsh)
 
@@ -21,9 +21,9 @@ h2. 软硬环境
 
 * IDE：Eclipse With JAVAEE
 
-* 浏览器：Firefox(开发)、Chrome
+* 浏览器：Chrome
 
-* 笔记本：HP 6520s，CPU：T9300 2.5G，内存：6G，硬盘：500G
+* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：10G，硬盘：500G
 
 h2. 关于www.kafeitu.me
 
