@@ -74,6 +74,29 @@ Activiti的流程定义文件可以直接部署bpmn20.xml、zip、bar文件，�
 * 第7~13行处用于配置一些文件的路径，其中**workflow.diagrams**就是bpmn和png文件所在的目录，只不过里面又根据模块细分了；
 * 第21~26行处才是重点，首先复制bpmn文件为bpmn20.xml，然后把bpmn20.xml和png文件打包成zip文件
 
+使用方法如下：
+<pre class="brush:shell">
+➜ henryyan@hy-mbp  ~kad git:(master) ✗ ant workflow.package.all 
+Buildfile: /Users/henryyan/work/projects/activiti/kft-activiti-demo/build.xml
+
+workflow.package.leave:
+     [echo] 打包流程定义：请假（自定义表单）
+     [copy] Copying 1 file to /Users/henryyan/work/projects/activiti/kft-activiti-demo/src/main/resources/diagrams/leave
+      [zip] Updating zip: /Users/henryyan/work/projects/activiti/kft-activiti-demo/src/main/resources/deployments/leave.zip
+   [delete] Deleting: /Users/henryyan/work/projects/activiti/kft-activiti-demo/src/main/resources/diagrams/leave/leave.bpmn20.xml
+
+workflow.package.leave-dynamic-from:
+     [echo] 打包流程定义：请假（动态表单）
+     [copy] Copying 1 file to /Users/henryyan/work/projects/activiti/kft-activiti-demo/src/main/resources/diagrams/leave-dynamic-from
+      [zip] Updating zip: /Users/henryyan/work/projects/activiti/kft-activiti-demo/src/main/resources/deployments/leave-dynamic-from.zip
+   [delete] Deleting: /Users/henryyan/work/projects/activiti/kft-activiti-demo/src/main/resources/diagrams/leave-dynamic-from/leave-dynamic-from.bpmn20.xml
+
+workflow.package.all:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+</pre>
+
 如果有外部form文件也可以加入到zip包中。
 
 
