@@ -63,8 +63,14 @@ clean process-resources compile process-test-resources test-compile test package
 
 请先安装oh-my-zsh，具体参考：[我最喜爱的工具-oh-my-zsh](/shell/2012/03/25/oh-my-zsh.html)。
 
-官方github地址：[https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+oh-my-zsh的官方github地址：[https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-我已经给oh-my-zsh提交了合并请求，如果顺利接下来可能会合并到master分支。
+安装完成之后记得在~/.zshrc中启用maven插件：
 
-暂时先从我的项目里面克隆，或者直接下载**mvn.plugin.zsh**覆盖到本地。
+<pre class="brush:shell">
+plugins=(ant mvn svn git git-flow)
+</pre>
+
+	我已经给oh-my-zsh提交了合并请求，如果顺利接下来可能会合并到master分支。
+
+	暂时先从我的项目里面克隆，或者直接下载mvn.plugin.zsh覆盖到本地。
