@@ -65,6 +65,8 @@ clean process-resources compile process-test-resources test-compile test package
 
 oh-my-zsh的官方github地址：[https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
+**插件源码**：[https://github.com/henryyan/oh-my-zsh/blob/master/plugins/mvn/mvn.plugin.zsh](https://github.com/henryyan/oh-my-zsh/blob/master/plugins/mvn/mvn.plugin.zsh)
+
 安装完成之后记得在~/.zshrc中启用maven插件：
 
 <pre class="brush:shell">
