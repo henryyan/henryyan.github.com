@@ -46,7 +46,7 @@ Signavio是通过ant构建打包的，在打包之前需要更改一下build.pro
 
 执行完命令之后在signavio-core-components/target目录就出生成**activiti-modeler.war**，现在就可以把这个war包部署到tomcat或者其他容器中运行了。
 
-### 4.2 直接不是到Web容器
+### 4.2 直接部署到Web容器
 
 需要设置属性：
 
@@ -56,4 +56,25 @@ Signavio是通过ant构建打包的，在打包之前需要更改一下build.pro
 
 可以通过如下命令直接打包+运行设计器：
 <pre>ant build-and-deploy-all-in-one-war-to-tomcat</pre>
-等待任务结束之后在**dir-tomcat-webapps**的属性值对应的目录中就看到了**activiti-modeler.war**文件了，现在你可以启动tomcat访问了。
+等待任务结束之后在**dir-tomcat-】webapps**的属性值对应的目录中就看到了**activiti-modeler.war**文件了，现在你可以启动tomcat访问了。
+
+## 4.3 Windows打包报错
+
+又是烦人的编码问题，如图：
+
+![](/files/2012/06/activiti-modeler-windows-build-error.png)
+
+不过好在有人遇到过，我把解决办法搬过来整理分享给大家。解决办法就是设置编码为UTF-8。
+
+官网的WIKI特别之处了**UTF-8 Encoding Configuration**。
+
+	A lot of users face issues regarding an invalid encoding that may result in corrupted model files. 
+	That is why it is very important that you ensure the usage of UTF-8 encoding in the whole application stack.
+
+用编辑器打开signavio-core-components/ editor/build.xml文件。
+
+1. 找到&lt;target name="com.signavio.editor.js.concat">，紧随其后添加一行配置代码：&lt;property name="charset" value="utf-8"/>标签中的&lt;concat destfile='${build}/oryx.debug.js'>修改为&lt;concat destfile='${build}/oryx.debug.js' encoding="${charset}" outputencoding="${charset}">。
+2.	找到&lt;target name='com.signavio.editor.js.compress代码处，更改次target内的&lt;java dir="${build}" jar="${root}/lib/yuicompressor-**2.4.2**.jar" fork="true" failonerror="true" output='${compress.temp}'>；将其中的yuicompressor-2.4.2.jar更改为yuicompressor-**2.4.7**.jar。
+3.	signavio默认使用yuicompressor-2.4.2版本压缩javascript和css文件，为了解决编码问题我们需要使用最新版本替换**2.4.2**版本，笔者在撰稿的时候最新的yuicompressor版本为**2.4.7**，读者也可以直接下载最新版本。访问[http://yuilibrary.com/download/yuicompressor/](http://yuilibrary.com/download/yuicompressor/) 下载第一个版本的压缩包，解压提取**build/yuicompressor-2.4.7.jar**文件并复制到signavio-core-components/yuicompressor/**editor/lib**目录中。再次执行打包命令**ant build-all-in-one-war**一切正常，截图证明。
+
+![](/files/2012/06/activiti-modeler-windows-build-success.png)
