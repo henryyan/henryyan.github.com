@@ -352,7 +352,12 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 
 代码移步：[https://gist.github.com/2183804](https://gist.github.com/2183804)
 
-## 7.结束
+## 7.开启Logger
+
+1. 添加log4j的jar
+2. 设置**log4j.logger.java.sql**=DEBUG
+
+## 8.结束
 
 之前就想写这篇文章，现在终于完成了，花费了几个小时，希望能节省你几天的时间。
 
