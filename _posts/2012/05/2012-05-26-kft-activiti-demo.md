@@ -27,10 +27,6 @@ tags:
 
 ![请假流程](/files/2012/05/leave-process-definition.png)
 
-### 1.3 项目结构
-
-本项目使用[Maven](http://maven.apache.org/)作为构建工具，使用[Springside4](https://github.com/springside/springside4)作为基础架构。
-
 ### 1.4 如何下载实例程序
 
 本项目托管在著名的**Github**，地址：[https://github.com/henryyan/kft-activiti-demo](https://github.com/henryyan/kft-activiti-demo)。
@@ -55,3 +51,5 @@ tags:
 1.<font color='red'>2012-05-27</font>：为了让更多人能快速入门，我做了妥协。创建了**no-maven**分支，以便让不懂maven的也可以快速运行项目。[https://github.com/henryyan/kft-activiti-demo/tree/no-maven](https://github.com/henryyan/kft-activiti-demo/tree/no-maven)
 
 2.<font color='red'>2012-05-30</font>：在亚马逊云服务(Amazon Web Service EC2)上搭建了DEMO：[http://aws.kafeitu.me:8080/kft-activiti-demo](http://aws.kafeitu.me:8080/kft-activiti-demo)
+
+3.<font color='red'>2012-08-05</font>：脱离了SpringSide。
