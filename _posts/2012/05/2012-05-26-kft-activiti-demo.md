@@ -53,3 +53,5 @@ tags:
 2.<font color='red'>2012-05-30</font>：在亚马逊云服务(Amazon Web Service EC2)上搭建了DEMO：[http://aws.kafeitu.me:8080/kft-activiti-demo](http://aws.kafeitu.me:8080/kft-activiti-demo)
 
 3.<font color='red'>2012-08-05</font>：脱离了SpringSide。
+
+4.<font color='red'>2012-08-12</font>：添加Activiti动态表单演示。
