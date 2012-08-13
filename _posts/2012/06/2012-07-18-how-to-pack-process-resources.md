@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "如何打包Activiti的流程及图片文件"
+title: "如何打包Activiti的流程资源文件(bpmn20.xml、form、png)"
 category: activiti 
 tags: 
  - activiti
@@ -23,7 +23,7 @@ Activiti的流程定义文件可以直接部署bpmn20.xml、zip、bar文件，�
 
 ![kft-activiti-demo中的流程定义目录](/files/2012/07/kft-activiti-demo-leave-process.png "kft-activiti-demo中的流程定义目录")
 
-## 2.打包Zip格式
+## 2.打包Zip|Bar格式
 
 ### 2.1 手动打包
 
@@ -101,4 +101,11 @@ Total time: 0 seconds
 
 
 ## 3.打包bar格式
+
+bar文件就是zip格式的，仅仅是扩展名不同而已，所以打包bar文件直接用上面的方式，只不过把扩展名**zip**更好成**bar**就可以了。
+
+### 3.1 自动打包Bar文件
+
 如何打包Bar我就不多说了，官网的手册已经说的很详细了，请移步：[http://www.activiti.org/userguide/index.html#eclipseDesignerBPMNFeatures](http://www.activiti.org/userguide/index.html#eclipseDesignerBPMNFeatures)，找到**Activiti Designer deployment features**有详细的说明。
+
+	不过此功能在5.9版本Activiti Designer中已经被移除！

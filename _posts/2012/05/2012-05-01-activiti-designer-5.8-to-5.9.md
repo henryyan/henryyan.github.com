@@ -71,14 +71,14 @@ Windows->Preferences->Activiti->Save，勾选复选框，如下图：
 
 好像是5.9版本就移除了，我一直不用这两项功能所以没注意。
 
-## 7.1 可能不合理的功能移除：Create deployment artifacts
+### 7.1 可能不合理的功能移除：Create deployment artifacts
 
 为什么说可能呢？从两方面解释：
 
 * **不合理**：不能快速打包bar文件了，需要自己手动把资源文件压缩成zip（bar就是zip文件）；尤其是5.9之后不能想5.9之前那样自动生成bpmn20.xml文件，不过读者可以参考手动打包：![如何打包Activiti的流程及图片文件](/activiti/2012/07/18/how-to-pack-process-resources.html)
 * **合理**：从开始使用Designer我就觉得这是一个很鸡肋的功能，因为默认是把整个项目中设计的所有流程都打包到一个文件中，不能部分打包。在实际使用中都是一个一个流程设计的，打包流程资源文件肯定是分开的，一个模块打包一个bar文件，这样在部署应用之后只要部署单个流程就可以了，而不是每次都把所有的流程都部署一遍。
 
-## 7.2 合理的功能移除：Import BPMN20 file
+### 7.2 合理的功能移除：Import BPMN20 file
 
 说合理是因为5.9版本之前因为存在.activiti文件，此功能就是通过bpmn20.xml转换为.activiti文件；但是在5.9中已经抛弃了.activiti文件而用bpmn代替，可以接受。
 
