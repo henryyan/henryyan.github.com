@@ -367,19 +367,27 @@ public class AccountServiceImpl implements AccountService {
 
 此方案和第二种类似，放弃使用系列表：ACT_ID_；但是做法不正规，需要修改源码并且创建同名的视图。
 
-视图：
+### 1.删除已创建的ACT_ID_*表
+
+创建视图必须删除引擎自动创建的ACT_ID_*表，否则不能创建视图。
+
+### 2.创建视图：
 
 * ACT_ID_GROUP
 * ACT_ID_INFO
 * ACT_ID_MEMBERSHIP
 * ACT_ID_USER
 
+创建的视图要保证数据类型一致，例如用户的ACT_ID_MEMBERSHIP表的两个字段都是字符型，一般系统中都是用NUMBER作为用户、角色的主键类型，所以创建视图的时候要把数字类型转换为字符型。
+
+### 3.修改引擎默认配置
+
 笔者按照表结构创建了以上几个同名的视图，但是Activiti具有自我保护机制，导致引擎不能初始化，需要需改源码才可以正常使用。
 
-修改的方法如下：
+修改org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl的**isDbIdentityUsed=false**
 
-* org.activiti.engine.impl.db.DbSqlSessionFactory的**isDbIdentityUsed=false**
-* org.activiti.engine.impl.db.DbSqlSession的**681**行代码处：<pre class="brush: java">public boolean isIdentityTablePresent(){return true;//isTablePresent("ACT_ID_USER");}</pre>
+	切记，每次升级版本的时候复制最新的源码然后再次更改属性isDbIdentityUsed=false。
+
 
 ## 总结
 
@@ -387,4 +395,4 @@ public class AccountServiceImpl implements AccountService {
 
 * 方案**二**：放弃原有的Identify模块，使用自定义的实现，特殊情况可以使用此方式；
 
-* 方案**三**：不仅破坏源码，而且破坏数据库结构，不推荐。
+* 方案**三**：破坏了部分源码，在现有的用户数据表基础上创建和ACT_ID_*一直的同名视图即可；还有一个缺陷就是不能使用IdentifyService添加User、Group和简历两者的关系，当然也不需要在从Activiti维护了。。
