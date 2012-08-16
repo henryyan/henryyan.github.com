@@ -17,13 +17,13 @@ h2. 软硬环境
 
 * Shell: zsh(oh-my-zsh)
 
-* 编辑器：VIM && gedit
+* 编辑器：VIM && Sublime Text 2
 
 * IDE：Eclipse With JAVAEE
 
 * 浏览器：Chrome
 
-* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：10G，硬盘：500G
+* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：16G，硬盘：500G
 
 h2. 关于www.kafeitu.me
 
