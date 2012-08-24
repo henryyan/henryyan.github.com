@@ -128,11 +128,8 @@ function hackHeight(listId) {
 		var frozenTdHeight = parseFloat($('td:first', this).height());
 		var normalHeight = parseFloat($(listId + ' #' + $(this).attr('id')).find('td:first').height());
 
-		if (frozenTdHeight > normalHeight) {
-			$('#' + rowId + ' td', this).each(function() {
-				//$(this).attr('style', $(this).attr('style') + "height:" + frozenTdHeight + "px !important");
-			});
-		} else if (frozenTdHeight < normalHeight) {
+		// 如果冻结的列高度小于未冻结列的高度则hack之
+		if (frozenTdHeight < normalHeight) {
 
 			$('td', this).each(function() {
 
@@ -231,12 +228,11 @@ function list1() {
 		del: false
 	}).jqGrid('setFrozenColumns');
 
+	
 	if (browser.isOpera()) {
 		$('#hackFrozenHeight1').text('少年，Opera不需要修复！！！');
 	} else {
-		/*
-	hack方式修复高度
-	 */
+		// hack方式修复高度
 		$('#hackFrozenHeight1').click(function() {
 			var listId = 'list1';
 			var divTop = -1;
