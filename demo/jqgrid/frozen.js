@@ -111,11 +111,7 @@ $(function() {
 		hackHeight('#list');
 	});
 
-	/*$('#pager1').html('准备加载第二个列表……');
-	setTimeout(function() {
-		$('#pager1').html('');
-		list1();
-	}, 5000);*/
+	// 加载第二个列表
 	list1();
 });
 
