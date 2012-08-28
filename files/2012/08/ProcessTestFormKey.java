@@ -10,7 +10,7 @@ import org.activiti.engine.test.Deployment;
 
 public class ProcessTestFormKey extends PluggableActivitiTestCase {
 
-	@Deployment(resources = { "diagrams/form/FormKey.bpmn20.xml", "diagrams/form/start.form", "diagrams/form/first-step.form" })
+	@Deployment(resources = { "diagrams/form/FormKey.bpmn20.xml", "diagrams/form/start.form", "diagrams/form/first-step.form", "diagrams/form/second-step.form" })
 	public void testTaskFormsWithVacationRequestProcess() {
 
 		// Get start form
@@ -25,8 +25,17 @@ public class ProcessTestFormKey extends PluggableActivitiTestCase {
 		ProcessInstance processInstance = formService.submitStartFormData(procDefId, formProperties);
 		assertNotNull(processInstance);
 		
-		Task task = taskService.createTaskQuery().singleResult();
+		Task task = taskService.createTaskQuery().taskAssignee("user1").singleResult();
 		Object renderedTaskForm = formService.getRenderedTaskForm(task.getId());
-		assertEquals("<input id=\"start-name\" value=\"HenryYan\" />", renderedTaskForm);
+		assertEquals("<input id=\"start-name\" value=\"HenryYan\" />\n<input id=\"first-name\" />", renderedTaskForm);
+		
+		formProperties = new HashMap<String, String>();
+		formProperties.put("firstName", "kafeitu");
+		formService.submitTaskFormData(task.getId(), formProperties);
+		
+		task = taskService.createTaskQuery().taskAssignee("user2").singleResult();
+		assertNotNull(task);
+		renderedTaskForm = formService.getRenderedTaskForm(task.getId());
+		assertEquals("<input id=\"first-name\" value=\"kafeitu\" />", renderedTaskForm);
 	}
 }
