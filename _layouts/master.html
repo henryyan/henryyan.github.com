@@ -24,6 +24,47 @@
     <link type="text/css" rel="stylesheet" href="/javascripts/syntaxhighlighter/styles/shThemeMidnight.css"/>
     <script src="/javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
     <script src="/javascripts/jquery.github.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+  <a href="http://github.com/henryyan/henryyan.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+    <div id='wrapper'>
+      <div id='header'>
+        <h1><a href='/'>咖啡兔</a></h1>
+        
+        <div id='menu'>
+          <ul>
+            <li><a href='/' id='home-link' title='Home'>首页</a></li>
+            <li><a href='/blog.html' id='blog-link' title='Blog'>博客</a></li>
+            <li><a href='/categories.html' id='categories-link' title='Categories'>分类</a></li>
+            <li><a href='/tags.html' id='tags-link' title='Tags'>标签</a></li>
+            <li><a href='/about.html' id='about-link' title='About'>关于</a></li>
+            <li><a href='http://github.com/henryyan' target='_blank' title='GitHub' rel='me' id='github-link'>GitHub</a></li>
+            <li><a href='http://weibo.com/kafeituzi' title='微博' target='_blank' id='weibo-link'>微博</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id='content'>
+        {{ content }}
+        <div class='clearfix'></div>
+      </div>
+      <!-- Duoshuo Comment BEGIN -->
+      <div class="ds-thread"></div>
+      <script type="text/javascript">
+      var duoshuoQuery = {short_name: "kafeitu"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+      <!-- Duoshuo Comment END -->
+    </div>
+    <div id='footer'>
+      Copyright &copy; 2012 咖啡兔|Henry Yan. Hosted by <a href='http://github.com/henryyan/henryyan.github.com/' target='_blank'>GitHub</a> and powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a>. Templates from <a href='http://github.com/mbleigh/mbleigh.github.com/' target='_blank'>Michael Bleigh</a>.
+    </div>
+
+    <!-- 语法高亮 BEGIN -->
     <script src="/javascripts/syntaxhighlighter/scripts/shCore.js" type="text/javascript"></script>
     <script src="/javascripts/syntaxhighlighter/scripts/shAutoloader.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -66,48 +107,11 @@
       return result;
     };
     </script>
-  </head>
-  <body>
-  <a href="http://github.com/henryyan/henryyan.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
-    <div id='wrapper'>
-      <div id='header'>
-        <h1><a href='/'>咖啡兔</a></h1>
-        
-        <div id='menu'>
-          <ul>
-            <li><a href='/' id='home-link' title='Home'>首页</a></li>
-            <li><a href='/blog.html' id='blog-link' title='Blog'>博客</a></li>
-            <li><a href='/categories.html' id='categories-link' title='Categories'>分类</a></li>
-            <li><a href='/tags.html' id='tags-link' title='Tags'>标签</a></li>
-            <li><a href='/about.html' id='about-link' title='About'>关于</a></li>
-            <li><a href='http://github.com/henryyan' target='_blank' title='GitHub' rel='me' id='github-link'>GitHub</a></li>
-            <li><a href='http://weibo.com/kafeituzi' title='微博' target='_blank' id='weibo-link'>微博</a></li>
-          </ul>
-        </div>
-      </div>
-      <div id='content'>
-        {{ content }}
-        <div class='clearfix'></div>
-      </div>
-      <!-- Duoshuo Comment BEGIN -->
-      <div class="ds-thread"></div>
-      <script type="text/javascript">
-      var duoshuoQuery = {short_name: "kafeitu"};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = 'http://static.duoshuo.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-      </script>
-      <!-- Duoshuo Comment END -->
-    </div>
-    <div id='footer'>
-      Copyright &copy; 2012 咖啡兔|Henry Yan. Hosted by <a href='http://github.com/henryyan/henryyan.github.com/' target='_blank'>GitHub</a> and powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a>. Templates from <a href='http://github.com/mbleigh/mbleigh.github.com/' target='_blank'>Michael Bleigh</a>.
-    </div>
+    <!-- 语法高亮 END -->
+
     <!-- UJian Button BEGIN -->
     <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&btn=4&uid=1537991"></script>
     <!-- UJian Button END -->
-	<script src="http://s96.cnzz.com/stat.php?id=2566493&web_id=2566493&show=pic" language="JavaScript"></script>
+	 <script src="http://s96.cnzz.com/stat.php?id=2566493&web_id=2566493&show=pic" language="JavaScript"></script>
   </body>
 </html>
