@@ -135,9 +135,9 @@ OK，接下来要配置CAS服务器了。
 
 <pre class="brush:xml">
 <bean class="org.jasig.cas.adaptors.jdbc.QueryDatabaseAuthenticationHandler">
-	<property name="dataSource" ref="dataSource" />
-	<property name="sql" value="select password from t_admin_user where login_name=?" />
-	<property name="passwordEncoder" ref="MD5PasswordEncoder"/>
+	<property name="dataSource" ref="dataSource"></property>
+	<property name="sql" value="select password from t_admin_user where login_name=?"></property>
+	<property name="passwordEncoder" ref="MD5PasswordEncoder"></property>
 </bean>
 </pre>
 
@@ -151,9 +151,9 @@ OK，接下来要配置CAS服务器了。
 </bean>
 
 <bean id="MD5PasswordEncoder" class="org.jasig.cas.authentication.handler.DefaultPasswordEncoder">
-<constructor-arg index="0">
-<value>MD5</value>
-</constructor-arg>
+    <constructor-arg index="0">
+        <value>MD5</value>
+    </constructor-arg>
 </bean>
 </pre>
 
@@ -214,50 +214,50 @@ create table t_admin_user (
 
 <!-- 该过滤器用于实现单点登出功能，可选配置。 -->
 <filter>
-<filter-name>CAS Single Sign Out Filter</filter-name>
-<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+    <filter-name>CAS Single Sign Out Filter</filter-name>
+    <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
 </filter>
 <filter-mapping>
-<filter-name>CAS Single Sign Out Filter</filter-name>
-<url-pattern>/*</url-pattern>
+    <filter-name>CAS Single Sign Out Filter</filter-name>
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 
 <!-- 该过滤器负责用户的认证工作，必须启用它 -->
 <filter>
-<filter-name>CASFilter</filter-name>
-<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
-<init-param>
-<param-name>casServerLoginUrl</param-name>
-<param-value>https://sso.wsria.com:8443/cas/login</param-value>
-<!--这里的server是服务端的IP-->
-</init-param>
-<init-param>
-<param-name>serverName</param-name>
-<param-value>http://localhost:10000</param-value>
-</init-param>
+    <filter-name>CASFilter</filter-name>
+    <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+    <init-param>
+        <param-name>casServerLoginUrl</param-name>
+        <param-value>https://sso.wsria.com:8443/cas/login</param-value>
+    </init-param>
+    <init-param>
+        <!--这里的server是服务端的IP-->
+        <param-name>serverName</param-name>
+        <param-value>http://localhost:10000</param-value>
+    </init-param>
 </filter>
 <filter-mapping>
-<filter-name>CASFilter</filter-name>
-<url-pattern>/*</url-pattern>
+    <filter-name>CASFilter</filter-name>
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 
 <!-- 该过滤器负责对Ticket的校验工作，必须启用它 -->
 <filter>
-<filter-name>CAS Validation Filter</filter-name>
-<filter-class>
+    <filter-name>CAS Validation Filter</filter-name>
+    <filter-class>
 org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>
-<init-param>
-<param-name>casServerUrlPrefix</param-name>
-<param-value>https://sso.wsria.com:8443/cas</param-value>
-</init-param>
-<init-param>
-<param-name>serverName</param-name>
-<param-value>http://localhost:10000</param-value>
-</init-param>
+    <init-param>
+        <param-name>casServerUrlPrefix</param-name>
+        <param-value>https://sso.wsria.com:8443/cas</param-value>
+    </init-param>
+    <init-param>
+        <param-name>serverName</param-name>
+        <param-value>http://localhost:10000</param-value>
+    </init-param>
 </filter>
 <filter-mapping>
-<filter-name>CAS Validation Filter</filter-name>
-<url-pattern>/*</url-pattern>
+    <filter-name>CAS Validation Filter</filter-name>
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 
 <!--
@@ -265,13 +265,13 @@ org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filte
 比如允许开发者通过HttpServletRequest的getRemoteUser()方法获得SSO登录用户的登录名，可选配置。
 -->
 <filter>
-<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
-<filter-class>
+    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+    <filter-class>
 org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
 </filter>
 <filter-mapping>
-<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
-<url-pattern>/*</url-pattern>
+    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 
 <!--
@@ -279,23 +279,23 @@ org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
 比如AssertionHolder.getAssertion().getPrincipal().getName()。
 -->
 <filter>
-<filter-name>CAS Assertion Thread Local Filter</filter-name>
-<filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
+    <filter-name>CAS Assertion Thread Local Filter</filter-name>
+    <filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
 </filter>
 <filter-mapping>
-<filter-name>CAS Assertion Thread Local Filter</filter-name>
-<url-pattern>/*</url-pattern>
+    <filter-name>CAS Assertion Thread Local Filter</filter-name>
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 
 <!-- 自动根据单点登录的结果设置本系统的用户信息 -->
 <filter>
-<display-name>AutoSetUserAdapterFilter</display-name>
-<filter-name>AutoSetUserAdapterFilter</filter-name>
-<filter-class>com.wsria.demo.filter.AutoSetUserAdapterFilter</filter-class>
+    <display-name>AutoSetUserAdapterFilter</display-name>
+    <filter-name>AutoSetUserAdapterFilter</filter-name>
+    <filter-class>com.wsria.demo.filter.AutoSetUserAdapterFilter</filter-class>
 </filter>
 <filter-mapping>
-<filter-name>AutoSetUserAdapterFilter</filter-name>
-<url-pattern>/*</url-pattern>
+    <filter-name>AutoSetUserAdapterFilter</filter-name>
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 <!-- ======================== 单点登录结束 ======================== -->
 </pre>
