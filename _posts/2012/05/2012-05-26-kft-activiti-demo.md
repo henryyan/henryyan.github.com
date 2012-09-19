@@ -31,12 +31,9 @@ tags:
 
 本项目托管在著名的**Github**，地址：[https://github.com/henryyan/kft-activiti-demo](https://github.com/henryyan/kft-activiti-demo)。
 
-具体操作请参考本项目的WIKI文档：[https://github.com/henryyan/kft-activiti-demo/wiki/配置说明](https://github.com/henryyan/kft-activiti-demo/wiki/%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E)
+## 2.Demo wiki文档
 
-## 2.功能说明
-
-请参考WIKI：[https://github.com/henryyan/kft-activiti-demo/wiki/功能演示](https://github.com/henryyan/kft-activiti-demo/wiki/%E5%8A%9F%E8%83%BD%E6%BC%94%E7%A4%BA)
-
+请参考WIKI：[https://github.com/henryyan/kft-activiti-demo/wiki](https://github.com/henryyan/kft-activiti-demo/wiki)
 
 ## 3.意见
 
