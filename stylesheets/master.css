@@ -75,6 +75,7 @@ a:visited {
 #menu ul li a#docs-link { background-image: url(/images/docs.gif); }
 #menu ul li a#categories-link { background-image: url(/images/categories.gif); }
 #menu ul li a#tags-link { background-image: url(/images/tags.gif); }
+#menu ul li a#activiti-link { background-image: url(/images/activiti.gif); }
 
 #content {
   padding: 2em 0;
