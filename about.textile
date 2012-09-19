@@ -5,9 +5,9 @@ layout: master
 
 h2. 关于我
 
-* 目前在一家创业型公司工作，工作内容：需求调研、DEMO、数据库、架构、测试以及核心模块开发工作
+* 目前在一家创业型公司工作，负责技术
 
-* 擅长B/S系统开发，使用技术：Java及其(SS、SSH2)架构、Ajax(jQuery)、Xhtml、Css；CAS、Spring Security
+* 擅长B/S系统开发，使用技术、框架：Java及其(SS、SSH2)架构、Ajax(jQuery)、Xhtml、Css；CAS、Spring Security；Activiti
 
 * 喜欢*nix、CLI控、开源、技术宅
 
