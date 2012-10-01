@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Activiti Modeler中文汉化"
+title: "Activiti Explorer中文汉化"
 category: activiti
 tags: 
  - activiti
