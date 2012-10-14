@@ -70,7 +70,8 @@ cd ../activiti-webapp-explorer2
 mvn package -Dmaven.test.skip=true
 </pre>
 
-	上面的代码cd modules/activiti-spring和之后的mvn install是在本地安装activiti-spring模块，如果不执行在打包explorer时会提示缺少activiti-spring依赖。
+	上面的代码cd modules/activiti-spring和之后的mvn install是在本地安装activiti-spring模块，
+	如果不执行在打包explorer时会提示缺少activiti-spring依赖。
 
 执行完成之后在modules/activiti-webapp-explorer2/target目录可以看到**activiti-webapp-explorer2-5.11-SNAPSHOT.war**，然后把这个文件重命名为**activiti-explorer.war**部署到tomcat或者其他的Web Server。
 
