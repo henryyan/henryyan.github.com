@@ -7,6 +7,8 @@ title: Activiti Extra
 
 > 本项目是针对Activiti的扩展（各种工具、功能扩展），包含一些常用的功能以及中国特色的工作流特性。
 
+项目地址（Github）：[https://github.com/henryyan/activiti-extra](https://github.com/henryyan/activiti-extra)
+
 ## 项目目标
 
 1. 使用Spring作为容器
