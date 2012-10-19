@@ -16,7 +16,7 @@ tags:
 
 说做就做，首先Fork了Github的Activiti源码，然后花了几个小时时间把中文国际化做完了，并发布了第一版Demo：
 
-[http://aws.kafeitu.me:8080/activiti-explorer](http://aws.kafeitu.me:8080/activiti-explorer)
+[http://aws.kafeitu.me:8888/activiti-explorer2](http://aws.kafeitu.me:8888/activiti-explorer2)
 
 
 ![汉化后的登陆页面](/files/2012/09/activiti-explorer-i18n-for-chinese-login.png)
