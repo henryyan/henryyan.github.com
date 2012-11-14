@@ -63,9 +63,11 @@ Activiti Modeler包含在**activiti-webapp-explorer2**模块中，读者可以�
 在终端中进入项目根目录，执行以下命令：
 
 <pre class="brush:shell">
-mvn install
+mvn install -Dmaven.test.skip=true
 cd modules/activiti-spring
-mvn install
+mvn install -Dmaven.test.skip=true
+cd modules/activiti-bpmn-converter
+mvn install -Dmaven.test.skip=true
 cd ../activiti-webapp-explorer2
 mvn package -Dmaven.test.skip=true
 </pre>
