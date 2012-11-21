@@ -3,7 +3,7 @@
 
 博客源码：[http://www.kafeitu.me](http://www.kafeitu.me)
 
-使用Github+Jekyll+Markdown。
+使用Github + Jekyll + Markdown。
 
 博客主题：
 ====
