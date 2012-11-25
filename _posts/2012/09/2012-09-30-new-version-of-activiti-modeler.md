@@ -63,7 +63,7 @@ Activiti Modeler包含在**activiti-webapp-explorer2**模块中，读者可以�
 在终端中进入项目根目录，执行以下命令：
 
 <pre class="brush:shell">
-mvn clean package jetty:run
+mvn clean install -PbuildWebappDependencies
 </pre>
 
 执行完成之后在modules/activiti-webapp-explorer2/target目录可以看到**activiti-webapp-explorer2-5.11-SNAPSHOT.war**，然后把这个文件重命名为**activiti-explorer.war**部署到tomcat或者其他的Web Server。
