@@ -73,7 +73,7 @@ mvn clean package -Dmaven.test.skip=true -Pdistro,nodocs
 在`modules/activiti-webapp-explorer2`目录中有一个文件`start-server.sh`，如果使用linux或者mac的用户可以直接运行但是会报错因为脚本里面指定需要使用jreble支持热部署（开发的时候使用的），我们仅仅是运行所以不管哪个平台都可以直接在有maven的情况下运行命令：
 
 <pre class="brush:shell">
-➜ henryyan@hy-mbp  ~/Activiti-Fork/modules/activiti-webapp-explorer2 git:(master) ✗ mvn jetty:run
+➜ $ ~/Activiti-Fork/modules/activiti-webapp-explorer2 git:(master) ✗ mvn jetty:run
 </pre>
 
 然后就可以访问Explorer了，地址：[http://localhost:8080/activiti-explorer2](http://localhost:8080/activiti-explorer2)
