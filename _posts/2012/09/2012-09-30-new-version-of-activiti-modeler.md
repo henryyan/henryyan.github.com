@@ -52,6 +52,13 @@ When will it be released 5.10 version of the designer?](http://forums.activiti.o
 
 官方打包的war包可能会存在延迟（非最新的源码），这个时候可以自己从Github获取源码打包，当然离不开Maven的支持（别问我为什么……）。
 
+----
+笔者Fork的Activiti源码提供最新的中文国际化支持，地址：
+
+[https://github.com/henryyan/Activiti](https://github.com/henryyan/Activiti)
+
+----
+
 获取之后的目录结构如下：
 
 ![Activiti源码目录结构](/files/2012/09/activiti-source-floder.png)
