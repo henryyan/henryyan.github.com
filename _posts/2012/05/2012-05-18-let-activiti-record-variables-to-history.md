@@ -2,7 +2,7 @@
 layout: post
 title: "让Activiti记录变量历史信息"
 category: activiti
-tags: 
+tags:
  - activiti
  - history
  - 变量
@@ -64,12 +64,22 @@ ProcessEngine processEngine = ProcessEngineConfiguration
 
 ![开始full历史级别后保存的历史信息](/files/2012/05/activiti-history-detail.png)
 
-### 4.1 Java代码
+### 4.1 Java代码（5.10版本之前）
 
 <pre class="brush:java">
 List<HistoricDetail> list = historyService.createHistoricDetailQuery().processInstanceId(processInstance.getId()).list();
 for (HistoricDetail historicDetail : list) {
 	HistoricVariableUpdateEntity variable = (HistoricVariableUpdateEntity) historicDetail;
 	System.out.println(variable.getName() + " = " + variable.getValue());
+}
+</pre>
+
+### 4.2 Java代码（5.11+版本）
+
+<pre class="brush:java">
+List<HistoricDetail> list = historyService.createHistoricDetailQuery().processInstanceId(processInstance.getId()).list();
+for (HistoricDetail historicDetail : list) {
+	HistoricVariableUpdate variable = (HistoricVariableUpdate) historicDetail;
+    System.out.println("variable: " + variable.getVariableName() + " = " + variable.getValue());
 }
 </pre>
