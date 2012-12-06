@@ -38,11 +38,19 @@ tags:
 
 除了以上的改进和新特性之外还修复了大量的Bug，完整的Changlog请参考[JIRA](http://www.activiti.org/readme.html)。
 
-## 3. 升级建议
+## 3. 下载新版本
+
+5.11版本下载地址：[https://github.com/downloads/Activiti/Activiti/activiti-5.11.zip](https://github.com/downloads/Activiti/Activiti/activiti-5.11.zip)
+
+	压缩包中的wars目录包含两个文件，activiti-rest模块可以单独部署了，修改数据库配置就可以作为自己的REST服务使用。
+
+Github上的5.11分支：[https://github.com/Activiti/Activiti/tree/activiti-5.11](https://github.com/Activiti/Activiti/tree/activiti-5.11)
+
+## 4. 升级建议
 
 5.11版本是一个改进版本，添加了很多有用的新特性，很值得升级；当然在升级产品环境之前做好充分的测试并备份数据。
 
-## 4. 5.12版本前瞻
+## 5. 版本5.12前瞻
 
 1. 在5.11发布之前我曾在JIRA提交了一个关于Activiti Explorer中流程图的一个Bug-[ACT-1469](http://jira.codehaus.org/browse/ACT-1469)，是的，又被关闭了；不过后来在twitter上和Activiti的Team Leader 交流了一下，我分享了我的做法并得到了他的肯定，而且想让我参与到开发中用Javascript和Css方式实现流程图的跟踪功能。
 
