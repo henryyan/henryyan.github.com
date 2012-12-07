@@ -23,6 +23,12 @@ tags:
 
 ## 2. 新版截图
 
+**项目主页（Demo）：**[http://www.kafeitu.me/demo/jquery-ui-portlet/index.html](/demo/jquery-ui-portlet/index.html)
+
+**源码（Github）：**[https://github.com/henryyan/jquery-ui-portlet](https://github.com/henryyan/jquery-ui-portlet)
+
+----
+
 ![](/files/2012/12/jquery-ui-portlet-v1.1.0.png)
 
 ## 3. Roadmap
