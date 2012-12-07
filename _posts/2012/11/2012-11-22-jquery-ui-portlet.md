@@ -23,6 +23,6 @@ Portlet是企业系统中比较重要的一块内容，可以展示企业的各�
 ![jquery-ui-portlet插件截图](/files/2012/11/jquery-ui-portlet.png)
 
 ----
-**项目主页（Demo）：**[http://www.kafeitu.me/jqyery-ui-portlet.html](/jquery-ui-portlet.html)
+**项目主页（Demo）：**[http://www.kafeitu.me/demo/jquery-ui-portlet/index.html](/demo/jquery-ui-portlet/index.html)
 
 **源码（Github）：**[https://github.com/henryyan/jquery-ui-portlet](https://github.com/henryyan/jquery-ui-portlet)
