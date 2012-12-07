@@ -20,7 +20,7 @@ tags:
 
 1. **新模块Activiti Modeler**：添加了Web版本的流程定义设计器—Activiti Modeler到Activiti Explorer中，而且两者可以无缝结合；可以把Modeler设计的流程定义部署到Exploer中，也可以以已部署的流程定义为基础进行修改后重新部署。具体的使用可以参考[这里](/activiti/2012/09/30/new-version-of-activiti-modeler.html)。
 
-2. **汉化Activiti Explorer**：本人有幸参与并完成了汉化工作，[汉化介绍](activiti/2012/09/30/activiti-explorer-i18n-for-chinese.html)。
+2. **汉化Activiti Explorer**：本人有幸参与并完成了汉化工作，[汉化介绍](/activiti/2012/09/30/activiti-explorer-i18n-for-chinese.html)。
 
 3. **添加Native Query**：允许通过本地SQL方法查询Activiti的对象；在这之前查询一直是一个比较头疼的事情，因为开发人员只能使用一些Query对象显示调用设置属性的方法过滤，如果想做到自定义条件查询没有这类接口提供；现在可以使用下面的方式灵活组装查询条件。参考手册的Query API部分。
 
