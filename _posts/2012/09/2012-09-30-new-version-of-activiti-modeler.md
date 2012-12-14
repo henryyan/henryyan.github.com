@@ -78,7 +78,7 @@ mvn clean install -PbuildWebappDependencies
 ### 3.3 直接用Maven的Jetty插件启动应用
 
 <pre class="brush:shell">
-➜ henryyan@hy-mbp  ~/Activiti/modules/activiti-webapp-explorer2 git:(master) ✗ mvn clean package jetty:run
+➜ ~/Activiti/modules/activiti-webapp-explorer2 (git) mvn clean package jetty:run
 </pre>
 
 然后就可以访问Explorer了，地址：[http://localhost:8080/activiti-explorer2](http://localhost:8080/activiti-explorer2)
