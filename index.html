@@ -11,7 +11,7 @@ full_posts: 3
 
 {% for post in site.posts limit:page.full_posts %}
   <div class='post'>
-    <span class='date'>{{post.date | date_to_string}}</span>
+    <span class='date'>{{post.date | date: "%d %b %Y"}}</span>
     <a href='{{post.url}}#comments' title='分享文章、查看评论' style="float:right;margin-right:.5em;">Comments</a>
     <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
     <div class='body'>{{post.content}}</div>
@@ -63,7 +63,7 @@ full_posts: 3
     <div class="sidebar-item">
     <ul class='sidebar-posts'>
       {% for post in site.posts limit:10 %}
-      <li title='发布日期：{{post.date | date_to_string}}'><a href='{{post.url}}'>{{post.title}}</a></li>
+      <li title='发布日期：{{post.date | date: "%d %b %Y"}}'><a href='{{post.url}}'>{{post.title}}</a></li>
       {% endfor %}
     </ul>
     </div>
