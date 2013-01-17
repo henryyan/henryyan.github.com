@@ -349,3 +349,5 @@ a img { border: 0; }
 .parameters td { border:1px solid #c5c5c5; padding:5px; background-color:#fff; color:#000 }
 .parameters th { background:#D9D9D9 !important; border-color:#d9d9d9 !important }
 .parameters .parameter { font-family:Fixed, monospace }
+
+.cse .gsc-control-cse, .gsc-control-cse {padding: 0em !important;}
