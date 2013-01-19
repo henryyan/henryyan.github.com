@@ -871,6 +871,18 @@ done < /tmp/study-git-submodule-dirs
 
 * 然后读取文件中的子模块路径，依次切换到master分支(修改都是在master分支上进行的)，最后更新最近改动。
 
+#### 2.8.3 <font color='red'>2013-01-19更新</font>
+
+网友**@紫煌**给出了更好的办法，一个命令就可以代替上面的**bin/update-submodules.sh**的功能：
+
+<pre class="brush:shell">
+git submodule foreach git pull
+</pre>
+
+此命令也脚本一样，循环进入（enter）每个子模块的目录，然后执行**foreach**后面的命令。
+
+> 该后面的命令可以任意的，例如 git submodule foreach ls -l 可以列出每个子模块的文件列表
+
 #### 2.8.3 体验工具带来的便利
 
 <pre class="brush: shell">
