@@ -11,6 +11,7 @@ title: Activiti
 
 <h2>Activiti相关博文</h2>
 <ul>
+    <li><a href="/activiti/2013/01/12/kft-activiti-demo-rest.html">如何使用Activiti Rest模块</a></li>
     <li><a href="/activiti/2012/12/15/kft-activiti-1-5-release.html">kft-activiti-demo 1.5.0 发布</a></li>
     <li><a href="/activiti/2012/12/05/activiti-5-11-release.html">Activiti 5.11发布</a></li>
     <li><a href="/activiti/2012/10/22/activiti-5.10-deploy-bpmn-directly.html">Activiti 5.10支持直接部署扩展名为bpmn的流程文件</a></li>
