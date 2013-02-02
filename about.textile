@@ -5,9 +5,9 @@ layout: master
 
 h2. 关于我
 
-* 目前在一家创业型公司工作，负责技术
+* 一个典型的攻城师、CodeMonkey，崇尚自由，喜欢关注新鲜事物
 
-* 擅长B/S系统开发，使用技术、框架：Java及其(SS、SSH2)架构、Ajax(jQuery)、Xhtml、Css；CAS、Spring Security；Activiti
+* 擅长B/S系统开发，使用技术、框架：Java及其(SS、SSH2)架构、Ajax(jQuery)、html、Css；CAS、Spring Security；Activiti
 
 * 喜欢*nix、CLI控、开源、技术宅
 
@@ -17,23 +17,27 @@ h2. 软硬环境
 
 * Shell: zsh(oh-my-zsh)
 
-* 编辑器：VIM && Sublime Text 2
+* 编辑器：VIM && Sublime Text
 
 * IDE：Eclipse With JAVAEE
 
-* 浏览器：Chrome
+* 浏览器：Chrome，偶尔使用Firefox、Safari，迫于无奈用IE测试……
 
-* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：16G，硬盘：500G
+* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：16G（内存必须大），硬盘：500G（计划添加一块SSD）
 
 h2. 关于www.kafeitu.me
 
-* 介绍业内流行、成熟的技术、工具、敏捷
+* 介绍业内流行、成熟的技术、工具，博主热衷分享研究成果
 
-* 以xhtml、css、javascript、ajax、jQuery为前端技术
+* 以html、css、javascript、ajax、jQuery为前端技术
 
-* 以Java、SSH(SpringMVC)、Springside为后台基础
+* 以Java、SSH(SpringMVC)为后台基础
 
 * 以Maven、Ant、CI(Jenkins)、Sonar为辅助工具
+
+* 以Git作为SCM工具
+
+* 偶尔分享一些关于Shell方面的文章
 
 * 以技术的实用性为导向，结合实例讲解各个系统、功能的实现过程
 
@@ -50,8 +54,10 @@ h2. 联系我
 
 h2. Github项目
 
+花点时间浏览或许能发现你所需要的^_^
+
 * <a href='https://github.com/henryyan'>https://github.com/henryyan</a>
 
 h2. 关于版权
 
-除特别说明外，本博客内容皆为原创，可以自由转载传播，但请署名及注明出处！
+除特别说明外，本博客内容皆为原创，可以自由转载传播，但请署名及注明出处（鄙视垃圾爬虫）！
