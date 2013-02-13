@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "利用静态服务提升读取Activiti流程图的性能"
-category: activity
+category: activiti
 tags: 
  - activiti
  - 静态
