@@ -23,7 +23,7 @@ h2. 软硬环境
 
 * 浏览器：Chrome，偶尔使用Firefox、Safari，迫于无奈用IE测试……
 
-* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：16G（内存必须大），硬盘：500G（计划添加一块SSD）
+* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：16G（内存必须大），硬盘：600G（120G SSD + 500G HDD，组成Fusion Driver）
 
 h2. 关于www.kafeitu.me
 
