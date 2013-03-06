@@ -11,6 +11,7 @@ title: Activiti
 
 <h2>Activiti相关博文</h2>
 <ul>
+    <li><a href="/activiti/2013/03/06/activiti-5-12-release.html">Activiti 5.12发布</a></li>
     <li><a href="/activiti/2013/02/14/improve-performance-for-reading-diagram.html">利用静态服务提升读取Activiti流程图的性能</a></li>
     <li><a href="/activiti/2013/01/12/kft-activiti-demo-rest.html">如何使用Activiti Rest模块</a></li>
     <li><a href="/activiti/2012/12/15/kft-activiti-1-5-release.html">kft-activiti-demo 1.5.0 发布</a></li>
