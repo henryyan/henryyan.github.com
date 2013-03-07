@@ -12,7 +12,7 @@ tags:
 
 1. 在Activiti Explorer中添加了基于Javascript的流程图查看功能，由[Raphaël](http://raphaeljs.com/)提供画图支持，支持全部浏览器；这个功能是我在5.11版本发布之后提出的，后来Tijs说让我帮忙做一个，最后用jQuery实现了（和[kft-activiti-demo](/activiti/2012/05/26/kft-activiti-demo.html)里面的跟踪效果一样，后来tijs告诉我有人在做了，所以我就取消了这个任务），效果图在下面。
 2. 统一了BPMN解析，可以应用与引擎、Activiti Designer、Activiti Modeler。
-3. 添加Activiti Kickstar到Activiti Explorer，让不懂BPMN规范的人也可以设计简单流程（设计的流程都是顺序流，设计的时候不要在assignee<办理热>字段填写值，否则会报错）。
+3. 添加Activiti Kickstar到Activiti Explorer，让不懂BPMN规范的人也可以设计简单流程（设计的流程都是顺序流，设计的时候不要在assignee<办理人>字段填写值，否则会报错）。
 4. 简化并扩充了Activiti Camel模块。
 5. 在Activiti Explorer中添加了报表功能，可以以用户、任务、流程等维度生成图形报表。
 6. 添加auto-layout模块，可以应用与KickStart和Modeler（还未验证）。
