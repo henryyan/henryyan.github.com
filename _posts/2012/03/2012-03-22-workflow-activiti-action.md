@@ -61,6 +61,11 @@ tags:
 当然如果你有配置文件读取工具那么可以设置在*.properties文件中，我就是这么做的：
 <pre>Font font = new Font(PropertyFileUtil.get("activiti.diagram.canvas.font"), Font.BOLD, 11);</pre>
 
+----
+从**5.12**版本开始支持设置字体名称，在引擎中设置:
+<pre><property name="activityFontName" value="微软雅黑" /></pre>在生成图片时即可使用**微软雅黑**设置图片中的文字。
+----
+
 #### 2.1.2 使用压缩包方式部署
 
 Activiti支持部署*.bpmn20.xml、bar、zip格式的流程定义。
