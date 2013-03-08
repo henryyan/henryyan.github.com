@@ -56,15 +56,15 @@ tags:
 
 在构造方法<pre>public ProcessDiagramCanvas(int width, int height)</pre>
 中有一行代码是设置字体的，默认是用**Arial**字体，这就是乱码产生的原因，把字改为本地的中文字体即可，例如：
-<pre>Font font = new Font("WenQuanYi Micro Hei", Font.BOLD, 11);</pre>
+<pre class="brush:java">Font font = new Font("WenQuanYi Micro Hei", Font.BOLD, 11);</pre>
 
 当然如果你有配置文件读取工具那么可以设置在*.properties文件中，我就是这么做的：
-<pre>Font font = new Font(PropertyFileUtil.get("activiti.diagram.canvas.font"), Font.BOLD, 11);</pre>
-
+<pre class="brush:java">Font font = new Font(PropertyFileUtil.get("activiti.diagram.canvas.font"), Font.BOLD, 11);</pre>
 ----
-从**5.12**版本开始支持设置字体名称，在引擎中设置:
-<pre><property name="activityFontName" value="微软雅黑" /></pre>在生成图片时即可使用**微软雅黑**设置图片中的文字。
-----
+<font color='red'>从**5.12**版本开始支持设置字体名称，在引擎中添加如下设置，在生成图片时即可使用**微软雅黑**设置图片中的文字。</font>
+<pre class="brush:xml">
+	<property name="activityFontName" value="微软雅黑"></property>
+</pre>
 
 #### 2.1.2 使用压缩包方式部署
 
