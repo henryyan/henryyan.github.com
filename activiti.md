@@ -11,6 +11,7 @@ title: Activiti
 
 <h2>Activiti相关博文</h2>
 <ul>
+    <li><a href="/activiti/2013/03/10/kft-activiti-demo-release-1-7.html">Activiti快速入门项目kft-activiti-demo 1.7.0版本发布</a></li>
     <li><a href="/activiti/2013/03/10/integrate-activiti-modeler.html">整合Activiti Modeler到业务系统（或BPM平台）</a></li>
     <li><a href="/activiti/2013/03/06/activiti-5-12-release.html">Activiti 5.12发布</a></li>
     <li><a href="/activiti/2013/02/14/improve-performance-for-reading-diagram.html">利用静态服务提升读取Activiti流程图的性能</a></li>
