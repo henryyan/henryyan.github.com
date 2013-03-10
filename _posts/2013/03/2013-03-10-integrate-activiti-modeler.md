@@ -30,14 +30,41 @@ Activiti 5.10版本把原本独立的Activiti Modeler模块整合到了Activiti 
 2. **src/main/resources**中的**editor.html、stencilset.json、plugins.xml**到项目**源码的根目录**
 3. **src/main/webapp**中的**api、editor、explorer、libs**到项目的webapp目录（与WEB-INF目录同级）
 
-### 2.3 添加Java类
+### 2.3 添加依赖
+<pre class="brush:xml">
+<dependency>
+	<groupId>org.activiti</groupId>
+	<artifactId>activiti-explorer</artifactId>
+	<version>5.12</version>
+	<exclusions>
+		<exclusion>
+			<artifactId>vaadin</artifactId>
+			<groupId>com.vaadin</groupId>
+		</exclusion>
+		<exclusion>
+			<artifactId>dcharts-widget</artifactId>
+			<groupId>org.vaadin.addons</groupId>
+		</exclusion>
+		<exclusion>
+			<artifactId>activiti-simple-workflow</artifactId>
+			<groupId>org.activiti</groupId>
+		</exclusion>
+	</exclusions>
+</dependency>
+<dependency>
+	<groupId>org.activiti</groupId>
+	<artifactId>activiti-modeler</artifactId>
+	<version>5.12</version>
+</dependency>
+</pre>
+
+### 2.4 添加Java类
 
 添加一个**ExplorerRestApplication.java**类保存到项目中，注册了一些REST路由。
 
 <pre class="brush:java">
 package org.activiti.explorer.rest.application;
 
-import org.activiti.diagram.rest.application.DiagramServicesInit;
 import org.activiti.editor.rest.application.ModelerServicesInit;
 import org.activiti.rest.api.DefaultResource;
 import org.activiti.rest.application.ActivitiRestApplication;
@@ -46,7 +73,7 @@ import org.restlet.Restlet;
 import org.restlet.routing.Router;
 
 public class ExplorerRestApplication extends ActivitiRestApplication {
-  
+
   public ExplorerRestApplication() {
     super();
   }
@@ -58,7 +85,6 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
     Router router = new Router(getContext());
     router.attachDefault(DefaultResource.class);
     ModelerServicesInit.attachResources(router);
-    DiagramServicesInit.attachResources(router);
     JsonpFilter jsonpFilter = new JsonpFilter(getContext());
     jsonpFilter.setNext(router);
     return jsonpFilter;
@@ -67,7 +93,7 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
 }
 </pre>
 
-### 2.3 配置web.xml
+### 2.5 配置web.xml
 
 在web.xml文件中添加如下配置：
 
@@ -90,7 +116,7 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
 </servlet-mapping>
 </pre>
 
-### 2.4 控制器
+### 2.6 控制器
 
 使用Spring MVC做了一个简单的封装，也可以使用其他的MVC实现。
 
@@ -232,7 +258,7 @@ public class ModelController {
 }
 </pre>
 
-### 2.5 注意事项
+### 2.7 注意事项
 
 如果使用Spring代理引擎，并且在项目中同时有activiti.cfg.xml文件（不管在main/resources还是test/resources目录），在activiti.cfg.xml里面的引擎中添加下面的配置参数，否则会导致打开Modeler的编辑页面时读取数据返回**204**状态码。
 
