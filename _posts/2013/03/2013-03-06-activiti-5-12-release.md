@@ -203,6 +203,7 @@ tags:
 1. [activiti-engine-5.12.1.jar](https://raw.github.com/henryyan/mavenrepo/master/releases/org/activiti/activiti-engine/5.12.1/activiti-engine-5.12.1.jar)
 2. [activiti-bpmn-model-5.12.1.jar](https://raw.github.com/henryyan/mavenrepo/master/releases/org/activiti/activiti-bpmn-model/5.12.1/activiti-bpmn-model-5.12.1.jar)
 3. [activiti-bpmn-converter-5.12.1.jar](https://raw.github.com/henryyan/mavenrepo/master/releases/org/activiti/activiti-bpmn-converter/5.12.1/activiti-bpmn-converter-5.12.1.jar)
+4. [activiti-spring-5.12.1.jar](https://raw.github.com/henryyan/mavenrepo/master/releases/org/activiti/activiti-spring/5.12.1/activiti-spring-5.12.1.jar)
 
 ## 5. 对5.13版本的期待
 
