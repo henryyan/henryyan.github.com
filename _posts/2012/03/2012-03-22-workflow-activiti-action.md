@@ -84,7 +84,7 @@ Activiti支持部署*.bpmn20.xml、bar、zip格式的流程定义。
 
 ##### 2.1.2.1 使用工具打包Bar文件
 
-右键项目名称然后点击“Create deployment artifacts”，会在src目录中创建**deployment**文件夹，里面包含*.bar文件.
+在“Package Explorer”视图中右键项目名称然后点击“Create deployment artifacts”，会在src目录中创建**deployment**文件夹，里面包含*.bar文件.
 
 ##### 2.1.2.2 使用Ant脚本打包Zip文件
 
