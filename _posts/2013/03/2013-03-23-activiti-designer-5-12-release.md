@@ -13,7 +13,7 @@ tags:
 
 可能很多使用Activiti的人都遇到一个问题，有些流程文件没有BPMN DI信息（用于描述流程中每一个组件的XY坐标、宽度、高度），所以要以图片形式查看流程就麻烦了，在Activiit源码中有大量的bpmn20.xml文件用于测试引擎，而且都没有附带BPMN DI信息，所以要看懂流程图就要有扎实的BPMN规范基础然后把xml在脑海中转换为图片形式。。。
 
-现在不需要了，利用Activiti中新增的**activiti-bpmn-layout**模块可以自动根据流程定义xml生成BPMN DI信息，现在可以*右键***foo.bpmn20.xml**或者任何包含了流程定义信息的文件选择“Open with”-> "Other…"-> "Activiti Diagram Editor"，单击“OK”后就可以看到流程图了，自己稍作调整（输出流的坐标不太准确）保存，再次用"XML Editor"打开就可以看到BPMN DI的XML配置了。
+现在不需要了，利用Activiti中新增的**activiti-bpmn-layout**模块可以自动根据流程定义xml生成BPMN DI信息，现在可以在**foo.bpmn20.xml**文件或者任何包含了流程定义信息的文件上**右键**选择“Open with”-> "Other…"-> "Activiti Diagram Editor"，单击“OK”后就可以看到流程图了，自己稍作调整（输出流的坐标不太准确）保存，再次用"XML Editor"打开就可以看到BPMN DI的XML配置了。
 
 ![打开无BPMN DI信息的流程文件自动排列](/files/2013/03/activiti-designer-no-bpmn-di-auto-layout.png)
 
