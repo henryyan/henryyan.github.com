@@ -94,6 +94,11 @@ Task是在流程定义中**看到**的最大单位，每当一个task完成的�
 
 结合请假流程来说就是让用户点击“完成”按钮提交当前任务是的动作，引擎自动根据任务的顺序流或者排他分支判断走向。
 
+下图是Execution与Task的数据分析，一个会签的例子。
+
+![image](/files/2012/08/executio-map-multi-tasks.png)
+
+
 ## 4.HistoryActivity
 
 HistoryActivity——历史活动。
