@@ -82,7 +82,7 @@ ProcessInstance（**1**）--->Execution(**N**)，其中**N >= 1**。
 
 刚刚说了ProcessInstance是和业务一对一关联的，和业务数据最亲密；Task是和用户最亲密的（UserTask），用户每天的待办事项就是一个个的Task对象。
 
-从**图1**中看得出Execution和Task是一对多关系，Task可以是任何类型的Task实现，可以是用户任务（UserTask）、Java服务（ServiceTask）等，在实际流程运行中只不过面向对象不同，用户任务需要有人完成（complete），Java服务需要有系统自动执行（execution）。
+从**图1**中看得出Execution和Task是一对一关系，Task可以是任何类型的Task实现，可以是用户任务（UserTask）、Java服务（ServiceTask）等，在实际流程运行中只不过面向对象不同，用户任务需要有人完成（complete），Java服务需要有系统自动执行（execution）。
 
 ![](/files/2012/08/task-db.png)
 
@@ -94,9 +94,9 @@ Task是在流程定义中**看到**的最大单位，每当一个task完成的�
 
 结合请假流程来说就是让用户点击“完成”按钮提交当前任务是的动作，引擎自动根据任务的顺序流或者排他分支判断走向。
 
-## 4.Activity
+## 4.HistoryActivity
 
-Activity——活动。
+HistoryActivity——历史活动。
 
 ![](/files/2012/08/activity-db.png)
 
@@ -107,6 +107,10 @@ Activity包含了流程中所有的活动数据，例如开始事件（图5中�
 有些人认为Activity和Task是多对一关系，其实不是，从上图中可以看出来根本没有Task相关的字段。
 
 结合请假流程来说如**Task**中提到的当完成流程的时候所有下一步要执行的任务（包括各种分支）都会创建一个Activity记录到数据库，例如领导审核节点点击“同意”按钮就会流转到人事审批节点，如果“驳回”那就流转到**调整请假内容**节点，每一次操作的task背后实际记录更详细的**活动**。
+
+下图是Execution与Activity的数据分析。
+
+![image](/files/2012/08/execution-map-multi-activities.png)
 
 ## 5.总结
 
