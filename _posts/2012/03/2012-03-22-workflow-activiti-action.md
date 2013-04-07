@@ -380,11 +380,16 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 
 动态指定任务办理人是群里面询问比较多的问题之一，其实就是一层窗户纸，只要在任务完成的时候传递activiti:assignee属性中的变量即可。
 
-<pre class="brush:java">
+----
+
 Map<String, Object> variables = new HashMap<String, Object>();
-variables.put("hrUserId");
+
+variables.put("hrUserId", hrUserId);
+
 taskService.complete(taskId, variables);
-</pre>
+
+----
+
 
 ### 9。2 自动设置任务办理人
 
