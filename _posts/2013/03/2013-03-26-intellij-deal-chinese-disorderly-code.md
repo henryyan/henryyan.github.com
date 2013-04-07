@@ -58,6 +58,8 @@ tags:
 
 <pre>-Dfile.encoding=UTF-8</pre>
 
+> PS：从12.1版本开始默认添加了这个参数
+
 ### 3.2. 步骤二
 
 不要以为问题解决了，实际上只完成了一半，因为是运行Web Server时出现的乱码，所以Web Server的编码要和IDEA保持一致：
