@@ -369,3 +369,34 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 请读者仔细阅读Activiti的用户手册和Javadoc。
 
 如果有什么疑问或者对于功能的实现有更好的办法欢迎提出、分享。
+
+## 9.动态指定任务办理人
+
+### 9.1 手动设置任务办理人
+
+<pre class="brush:xml">
+<userTask id="hrAudit" name="人事审批" activiti:assignee="${hrUserId}"></userTask>
+</pre>
+
+动态指定任务办理人是群里面询问比较多的问题之一，其实就是一层窗户纸，只要在任务完成的时候传递activiti:assignee属性中的变量即可。
+
+<pre class="brush:java">
+Map<String, Object> variables = new HashMap<String, Object>();
+variables.put("hrUserId");
+taskService.complete(taskId, variables);
+</pre>
+
+### 9。2 自动设置任务办理人
+
+下面的代码是利用initiator功能，设置一个名称（不是变量而是变量名）到启动事件上，并且在启动流程时调用一些下面的方法：
+<pre class="brush:java">
+identityService.setAuthenticatedUserId(currentUserId);
+</pre>
+其中currentUserId表示当前用户，也就是启动流程的人，配置如下所示：
+
+<pre class="brush:xml">
+<startEvent id="startevent1" name="Start" activiti:initiator="applyUserId"></startEvent>
+<userTask id="reportBack" name="销假" activiti:assignee="${applyUserId}"></userTask>
+</pre>
+
+这样流程启动之后如果任务流转至"销假"节点则会自动把任务分配给启动流程的人。
