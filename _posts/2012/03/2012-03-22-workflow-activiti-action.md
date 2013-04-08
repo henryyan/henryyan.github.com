@@ -391,7 +391,7 @@ taskService.complete(taskId, variables);
 ----
 
 
-### 9。2 自动设置任务办理人
+### 9.2 自动设置任务办理人
 
 下面的代码是利用initiator功能，设置一个名称（不是变量而是变量名）到启动事件上，并且在启动流程时调用一些下面的方法：
 <pre class="brush:java">
@@ -405,3 +405,17 @@ identityService.setAuthenticatedUserId(currentUserId);
 </pre>
 
 这样流程启动之后如果任务流转至"销假"节点则会自动把任务分配给启动流程的人。
+
+### 9.3 获取流程发起人
+
+如果在启动流程的时候调用了下面的代码：
+
+<pre class="brush:java">
+identityService.setAuthenticatedUserId(currentUserId);
+</pre>
+引擎会记录启动人，即在ACT_HI_PROINST表的START_USER_ID字段，可以通过下面的代码获取。
+
+<pre class="brush:java">
+HistoricProcessInstance hi = historyService.createHistoricProcessInstanceQuery().singleResult();
+hi.getStartUserId();
+</pre>
