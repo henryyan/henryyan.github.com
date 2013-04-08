@@ -5,7 +5,7 @@ layout: master
 
 h2. 关于我
 
-* 一个典型的攻城师、CodeMonkey，崇尚自由，喜欢关注新鲜事物
+* 一个典型的攻城师、码农，崇尚自由，喜欢关注新鲜事物
 
 * 擅长B/S系统开发，使用技术、框架：Java及其(SS、SSH2)架构、Ajax(jQuery)、html、Css；CAS、Spring Security；Activiti
 
