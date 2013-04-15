@@ -352,3 +352,4 @@ a img { border: 0; }
 .parameters .parameter { font-family:Fixed, monospace }
 
 .cse .gsc-control-cse, .gsc-control-cse {padding: 0em !important;}
+.body img {width: 100%;}
