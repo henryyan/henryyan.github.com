@@ -12,7 +12,7 @@ tags:
 
 引擎配置是配置Activiti的第一步，无论你使用Standalone还是Spring管理引擎都可以在配置文件中配置参数，虽然目前Activiti支持多种引擎配置对象，但是均继承自一个基础的配置对象（抽象类）*org.activiti.engine.ProcessEngineConfiguration*。
 
-除了基础的引擎配置对象之外还有一下几个具体的实现，不同的场合使用不用的引擎实现，均集成自*org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl*
+除了基础的引擎配置对象之外还有一下几个具体的实现，不同的场合使用不用的引擎实现，均继承自*org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl*
 
 1. **StandaloneProcessEngineConfiguration：**标准的单机引擎配置对象，默认读取activiti.cfg.xml文件的配置
 2. **StandaloneInMemProcessEngineConfiguration**：用于测试环境，jdbcUrl配置为jdbc:h2:mem:activiti，数据库的DDL操作配置：create-drop，在日常的快速测试中经常用到
