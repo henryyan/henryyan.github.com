@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "谈谈Activiti的引擎与引擎配置对象"
-category: blog
+category: activiti
 tags: 
  - activiti
  - 引擎配置对象

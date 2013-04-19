@@ -11,7 +11,8 @@ title: Activiti
 
 <h2>Activiti相关博文</h2>
 <ul>
-	<li><a href="/activiti/2013/04/05/activiti-5-12-x.html">Activiti 5.12.X 衍生版本发布</a></li>
+	<li><a href="/activiti/2013/04/19/about-process-egine-and-configuration.html">谈谈Activiti的引擎与引擎配置对象</a></li>
+    <li><a href="/activiti/2013/04/05/activiti-5-12-x.html">Activiti 5.12.X 衍生版本发布</a></li>
 	<li><a href="/activiti/2013/03/23/activiti-designer-5-12-release.html">Activiti Designer 5.12.0 发布</a></li>
     <li><a href="/activiti/2013/03/10/kft-activiti-demo-release-1-7.html">Activiti快速入门项目kft-activiti-demo 1.7.0版本发布</a></li>
     <li><a href="/activiti/2013/03/10/integrate-activiti-modeler.html">整合Activiti Modeler到业务系统（或BPM平台）</a></li>
