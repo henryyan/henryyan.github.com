@@ -1,23 +1,7 @@
-/**
- * SyntaxHighlighter
- * http://alexgorbatchev.com/SyntaxHighlighter
- *
- * SyntaxHighlighter is donationware. If you are using it, please donate.
- * http://alexgorbatchev.com/SyntaxHighlighter/donate.html
- *
- * @version
- * 3.0.83 (July 02 2010)
- * 
- * @copyright
- * Copyright (C) 2004-2010 Alex Gorbatchev.
- *
- * @license
- * Dual licensed under the MIT and GPL licenses.
- */
 ;(function()
 {
 	// CommonJS
-	typeof(require) != 'undefined' ? SyntaxHighlighter = require('shCore').SyntaxHighlighter : null;
+	SyntaxHighlighter = SyntaxHighlighter || (typeof require !== 'undefined'? require('shCore').SyntaxHighlighter : null);
 
 	function Brush()
 	{
@@ -25,7 +9,7 @@
 		{
 			var constructor = SyntaxHighlighter.Match,
 				code = match[0],
-				tag = new XRegExp('(&lt;|<)[\\s\\/\\?]*(?<name>[:\\w-\\.]+)', 'xg').exec(code),
+				tag = new XRegExp('(&lt;|<)[\\s\\/\\?!]*(?<name>[:\\w-\\.]+)', 'xg').exec(code),
 				result = []
 				;
 		
@@ -55,12 +39,12 @@
 		this.regexList = [
 			{ regex: new XRegExp('(\\&lt;|<)\\!\\[[\\w\\s]*?\\[(.|\\s)*?\\]\\](\\&gt;|>)', 'gm'),			css: 'color2' },	// <![ ... [ ... ]]>
 			{ regex: SyntaxHighlighter.regexLib.xmlComments,												css: 'comments' },	// <!-- ... -->
-			{ regex: new XRegExp('(&lt;|<)[\\s\\/\\?]*(\\w+)(?<attributes>.*?)[\\s\\/\\?]*(&gt;|>)', 'sg'), func: process }
+			{ regex: new XRegExp('(&lt;|<)[\\s\\/\\?!]*(\\w+)(?<attributes>.*?)[\\s\\/\\?]*(&gt;|>)', 'sg'), func: process }
 		];
 	};
 
 	Brush.prototype	= new SyntaxHighlighter.Highlighter();
-	Brush.aliases	= ['xml', 'xhtml', 'xslt', 'html'];
+	Brush.aliases	= ['xml', 'xhtml', 'xslt', 'html', 'plist'];
 
 	SyntaxHighlighter.brushes.Xml = Brush;
 

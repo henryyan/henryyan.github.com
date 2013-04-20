@@ -17,7 +17,7 @@
 .syntaxhighlighter .toolbar a:hover{color:black !important;}
 .syntaxhighlighter .plain,.syntaxhighlighter .plain a{color:black !important;}
 .syntaxhighlighter .comments,.syntaxhighlighter .comments a{color:#008200 !important;}
-.syntaxhighlighter .string,.syntaxhighlighter .string a{color:blue !important;}
+.syntaxhighlighter .string,.syntaxhighlighter .string a{color:#d11010 !important;}
 .syntaxhighlighter .keyword{color:#006699 !important;}
 .syntaxhighlighter .preprocessor{color:gray !important;}
 .syntaxhighlighter .variable{color:#aa7700 !important;}
