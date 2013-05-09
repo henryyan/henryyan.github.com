@@ -365,7 +365,7 @@ public class AccountServiceImpl implements AccountService {
 
 ## 方案三：用视图覆盖同名的ACT_ID_系列表
 
-此方案和第二种类似，放弃使用系列表：ACT_ID_；但是做法不正规，需要修改源码并且创建同名的视图。
+此方案和第二种类似，放弃使用系列表：ACT_ID_，创建同名的视图。
 
 ### 1.删除已创建的ACT_ID_*表
 
@@ -382,12 +382,15 @@ public class AccountServiceImpl implements AccountService {
 
 ### 3.修改引擎默认配置
 
-笔者按照表结构创建了以上几个同名的视图，但是Activiti具有自我保护机制，导致引擎不能初始化，需要需改源码才可以正常使用。
+在引擎配置中设置属性**isDbIdentityUsed**为**false**即可。
 
-修改org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl的**isDbIdentityUsed=false**
-
-	切记，每次升级版本的时候复制最新的源码然后再次更改属性isDbIdentityUsed=false。
-
+<pre class="brush:xml">
+<bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
+	...
+	<property name="isDbIdentityUsed" ref="false"/>
+	...
+</bean>
+</pre>
 
 ## 总结
 
@@ -395,4 +398,4 @@ public class AccountServiceImpl implements AccountService {
 
 * 方案**二**：放弃原有的Identify模块，使用自定义的实现，特殊情况可以使用此方式；
 
-* 方案**三**：破坏了部分源码，在现有的用户数据表基础上创建和ACT_ID_*一直的同名视图即可；还有一个缺陷就是不能使用IdentifyService添加User、Group和简历两者的关系，当然也不需要在从Activiti维护了。。
+* 方案**三**：不需要编写Java代码，只需要创建同名视图即可。
