@@ -46,7 +46,15 @@ title: Activiti
 	<li>本项目托管在著名的Github，地址：<a href="https://github.com/henryyan/kft-activiti-demo">https://github.com/henryyan/kft-activiti-demo</a> 。</li>
 	<li>参考WIKI：<a href="https://github.com/henryyan/kft-activiti-demo/wiki">https://github.com/henryyan/kft-activiti-demo/wiki</a> </li>
 </ul>
-
 <div>
 	<img src="/files/2012/05/kft-activiti-demo.png" alt="kft-activiti-demo" />
 </div>
+
+## Activiti中文论坛
+为了方便国内Activiti开发者交流，把交流的结果沉淀下来方便新人学习，**Activiti中文论坛**与2013年5月20日建立。
+
+论坛网址：[http://www.activiti-cn.org](http://www.activiti-cn.org)
+
+开放注册方式：Email、QQ、微博（建议用微博或者QQ互联），点**[这里](http://www.activiti-cn.org/member.php?mod=register)**注册。
+
+![Activiti中文论坛](/files/2013/05/forums-large.png)
