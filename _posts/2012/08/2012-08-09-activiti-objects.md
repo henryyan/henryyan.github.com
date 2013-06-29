@@ -20,7 +20,7 @@ tags:
 
 本文用次例介绍在工作流中出现的几个对象及其之间的关系，以及在Activiti中各个对象是如何关联的。
 
-在线演示实例：[http://aws.kafeitu.me:8080/kft-activiti-demo](http://aws.kafeitu.me:8080/kft-activiti-demo)
+在线演示实例：[http://demo.kafeitu.me/kft-activiti-demo](http://demo.kafeitu.me/kft-activiti-demo)
 
 在开始之前先看看下图，对整个对象结构有个了解，再结合下面的详细介绍理解。
 

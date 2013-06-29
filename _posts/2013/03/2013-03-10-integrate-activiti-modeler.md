@@ -272,7 +272,7 @@ public class ModelController {
 
 在最新的kft-activiti-demo版本（1.7.0）中已经集成了Activiti Modeler，可以在线访问，也可以下载源码学习如何配置。
 
-登录[http://aws.kafeitu.me:8080/kft-activiti-demo](http://aws.kafeitu.me:8080/kft-activiti-demo)后选择**流程管理**->**模型工作区**菜单项即可。
+登录[http://demo.kafeitu.me/kft-activiti-demo](http://demo.kafeitu.me/kft-activiti-demo)后选择**流程管理**->**模型工作区**菜单项即可。
 
 ![kft-activiti-demo中的效果截图](/files/2013/03/kft-activiti-demo-model-workspace.png)
 ![kft-activiti-demo中的效果截图](/files/2013/03/kad-modeler.png)

@@ -20,4 +20,4 @@ tags:
 
 **源码下载**：[https://github.com/henryyan/kft-activiti-demo](https://github.com/henryyan/kft-activiti-demo)
 
-**在线Demo**：[http://aws.kafeitu.me:8080/kft-activiti-demo](http://aws.kafeitu.me:8080/kft-activiti-demo)
+**在线Demo**：[http://demo.kafeitu.me/kft-activiti-demo](http://demo.kafeitu.me/kft-activiti-demo)

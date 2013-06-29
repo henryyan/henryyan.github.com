@@ -71,4 +71,4 @@ runtimeService.startProcessInstanceByKey("leave");
 * java: [LeaveWorkflowServiceTest.java](https://github.com/henryyan/kft-activiti-demo/blob/master/src/test/java/me/kafeitu/demo/activiti/service/oa/leave/LeaveWorkflowServiceTest.java)
 * xml：[leave.bpmn](https://github.com/henryyan/kft-activiti-demo/blob/master/src/main/resources/diagrams/leave/leave.bpmn)
 
-还可以在线运行请假流程：[http://aws.kafeitu.me:8080/kft-activiti-demo](http://aws.kafeitu.me:8080/kft-activiti-demo)体验一下这个过程。
+还可以在线运行请假流程：[http://demo.kafeitu.me/kft-activiti-demo](http://demo.kafeitu.me/kft-activiti-demo)体验一下这个过程。
