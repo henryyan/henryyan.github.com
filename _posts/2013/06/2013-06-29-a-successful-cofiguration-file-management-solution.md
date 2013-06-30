@@ -5,6 +5,9 @@ category: solution
 tags: 
  - 配置文件
  - 管理方式
+ - Maven
+ - portable-config-maven-plugin
+ - Juven
  - 成功案例
 ---
 
