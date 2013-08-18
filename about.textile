@@ -46,11 +46,10 @@ h2. 关于www.kafeitu.me
 h2. 联系我
 
 * QQ：576525789
-* MSN、Email、Apple ID：yanhonglei[@]gmail.com
-* Weibo: <a href='http://weibo.com/kafeituzi'>@kafeituzi</a>
+* Email、Apple ID：yanhonglei[@]gmail.com
+* 微博（Weibo Sina）: <a href='http://weibo.com/kafeituzi'>@我才是咖啡兔</a>
 * Twitter: <a href='http://twitter.com/kafeituzi'>@kafeituzi</a>
-* Blog: <a href='http://www.kafeitu.me'>http://www.kafeitu.me</a>
-* Linkedin: <a href='http://cn.linkedin.com/pub/henry-yan/55/b29/92a/'>Henry Yan</a> 
+* 博客（Blog）: <a href='http://www.kafeitu.me'>http://www.kafeitu.me</a>
 
 h2. Github项目
 
