@@ -390,7 +390,6 @@ taskService.complete(taskId, variables);
 
 ----
 
-
 ### 9.2 自动设置任务办理人
 
 下面的代码是利用initiator功能，设置一个名称（不是变量而是变量名）到启动事件上，并且在启动流程时调用一些下面的方法：
@@ -419,3 +418,15 @@ identityService.setAuthenticatedUserId(currentUserId);
 HistoricProcessInstance hi = historyService.createHistoricProcessInstanceQuery().singleResult();
 hi.getStartUserId();
 </pre>
+
+## 10. 任务代办
+
+很多人问“Owner”属性为什么是空的，什么时候用？要了解它的作用首先要了解“代办”。
+
+代办的概念可以用下面的一句话概括：
+
+	你领导接到一个任务，让你代办，你办理完成后任务还是回归到你的领导，事情是你做的，功劳是你领导的，此乃代办也！
+
+看到这个单元测试你就明白什么是代办：[ProcessTestDelegateTask](https://github.com/henryyan/activiti-study/tree/master/src/test/java/org/activiti/designer/test/ProcessTestDelegateTask.java)
+
+最好把**activiti-study**这个项目下载下来导入到Eclipse中运行一下：[https://github.com/henryyan/activiti-study](https://github.com/henryyan/activiti-study)
