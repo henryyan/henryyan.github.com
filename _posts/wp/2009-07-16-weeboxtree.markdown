@@ -1,9 +1,13 @@
 --- 
 layout: post
-title: "\xE5\x81\x9A\xE4\xBA\x86\xE4\xB8\x80\xE6\xAC\xA1\xE9\x9B\x86\xE6\x88\x90\xE6\x9C\x8D\xE5\x8A\xA1\xEF\xBC\x9A\xE5\x9F\xBA\xE4\xBA\x8Eweebox\xE5\x92\x8Csimpletree\xE7\x9A\x84dialogtree\xE8\xAF\x9E\xE7\x94\x9F\xE4\xBA\x86"
+title: "做了一次集成服务：基于weebox和simpletree的dialogtree诞生了"
 wordpress_id: 625
 wordpress_url: http://www.wsria.com/?p=625
 date: 2009-07-16 12:59:39 +08:00
+tags: 
+ - weebox
+ - simpletree
+ - dialogtree
 ---
 在之前的finance项目中我使用过weebox和simpletree两个插件，后来感觉不方便就自己做了下集成，如下效果：
 

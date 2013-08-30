@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "\xE4\xBB\x8EGoogle\xE6\x90\x9C\xE7\xB4\xA2\xE8\x81\x94\xE6\x83\xB3\xE5\x88\xB0\xE4\xBA\x86jQuery"
+title: "从Google搜索联想到了jQuery"
 wordpress_id: 245
 wordpress_url: http://www.wsria.com/?p=245
 date: 2009-02-20 22:10:17 +08:00

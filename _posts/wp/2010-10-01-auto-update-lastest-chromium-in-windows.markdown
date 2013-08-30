@@ -1,10 +1,12 @@
 --- 
 layout: post
-title: "\xE5\x88\xA9\xE7\x94\xA8Windows\xE7\x9A\x84\xE8\xAE\xA1\xE5\x88\x92\xE4\xBB\xBB\xE5\x8A\xA1\xE8\x87\xAA\xE5\x8A\xA8\xE6\x9B\xB4\xE6\x96\xB0\xE6\x9C\x80\xE6\x96\xB0\xE7\x9A\x84Chromium"
-excerpt: "\xE5\x88\xA9\xE7\x94\xA8Windows\xE7\x9A\x84\xE8\xAE\xA1\xE5\x88\x92\xE4\xBB\xBB\xE5\x8A\xA1\xE8\x87\xAA\xE5\x8A\xA8\xE6\x9B\xB4\xE6\x96\xB0Chromium"
+title: "利用Windows的计划任务自动更新最新的Chromium"
 wordpress_id: 1159
 wordpress_url: http://www.wsria.com/?p=1159
 date: 2010-10-01 14:45:43 +08:00
+tags: 
+ - 计划任务
+ - Chromium
 ---
 为了最先体验谷歌浏览器的新功能，从Chrome换到了Chromium，但是Chromium一天将近20个的更新包如果手动更新那要搞死人了，到时不是我用Chromium而是被他玩了，何况程序员最不喜欢干的事情就是<strong>重复</strong>……
 所以找到了小飞的一篇文章，<a href="http://shawphy.com/2010/09/fast-update-chromium.html" target="_blank">快速更新Chromium</a>，还是拿来主义进行修改……

@@ -1,9 +1,13 @@
 --- 
 layout: post
-title: "jQuery.plugin\xE2\x80\x94\xE2\x80\x94\xE5\xBC\xBA\xE5\xA4\xA7\xE7\x9A\x84\xE9\x81\xAE\xE7\xBD\xA9\xE5\xB1\x82(nyroModal)"
+title: "jQuery.plugin——强大的遮罩层(nyroModal)"
 wordpress_id: 429
 wordpress_url: http://www.wsria.com/?p=429
 date: 2009-03-02 21:57:43 +08:00
+category: jquery
+tags: 
+ - 遮罩
+ - jquery
 ---
 在cssrain那里看到的，特转载过来分享给大家；效果做的很华丽，给用户柔和的感觉，比blockUI还要好
 <pre><strong>强大的 遮罩层， 它包括以下功能：</strong>

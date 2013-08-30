@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "[\xE8\xBD\xAC][\xE6\x8E\xA8\xE8\x8D\x90]15 \xE4\xB8\xAA JavaScript Web UI \xE5\xBA\x93"
+title: "[转][推荐]15 个 JavaScript Web UI 库"
 wordpress_id: 974
 wordpress_url: http://www.wsria.com/?p=974
 date: 2010-05-20 09:56:30 +08:00
+tags: 
+ - UI
 ---
 从cnbeta.com看到的，分享给大家；原文：<a href="http://www.cnbeta.com/articles/111512.htm">http://www.cnbeta.com/articles/111512.htm</a>
 

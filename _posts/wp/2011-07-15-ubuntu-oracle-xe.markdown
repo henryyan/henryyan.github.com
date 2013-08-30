@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "Ubuntu\xE5\xAE\x89\xE8\xA3\x85ORACLE-XE"
+title: "Ubuntu安装ORACLE-XE"
 wordpress_id: 1529
 wordpress_url: http://www.wsria.com/?p=1529
 date: 2011-07-15 15:52:49 +08:00
+tags: 
+ - ubuntu
+ - oracle-xe
 ---
 最近开发环境迁移到了Linux的发行版Ubuntu，但是目前正在开发的系统是使用的Oracle数据库，从网上找了一对资料都是很麻烦的，又是乱码又是一堆的配置，后来google到原来有一个ubuntu版本的……
 <h3>环境说明</h3>

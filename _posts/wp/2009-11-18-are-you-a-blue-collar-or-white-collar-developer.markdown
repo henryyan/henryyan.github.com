@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE7\xA8\x8B\xE5\xBA\x8F\xE5\x91\x98\xE7\x9A\x84\xE5\xAD\xA6\xE5\x8E\x86\xE6\x9C\x89\xE5\xA4\x9A\xE9\x87\x8D\xE8\xA6\x81"
+title: "程序员的学历有多重要"
 wordpress_id: 731
 wordpress_url: http://www.wsria.com/?p=731
 date: 2009-11-18 23:49:28 +08:00
+tags: 
+ - 学历
 ---
 <pre>虽然是技术博客，但是关于这个话题我想让大家看看</pre>
 “你们在哪儿上的大学啊？”

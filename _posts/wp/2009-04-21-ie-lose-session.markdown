@@ -1,10 +1,12 @@
 --- 
 layout: post
-title: "IE\xE4\xB8\xAD\xE4\xB8\xA2\xE5\xA4\xB1session\xE9\x97\xAE\xE9\xA2\x98\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
-excerpt: "IE\xE4\xB8\xA2\xE5\xA4\xB1session\xE9\x97\xAE\xE9\xA2\x98"
+title: "IE中丢失session问题解决办法"
 wordpress_id: 510
 wordpress_url: http://www.wsria.com/?p=510
 date: 2009-04-21 09:39:25 +08:00
+tags: 
+ - IE
+ - session
 ---
 前段时间在一个项目中为了避免用户的误操作所以点击一个按钮后使用了模态对话框来打开一个新的页面，顺便说一下后台语言为JAVA；昨天在测试的时候出现了问题，具体表现如下：
 

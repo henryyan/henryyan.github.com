@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE8\xA7\xA3\xE5\x86\xB3a different object with the same identifier value was already associated with the session\xE9\x94\x99\xE8\xAF\xAF"
+title: "解决a different object with the same identifier value was already associated with the session错误"
 wordpress_id: 972
 wordpress_url: http://www.wsria.com/?p=972
 date: 2010-05-18 10:22:10 +08:00
+tags: 
+ - hibernate
 ---
 使用Hibernate三年了第一次遇到这个异常，<strong>常发生在一对多和多对多关系映射时</strong>，其实翻译一下很简单就是在Session中有两个相同标示但是又不是相同的实体，当进行保存或者更新(saveOrUpdate)时就爆出了这个错误，因为Hibernate不知道改怎么操作了，Google了一下发现解决办法很多，比如清空Session对象的缓存、刷新Session，但是这些都会导致后遗症的发生
 

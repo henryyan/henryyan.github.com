@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "\xE7\xAB\x99\xE7\x82\xB9GBK\xE7\xBC\x96\xE7\xA0\x81\xE4\xB8\x8BjQuery Ajax\xE4\xB8\xAD\xE6\x96\x87\xE4\xB9\xB1\xE7\xA0\x81\xE8\xA7\xA3\xE5\x86\xB3\xE6\x96\xB9\xE6\xA1\x88"
+title: "站点GBK编码下jQuery Ajax中文乱码解决方案"
 wordpress_id: 611
 wordpress_url: http://www.wsria.com/?p=611
 date: 2009-07-01 13:18:03 +08:00
+tags: 
+ - 乱码
+ - ajax
 ---
 哎，还是老话题，一直缠绕着国人……
 

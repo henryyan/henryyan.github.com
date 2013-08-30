@@ -1,7 +1,6 @@
 --- 
 layout: post
-title: "json-lib \xE5\x87\xBA\xE7\x8E\xB0net.sf.json.JSONException: There is a cycle in the hierarchy\xE5\xBC\x82\xE5\xB8\xB8\xE7\x9A\x84\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
-excerpt: "json-lib \xE5\x87\xBA\xE7\x8E\xB0net.sf.json.JSONException: There is a cycle in the hierarchy\xE5\xBC\x82\xE5\xB8\xB8\xE7\x9A\x84\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
+title: "出现net.sf.json.JSONException: There is a cycle in the hierarchy异常的解决办法"
 wordpress_id: 14
 wordpress_url: http://wsria.com/?p=14
 date: 2009-02-07 18:33:22 +08:00

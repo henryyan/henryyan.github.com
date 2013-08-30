@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "Json-lib \xE4\xB8\x8E hibernate \xE5\x85\xB1\xE5\x90\x8C\xE4\xBD\xBF\xE7\x94\xA8\xE7\x9A\x84\xE9\x97\xAE\xE9\xA2\x98"
+title: "Json-lib 与 hibernate 共同使用的问题"
 wordpress_id: 724
 wordpress_url: http://www.wsria.com/?p=724
 date: 2009-10-24 13:28:20 +08:00
+tags: 
+ - hibernate
+ - json-lib
 ---
 <div>Posted by: <a href="http://www.groovygrails.com/conference/speaker/andres_almiray.html">Andres  Almiray</a> on 05/01/2008 <a title="原文" href="http://www.groovygrails.com/blog/andres_almiray/2008/05/json_lib__hibernate_tips_and_hints.html" target="_blank">原文</a></div>
 hibernate使用CGLIB把POJO的domain对象动态代理，实现它的魔法，但是给JSON的序列化带来了麻烦，因为JSON无法对lazy的属性进行序列化。有以下的四个方法可以解决hibernate的序列化问题
@@ -84,3 +87,6 @@ jsonConfig.registerJsonBeanProcessor( Person.class,
 });
 Person bean = /* initialize */;
 JSON json = JSONSerializer.toJSON( bean, jsonConfig );</pre>
+
+----
+用fastjson可以自动忽略！

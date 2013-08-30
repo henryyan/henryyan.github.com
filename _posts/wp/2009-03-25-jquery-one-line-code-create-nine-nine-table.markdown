@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "\xE4\xB8\x80\xE8\xA1\x8CjQuery\xE4\xBB\xA3\xE7\xA0\x81\xE6\x89\x93\xE5\x8D\xB0\xE4\xB9\x9D\xE4\xB9\x9D\xE4\xB9\x98\xE6\xB3\x95\xE8\xA1\xA8"
+title: "一行jQuery代码打印九九乘法表"
 wordpress_id: 471
 wordpress_url: http://www.wsria.com/?p=471
 date: 2009-03-25 19:30:46 +08:00
+category: jquery
+tags: 
+ - 乘法表
 ---
 网友<strong>西_西_佛</strong>用一行代码打印九九乘法表
 <em>展示了jQuery的级联语法，简介且功能强大</em>

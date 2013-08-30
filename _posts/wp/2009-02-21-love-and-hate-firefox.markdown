@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "\xE6\x97\xA2\xE7\x88\xB1\xE5\x8F\x88\xE6\x81\xA8Firefox"
+title: "既爱又恨Firefox"
 wordpress_id: 259
 wordpress_url: http://www.wsria.com/?p=259
 date: 2009-02-21 21:04:47 +08:00

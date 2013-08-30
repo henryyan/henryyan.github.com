@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE5\xB7\xA5\xE6\xAC\xB2\xE5\x96\x84\xE5\x85\xB6\xE4\xBA\x8B\xE5\xBF\x85\xE5\x85\x88\xE5\x88\xA9\xE5\x85\xB6\xE5\x99\xA8--Java Web\xE5\xBF\xAB\xE9\x80\x9F\xE5\xBC\x80\xE5\x8F\x91\xE6\xA1\x86\xE6\x9E\xB6--Springside"
+title: "工欲善其事必先利其器--Java Web快速开发框架--Springside"
 wordpress_id: 1188
 wordpress_url: http://www.wsria.com/?p=1188
 date: 2010-10-12 00:45:38 +08:00
+tags: 
+ - springside
 ---
 今天开始“工欲善其事必先利其器”系列第一篇，介绍目前可以快速开发并且有规范可维护性的开源框架——<span style="background-color: #00ff00;">Springside</span>。
 <h3>一、老板，来二两点废话：</h3>

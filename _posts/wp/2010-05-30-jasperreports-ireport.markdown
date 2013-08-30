@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "JasperReports iReport\xE5\xAF\xBC\xE5\x87\xBAPDF\xE4\xB8\xAD\xE6\x96\x87\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
+title: "JasperReports iReport导出PDF中文解决办法"
 wordpress_id: 981
 wordpress_url: http://www.wsria.com/?p=981
 date: 2010-05-30 20:52:57 +08:00
+tags: 
+ - JasperReports
+ - 中文
 ---
 最近研究JasperReports的UI可视化设计工具iReport在导出PDF文档时遇到了老问题：中文乱码……哎，又是乱码，解决呗
 

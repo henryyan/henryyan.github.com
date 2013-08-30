@@ -1,10 +1,11 @@
 --- 
 layout: post
-title: "Apache Asia Roadshow 2010\xE5\xBD\x92\xE6\x9D\xA5"
-excerpt: "Apache Asia Roadshow 2010\xE5\xBD\x92\xE6\x9D\xA5\xEF\xBC\x8C\xE4\xB8\x80\xE4\xBA\x9B\xE8\xAE\xB0\xE5\xBD\x95"
+title: "Apache Asia Roadshow 2010归来"
 wordpress_id: 1111
 wordpress_url: http://www.wsria.com/?p=1111
 date: 2010-08-15 00:06:37 +08:00
+tags: 
+ - apache
 ---
 <h2>一、什么是Apache Roadshow？</h2>
 是Apache基金会组织的一次以开源为主题的巡演。

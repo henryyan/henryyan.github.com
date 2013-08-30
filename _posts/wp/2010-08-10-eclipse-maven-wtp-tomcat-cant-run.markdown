@@ -1,9 +1,14 @@
 --- 
 layout: post
-title: "Eclipse+Maven+WTP+Tomcat\xE4\xB8\x8D\xE8\x83\xBDRun On Server\xE5\x85\xB6\xE4\xB8\xAD\xE4\xB8\x80\xE4\xB8\xAA\xE5\x8E\x9F\xE5\x9B\xA0"
+title: "Eclipse+Maven+WTP+Tomcat不能Run On Server其中一个原因"
 wordpress_id: 1004
 wordpress_url: http://www.wsria.com/?p=1004
 date: 2010-08-10 11:37:33 +08:00
+tags: 
+ - ecplise
+ - maven
+ - WTP
+ - tomcat
 ---
 <p>使用Maven有段时间了，自己DIY项目后遇到了一个问题，项目不能使用WTP提供的Run On Server功能……</p>
 <h2>1、问题描述</h2>

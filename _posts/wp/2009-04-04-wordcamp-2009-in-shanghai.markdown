@@ -1,10 +1,12 @@
 --- 
 layout: post
-title: "wordcamp 2009 in ShangHai\xE5\xBD\x92\xE6\x9D\xA5"
+title: "wordcamp 2009 in ShangHai归来"
 excerpt: wordcamp 2009 in ShangHai
 wordpress_id: 487
 wordpress_url: http://www.wsria.com/?p=487
 date: 2009-04-04 18:30:18 +08:00
+tags: 
+ - wordcamp
 ---
 如果你还不知道WP是什么的话先google一下O(∩_∩)O~
 

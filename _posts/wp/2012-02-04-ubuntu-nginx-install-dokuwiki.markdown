@@ -1,9 +1,13 @@
 --- 
 layout: post
-title: "Linux(Ubuntu)\xE7\x8E\xAF\xE5\xA2\x83\xE5\xAE\x89\xE8\xA3\x85\xE9\x85\x8D\xE7\xBD\xAENginx+Dokuwiki"
+title: "Linux(Ubuntu)环境安装配置Nginx+Dokuwiki"
 wordpress_id: 1613
 wordpress_url: http://www.wsria.com/?p=1613
 date: 2012-02-04 02:53:27 +08:00
+tags: 
+ - ubuntu
+ - nginx
+ - dokuwiki
 ---
 <h3>前言</h3>
 <p>这几天一直忙着公司项目的整合，添加了一些配置文件可以结合Maven灵活控制项目（编译、打包），最终能达到项目结构的拆合自如；连续的修改产生了很多配置项，也没有很清楚的描述这样对以后势必造成不好理解，所以还是为公搭建一个WIKI服务（个人已有）。</p>

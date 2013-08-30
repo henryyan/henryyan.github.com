@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "Maven\xE5\xB8\xB8\xE8\xA7\x81\xE9\x97\xAE\xE9\xA2\x98\xE6\x94\xB6\xE9\x9B\x86\xEF\xBC\x88\xE6\x8C\x81\xE7\xBB\xAD\xE6\x9B\xB4\xE6\x96\xB0-2010-12-15\xEF\xBC\x89"
+title: "Maven常见问题收集（持续更新-2010-12-15）"
 wordpress_id: 1314
 wordpress_url: http://www.wsria.com/?p=1314
 date: 2010-11-01 21:15:00 +08:00
+tags: 
+ - maven
 ---
 <h3>一、Maven狂热者-Jdonee收集的问题(2010-11-01)</h3>
 <ol>

@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "\xE5\x88\x86\xE4\xBA\xAB\xEF\xBC\x9AJavaScript\xE5\x9C\xA8\xE7\xBA\xBF\xE5\x8E\x8B\xE7\xBC\xA9\xE5\xB7\xA5\xE5\x85\xB7"
+title: "分享：JavaScript在线压缩工具"
 wordpress_id: 249
 wordpress_url: http://www.wsria.com/?p=249
 date: 2009-02-21 18:27:03 +08:00

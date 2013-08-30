@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "\xE5\x8F\xBD\xE6\xAD\xAA\xE6\x80\x8E\xE4\xB9\x88\xE4\xBA\x86\xEF\xBC\x9F"
+title: "叽歪怎么了？"
 wordpress_id: 664
 wordpress_url: http://www.wsria.com/?p=664
 date: 2009-07-29 11:19:29 +08:00

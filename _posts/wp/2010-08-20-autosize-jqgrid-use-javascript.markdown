@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "\xE5\x88\xA9\xE7\x94\xA8JavaScript\xE8\x8E\xB7\xE5\x8F\x96\xE7\xAA\x97\xE5\x8F\xA3/Body\xE7\x9A\x84\xE5\xAE\xBD\xE5\xBA\xA6\xE5\x92\x8C\xE9\xAB\x98\xE5\xBA\xA6(\xE8\xAE\xA9jqGrid\xE8\x87\xAA\xE9\x80\x82\xE5\xBA\x94\xE7\xAA\x97\xE5\x8F\xA3\xE5\xA4\xA7\xE5\xB0\x8F)"
+title: "利用JavaScript获取窗口/Body的宽度和高度(让jqGrid自适应窗口大小)"
 wordpress_id: 1147
 wordpress_url: http://www.wsria.com/?p=1147
 date: 2010-08-20 13:07:24 +08:00
+tags: 
+ - jquery
+ - 自动
 ---
 项目中使用了easy-ui和jqGrid，我使用easy-ui的layout布局，然后用jqGrid显示数据列表，easyu-ui在改变窗口大小的时候可以自适应，而jqGrid要加一些盐了，所以用到了获取窗口大小的几个参数，这样就可以根据窗口大小改变的时候改变jqGrid的高度和宽度，从网站找的别人写的例子：
 

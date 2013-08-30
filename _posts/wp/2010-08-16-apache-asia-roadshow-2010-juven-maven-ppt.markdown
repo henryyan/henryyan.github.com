@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "Apache Asia Roadshow 2010 Juven Maven PPT\xE5\x92\x8C\xE8\xA7\x86\xE9\xA2\x91\xE4\xB8\x8B\xE8\xBD\xBD"
+title: "Apache Asia Roadshow 2010 Juven Maven PPT和视频下载"
 wordpress_id: 1139
 wordpress_url: http://www.wsria.com/?p=1139
 date: 2010-08-16 23:25:25 +08:00
+tags: 
+ - apache
 ---
 接上一篇日志：<a title="Apache Asia Roadshow 2010归来" rel="bookmark inlinks permalink" href="http://www.wsria.com/archives/1111">Apache Asia Roadshow 2010归来</a>
 

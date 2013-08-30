@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE6\x8E\xA8\xE8\x8D\x90\xEF\xBC\x9A\xE5\x9B\xBD\xE5\x86\x85\xE7\xAC\xAC\xE4\xB8\x80\xE6\x9C\xACMaven\xE4\xB9\xA6\xE7\xB1\x8D\xE2\x80\x94\xE2\x80\x94\xE3\x80\x8AMaven\xE5\xAE\x9E\xE6\x88\x98\xE3\x80\x8B"
+title: "推荐：国内第一本Maven书籍——《Maven实战》"
 wordpress_id: 1480
 wordpress_url: http://www.wsria.com/?p=1480
 date: 2010-11-19 09:57:46 +08:00
+tags: 
+ - Maven实战
 ---
 <h3>引言</h3>
 我是由于学习SpringSide的缘故接触到了Maven工具，因为Maven的缘故接触到了业内公认的Maven专家Juven，从而以后一直关注Maven的发展当然包括今天要推荐的这本国内第一本Maven书籍《Maven实战》。

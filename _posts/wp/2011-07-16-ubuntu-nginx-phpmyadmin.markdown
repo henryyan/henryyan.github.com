@@ -1,9 +1,13 @@
 --- 
 layout: post
-title: "Ubuntu\xE9\x85\x8D\xE7\xBD\xAEngnix+phpmyadmin"
+title: "Ubuntu配置ngnix+phpmyadmin"
 wordpress_id: 1540
 wordpress_url: http://www.wsria.com/?p=1540
 date: 2011-07-16 12:17:42 +08:00
+tags: 
+ - nginx
+ - phpmadmin
+ - ubnutu
 ---
 <h3>一、背景</h3>
 操作系统：Ubuntu11.04-X86

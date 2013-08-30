@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE5\x85\xAC\xE5\xB8\x83\xE4\xB8\x80\xE4\xB8\x8B\xE6\x88\x91\xE7\x9A\x84Evernote\xE5\x88\x86\xE4\xBA\xAB\xE5\x9C\xB0\xE5\x9D\x80"
+title: "公布一下我的Evernote分享地址"
 wordpress_id: 1331
 wordpress_url: http://www.wsria.com/?p=1331
 date: 2010-11-03 09:47:58 +08:00
+tags: 
+ - Evernote
 ---
 不知道Evernote是什么玩意自己查；我的账号是去年注册的，今年才开始使用，平常记录了一些技术方面的资料，和大家分享一下，或许能有用。
 

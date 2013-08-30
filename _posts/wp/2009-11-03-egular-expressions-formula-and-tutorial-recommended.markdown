@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE6\x8E\xA8\xE8\x8D\x90\xEF\xBC\x9A\xE6\xAD\xA3\xE5\x88\x99\xE8\xA1\xA8\xE8\xBE\xBE\xE5\xBC\x8F\xE5\x8F\xA3\xE8\xAF\x80\xE5\x8F\x8A\xE6\x95\x99\xE7\xA8\x8B"
+title: "推荐：正则表达式口诀及教程"
 wordpress_id: 728
 wordpress_url: http://www.wsria.com/?p=728
 date: 2009-11-03 21:15:20 +08:00
+tags: 
+ - 正则表达式
 ---
 由 Knightby 撰写 　http://www.knightby.net/regular-expressions-formula-and-tutorial-recommended.html 
 转载自：http://bbs.php.cn/thread-20557-1-15.html

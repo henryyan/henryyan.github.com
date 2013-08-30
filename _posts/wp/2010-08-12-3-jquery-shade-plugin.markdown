@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE6\x8E\xA8\xE8\x8D\x90\xE7\xB2\xBE\xE9\x80\x893\xE6\x9E\x9AjQuery\xE9\x81\xAE\xE7\xBD\xA9\xE6\x8F\x92\xE4\xBB\xB6"
+title: "推荐精选3枚jQuery遮罩插件"
 wordpress_id: 1100
 wordpress_url: http://www.wsria.com/?p=1100
 date: 2010-08-12 23:25:51 +08:00
+tags: 
+ - jquery
 ---
 <h2>第一枚：Fancybox</h2>
 <a href="http://www.kafeitu.me/files/2010/08/fancybox2.png"><img class="aligncenter size-medium wp-image-1098" title="fancybox2" src="http://www.kafeitu.me/files/2010/08/fancybox2-300x248.png" alt="" width="300" height="248" /></a>

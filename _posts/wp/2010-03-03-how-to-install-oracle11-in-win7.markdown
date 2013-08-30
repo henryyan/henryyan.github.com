@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "Win7\xE4\xB8\x8B\xE4\xB8\x8D\xE8\x83\xBD\xE5\xAE\x89\xE8\xA3\x85Oracle11g\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
+title: "Win7下不能安装Oracle11g解决办法"
 wordpress_id: 927
 wordpress_url: http://www.wsria.com/?p=927
 date: 2010-03-03 12:36:48 +08:00
+tags: 
+ - oracle
 ---
 昨晚下载了Oracle11，今天在WIN7下安装遇到了问题，说操作系统部支持，具体日志信息：
 <pre>正在检查操作系统要求...

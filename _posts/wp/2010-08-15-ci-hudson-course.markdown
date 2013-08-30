@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "Hudson\xE6\x95\x99\xE7\xA8\x8B\xE7\xB3\xBB\xE5\x88\x97"
+title: "Hudson系列教程"
 wordpress_id: 1135
 wordpress_url: http://www.wsria.com/?p=1135
 date: 2010-08-15 21:33:27 +08:00
+tags: 
+ - ci
+ - hudson
 ---
 最近要学习持续集成Hudson，把教程放在这里！
 Hudson持续集成教程1：<a href="http://jdonee.javaeye.com/blog/310497" target="_blank">http://jdonee.javaeye.com/blog/310497</a>

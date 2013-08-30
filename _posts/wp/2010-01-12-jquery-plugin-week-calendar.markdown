@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "\xE6\x8E\xA8\xE8\x8D\x90\xEF\xBC\x9A\xE5\x9F\xBA\xE4\xBA\x8EjQuery\xE5\xBC\x80\xE5\x8F\x91\xE4\xBB\xBFGoogle Calendar(jQuery Week Calendar)"
+title: "推荐：基于jQuery开发仿Google Calendar(jQuery Week Calendar)"
 wordpress_id: 762
 wordpress_url: http://www.wsria.com/?p=762
 date: 2010-01-12 16:17:56 +08:00
+tags: 
+ - jquery
+ - 日历
 ---
 <img title="jQuery Week Calendar" src="http://www.redredred.com.au/wp-content/uploads/2009/05/calendar.jpg" alt="jQuery Week Calendar" width="500" height="310" />
 

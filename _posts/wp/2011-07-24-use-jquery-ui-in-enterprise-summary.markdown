@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "jQuery UI\xE5\x8F\x8A\xE5\x85\xB6\xE6\x8F\x92\xE4\xBB\xB6\xE5\x9C\xA8\xE4\xBC\x81\xE4\xB8\x9A\xE7\x8E\xAF\xE5\xA2\x83\xE7\x9A\x84\xE5\xBA\x94\xE7\x94\xA8\xE6\x80\xBB\xE7\xBB\x93"
+title: "jQuery UI及其插件在企业环境的应用总结"
 wordpress_id: 1549
 wordpress_url: http://www.wsria.com/?p=1549
 date: 2011-07-24 16:04:19 +08:00
+tags: 
+ - jQuery UI
 ---
 <h3>一、博文背景</h3>
 使用jQuery差不多3年了，开始只是简单的应用，后来发现了官网开发的jQuery UI；从去年的一个项目开始使用jQuery UI作为主要的UI插件，选择jQuery UI的主要原因是因为需要使用jqGrid这个插件，而这个插件又使用了jQuery UI的主题;再者jQuery UI提供主题的自定义，这样对于一些喜欢不同风格的客户来说就比较容易切换自己喜欢的主题了。

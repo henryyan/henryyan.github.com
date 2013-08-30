@@ -1,10 +1,11 @@
 --- 
 layout: post
-title: "Maven\xE5\xAD\xA6\xE4\xB9\xA0\xE5\xBC\x95\xE5\xAF\xBC"
-excerpt: "Maven\xE5\xAD\xA6\xE4\xB9\xA0\xE5\xBC\x95\xE5\xAF\xBC"
+title: "Maven学习引导"
 wordpress_id: 1072
 wordpress_url: http://www.wsria.com/?p=1072
 date: 2010-08-07 17:17:12 +08:00
+tags: 
+ - maven
 ---
 如果不知道Maven是什么东西先看看：<a href="http://www.ibm.com/developerworks/cn/java/j-maven/">http://www.ibm.com/developerworks/cn/java/j-maven/</a>
 <ol>

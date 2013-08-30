@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "Linux\xE4\xB8\x8Bspringside3\xE5\xBF\xAB\xE6\x8D\xB7\xE8\x84\x9A\xE6\x9C\xAC\xEF\xBC\x88quick-start\xE3\x80\x81generate-project\xEF\xBC\x89"
+title: "Linux下springside3快捷脚本（quick-start、generate-project）"
 wordpress_id: 1580
 wordpress_url: http://www.wsria.com/?p=1580
 date: 2011-08-13 20:59:56 +08:00
+tags: 
+ - springside
 ---
 <h3>一、交代背景</h3>
 使用Springside（一下简称SS）有段时间了，之前一直都是用windows开发，正好SS提供了很方便一键安装（quick-start）和一键生成（generate-project）脚本（bat格式）；前段时间全面切换环境到Ubuntu，因为培训新员工的缘故需要给他们讲解SS（因为我们用SS作为公司的基础架构），所以我在本地需要操作SS，但是脚本仅限于Windows，好在这段时间看了一部分Bash的书籍，所以决定自己根据bat脚本修改一个bash的脚本。

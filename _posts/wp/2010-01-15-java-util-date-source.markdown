@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE5\x88\x86\xE4\xBA\xAB\xEF\xBC\x9AJava\xE6\x97\xA5\xE6\x9C\x9F\xE5\xB7\xA5\xE5\x85\xB7\xE7\xB1\xBB"
+title: "分享：Java日期工具类"
 wordpress_id: 785
 wordpress_url: http://www.wsria.com/?p=785
 date: 2010-01-15 14:27:34 +08:00
+tags: 
+ - java
 ---
 平常开发中积累了一些，可能会和其他有重复，发上来按需取舍
 包括：日期格式化、日期相加、日期排序等

@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "\xE6\x8E\xA8\xE8\x8D\x90\xE4\xB8\x80\xE4\xB8\xAAajax\xE8\xB5\x84\xE6\xBA\x90\xE7\xAB\x99\xE7\x82\xB9"
+title: "推荐一个ajax资源站点"
 wordpress_id: 640
 wordpress_url: http://www.wsria.com/?p=640
 date: 2009-07-16 14:09:06 +08:00

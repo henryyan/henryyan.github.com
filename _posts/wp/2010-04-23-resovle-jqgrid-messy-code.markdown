@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "jqGrid\xE6\x9F\xA5\xE8\xAF\xA2\xE4\xB8\xAD\xE6\x96\x87\xE4\xB9\xB1\xE7\xA0\x81\xE9\x97\xAE\xE9\xA2\x98\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95(2011-11-11)"
+title: "jqGrid查询中文乱码问题解决办法(2011-11-11)"
 wordpress_id: 961
 wordpress_url: http://www.wsria.com/?p=961
 date: 2010-04-23 17:23:33 +08:00
+tags: 
+ - jqGrid
 ---
 <h3>终极解决办法-2011-11-11</h3>
 之前是通过修改源码的方式解决乱码问题，但是只能解决一部分问题而且不利于升级，<strong>@嘴大饿急</strong>的意见我实验了一下比较完美，设置所有的ajax请求都使用post请求就可以了，具体代码：

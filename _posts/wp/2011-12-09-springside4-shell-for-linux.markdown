@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "Linux\xE4\xB8\x8Bspringside4\xE5\xBF\xAB\xE6\x8D\xB7\xE8\x84\x9A\xE6\x9C\xAC\xEF\xBC\x88quick-start\xE3\x80\x81generate-project\xEF\xBC\x89"
+title: "Linux下springside4快捷脚本（quick-start、generate-project）"
 wordpress_id: 1605
 wordpress_url: http://www.wsria.com/?p=1605
 date: 2011-12-09 10:24:25 +08:00
+tags: 
+ - springside
 ---
 <h3>一、前言</h3>
 尝鲜的同学得意了，特意编写了在linux下面运行的快捷脚本shell，对于springside3的脚本请访问：<a href="http://www.wsria.com/archives/1580" title="Linux下springside3快捷脚本（quick-start、generate-project）" target="_blank">Linux下springside3快捷脚本（quick-start、generate-project）</a>

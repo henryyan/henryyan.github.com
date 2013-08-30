@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "\xE6\x8E\xA8\xE8\x8D\x90\xE6\x97\xA5\xE6\x9C\x9F\xE9\x80\x89\xE6\x8B\xA9\xE7\xBB\x84\xE4\xBB\xB6My97 DatePicker"
+title: "推荐日期选择组件My97 DatePicker"
 wordpress_id: 263
 wordpress_url: http://www.wsria.com/?p=263
 date: 2009-02-21 21:18:47 +08:00

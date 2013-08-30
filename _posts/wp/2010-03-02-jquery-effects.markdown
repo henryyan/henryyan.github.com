@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE7\x9B\xB4\xE9\x80\xBC Flash \xE7\x9A\x84\xE6\xB5\x81\xE7\x95\x85\xE6\x84\x9F\xEF\xBC\x9AjQuery \xE8\xBF\x90\xE5\x8A\xA8\xE7\x89\xB9\xE6\x95\x88\xE5\xB1\x95\xE7\xA4\xBA"
+title: "直逼 Flash 的流畅感：jQuery 运动特效展示"
 wordpress_id: 918
 wordpress_url: http://www.wsria.com/?p=918
 date: 2010-03-02 14:41:46 +08:00
+tags: 
+ - jquery
 ---
 新闻来源:devsnippets.com
 围剿 Flash 的不仅有 HTML 5，还有 JavaScript，著名的 JavaScript 框架 jQuery 在运动特效方面已经越来越流畅，有时候你需要点一下右键来确认它不是 Flash。本文介绍了10个非常出色的 jQuery 运动特效，这些效果可以更有效地展示你的内容。

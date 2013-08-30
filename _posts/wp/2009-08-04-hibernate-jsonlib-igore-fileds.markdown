@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE4\xBD\xBF\xE7\x94\xA8hibernate\xE5\x92\x8Cjson-lib\xE6\x97\xB6\xE5\xBF\xBD\xE7\x95\xA5\xE5\xB1\x9E\xE6\x80\xA7\xE5\x92\x8C\xE9\x9B\x86\xE5\x90\x88"
+title: "使用hibernate和json-lib时忽略属性和集合"
 wordpress_id: 670
 wordpress_url: http://www.wsria.com/?p=670
 date: 2009-08-04 22:58:20 +08:00
+tags: 
+ - hibernate
 ---
 在使用Java语言开发项目的时候一般都是使用SSH架构，基本上大家没有例外，目前流利的Ajax技术给我们开发的系统了带来了不少的改善和性能方面的提高，去年开始学习了jQuery框架，因为使用Java语言做为后台而且jQuery中使用是目前数据结构良好的且方便的JSON做为数据传输方式，所以就在JSON官网找到了json-lib这个第三方JAR包，后来学习了一下就在finance系统中试用了一下，感觉不错；但是也遇到了一些问题，比如当我们映射了hibernate对象后，两个表做了关联，如下例子：
 <pre class="brush: sql" line="1">

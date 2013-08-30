@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "\xE3\x80\x8A\xE7\x96\xAF\xE7\x8B\x82\xE7\xA8\x8B\xE5\xBA\x8F\xE5\x91\x98\xE3\x80\x8B\xE4\xB8\x80\xE4\xB9\xA6\xE4\xB8\xAD\xE7\x9A\x84\"\xE5\xA5\xA5\xE7\xA7\x98\""
+title: "《疯狂程序员》一书中的奥秘"
 wordpress_id: 655
 wordpress_url: http://www.wsria.com/?p=655
 date: 2009-07-23 16:52:37 +08:00
+tags: 
+ - 读书
 ---
 <pre>2008年年底买的《疯狂的程序员》一书，看了一多半，感觉写的很好；程序员是崇尚技术的，而且两个程序员在一起大多数时间都在谈技术，把它称为程序员版的奋斗一点也不为过，激励你、给你指路，看书的时候只是用笔标记了一下没有整理，正好我订阅的CSDN的RSS看到了这篇文章，整理的不错特意转载，原文来自<a href="http://blog.csdn.net/gisfarmer/archive/2009/07/22/4371153.aspx" target="_blank">http://blog.csdn.net/gisfarmer/archive/2009/07/22/4371153.aspx</a></pre>
 

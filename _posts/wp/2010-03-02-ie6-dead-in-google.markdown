@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "IE6\xE6\xB5\x8F\xE8\xA7\x88\xE5\x99\xA8\xE8\x91\xAC\xE7\xA4\xBC\xE7\x9A\x84\xE8\x83\x8C\xE5\x90\x8E"
+title: "IE6浏览器葬礼的背后"
 wordpress_id: 914
 wordpress_url: http://www.wsria.com/?p=914
 date: 2010-03-02 14:12:15 +08:00
+tags: 
+ - IE6
 ---
 <strong>由于家族的激烈竞争，IE6于2010年3月1日在美国加州山景城谷歌总部去世，这款毁誉参半的Web浏览器享年8.5岁。</strong>
 

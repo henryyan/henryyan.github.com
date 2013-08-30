@@ -1,10 +1,11 @@
 --- 
 layout: post
-title: "Springside3.3.3\xE6\x8A\xA5\xE9\x94\x99\xEF\xBC\x9Ajava.lang.NoClassDefFoundError: org/codehaus/classworlds/Launcher\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
-excerpt: "Springside3.3.3\xE6\x8A\xA5\xE9\x94\x99\xEF\xBC\x9Ajava.lang.NoClassDefFoundError: org/codehaus/classworlds/Launcher\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
+title: "Springside3.3.3报错：java.lang.NoClassDefFoundError: org/codehaus/classworlds/Launcher解决办法"
 wordpress_id: 1079
 wordpress_url: http://www.wsria.com/?p=1079
 date: 2010-08-09 22:30:50 +08:00
+tags: 
+ - springside
 ---
 <a title="Springside官网" href="http://www.springside.org.cn/" target="_blank">Springside</a>刚刚发布了<a title="Springside 3.3.3" href="http://www.springside.org.cn/index.php/1/action_viewspace_itemid_25.html" target="_blank">Springside 3.3.</a>3版本，不过这次回复了generate-project.bat文件可以创建mini-web类型的项目。
 

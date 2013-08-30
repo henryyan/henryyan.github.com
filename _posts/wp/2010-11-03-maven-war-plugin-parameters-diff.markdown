@@ -1,10 +1,11 @@
 --- 
 layout: post
-title: "maven-war-plugin\xE6\x8F\x92\xE4\xBB\xB6\xE7\x9A\x84warSourceExcludes\xE5\x92\x8CpackagingExcludes\xE5\x8F\x82\xE6\x95\xB0\xE7\x9A\x84\xE5\x8C\xBA\xE5\x88\xAB"
-excerpt: "warSourceExcludes\xE5\x92\x8CpackagingExcludes\xE7\x9A\x84\xE5\x8C\xBA\xE5\x88\xAB"
+title: "maven-war-plugin插件的warSourceExcludes和packagingExcludes参数的区别"
 wordpress_id: 1335
 wordpress_url: http://www.wsria.com/?p=1335
 date: 2010-11-03 10:25:13 +08:00
+tags: 
+ - maven
 ---
 项目中在打包的时候时常要忽略一些只在本地使用的文件，比如一些test文件夹或者本地配置，刚刚开始使用maven-war-plugin的warSourceExcludes和packagingExcludes这两个参数还真是搞得有点晕，多试验了几次明白了，现在分享一下我的理解。
 

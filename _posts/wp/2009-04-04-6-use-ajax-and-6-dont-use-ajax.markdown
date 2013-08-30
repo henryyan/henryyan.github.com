@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "6\xE4\xB8\xAA\xE4\xBD\xA0\xE5\xBF\x85\xE9\xA1\xBB\xE7\x94\xA8\xE5\x88\xB0AJAX\xE7\x9A\x84\xE5\x9C\xB0\xE6\x96\xB9\xE4\xB8\x8E6\xE4\xB8\xAA\xE4\xB8\x8D\xE5\xBF\x85\xE7\x94\xA8\xE5\x88\xB0\xE7\x9A\x84\xE5\x9C\xB0\xE6\x96\xB9"
+title: "6个你必须用到AJAX的地方与6个不必用到的地方"
 wordpress_id: 505
 wordpress_url: http://www.wsria.com/?p=505
 date: 2009-04-04 22:27:38 +08:00
+category: ria
+tags: 
+ - ajax
 ---
 用ajax开发系统、网站确实好给客户带来了很大的方便，也降低了服务器的压力，但是我们在开发的时候不能盲目的使用ajax，不是所有的情况都适合使用ajax的，下面是从CSDN上面看到的，分享给大家。
 

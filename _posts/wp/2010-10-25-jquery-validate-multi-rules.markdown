@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "jquery.validate\xE6\x8F\x92\xE4\xBB\xB6remote\xE8\xA7\x84\xE5\x88\x99\xE7\x9B\xB8\xE5\x90\x8C\xE5\x80\xBC\xE4\xB8\x8D\xE9\xAA\x8C\xE8\xAF\x81\xE7\x9A\x84\xE9\x97\xAE\xE9\xA2\x98\xE8\xA7\xA3\xE5\x86\xB3\xE5\x8A\x9E\xE6\xB3\x95"
+title: "jquery.validate插件remote规则相同值不验证的问题解决办法"
 wordpress_id: 1273
 wordpress_url: http://www.wsria.com/?p=1273
 date: 2010-10-25 23:36:22 +08:00
+tags: 
+ - jquery
+ - validate
 ---
 <h3>一、由来说明</h3>
 使用jquery.validate插件的remote规则来验证一组参数是否重复，我的需求不像其他应用一样只验证一个字段是否重复，而是要依赖其他的几个字段来组合判断，所以jquery.validate就有点水土不服了。

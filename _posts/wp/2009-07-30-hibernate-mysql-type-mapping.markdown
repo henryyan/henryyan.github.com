@@ -1,9 +1,11 @@
 --- 
 layout: post
-title: "Hibernate\xE7\x9A\x84\xE6\x98\xA0\xE5\xB0\x84\xE7\xB1\xBB\xE5\x9E\x8B hibernate mysql\xE6\x98\xA0\xE5\xB0\x84\xE7\xB1\xBB\xE5\x9E\x8B"
+title: "Hibernate的映射类型 hibernate mysql映射类型"
 wordpress_id: 667
 wordpress_url: http://www.wsria.com/?p=667
 date: 2009-07-30 11:47:56 +08:00
+tags: 
+ - hibernate
 ---
 <table border="1" cellspacing="0" cellpadding="0">
 <tbody>

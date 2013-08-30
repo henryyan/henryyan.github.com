@@ -1,9 +1,13 @@
 --- 
 layout: post
-title: "Struts2 Annotation\xE5\xAE\x9E\xE7\x8E\xB0\xE6\x96\x87\xE4\xBB\xB6\xE4\xB8\x8B\xE8\xBD\xBD\xE5\x8A\x9F\xE8\x83\xBD"
+title: "Struts2 Annotation实现文件下载功能"
 wordpress_id: 1172
 wordpress_url: http://www.wsria.com/?p=1172
 date: 2010-10-03 21:32:49 +08:00
+tags: 
+ - Struts2
+ - 注解
+ - Annotation
 ---
 <h3>一、达到目标：</h3>
 给定任意Web根路径下面的文件<strong>相对路径</strong>下载文件，在任意浏览器下下载文件不出现乱码问题；

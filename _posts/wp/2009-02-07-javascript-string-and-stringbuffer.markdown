@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: " javascript\xE4\xB8\xAD\xE5\xAD\x97\xE7\xAC\xA6\xE4\xB8\xB2\xE7\xB4\xAF\xE5\x8A\xA0\xE7\x9A\x84\xE6\x80\xA7\xE8\x83\xBD\xE4\xBC\x98\xE5\x8C\x96(String\xE5\x92\x8CStringBuffer)"
+title: " javascript中字符串累加的性能优化(String和StringBuffer)"
 wordpress_id: 17
 wordpress_url: http://wsria.com/?p=17
 date: 2009-02-07 18:38:39 +08:00
