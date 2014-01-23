@@ -21,14 +21,16 @@ tags:
 ## 3. 输出结果示例
 
 <pre>
-{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@72086f9a, default=null, name=部门领导审批, documentation=null, type=userTask}
-{conditionText=${!deptLeaderPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@7d721f3, name=不同意, documentation=null}
-{conditionText=${deptLeaderPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@3cf5dc8a, name=同意, documentation=null}
-{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@3162074a, default=null, name=调整申请, documentation=null, type=userTask}
-{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@1acca49a, default=null, name=人事审批, documentation=null, type=userTask}
-{conditionText=${hrPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@714a8834, name=同意, documentation=null}
-{conditionText=${!hrPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@54344807, name=不同意, documentation=null}
-{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@3464eec1, default=null, name=销假, documentation=null, type=userTask}
-{conditionText=${reApply}, condition=org.activiti.engine.impl.el.UelExpressionCondition@4e76dbc6, name=重新申请, documentation=null}
-{conditionText=${!reApply}, condition=org.activiti.engine.impl.el.UelExpressionCondition@5d56cc68, name=结束流程, documentation=null}
+{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@19c6e4d1, default=null, name=部门领导审批, documentation=null, type=userTask}
+{conditionText=${!deptLeaderPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@50d8628f, name=不同意, documentation=null}
+{conditionText=${deptLeaderPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@2e2ec3c0, name=同意, documentation=null}
+{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@3589f0, default=null, name=调整申请, documentation=null, type=userTask}
+{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@3af2ebab, default=null, name=人事审批, documentation=null, type=userTask}
+{conditionText=${hrPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@224e45c9, name=同意, documentation=null}
+{conditionText=${!hrPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@40c7a0b7, name=不同意, documentation=null}
+{taskDefinition=org.activiti.engine.impl.task.TaskDefinition@72086f9a, default=null, name=销假, documentation=null, type=userTask}
+{conditionText=${reApply}, condition=org.activiti.engine.impl.el.UelExpressionCondition@7d721f3, name=重新申请, documentation=null}
+{conditionText=${!reApply}, condition=org.activiti.engine.impl.el.UelExpressionCondition@3cf5dc8a, name=结束流程, documentation=null}
+{name=Start, documentation=null, type=startEvent}
+{name=End, documentation=null, type=endEvent}
 </pre>
