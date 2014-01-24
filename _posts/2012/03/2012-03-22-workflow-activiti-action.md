@@ -34,7 +34,7 @@ tags:
 
 * Eclipse Plugin: [http://activiti.org/designer/update/](http://activiti.org/designer/update/)
 
-* Activit中文群：5435716
+* Activit中文群：23539326
 
 ## 2.初次使用遇到问题收集
 
