@@ -382,12 +382,12 @@ public class AccountServiceImpl implements AccountService {
 
 ### 3.修改引擎默认配置
 
-在引擎配置中设置属性**isDbIdentityUsed**为**false**即可。
+在引擎配置中设置属性**dbIdentityUsed**为**false**即可。
 
 <pre class="brush:xml">
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	...
-	<property name="isDbIdentityUsed" ref="false"/>
+	<property name="dbIdentityUsed" ref="false"/>
 	...
 </bean>
 </pre>
