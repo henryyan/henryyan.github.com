@@ -26,9 +26,8 @@ Activiti 5.10版本把原本独立的Activiti Modeler模块整合到了Activiti 
 
 > 复制的所有文件均在**activiti-webapp-explorer2**目录中。
 
-1. **editor**复制到项目的webapp目录（与WEB-INF目录同级）
-2. **src/main/resources**中的**editor.html、stencilset.json、plugins.xml**到项目**源码的源码根目录**，保证编译之后在classes根目录
-3. **src/main/webapp**中的**api、editor、explorer、libs**到项目的webapp目录（与WEB-INF目录同级）
+1. **src/main/resources**中的**editor.html、stencilset.json、plugins.xml**到项目**源码的源码根目录**，保证编译之后在classes根目录
+2. **src/main/webapp**中的**api、editor、explorer、libs**到项目的webapp目录（与WEB-INF目录同级）
 
 ### 2.3 添加依赖
 <pre class="brush:xml">
