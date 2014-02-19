@@ -34,7 +34,7 @@ Activiti 5.10版本把原本独立的Activiti Modeler模块整合到了Activiti 
 <dependency>
 	<groupId>org.activiti</groupId>
 	<artifactId>activiti-explorer</artifactId>
-	<version>5.12</version>
+	<version>5.14</version>
 	<exclusions>
 		<exclusion>
 			<artifactId>vaadin</artifactId>
@@ -53,7 +53,7 @@ Activiti 5.10版本把原本独立的Activiti Modeler模块整合到了Activiti 
 <dependency>
 	<groupId>org.activiti</groupId>
 	<artifactId>activiti-modeler</artifactId>
-	<version>5.12</version>
+	<version>5.14</version>
 </dependency>
 </pre>
 
@@ -84,6 +84,7 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
     Router router = new Router(getContext());
     router.attachDefault(DefaultResource.class);
     ModelerServicesInit.attachResources(router);
+    DiagramServicesInit.attachResources(router);
     JsonpFilter jsonpFilter = new JsonpFilter(getContext());
     jsonpFilter.setNext(router);
     return jsonpFilter;
@@ -267,7 +268,15 @@ public class ModelController {
 
 引擎默认名称为default，ProcessEngines.getDefaultProcessEngine()查询时会先检索main/resources，然后再检索test/resources的activiti.cfg.xml和activiti-context.xml文件，所以当main/resources监测不到指定文件时就会导致该引擎被当做web应用的引擎对象，这样会导致有两个引擎，所以把引擎的名称改为非默认的“default”。
 
-## 3. 效果截图
+## 3. 中文乱码问题解决办法
+
+在JVM参数中添加参数：
+
+> -Dsun.jnu.encoding=UTF-8 -Dfile.encoding=UTF-8
+
+**参考**：[在Activiti Modeler中设计的流程包含奇数个中文时不能部署问题](http://forums.activiti-cn.org/forum.php?mod=viewthread&tid=50&fromuid=2)
+
+## 4. 效果截图
 
 在最新的kft-activiti-demo版本（1.7.0）中已经集成了Activiti Modeler，可以在线访问，也可以下载源码学习如何配置。
 
