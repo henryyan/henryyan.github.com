@@ -11,8 +11,10 @@ title: Activiti
 
 <h2>Activiti相关博文</h2>
 <ul>
-	<li><a href="/2014/01/23/analyse-activity.html">剖析Activiti的Activity</a></li>
+	<li><a href="/activiti/2014/04/10/activiti-with-jpa.html">在Activiti中集成JPA（解决动态表单生成的大量数据）</a></li>
+	<li><a href="/activiti/2014/01/23/analyse-activity.html">剖析Activiti的Activity</a></li>
     <li><a href="/activiti/2013/08/30/using-uuid-as-primary-key-in-activiti.html">在Activiti中使用UUID作为主键生成策略</a></li>
+	<li><a href="/activiti/2013/05/27/dynamic-process-creation-and-deployment-in-100-lines.html">利用100行代码动态创建并部署流程</a></li>
 	<li><a href="/activiti/2013/04/19/about-process-egine-and-configuration.html">谈谈Activiti的引擎与引擎配置对象</a></li>
     <li><a href="/activiti/2013/04/05/activiti-5-12-x.html">Activiti 5.12.X 衍生版本发布</a></li>
 	<li><a href="/activiti/2013/03/23/activiti-designer-5-12-release.html">Activiti Designer 5.12.0 发布</a></li>
