@@ -11,6 +11,7 @@ title: Activiti
 
 <h2>Activiti相关博文</h2>
 <ul>
+	<li><a href="/activiti/2014/04/24/diagram-viewer.html">集成Diagram Viewer跟踪流程</a></li>
 	<li><a href="/activiti/2014/04/18/activiti-with-jpa.html">在Activiti中集成JPA（解决动态表单生成的大量数据）</a></li>
 	<li><a href="/activiti/2014/01/23/analyse-activity.html">剖析Activiti的Activity</a></li>
     <li><a href="/activiti/2013/08/30/using-uuid-as-primary-key-in-activiti.html">在Activiti中使用UUID作为主键生成策略</a></li>
