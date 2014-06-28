@@ -418,21 +418,11 @@ title: Activiti实战
 </ul>
 </fieldset>
 
-<fieldset><legend>第22章 集群与多租户</legend>
+<fieldset><legend>第22章 侵入Activiti</legend>
 <ul>
-<li>22.1	集群</li>
-<li>22.1.1	主键冲突解决办法</li>
-<li>22.1.2	乐观锁</li>
-<li>22.2	多租户</li>
-</ul>
-</fieldset>
-
-<fieldset><legend>第23章 侵入Activiti</legend>
-<ul>
-<li>23.1	BPMN解析拦截器</li>
-<li>23.1.1	动态添加节点</li>
-<li>23.2	全局事件</li>
-<li>23.2.1	自动委派</li>
-<li>23.3	自定义Command</li>
-<li>23.3.1	节点自由跳转</li>
-
+<li>22.1	BPMN解析拦截器</li>
+<li>22.1.1	动态添加节点</li>
+<li>22.2	全局事件</li>
+<li>22.2.1	自动委派</li>
+<li>22.3	自定义Command</li>
+<li>22.3.1	节点自由跳转</li>
