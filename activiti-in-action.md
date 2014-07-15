@@ -354,75 +354,65 @@ title: Activiti实战
 </ul>
 </fieldset>
 
-<fieldset><legend>第19章 CDI环境调用API</legend>
+<fieldset><legend>第19章 统一身份管理</legend>
 <ul>
-<li>19.1	CDI功能简介</li>
-<li>19.2	配置CDI</li>
-<li>19.2.1	添加Maven依赖</li>
-<li>19.2.2	查找流程引擎</li>
-<li>19.2.3	配置流程引擎</li>
-<li>19.2.4	自动部署流程</li>
-<li>19.3	在上下文环境中使用CDI</li>
-<li>19.3.1	关联会话与流程实例</li>
-<li>19.3.2	声明式控制流程</li>
-<li>19.3.3	在流程中使用Bean</li>
-<li>19.3.4	使用@BusinessProcessScoped注解管理的Bean</li>
-<li>19.3.5	注入流程变量</li>
-<li>19.3.6	在EL中使用流程变量</li>
-<li>19.3.7	接收流程事件</li>
-<li>19.3.8	配置监听</li>
-<li>19.3.9	监听注解说明</li>
-<li>19.3.10	其他附加特性</li>
-<li>19.4	本章小结</li>
+<li>19.1.	一套典型的身份系统</li>
+<li>19.2.	通过引擎接口同步数据</li>
+<li>19.3.	重写IdentityService接口实现</li>
+<li>19.4.	用视图代替物理表</li>
+<li>19.5.	替代内部SessionFactory</li>
+<li>19.6.	集成LDAP</li>
+<li>19.7.	本章小节</li>
 </ul>
 </fieldset>
 
-<fieldset><legend>第20章 统一管理用户数据</legend>
+<fieldset><legend>第20章 REST API</legend>
 <ul>
-<li>20.1	方案一：使用IdentifyService接口同步</li>
-<li>20.1.1	方案思路</li>
-<li>20.1.2	定义用户接口</li>
-<li>20.1.3	删除User和Group的关系</li>
-<li>20.1.4	复制Group数据</li>
-<li>20.1.5	复制用户数据及其和Group的关系</li>
-<li>20.1.6	验证方案</li>
-<li>20.2	方案二：覆盖IdentifyService实现</li>
-<li>20.2.1	方案思路</li>
-<li>20.2.2	实现IdentifyService接口的方法</li>
-<li>20.2.3	验证方案</li>
-<li>20.3	方案三：使用View替代Table</li>
-<li>20.3.1	方案思路</li>
-<li>20.3.2	视图ACT_ID_GROUP</li>
-<li>20.3.3	视图ACT_ID_INFO</li>
-<li>20.3.4	视图ACT_ID_MEMBERSHIP</li>
-<li>20.3.5	视图ACT_ID_USER</li>
-<li>20.3.6	Activiti的自我保护机制</li>
-<li>20.3.7	入侵式实现</li>
-<li>20.3.8	验证方案</li>
-<li>20.4	与LDAP集成</li>
-<li>20.5	各种方案对比</li>
-<li>20.6	本章小结</li>
+<li>20.1.	通信协议简介</li>
+<li>20.2.	REST API概述</li>
+<li>20.2.1.	REST API认证机制</li>
+<li>20.3.	发布REST API</li>
+<li>20.3.1.	通过浏览器访问</li>
+<li>20.3.2.	通过Http Client访问</li>
+<li>20.3.3.	通过Restlet访问</li>
+<li>20.3.4.	通过Apache CXF访问</li>
+<li>20.4.	集成REST API</li>
+<li>20.4.1.	依赖及配置文件</li>
+<li>20.4.2.	通过Ajax访问</li>
+<li>20.5.	完整示例</li>
+<li>20.5.1.	部署流程</li>
+<li>20.5.2.	查询Deployment</li>
+<li>20.5.3.	查询流程定义</li>
+<li>20.5.4.	启动流程</li>
+<li>20.5.5.	读取流程变量</li>
+<li>20.5.6.	查询任务</li>
+<li>20.5.7.	签收任务</li>
+<li>20.5.8.	完成任务</li>
+<li>20.5.9.	查询历史数据</li>
+<li>20.6.	本章小结</li>
 </ul>
 </fieldset>
 
-<fieldset><legend>第21章 REST API</legend>
+<fieldset><legend>第21章 入侵Activiti</legend>
 <ul>
-<li>21.1	REST协议简介</li>
-<li>21.2	访问Activiti REST模块</li>
-<li>21.2.1	添加REST依赖</li>
-<li>21.2.2	配置REST Servlet访问路径</li>
-<li>21.2.3	通过浏览器访问</li>
-<li>21.2.4	通过Ajax访问</li>
-<li>21.2.5	通过HttpClient访问</li>
-<li>21.3	本章小结</li>
+<li>21.1	解析BPMN文件</li>
+<li>21.1.1.	BpmnModel对象与XML之间的转换</li>
+<li>21.1.2.	动态创建流程</li>
+<li>21.1.3.	BPMN解析处理器</li>
+<li>21.2	全局事件处理器</li>
+<li>21.2.1.	定义事件处理器</li>
+<li>21.2.2.	处理捕获的事件</li>
+<li>21.2.3.	事件处理器的异常处理</li>
+<li>21.2.4.	动态注册事件处理器</li>
+<li>21.2.5.	任务自动转办</li>
+<li>21.3	命令与拦截器</li>
+<li>21.3.1.	命令与拦截器运行机制</li>
+<li>21.3.2.	自定义命令</li>
+<li>21.3.3.	命令拦截器</li>
+<li>21.4	流程虚拟机—PVM</li>
+<li>21.4.1.	简述PVM</li>
+<li>21.4.2.	Hello PVM</li>
+<li>21.4.3.	PVM进阶</li>
+<li>21.5	本章小结</li>
 </ul>
 </fieldset>
-
-<fieldset><legend>第22章 侵入Activiti</legend>
-<ul>
-<li>22.1	BPMN解析拦截器</li>
-<li>22.1.1	动态添加节点</li>
-<li>22.2	全局事件</li>
-<li>22.2.1	自动委派</li>
-<li>22.3	自定义Command</li>
-<li>22.3.1	节点自由跳转</li>
