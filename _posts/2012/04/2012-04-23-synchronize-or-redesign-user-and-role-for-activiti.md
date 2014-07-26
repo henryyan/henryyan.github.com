@@ -11,8 +11,6 @@ tags:
 
 相信每个涉及到用户的系统都有一套用户权限管理平台或者模块，用来维护用户以及在系统内的功能、数据权限，我们使用的Activiti工作流引擎配套设计了包括**User、Group**的Identify模块，怎么和业务数据同步呢，这个问题是每个新人必问的问题之一，下面介绍几种同步方案，最后总结比较。
 
-	如果你在考虑直接使用Activiti引擎的Identify模块作为系统的用户数据管理模块，您真是奇才～开个玩笑
-
 ## 方案一：调用IdentifyService接口完成同步
 
 参考IdentifyService接口Javadoc：[http://www.activiti.org/javadocs/org/activiti/engine/IdentityService.html](http://www.activiti.org/javadocs/org/activiti/engine/IdentityService.html)
@@ -355,13 +353,94 @@ public class AccountServiceImpl implements AccountService {
 }
 </pre>
 
-## 方案二：覆盖IdentifyService接口的实现
+## 方案二：自定义SessionFactory
 
-此方法覆盖**IdentifyService**接口的默认实现类：**org.activiti.engine.impl.IdentityServiceImpl**。
+引擎内部与数据库交互使用的是MyBatis，对不同的表的CRUD操作均由一个对应的实体管理器（XxxEntityManager，有接口和实现类），引擎的7个Service接口在需要CRUD实体时会根据接口获取注册的实体管理器实现类（初始化引擎时用Map对象维护两者的映射关系），并且引擎允许我们覆盖内部的实体管理器，查看源码后可以知道有关Identity操作的两个接口分别为：UserIdentityManager和GroupIdentityManager。
 
-读者可以根据现有的用户管理接口实现覆盖**IdentityServiceImpl**的每个方法的默认实现，这样就等于放弃使用系列表：ACT_ID_。
+查看引擎配置对象ProcessEngineConfigurationImpl类可以找到一个名称为“customSessionFactories”的属性，该属性可以用来自定义SessionFactory（每一个XXxManager类都是一个Session<实现Session接口>，由SessionFactory来管理），为了能替代内部的实体管理器的实现我们可以自定义一个SessionFactory并注册到引擎。
 
-此方法不再提供代码，请读者自行根据现有接口逐一实现接口定义的功能。
+这种自定义SessionFactory的方式适用于公司内部有独立的身份系统或者公共的身份模块的情况，所有和用户、角色、权限的服务均通过一个统一的接口获取，而业务系统则不保存这些数据，此时引擎的身份模块表就没必要存在（ACT_ID_*）。
+
+下面是有关**customSessionFactories**的示例配置。
+
+<pre class="brush:xml">
+<bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration"> 
+    ...
+    <property name="customSessionFactories">
+        <list>
+            <bean class="me.kafeitu.activiti.xxx.CustomUserEntityManagerFactory">
+                <property name="customUserEntityManager">
+                    <bean class="me.kafeitu.activiti.xxx.CustomUserEntityManager">
+                        <property name="CustomUserManager" ref="CustomUserManager" />
+                    </bean>
+                </property>
+            </bean>
+            <bean class="me.kafeitu.activiti.xxx.CustomGroupEntityManagerFactory">
+                <property name="customGroupEntityManager">
+                    <bean class="me.kafeitu.activiti.xxx.CustomGroupEntityManager">
+                        <property name="customRoleManager" ref="customRoleManager" />
+                    </bean>
+                </property>
+            </bean>
+        </list>
+    </property>
+    ...
+</bean>
+
+<bean id="customUserManager" class="me.kafeitu.activiti.xxx.impl.AiaUserManagerImpl">
+    <property name="dao">
+        <bean class="me.kafeitu.activiti.xxx.impl.CustomUserDaoImpl"></bean>
+    </property>
+    <property name="identityService" ref="identityService"/>
+</bean>
+
+<bean id="customRoleManager" class="me.kafeitu.activiti.chapter19.identity.impl.AiaRoleManagerImpl">
+    <property name="dao">
+        <bean class="me.kafeitu.activiti.xxx.impl.CustomRoleDaoImpl"></bean>
+    </property>
+</bean>
+</pre>
+
+以用户操作为例介绍一下如何自定义一个SessionFactory。
+
+<pre class="brush:java">
+public class CustomUserEntityManagerFactory implements SessionFactory {
+
+    private CustomUserEntityManager customUserEntityManager;
+
+    public void setCustomUserEntityManager(CustomUserEntityManager customUserEntityManager) {
+        this.customUserEntityManager = customUserEntityManager;
+    }
+
+    @Override
+    public Class<?> getSessionType() { // 返回引擎的实体管理器接口
+        return UserIdentityManager.class;
+    }
+
+    @Override
+    public Session openSession() {
+        return customUserEntityManager;
+    }
+}
+</pre>
+
+<pre class="brush:java">
+public class CustomUserEntityManager extends UserEntityManager {
+
+	  // 这个Bean就是公司提供的统一身份访问接口，可以覆盖UserEntityManager的任何方法用公司内部的统一接口提供服务
+    private CustomUserManager customUserManager;
+
+    @Override
+    public Boolean checkPassword(String userId, String password) {
+        CustomUser customUser = customUserManager.get(new Long(userId));
+        return CustomUser.getPassword().equals(password);
+    }
+
+    public void setCustomUserManager(CustomUserManager customUserManager) {
+        this.customUserManager = customUserManager;
+    }
+}
+</pre>
 
 ## 方案三：用视图覆盖同名的ACT_ID_系列表
 
@@ -394,8 +473,8 @@ public class AccountServiceImpl implements AccountService {
 
 ## 总结
 
-* 方案**一**：不破坏、不修改源码，**面向接口编程**，**推荐**；
+* 方案**一**：通过数据推送方式同步数据到引擎的身份表，需要把数据备份到引擎的身份表或者公司有平台或者WebService推送用户数据的推荐使用
 
-* 方案**二**：放弃原有的Identify模块，使用自定义的实现，特殊情况可以使用此方式；
+* 方案**二**：自定义SessionFactory，非侵入式替换接口实现，对于公司内部有统一身份访问接口的推荐使用
 
-* 方案**三**：不需要编写Java代码，只需要创建同名视图即可。
+* 方案**三**：不需要编写Java代码，只需要创建同名视图即可
