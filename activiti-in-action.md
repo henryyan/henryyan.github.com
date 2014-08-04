@@ -54,7 +54,7 @@ title: 《Activiti实战》- 国内权威Activiti中文书籍
 ### 第二部分 基础篇
 <fieldset><legend>第3章 流程设计工具</legend>
 <ul>
-<li>3.1	面向业务人员的Activiti Modeler</li>
+<li>3.1	基于B/S架构的流程设计器Activiti Modeler</li>
 <li>3.1.1	Activiti Modeler特点</li>
 <li>3.1.2	下载Signavio-core-components</li>
 <li>3.1.3	配置打包与运行</li>
@@ -62,13 +62,15 @@ title: 《Activiti实战》- 国内权威Activiti中文书籍
 <li>3.1.5	设计请假流程</li>
 <li>3.1.6	导出bpmn2.0.xml</li>
 <li>3.2	在Activiti Explorer中使用Activiti Modeler</li>
-<li>3.3	面向开发人员的Activiti Designer</li>
+<li>3.3	基于Eclipse插件的流程设计器Activiti Designer</li>
 <li>3.3.1	Acvititi Designer特点</li>
 <li>3.3.2	安装Activiti Designer</li>
 <li>3.3.3	设计流程</li>
 <li>3.3.4	自动化</li>
 <li>3.3.5	升级历史遗留的流程设计</li>
 <li>3.3.6	导入Activiti Modeler设计</li>
+<li>3.3.7	泳池与泳道</li>
+<li>3.3.8	在Activiti Designer中使用泳道与泳池</li>
 <li>3.4	本章小结</li>
 </ul>
 </fieldset>
