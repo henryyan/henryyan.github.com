@@ -1,6 +1,6 @@
 ---
 layout: master
-title: Activiti实战
+title: 《Activiti实战》- 国内权威Activiti中文书籍
 ---
 
 <div>
@@ -10,7 +10,7 @@ title: Activiti实战
 </div>
 
 <h2>《Activiti实战》目录</h2>
-### 第一部分准备篇
+### 第一部分 准备篇
 <fieldset><legend>第1章 认识Activiti</legend>
 <ul>
 <li>1.1	什么是Activiti</li>
@@ -158,7 +158,7 @@ title: Activiti实战
 </ul>
 </fieldset>
 
-<fieldset><legend>第7章 Activiti与Spring集成</legend>
+<fieldset><legend>第7章 Activiti与容器集成</legend>
 <ul>
 <li>7.1.	流程引擎工厂</li>
 <li>7.1.1.	创建引擎的方式</li>
@@ -169,12 +169,21 @@ title: Activiti实战
 <li>7.3.2.	表达式示例</li>
 <li>7.3.3.	使用Spring管理变量</li>
 <li>7.4.	监听器</li>
-<li>7.5.	应用实例</li>
+<li>7.5.	Spring容器集成应用实例</li>
 <li>7.5.1.	业务建模</li>
 <li>7.5.2.	启动流程</li>
 <li>7.5.3.	任务读取</li>
 <li>7.5.4.	任务办理</li>
-<li>7.6.	本章小结</li>
+<li>7.6.	使用Spring注解初始化引擎</li>
+<li>7.6.1.	使用@EnableActiviti注解</li>
+<li>7.6.2.	使用Spring Boot初始化引擎</li>
+<li>7.7.	CDI模块</li>
+<li>7.7.1.	启动示例</li>
+<li>7.7.2.	引擎配置与流程定义</li>
+<li>7.7.3.	流程定义与启动</li>
+<li>7.7.4.	任务办理与完成</li>
+<li>7.7.5.	事件监听</li>
+<li>7.8.	本章小结</li>
 </ul>
 </fieldset>
 
