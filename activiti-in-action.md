@@ -369,11 +369,11 @@ title: 《Activiti实战》- 国内权威Activiti中文书籍
 <ul>
 <li>19.1.	一套典型的身份系统</li>
 <li>19.2.	通过引擎接口同步数据</li>
-<li>19.3.	重写IdentityService接口实现</li>
-<li>19.4.	用视图代替物理表</li>
-<li>19.5.	替代内部SessionFactory</li>
-<li>19.6.	集成LDAP</li>
-<li>19.7.	本章小节</li>
+<li>19.2.1	通过引擎接口同步数据</li>
+<li>19.2.2	自定义Session工厂方式</li>
+<li>19.3.	用视图代替物理表</li>
+<li>19.4.	集成LDAP</li>
+<li>19.5.	本章小节</li>
 </ul>
 </fieldset>
 
