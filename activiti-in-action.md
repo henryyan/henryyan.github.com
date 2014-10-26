@@ -6,7 +6,7 @@ title: 《Activiti实战》- 国内权威Activiti中文书籍
 <div>
 	<a href="http://www.activiti.org" target="_blank"><img src="/images/activiti_logo.png" alt="Activiti" /></a>
 	国内中文Activiti专题书籍<span style="color: #3FBA5B">《</span><span style="color: #007FBE">Activiti实战</span><span style="color: #3FBA5B">》</span>
-	近期将由机械工业出版社出版，敬请期待！！！
+	元旦前后（出版过程环节较多请读者理解）将由机械工业出版社出版，敬请期待！！！另外本书得到了Activiti的现任Team Leader <a href="https://github.com/tijsrademakers">Tijs Rademakers</a> 的推荐。
 </div>
 
 <h2>《Activiti实战》目录</h2>
