@@ -23,7 +23,7 @@ h2. 软硬环境
 
 * 浏览器：Chrome，偶尔使用Firefox、Safari，迫于无奈用IE测试……
 
-* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：16G（内存必须大），硬盘：600G（120G SSD + 500G HDD，组成Fusion Driver）
+* 笔记本：Macbook Pro MD103，CPU：I7 2.3G，内存：16G（内存必须大），SSD
 
 h2. 关于www.kafeitu.me
 
@@ -34,6 +34,8 @@ h2. 关于www.kafeitu.me
 * 以Java、SSH(SpringMVC)为后台基础
 
 * 以Maven、Ant、CI(Jenkins)、Sonar为辅助工具
+
+* 在国内推广Activiti开源流程（引擎）平台
 
 * 以Git作为SCM工具
 
@@ -50,6 +52,10 @@ h2. 联系我
 * 微博（Weibo Sina）: <a href='http://weibo.com/kafeituzi'>@我才是咖啡兔</a>
 * Twitter: <a href='http://twitter.com/kafeituzi'>@kafeituzi</a>
 * 博客（Blog）: <a href='http://www.kafeitu.me'>http://www.kafeitu.me</a>
+
+h2. 招贤纳士
+
+目前在一家汽车电商创业型公司——小马试驾（<a href='http://www.xiaomagouche.com?from=kft' target='_blank'>小马购车</a>），有互联网项目开发经验的最好不过了，有能力的拿着你的投名状找我。
 
 h2. Github项目
 
