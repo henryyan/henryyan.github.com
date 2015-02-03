@@ -466,7 +466,7 @@ public class CustomUserEntityManager extends UserEntityManager {
 <pre class="brush:xml">
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	...
-	<property name="dbIdentityUsed" ref="false"/>
+	<property name="dbIdentityUsed" value="false"/>
 	...
 </bean>
 </pre>
