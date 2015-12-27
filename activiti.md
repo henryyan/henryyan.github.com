@@ -11,6 +11,7 @@ title: Activiti
 
 <h2>Activiti相关博文</h2>
 <ul>
+    <li><a href="/activiti/2015/12/27/integrate-new-activiti-modeler-and-rest.html">集成新版(5.17+)Activiti Modeler与Rest服务</a></li>
 	<li><a href="/activiti/2014/04/24/diagram-viewer.html">集成Diagram Viewer跟踪流程</a></li>
 	<li><a href="/activiti/2014/04/18/activiti-with-jpa.html">在Activiti中集成JPA（解决动态表单生成的大量数据）</a></li>
 	<li><a href="/activiti/2014/01/23/analyse-activity.html">剖析Activiti的Activity</a></li>
