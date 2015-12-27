@@ -13,6 +13,7 @@ tags:
 
 1. 此教程适合Activiti 5.17+版本。
 2. 本博客所涉及的内容均可在[kft-activiti-demo](https://github.com/henryyan/kft-activiti-demo)中找到。
+3. 在线demo可以访问 [http://demo.kafeitu.me:8080/kft-activiti-demo](http://demo.kafeitu.me:8080/kft-activiti-demo) 菜单路径：管理模块 -> 流程管理 -> 模型工作区，可以『创建』或者『编辑』模型
 
 ## 1. 简介
 
