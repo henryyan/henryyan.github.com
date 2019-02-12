@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Maven多模块布局实例详解"
 wordpress_id: 1405
 wordpress_url: http://www.wsria.com/?p=1405

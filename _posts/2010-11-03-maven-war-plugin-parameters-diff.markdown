@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "maven-war-plugin插件的warSourceExcludes和packagingExcludes参数的区别"
 wordpress_id: 1335
 wordpress_url: http://www.wsria.com/?p=1335

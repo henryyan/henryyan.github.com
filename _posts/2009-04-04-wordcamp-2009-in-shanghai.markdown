@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "wordcamp 2009 in ShangHai归来"
 excerpt: wordcamp 2009 in ShangHai
 wordpress_id: 487

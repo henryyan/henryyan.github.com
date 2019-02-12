@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "推荐国外著名的xhtml+css模板"
 wordpress_id: 481
 wordpress_url: http://www.wsria.com/?p=481
 date: 2009-03-29 01:44:28 +08:00
-category: ria
+categories: ria
 tags: 
  - 模板
 ---

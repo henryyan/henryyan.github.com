@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "《Maven实战》最新消息，11月初出版"
 wordpress_id: 1288
 wordpress_url: http://www.wsria.com/?p=1288

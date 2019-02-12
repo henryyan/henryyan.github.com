@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "利用JavaScript获取窗口/Body的宽度和高度(让jqGrid自适应窗口大小)"
 wordpress_id: 1147
 wordpress_url: http://www.wsria.com/?p=1147

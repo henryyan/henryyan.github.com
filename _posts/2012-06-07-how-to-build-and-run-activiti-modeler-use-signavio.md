@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "如何使用Signavio打包Activiti Modeler"
-category: activiti 
+categories: activiti 
 tags: 
  - activiti
  - signavio
@@ -73,8 +72,14 @@ Signavio是通过ant构建打包的，在打包之前需要更改一下build.pro
 
 用编辑器打开signavio-core-components/ editor/build.xml文件。
 
-1. 找到&lt;target name="com.signavio.editor.js.concat">，紧随其后添加一行配置代码：&lt;property name="charset" value="utf-8"/>标签中的&lt;concat destfile='${build}/oryx.debug.js'>修改为&lt;concat destfile='${build}/oryx.debug.js' encoding="${charset}" outputencoding="${charset}">。
-2.	找到&lt;target name='com.signavio.editor.js.compress代码处，更改次target内的&lt;java dir="${build}" jar="${root}/lib/yuicompressor-**2.4.2**.jar" fork="true" failonerror="true" output='${compress.temp}'>；将其中的yuicompressor-2.4.2.jar更改为yuicompressor-**2.4.7**.jar。
-3.	signavio默认使用yuicompressor-2.4.2版本压缩javascript和css文件，为了解决编码问题我们需要使用最新版本替换**2.4.2**版本，笔者在撰稿的时候最新的yuicompressor版本为**2.4.7**，读者也可以直接下载最新版本。访问[http://yuilibrary.com/download/yuicompressor/](http://yuilibrary.com/download/yuicompressor/) 下载第一个版本的压缩包，解压提取**build/yuicompressor-2.4.7.jar**文件并复制到signavio-core-components/yuicompressor/**editor/lib**目录中。再次执行打包命令**ant build-all-in-one-war**一切正常，截图证明。
+1. 找到&lt;target name="com.signavio.editor.js.concat">，紧随其后添加一行配置代码：&lt;property name="charset" value="utf-8"/>
+标签中的&lt;concat destfile='${build}/oryx.debug.js'>修改为
+&lt;concat destfile='${build}/oryx.debug.js' encoding="${charset}" outputencoding="${charset}">。
 
-![](/files/2012/06/activiti-modeler-windows-build-success.png)
+2.	找到&lt;target name='com.signavio.editor.js.compress代码处，更改次target内的&lt;java dir="${build}" jar="${root}/lib/yuicompressor-**2.4.2**.jar" fork="true" failonerror="true" output='${compress.temp}'>；将其中的yuicompressor-2.4.2.jar更改为yuicompressor-**2.4.7**.jar。
+
+3.	signavio默认使用yuicompressor-2.4.2版本压缩javascript和css文件，为了解决编码问题我们需要使用最新版本替换**2.4.2**版本，笔者在撰稿的时候最新的yuicompressor版本为**2.4.7**，读者也可以直接下载最新版本。访问[http://yuilibrary.com/download/yuicompressor/](http://yuilibrary.com/download/yuicompressor/) 下载第一个版本的压缩包，解压提取**build/yuicompressor-2.4.7.jar**文件并复制到signavio-core-components/yuicompressor/**editor/lib**目录中。
+
+再次执行打包命令**ant build-all-in-one-war**一切正常，截图证明。
+
+![](/files/2012/06/activiti-modeler-windows-build-success.png)

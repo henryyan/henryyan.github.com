@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "城市级联选择插件jquery.area2select闪亮登场(前后台设计)"
 wordpress_id: 1237
 wordpress_url: http://www.wsria.com/?p=1237

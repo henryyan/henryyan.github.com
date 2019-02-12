@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "推荐一个不错的js编辑工具Spket IDE for eclipse"
 wordpress_id: 296
 wordpress_url: http://www.wsria.com/?p=296
 date: 2009-02-22 18:12:45 +08:00
-category: eclipse
+categories: eclipse
 tags: 
  - eclipse
  - spket

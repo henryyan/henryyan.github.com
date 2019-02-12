@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "jquery.validate插件remote规则相同值不验证的问题解决办法"
 wordpress_id: 1273
 wordpress_url: http://www.wsria.com/?p=1273

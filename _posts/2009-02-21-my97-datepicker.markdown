@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "推荐日期选择组件My97 DatePicker"
 wordpress_id: 263
 wordpress_url: http://www.wsria.com/?p=263
 date: 2009-02-21 21:18:47 +08:00
-category: plugins
+categories: plugins
 tags: 
  - my97
  - 日期

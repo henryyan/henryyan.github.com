@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "推荐jQuery插件系列——表单验证formValidator"
 wordpress_id: 214
 wordpress_url: http://www.wsria.com/?p=214
 date: 2009-02-18 19:41:13 +08:00
-category: jquery
+categories: jquery
 tags: 
  - plugin
  - 验证

@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "推荐：基于jQuery开发仿Google Calendar(jQuery Week Calendar)"
 wordpress_id: 762
 wordpress_url: http://www.wsria.com/?p=762

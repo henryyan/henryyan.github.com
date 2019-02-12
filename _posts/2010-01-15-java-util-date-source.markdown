@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "分享：Java日期工具类"
 wordpress_id: 785
 wordpress_url: http://www.wsria.com/?p=785

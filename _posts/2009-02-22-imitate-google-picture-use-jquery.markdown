@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "模拟google相册鼠标移动提示信息"
 wordpress_id: 285
 wordpress_url: http://www.wsria.com/?p=285
 date: 2009-02-22 16:57:07 +08:00
-category: jquery
+categories: jquery
 tags: 
  - google
  - 悬浮

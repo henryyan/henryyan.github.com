@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "推荐一个ajax资源站点"
 wordpress_id: 640
 wordpress_url: http://www.wsria.com/?p=640

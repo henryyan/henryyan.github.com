@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "单表查询树形结构的SQL语句"
 wordpress_id: 241
 wordpress_url: http://www.wsria.com/?p=241
 date: 2009-02-20 18:25:14 +08:00
-category: database
+categories: database
 tags: 
  - sql
  - 树

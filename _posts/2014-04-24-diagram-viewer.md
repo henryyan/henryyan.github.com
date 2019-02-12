@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "集成Diagram Viewer跟踪流程"
-category: activiti
+categories: activiti
 tags: 
  - Activiti
  - Diagram Viewer

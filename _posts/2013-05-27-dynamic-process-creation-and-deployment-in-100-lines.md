@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "利用100行代码动态创建并部署流程"
-category: activiti 
+categories: activiti 
 tags: 
  - activiti
  - 动态

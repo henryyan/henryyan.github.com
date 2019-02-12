@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "activiti:initiator的作用及其使用"
-category: activiti 
+categories: activiti 
 tags: 
  - activiti
  - initiator

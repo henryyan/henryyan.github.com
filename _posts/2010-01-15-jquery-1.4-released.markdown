@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "jQuery 1.4 正式版发布啦(14 Days of jQuery)"
 wordpress_id: 772
 wordpress_url: http://www.wsria.com/?p=772

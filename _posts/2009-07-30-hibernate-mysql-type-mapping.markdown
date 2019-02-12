@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Hibernate的映射类型 hibernate mysql映射类型"
 wordpress_id: 667
 wordpress_url: http://www.wsria.com/?p=667

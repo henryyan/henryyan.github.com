@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "jQuery UI Portlet V1.1.0 发布"
-category: jquery
+categories: jquery
 tags:
  - jquery
  - ui

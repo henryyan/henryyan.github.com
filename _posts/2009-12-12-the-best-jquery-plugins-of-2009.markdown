@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "推荐：2009 年度最佳 jQuery 插件"
 wordpress_id: 733
 wordpress_url: http://www.wsria.com/?p=733

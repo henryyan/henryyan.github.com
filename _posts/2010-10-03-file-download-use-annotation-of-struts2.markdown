@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Struts2 Annotation实现文件下载功能"
 wordpress_id: 1172
 wordpress_url: http://www.wsria.com/?p=1172

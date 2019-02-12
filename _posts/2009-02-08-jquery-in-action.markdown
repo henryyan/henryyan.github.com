@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "《jQuery in Action》中文版即将上市"
 wordpress_id: 46
 wordpress_url: http://wsria.com/?p=46
 date: 2009-02-08 02:32:55 +08:00
-category: jquery
+categories: jquery
 tags: 
  - 图书
 ---

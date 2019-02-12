@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "jqGrid启用列冻结之后列高度不一致问题解决办法"
-category: jquery 
+categories: jquery 
 tags: 
  - jqgrid
  - 列冻结

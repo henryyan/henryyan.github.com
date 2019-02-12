@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "如何使用Activiti Rest模块"
-category: activiti
+categories: activiti
 tags: 
  - activiti
  - rest

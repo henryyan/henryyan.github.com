@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Twitter用户发起“拒绝IE6”请愿活动"
 wordpress_id: 645
 wordpress_url: http://www.wsria.com/?p=645

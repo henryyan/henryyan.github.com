@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "心系5.12(2009年5.12日 2：28分我们集体默哀3分钟)"
 wordpress_id: 535
 wordpress_url: http://www.wsria.com/?p=535

@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "新版Activiti Modeler发布以及教程"
-category: activiti
+categories: activiti
 tags:
  - activiti
  - Activiti Modeler

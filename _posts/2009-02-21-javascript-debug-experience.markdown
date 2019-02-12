@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "转：Javascript 脚本的调试经验"
 wordpress_id: 255
 wordpress_url: http://www.wsria.com/?p=255
 date: 2009-02-21 20:03:38 +08:00
-category: javascript
+categories: javascript
 tags: 
  - 调试
 ---

@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "叽歪怎么了？"
 wordpress_id: 664
 wordpress_url: http://www.wsria.com/?p=664

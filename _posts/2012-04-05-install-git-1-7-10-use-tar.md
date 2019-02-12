@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "在Ubuntu上安装Git1.7.10-rc4(中文化)"
-category: git
+categories: git
 tags: 
  - git
  - 本地化

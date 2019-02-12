@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "工作流引擎Activiti使用总结"
-category: activiti
+categories: activiti
 tags:
  - activiti
  - 工作流

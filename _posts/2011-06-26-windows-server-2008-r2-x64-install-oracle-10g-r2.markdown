@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Windows Server 2008 R2 X64安装Oracle 10g R2后不能创建数据库问题解决办法"
 wordpress_id: 1519
 wordpress_url: http://www.wsria.com/?p=1519

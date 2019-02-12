@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "我暴露了程序员的习惯"
 wordpress_id: 232
 wordpress_url: http://www.wsria.com/?p=232
 date: 2009-02-19 22:19:03 +08:00
-category: study
+categories: study
 tags: 
  - 学习机
 ---

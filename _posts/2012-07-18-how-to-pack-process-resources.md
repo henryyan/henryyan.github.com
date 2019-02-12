@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "如何打包Activiti的流程资源文件(bpmn20.xml、form、png)"
-category: activiti 
+categories: activiti 
 tags: 
  - activiti
  - 打包

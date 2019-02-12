@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Json-lib 与 hibernate 共同使用的问题"
 wordpress_id: 724
 wordpress_url: http://www.wsria.com/?p=724

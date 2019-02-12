@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "实例解析java + jQuery + json工作过程(获取JSON数据)"
 wordpress_id: 369
 wordpress_url: http://www.wsria.com/?p=369
 date: 2009-02-28 18:39:27 +08:00
-category: jquery
+categories: jquery
 tags: 
  - jquery
  - json

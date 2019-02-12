@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "站点GBK编码下jQuery Ajax中文乱码解决方案"
 wordpress_id: 611
 wordpress_url: http://www.wsria.com/?p=611

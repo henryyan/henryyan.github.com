@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "从Google搜索联想到了jQuery"
 wordpress_id: 245
 wordpress_url: http://www.wsria.com/?p=245
 date: 2009-02-20 22:10:17 +08:00
-category: google
+categories: google
 tags: 
  - google
 ---

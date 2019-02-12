@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "[推荐]改进的提示插件-jQuery.hiAlerts.1.0"
 wordpress_id: 659
 wordpress_url: http://www.wsria.com/?p=659

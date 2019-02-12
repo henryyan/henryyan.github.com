@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "庆祝博客PageRank提升到了3/10"
 wordpress_id: 502
 wordpress_url: http://www.wsria.com/?p=502

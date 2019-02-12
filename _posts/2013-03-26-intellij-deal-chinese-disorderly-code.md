@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "IntelliJ IDEA中文乱码解决办法"
-category: tools
+categories: tools
 tags:
  - 开发工具
  - IntelliJ IDEA

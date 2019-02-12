@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "如何判断一个请求是否为AJAX请求"
 wordpress_id: 582
 wordpress_url: http://www.wsria.com/?p=582

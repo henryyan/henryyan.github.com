@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "经典：从追MM谈Java的23种设计模式"
 wordpress_id: 20
 wordpress_url: http://wsria.com/?p=20
 date: 2009-02-07 18:45:18 +08:00
-category: design
+categories: design
 tags: 
  - 设计模式
  - java

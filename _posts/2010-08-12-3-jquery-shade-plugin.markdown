@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "推荐精选3枚jQuery遮罩插件"
 wordpress_id: 1100
 wordpress_url: http://www.wsria.com/?p=1100

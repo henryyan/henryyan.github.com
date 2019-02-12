@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Ubuntu配置ngnix+phpmyadmin"
 wordpress_id: 1540
 wordpress_url: http://www.wsria.com/?p=1540

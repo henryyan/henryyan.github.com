@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "IE浏览器下的JS实用调试小工具——fullsource(2K)"
 wordpress_id: 461
 wordpress_url: http://www.wsria.com/?p=461
 date: 2009-03-11 22:20:09 +08:00
-category: tools
+categories: tools
 tags: 
  - IE
  - 工具

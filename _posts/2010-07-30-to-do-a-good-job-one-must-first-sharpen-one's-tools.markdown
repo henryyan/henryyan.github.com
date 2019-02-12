@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "工欲善其事，必先利其器"
 wordpress_id: 1026
 wordpress_url: http://www.wsria.com/?p=1026

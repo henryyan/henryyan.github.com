@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "整合Activiti Modeler到业务系统（或BPM平台）"
-category: activiti
+categories: activiti
 tags:
  - activiti
  - Activiti Modeler

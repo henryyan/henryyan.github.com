@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "[转][评论]谷歌重申不过滤搜索结果 做好停止中国业务准备"
 wordpress_id: 934
 wordpress_url: http://www.wsria.com/?p=934

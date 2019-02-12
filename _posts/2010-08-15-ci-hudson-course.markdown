@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Hudson系列教程"
 wordpress_id: 1135
 wordpress_url: http://www.wsria.com/?p=1135

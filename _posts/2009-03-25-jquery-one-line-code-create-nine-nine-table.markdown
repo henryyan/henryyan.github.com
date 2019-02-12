@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "一行jQuery代码打印九九乘法表"
 wordpress_id: 471
 wordpress_url: http://www.wsria.com/?p=471
 date: 2009-03-25 19:30:46 +08:00
-category: jquery
+categories: jquery
 tags: 
  - 乘法表
 ---

@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Activiti入门，学习资源索引"
-category: activiti 
+categories: activiti 
 tags: 
  - activiti
  - 教程

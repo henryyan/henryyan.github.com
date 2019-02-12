@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "夏天到了，终于收到迟来的WordPress T恤了"
 wordpress_id: 575
 wordpress_url: http://www.wsria.com/?p=575

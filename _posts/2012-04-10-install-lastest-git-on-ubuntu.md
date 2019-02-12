@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "在Ubuntu(Debian)上安装最新版Git"
-category: git
+categories: git
 tags: 
  - git
  - ubuntu

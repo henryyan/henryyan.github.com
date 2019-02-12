@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "简单实现在基于Java的AJAX环境下未登录自动跳转流程详解(spring代理struts的action)"
 wordpress_id: 588
 wordpress_url: http://www.wsria.com/?p=588

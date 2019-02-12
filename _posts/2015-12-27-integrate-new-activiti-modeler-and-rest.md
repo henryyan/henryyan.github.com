@@ -1,11 +1,12 @@
 ---
-layout: post
 title: "集成新版(5.17+)Activiti Modeler与Rest服务"
-category: activiti
+categories: activiti
 tags: 
  - Activiti
  - Activiti Modeler
 ---
+
+{% include toc title="Getting Started" %}
 
 这又是一片迟来的博客，上一篇博文还是2014年4月24日写的，因为很多内容都在书（《[Activiti实战](activiti-in-action.html)》）里了已经有详细的解释了，不过由于书里面使用的是**5.16.4**版本，从**5.17.0**版本后Activiti Modeler的整合方式有些变化，所以写此博问作为补充内容。
 

@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Maven常见问题收集（持续更新-2010-12-15）"
 wordpress_id: 1314
 wordpress_url: http://www.wsria.com/?p=1314

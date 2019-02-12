@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Win7下不能安装Oracle11g解决办法"
 wordpress_id: 927
 wordpress_url: http://www.wsria.com/?p=927

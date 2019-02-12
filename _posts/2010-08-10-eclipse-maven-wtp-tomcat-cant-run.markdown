@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Eclipse+Maven+WTP+Tomcat不能Run On Server其中一个原因"
 wordpress_id: 1004
 wordpress_url: http://www.wsria.com/?p=1004

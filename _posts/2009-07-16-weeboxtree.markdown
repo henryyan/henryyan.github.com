@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "做了一次集成服务：基于weebox和simpletree的dialogtree诞生了"
 wordpress_id: 625
 wordpress_url: http://www.wsria.com/?p=625

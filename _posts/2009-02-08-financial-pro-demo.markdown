@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "基于jQuery开发的账务管理系统(个人版)演示"
 wordpress_id: 73
 wordpress_url: http://wsria.com/?p=73
 date: 2009-02-08 11:48:43 +08:00
-category: financial
+categories: financial
 tags: 
  - 演示
  - 视频

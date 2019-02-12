@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Maven下用mvn assembly:assembly打包class文件重复"
 wordpress_id: 958
 wordpress_url: http://www.wsria.com/?p=958

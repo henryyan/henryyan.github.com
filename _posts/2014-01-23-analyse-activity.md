@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "剖析Activiti的Activity"
-category: activiti
+categories: activiti
 tags: 
  - activiti
  - Activity
@@ -20,7 +19,7 @@ tags:
 
 ## 3. 输出结果示例
 
-<pre>
+```
 {taskDefinition=org.activiti.engine.impl.task.TaskDefinition@19c6e4d1, default=null, name=部门领导审批, documentation=null, type=userTask}
 {conditionText=${!deptLeaderPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@50d8628f, name=不同意, documentation=null}
 {conditionText=${deptLeaderPass}, condition=org.activiti.engine.impl.el.UelExpressionCondition@2e2ec3c0, name=同意, documentation=null}
@@ -33,4 +32,4 @@ tags:
 {conditionText=${!reApply}, condition=org.activiti.engine.impl.el.UelExpressionCondition@3cf5dc8a, name=结束流程, documentation=null}
 {name=Start, documentation=null, type=startEvent}
 {name=End, documentation=null, type=endEvent}
-</pre>
+```

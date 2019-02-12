@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "2009.5.1~5.3杭州之旅(露营、雨中游西湖)"
 wordpress_id: 520
 wordpress_url: http://www.wsria.com/?p=520

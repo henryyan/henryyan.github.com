@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "jQuery.plugin——强大的遮罩层(nyroModal)"
 wordpress_id: 429
 wordpress_url: http://www.wsria.com/?p=429
 date: 2009-03-02 21:57:43 +08:00
-category: jquery
+categories: jquery
 tags: 
  - 遮罩
  - jquery

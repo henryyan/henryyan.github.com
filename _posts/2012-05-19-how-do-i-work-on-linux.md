@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "我是如何在Linux(Ubuntu)上工作的？"
-category: linux
+categories: linux
 tags: 
  - Linux
  - Ubuntu

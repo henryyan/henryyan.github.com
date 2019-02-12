@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Activiti快速入门项目-kft-activiti-demo"
-category: activiti
+categories: activiti
 tags: 
  - activiti
  - 入门

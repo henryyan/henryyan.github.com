@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "既爱又恨Firefox"
 wordpress_id: 259
 wordpress_url: http://www.wsria.com/?p=259
 date: 2009-02-21 21:04:47 +08:00
-category: browser
+categories: browser
 tags: 
  - firefox
 ---

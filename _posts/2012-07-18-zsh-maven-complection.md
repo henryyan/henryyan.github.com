@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Zsh(oh-my-zsh)的Maven自动提示插件(zsh-maven-complection)"
-category: shell 
+categories: shell 
 tags: 
  - shell
  - zsh

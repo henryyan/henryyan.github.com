@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "优秀程序员的两大要素：懒+笨"
 wordpress_id: 67
 wordpress_url: http://wsria.com/?p=67
 date: 2009-02-08 11:12:15 +08:00
-category: programmer
+categories: programmer
 tags: 
  - 懒
 ---

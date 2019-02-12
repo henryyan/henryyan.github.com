@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "同步或者重构Activiti Identify用户数据的多种方案比较"
-category: activiti
+categories: activiti
 tags: 
  - activiti
  - workflow

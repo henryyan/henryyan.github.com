@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "jQuery性能优化指南"
 wordpress_id: 555
 wordpress_url: http://www.wsria.com/?p=555
 date: 2009-05-23 14:54:48 +08:00
-category: jquery
+categories: jquery
 tags: 
  - 性能优化
 ---

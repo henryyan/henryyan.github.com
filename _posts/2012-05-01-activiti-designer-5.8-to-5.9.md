@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "从Activiti Designer5.8升级到5.9遇到的问题"
-category: activiti
+categories: activiti
 tags: 
  - activiti
  - designer

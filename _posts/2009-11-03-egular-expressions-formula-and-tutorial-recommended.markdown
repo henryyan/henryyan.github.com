@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "推荐：正则表达式口诀及教程"
 wordpress_id: 728
 wordpress_url: http://www.wsria.com/?p=728

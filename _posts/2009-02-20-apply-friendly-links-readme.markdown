@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "申请友链及说明"
 wordpress_id: 237
 wordpress_url: http://www.wsria.com/?p=237
 date: 2009-02-20 11:33:31 +08:00
-category: blog
+categories: blog
 tags: 
  - 友链
  - 博客

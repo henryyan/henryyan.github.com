@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Activiti Explorer 5.11登录页面乱码解决办法"
-category: activiti 
+categories: activiti 
 tags: 
  - activiti
  - explorer

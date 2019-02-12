@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "推荐使用轻量级ajax框架-jQuery"
 wordpress_id: 84
 wordpress_url: http://wsria.com/?p=84
 date: 2009-02-10 14:19:09 +08:00
-category: ria
+categories: ria
 tags: 
  - jquery
  - ajax

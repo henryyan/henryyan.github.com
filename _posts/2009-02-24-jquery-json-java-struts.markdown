@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "实例解析java + jQuery + json工作过程(登录)"
 wordpress_id: 300
 wordpress_url: http://www.wsria.com/?p=300
 date: 2009-02-24 21:55:29 +08:00
-category: jquery
+categories: jquery
 tags: 
  - json
  - jqury

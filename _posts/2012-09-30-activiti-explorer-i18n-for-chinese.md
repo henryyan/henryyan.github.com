@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Activiti Explorer中文汉化"
-category: activiti
+categories: activiti
 tags: 
  - activiti
  - 中文

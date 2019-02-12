@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Springside3.3.3报错：java.lang.NoClassDefFoundError: org/codehaus/classworlds/Launcher解决办法"
 wordpress_id: 1079
 wordpress_url: http://www.wsria.com/?p=1079

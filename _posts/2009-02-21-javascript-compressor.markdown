@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "分享：JavaScript在线压缩工具"
 wordpress_id: 249
 wordpress_url: http://www.wsria.com/?p=249
 date: 2009-02-21 18:27:03 +08:00
-category: javascript
+categories: javascript
 tags: 
  - 压缩
 ---

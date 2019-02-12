@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "jqGrid查询中文乱码问题解决办法(2011-11-11)"
 wordpress_id: 961
 wordpress_url: http://www.wsria.com/?p=961

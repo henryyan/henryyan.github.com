@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "让Activiti记录变量历史信息"
-category: activiti
+categories: activiti
 tags:
  - activiti
  - history

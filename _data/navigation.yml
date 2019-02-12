@@ -1,0 +1,22 @@
+# main links links
+main:
+  - title: "Blog"
+    url: /blog.html
+
+  - title: "《Activiti实战》"
+    url: /activiti-in-action.html
+
+  - title: "Activiti文章"
+    url: /activiti.html
+
+  - title: "Categories"
+    url: /categories/
+
+  - title: "Tags"
+    url: /tags/
+
+  - title: "Github"
+    url: https://github.com/henryyan
+
+  - title: "About"
+    url: /about.html

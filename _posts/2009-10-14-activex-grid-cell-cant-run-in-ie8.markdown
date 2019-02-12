@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "备忘：金格、用友CELL不能在IE8下使用的解决办法"
 wordpress_id: 713
 wordpress_url: http://www.wsria.com/?p=713

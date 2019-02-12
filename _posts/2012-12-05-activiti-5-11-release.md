@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Activiti 5.11发布"
-category: activiti
+categories: activiti
 tags:
  - activiti
  - bpmn2.0

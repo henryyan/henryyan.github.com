@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "一个基于Maven的配置文件管理成功案例"
-category: solution 
+categories: solution 
 tags: 
  - 配置文件
  - 管理方式

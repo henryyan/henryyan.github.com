@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "IE6浏览器葬礼的背后"
 wordpress_id: 914
 wordpress_url: http://www.wsria.com/?p=914

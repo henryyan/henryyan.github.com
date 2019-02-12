@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Activiti Designer 5.12.0 发布"
-category: activiti
+categories: activiti
 tags:
  - activiti
  - Activiti Designer

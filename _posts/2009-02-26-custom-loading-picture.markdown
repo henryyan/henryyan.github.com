@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "自己动手定制ajax loading图片"
 wordpress_id: 375
 wordpress_url: http://www.wsria.com/?p=375
 date: 2009-02-26 23:31:34 +08:00
-category: ajax
+categories: ajax
 tags: 
  - ajax
  - 图片

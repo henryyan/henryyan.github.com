@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "6个你必须用到AJAX的地方与6个不必用到的地方"
 wordpress_id: 505
 wordpress_url: http://www.wsria.com/?p=505
 date: 2009-04-04 22:27:38 +08:00
-category: ria
+categories: ria
 tags: 
  - ajax
 ---

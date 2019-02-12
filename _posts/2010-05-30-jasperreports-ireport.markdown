@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "JasperReports iReport导出PDF中文解决办法"
 wordpress_id: 981
 wordpress_url: http://www.wsria.com/?p=981

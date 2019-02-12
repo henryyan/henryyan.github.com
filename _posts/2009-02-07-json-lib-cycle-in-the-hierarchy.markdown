@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "出现net.sf.json.JSONException: There is a cycle in the hierarchy异常的解决办法"
 wordpress_id: 14
 wordpress_url: http://wsria.com/?p=14
 date: 2009-02-07 18:33:22 +08:00
-category: json
+categories: json
 tags: 
  - hibernate
  - json-lib

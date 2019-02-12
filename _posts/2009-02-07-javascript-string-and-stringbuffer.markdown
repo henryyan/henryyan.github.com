@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: " javascript中字符串累加的性能优化(String和StringBuffer)"
 wordpress_id: 17
 wordpress_url: http://wsria.com/?p=17
 date: 2009-02-07 18:38:39 +08:00
-category: javascript
+categories: javascript
 tags: 
  - string
  - StringBuffer

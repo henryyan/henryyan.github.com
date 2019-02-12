@@ -1,10 +1,9 @@
 --- 
-layout: post
 title: "程序员的十种级别，看看你属于哪个级别的程序员"
 wordpress_id: 109
 wordpress_url: http://www.wsria.com/?p=109
 date: 2009-02-14 00:48:21 +08:00
-category: programmer
+categories: programmer
 tags: 
  - level
 ---

@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "比较Activiti中三种不同的表单及其应用"
-category: activiti
+categories: activiti
 tags:
  - activiti
  - 表单

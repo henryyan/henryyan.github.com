@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "利用Windows的计划任务自动更新最新的Chromium"
 wordpress_id: 1159
 wordpress_url: http://www.wsria.com/?p=1159

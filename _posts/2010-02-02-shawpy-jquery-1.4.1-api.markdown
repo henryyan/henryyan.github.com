@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "jQuery 1.4.1 中文文档 CHM 版发布"
 wordpress_id: 807
 wordpress_url: http://www.wsria.com/?p=807

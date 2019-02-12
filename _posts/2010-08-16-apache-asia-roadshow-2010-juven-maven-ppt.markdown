@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "Apache Asia Roadshow 2010 Juven Maven PPT和视频下载"
 wordpress_id: 1139
 wordpress_url: http://www.wsria.com/?p=1139

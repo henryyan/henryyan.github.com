@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "[转][推荐]程序员们，请珍爱自己的身体"
 wordpress_id: 818
 wordpress_url: http://www.wsria.com/?p=818

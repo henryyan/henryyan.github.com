@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "推荐：jQuery提示插件qTip2"
-category: jquery
+categories: jquery
 tags: 
  - jquery
  - plugin

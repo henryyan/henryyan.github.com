@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Activiti设置流程发起用户信息"
-category: activiti
+categories: activiti
 tags: 
  - activiti
  - 启动

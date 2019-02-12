@@ -1,5 +1,4 @@
 --- 
-layout: post
 title: "《疯狂程序员》一书中的奥秘"
 wordpress_id: 655
 wordpress_url: http://www.wsria.com/?p=655
