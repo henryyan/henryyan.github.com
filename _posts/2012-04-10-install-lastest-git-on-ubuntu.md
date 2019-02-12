@@ -23,12 +23,12 @@ PPA地址：https://launchpad.net/~git-core/+archive/ppa
 sudo apt-add-repository ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get install git
-</pre>
+```
 
 如果本地已经安装过Git，可以使用升级命令：
 <pre class="brush: shell">
 sudo apt-get dist-upgrade
-</pre>
+```
 
 如果你的OS使用的是中文语言，那么就运行git命令就看到了中文提示信息，参见：[在Ubuntu上安装Git1.7.10-rc4(中文化)](/git/2012/04/05/install-git-1-7-10-use-tar.html)。
 

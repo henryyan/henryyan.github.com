@@ -23,7 +23,7 @@ tags:
 
 Activiti团队核心成员**frederikheremans**创建了[activiti-dynamic-process](https://github.com/frederikheremans/activiti-dynamic-process)项目，该项目利用以上的几个模块演示了如何动态创建流程并部署运行，这几个步骤仅仅用了100行代码（还可以继续精简，但是这不是重点，重点在于体现Activiti的灵活性）。
 
-<pre class="brush:java">
+```java
 @Test
 public void testDynamicDeploy() throws Exception {
   // 1. Build up the model from scratch
@@ -99,7 +99,7 @@ protected EndEvent createEndEvent() {
   endEvent.setId("end");
   return endEvent;
 }
-</pre>
+```
 
 部署后获取流程图如下所示：
 ![](/files/2013/05/diagram.png)

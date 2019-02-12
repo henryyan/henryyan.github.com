@@ -97,7 +97,7 @@ Zsh的确好用，但是配置起来比较复杂，之后又在Github上发现�
 对于oh-my-zsh的安装配置请参考本博客的文章：[我最喜爱的工具-oh-my-zsh](http://www.kafeitu.me/shell/2012/03/25/oh-my-zsh.html)
 
 我的zsh(oh-my-zsh)配置分享：
-<pre class="brush:shell">
+```shell
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -152,7 +152,7 @@ source /etc/envs
 export CXF_HOME=/home/henryyan/work/sources/cxf/apache-cxf-2.6.0
 export MULE_HOME=/home/henryyan/work/sources/mule/mule-standalone-3.2.0
 export PATH=$PATH:$CXF_HOME/bin:$MULE_HOME/bin
-</pre>
+```
 
 其中使用hash定义的别名有两种办法进入：
 
@@ -199,7 +199,7 @@ export PATH=$PATH:$CXF_HOME/bin:$MULE_HOME/bin
 一般会把环境变量配置在**/etc/profile**或者**/etc/environment**中，我创建了单独的**/etc/envs**文件用来保存环境变量，然后在**/etc/profile**的尾部**source /etc/envs**即可。
 
 我的/etc/envs配置：
-<pre class="brush:shell">
+```shell
 export ANT_HOME=/opt/devtools/ant/apache-ant
 export M3_HOME=/opt/devtools/maven/apache-maven
 export JAVA_HOME=/opt/devtools/jdk/jdk1.6
@@ -208,12 +208,12 @@ export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 export ORACLE_SID=XE
 export NLS_LANG=AMERICAN_AMERICA.ZHS16GBK
 export PATH=$PATH:$JAVA_HOME/bin:$M3_HOME/bin:$ORACLE_HOME:$ORACLE_HOME/bin:$ANT_HOME/bin
-</pre>
+```
 
 ### 4.1.1 环境变量规则
 
 我一般都会为应用创建一个软链接，这样当有新版本发布的时候更改软链接的target即可生效。例如：
-<pre class="brush:shell">
+```shell
 ➜ henryyan@hy-hp  /opt/devtools/maven  ls -l
 total 7756
 lrwxrwxrwx 1 root devtools      18  4月 29 01:11 apache-maven -> apache-maven-3.0.4
@@ -222,41 +222,41 @@ dr-xrwxr-x 6 root devtools    4096  4月 29 01:11 apache-maven-3.0.3
 -r-xrwxr-x 1 root devtools      26  4月 29 01:11 apache-maven-3.0.3-bin.tar.gz:Zone.Identifier
 dr-xrwxr-x 6 root devtools    4096  4月 29 01:11 apache-maven-3.0.4
 -r-xrwxr-x 1 root devtools 4873043  4月 29 01:11 apache-maven-3.0.4-bin.tar.gz
-</pre>
+```
 
 ### 4.2 配置Java
 
 JDK下载页面：[http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 在下载页面选择**.bin**结尾的文件下载，然后放到安装目录，例如：/opt/devtools/java
-<pre class="brush:bash">
+```shell
 sh jdk-6u31-linux-x64.bin
 ln -s jdk1.6.0_31 jdk1.6
-</pre>
+```
 
 安装完成后需要设置默认的JDK：
-<pre class="brush:bash">
+```shell
 sudo update-alternatives --install "/usr/bin/java" "java" "/opt/devtools/jdk/jdk1.6/bin/java" 1
-</pre>
+```
 
 如果要安装JDK7请移步：[Ubuntu 12.04下配置JDK7](http://www.linuxidc.com/Linux/2012-05/59858.htm)
 
 ### 4.3 配置Ant
-<pre class="brush:bash">
+```shell
 cd /opt/devtools/ant
 axel -a http://labs.renren.com/apache-mirror/ant/binaries/apache-ant-1.8.3-bin.tar.gz
 tar xzvf apache-ant-1.8.3-bin.tar.gz
 ln -s apache-ant-1.3.2 ant
-</pre>
+```
 
 ### 4.4 配置Maven
 
-<pre class="brush:shell">
+```shell
 cd /opt/devtools/ant
 axel -a http://labs.renren.com/apache-mirror/maven/binaries/apache-maven-3.0.4-bin.tar.gz
 tar xzvf apache-maven-3.0.4-bin.tar.gz
 ln -s apache-maven-3.0.4 maven
-</pre>
+```
 
 ### 4.5 安装、配置Git
 
@@ -288,9 +288,9 @@ Git的CLI交互方式已经很好用了，而且自带GUI工具；如果不差�
 
 #### 4.7.1 Mysql
 
-<pre class="brush:shell">
+```shell
 sudo apt-get install mysql-server
-</pre>
+```
 
 #### 4.7.2 Oracle
 
@@ -299,37 +299,37 @@ sudo apt-get install mysql-server
 	顺便说一下我使用Ubuntu One第一版的时候很是郁闷，上传速度慢，占用内存过大（超过4G），所以放弃；不过在Ubuntu 12.04 LTS版本中使用QT从重写了界面性能提升很多而且稳定，值得使用。
 
 下载完成之后就可以安装了，不过在安装之前先设置一些环境变量到**/etc/profile**（如果你和我一样创建了/etc/envs那就添加到这个文件中）：
-<pre class="brush:shell">
+```shell
 export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 export ORACLE_SID=XE
 export NLS_LANG=AMERICAN_AMERICA.ZHS16GBK
-</pre>
+```
 
 开始安装：
-<pre class="brush:shell">
+```shell
 sudo apt-get install libaio1
 sudo dpkg -i oracle-xe_11.2.0-1.5_amd64.deb
-</pre>
+```
 
 在安装的过程中会提示输入**sys、system**的密码，请务必记住！
 
 安装完成之后会提示运行配置oracle的命令：
-<pre class="brush:shell">
+```shell
 sudo /etc/init.d/oracle-xe configure
-</pre>
+```
 根据提示设置一些端口号之类的参数即可完成安装。
 
 ##### 4.7.2.1 让sqlplus更好用
 
 默认sqlplus中按方向键会显示回显字符，解决的办法安装**rlwrap**：
-<pre class="brush:shell">
+```shell
 sudo apt-get install rlwrap
-</pre>
+```
 然后在shell中配置sqlplus的别名：bash(.bashrc), zsh(.zshrc)
-<pre class="brush:shell">
+```shell
 alias sqlplus='rlwrap sqlplus'
-</pre>
+```
 
 ##### 4.7.2.2 解决中文乱码问题
 
@@ -355,7 +355,7 @@ SqlDeveloper是Oracle使用Java开发的Oracle客户端程序，可以和Windows
 
 例如我本地安装的Nexus配置(/etc/init.d/nexus)：
 
-<pre class="brush:shell">
+```shell
 #!/bin/bash
 # nexus auto-start
 #
@@ -382,7 +382,7 @@ console)
 esac
 
 exit 0
-</pre>
+```
 
 然后再使用前面介绍的**sysv-rc-conf**设置为自启动。
 
@@ -393,7 +393,7 @@ Eclipse、SqlDeveloper都是通过解压方式安装的，不能自动加入到U
 ** sudo vi /usr/share/applications/eclipse-javaee.desktop**
 
 内容如下：
-<pre class="brush:shell">
+```shell
 [Desktop Entry]
 Name=Eclipse With JAVAEE
 Comment=Eclipse With JAVAEE
@@ -404,7 +404,7 @@ Type=Application
 StartupNotify=true
 Name[en_US]=Eclipse With JAVAEE
 Comment[en_US]=Eclipse With JAVAEE
-</pre>
+```
 
 其中的**Icon**属性是图标名称，可以指定到觉得路径，我这样的配置方式是使用系统默认提供的图标。
 

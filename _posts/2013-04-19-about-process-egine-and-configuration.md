@@ -26,25 +26,25 @@ Activiti允许创建多个引擎，每个引擎用别名区分，可以在引擎
 
 ### 2.1 标准方式
 
-<pre class="brush:xml">
+```xml
 <property name="processEngineName" value="myProcessEngine"></property>
-</pre>
+```
 其中的**myProcessEngine**即为引擎的别名，当需要获取引擎对象时可以通过下面的代码获取：
 
-<pre class="brush:java">
+```java
 ProcessEngine myProcessEngine = ProcessEngines.getProcessEngine("myProcessEngine");
-</pre>
+```
 
 当然如果只有一个引擎获取就更简单了，下面的代码可以直接获取一个默认的引擎对象。
-<pre class="brush:java">
+```java
 ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 // 等价于 ProcessEngines.getProcessEngine("default");
-</pre>
+```
 
 ### 2.2 Spring方式
 
 如果使用了Spring代理引擎可以使用“Spring”风格方式获取引擎对象，例如下面的配置：
-<pre class="brush:xml">
+```xml
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	<property name="dataSource" ref="dataSource"></property>
     <property name="transactionManager" ref="transactionManager"></property>
@@ -52,9 +52,9 @@ ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
     <property name="jobExecutorActivate" value="false"></property>
     ...
 </bean>
-</pre>
+```
 
-<pre class="brush:java">
+```java
 @Controller
 @RequestMapping(value = "/workflow")
 public class ActivitiController {
@@ -66,38 +66,38 @@ public class ActivitiController {
   		ProcessEngine processEngine = processEngineFactoryBean.getObject();
   	}
 }
-</pre>
+```
 
 ### 2.3 在引擎外部设置引擎配置对象
 
 或许这个小节的标题看不懂了。。。
 
 原因是这样的，众所周知，在默认的配置情况下部署包含中文的流程文件会导致中文乱码（Linux、Windows，Mac平台没问题），所以需要覆盖引擎默认的字体配置属性（活动的字体与输出流文字字体），例如下面的配置：
-<pre class="brush:xml">
+```xml
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	<property name="activityFontName" value="宋体"></property>
     <property name="labelFontName" value="宋体"></property>
     ...
 </bean>
-</pre>
+```
 字体名称根据平台的不同其值也不同，例如在Windows平台下可以使用诸如**宋体**、**微软雅黑**等，但是在Linux平台下引擎没有这些字体（或者名称不同）需要特殊设置，kft-activiti-demo的在线demo部署在Ubuntu Server上，而且是纯英文系统没有中文字体，为了解决部署后以及流程跟踪时的中文乱码问题我从Windows平台复制了宋体字体文件解决，字体的文件名为**simsun.ttc**，使用的配置如下所示：
-<pre class="brush:xml">
+```xml
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	<property name="activityFontName" value="simsun"></property>
     <property name="labelFontName" value="simsun"></property>
     ...
 </bean>
-</pre>
+```
 
 这样就解决了部署流程时的中文乱码问题，但是没有解决流程跟踪时的乱码问题。。。
 
 原因在于流程图生成工具类**ProcessDiagramGenerator**会从当前的ThreadLocal中获取引擎配置对象，但是目前仅仅是引擎自动在内部实现时把引擎配置对象设置到ThreadLocal中，所以很多人遇到在Struts(2）或者Spring MVC中直接调用下面的代码得到的图片是乱码：
-<pre class="brush:java">
+```java
 InputStream imageStream = ProcessDiagramGenerator.generateDiagram(bpmnModel, "png", activeActivityIds);
-</pre>
+```
 
 既然知道引擎从ThreadLocal中获取引擎配置对象，而且我们已经获取了引擎对象（也就是说可以从中获取引擎配置对象），解决问题的办法很简单，手动把引擎配置对象设置到ThreadLocal中就解决问题了；下面的代码在kft-activiti-demo的ActivitiController类中。
-<pre class="brush:java">
+```java
 @RequestMapping(value = "/process/trace/auto/{executionId}")
 public void readResource(@PathVariable("executionId") String executionId, HttpServletResponse response)
 throws Exception {
@@ -120,7 +120,7 @@ throws Exception {
     response.getOutputStream().write(b, 0, len);
   }
 }
-</pre>
+```
 
 关键就在于在调用生成流程图的方法之前调用一次Context.setProcessEngineConfiguration()方法即可，这样引擎就可以获取到引擎配置对象，从而获取到自定义的字体名称属性，乱码问题自然没有了。
 

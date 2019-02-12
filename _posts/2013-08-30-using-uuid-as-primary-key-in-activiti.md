@@ -21,11 +21,11 @@ tags:
 
 在引擎初始化的时候会注册ID生成器，看过源码的同学还可能知道有一个类：**org.activiti.engine.impl.db.DbIdGenerator**，这个类实现了一个接口：**org.activiti.engine.impl.cfg.IdGenerator**：
 
-<pre class="brush:java">
+```java
 public interface IdGenerator {
   String getNextId();
 }
-</pre>
+```
 
 该接口仅有一个方法，返回一个String类型的字符串，有兴趣的同学可以去看看引擎默认的生成器源码，接下来介绍如何更改引擎的主键生成器。
 
@@ -35,12 +35,12 @@ UUID是全球唯一的主键生成器，也是除自增策略之外最常用的�
 
 要更改引擎默认的主键生成器很简单，只需要在配置引擎时覆盖一个属性即可，代码如下：
 
-<pre class="brush:xml">
+```xml
 <bean id="uuidGenerator" class="org.activiti.engine.impl.persistence.StrongUuidGenerator" />
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	<property name="idGenerator" ref="uuidGenerator" />
 </bean>
-</pre>
+```
 
 ID为“uuidGenerator”的bean对象就是引擎内部提供的UUID生成器，把Bean对象注册好以后覆盖引擎的“idGenerator”属性即可；再次启动系统后创建的新数据都会用UUID生成策略。
 
@@ -48,13 +48,13 @@ ID为“uuidGenerator”的bean对象就是引擎内部提供的UUID生成器，
 
 引擎提供的UUID生成器依赖fastxml的一个模块，需要在pom.xml（Maven工程）中添加如下依赖：
 
-<pre class="brush:xml">
+```xml
 <dependency>
     <groupId>com.fasterxml.uuid</groupId>
     <artifactId>java-uuid-generator</artifactId>
     <version>3.1.3</version>
 </dependency>
-</pre>
+```
 
 ![用UUID生成策略产生的ID](/files/2013/08/uuid-example.png)
 

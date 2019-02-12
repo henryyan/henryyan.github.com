@@ -22,16 +22,16 @@ tags:
 ### 2.1. 系统语言：英文
 
 我一直的习惯把系统语言设置为英文（强迫性记忆），这是第一次**遇到乱码**问题，分析了程序执行参数如下：
-<pre>ps -ef | grep java</pre>
+<pre>ps -ef | grep java```
 
 执行后得到如下的结果，省略了classpath：
 <pre>
 /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/java -d64 -Djava.awt.headless=true -Xmx512m -Dfile.encoding=MacRoman -classpath … org.jetbrains.idea.maven.server.RemoteMavenServer
-</pre>
+```
 
 分析参数和编码有关的只有一个：
 
-<pre>-Dfile.encoding=MacRoman </pre>
+<pre>-Dfile.encoding=MacRoman ```
 
 ### 2.2. 系统语言：中文
 
@@ -39,7 +39,7 @@ tags:
 
 切换到中文语言后分析执行参数，和英文语言下不同的是：
 
-<pre>-Dfile.encoding=GB2312</pre>
+<pre>-Dfile.encoding=GB2312```
 
 ## 3. 解决办法
 
@@ -49,13 +49,13 @@ tags:
 
 和项目编码统一，更改IntelliJ IDEA启动时的编码参数即可，打开下面的配置文件：
 
-<pre>/Applications/IntelliJ IDEA 12.app/Contents/Info.plist</pre>
+<pre>/Applications/IntelliJ IDEA 12.app/Contents/Info.plist```
 
 	在IntelliJ IDEA 12.app文件右键选择“Show Contents”即可看到Contents目录。
 
 找到**key**等于**VMOptions**位置，这里设置的虚拟机的参数，在后面追加下面的参数保存文件。
 
-<pre>-Dfile.encoding=UTF-8</pre>
+<pre>-Dfile.encoding=UTF-8```
 
 > PS：从12.1版本开始默认添加了这个参数
 

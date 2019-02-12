@@ -11,7 +11,7 @@ tags:
 
 <pre>
 Git Submodule功能刚刚开始学习可能觉得有点怪异，所以本教程把每一步的操作的命令和结果都用代码的形式展现给大家，以便更好的理解。
-</pre>
+```
 
 ## 1.对于公共资源各种程序员的处理方式
 
@@ -42,7 +42,7 @@ Git Submodule功能刚刚开始学习可能觉得有点怪异，所以本教程�
 ➜ henryyan@hy-hp  ~  pwd
 /home/henryyan
 mkdir -p submd/repos
-</pre>
+```
 
 创建需要的本地仓库：
 <pre class="brush: shell">
@@ -51,13 +51,13 @@ git --git-dir=lib1.git init --bare
 git --git-dir=lib2.git init --bare
 git --git-dir=project1.git init --bare
 git --git-dir=project2.git init --bare
-</pre>
+```
 
 初始化工作区：
 <pre class="brush: shell">
 mkdir ~/submd/ws
 cd ~/submd/ws
-</pre>
+```
 
 #### 2.1.2 初始化项目
 
@@ -95,7 +95,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/ws/../repos/project1.git
  * [new branch]      master -> master
-</pre>
+```
 
 初始化project2：
 <pre class="brush: shell">
@@ -133,7 +133,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/ws/../repos/project2.git
  * [new branch]      master -> master
-</pre>
+```
 
 #### 2.1.3 初始化公共类库
 
@@ -157,7 +157,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/ws/../repos/lib1.git
  * [new branch]      master -> master
-</pre>
+```
 
 初始化公共类库lib2：
 <pre class="brush: shell">
@@ -180,7 +180,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/ws/../repos/lib2.git
  * [new branch]      master -> master
-</pre>
+```
 
 ### 2.2 为主项目添加Submodules
 
@@ -216,7 +216,7 @@ lib1  lib2
 I'm lib1.
 ➜ henryyan@hy-hp  ~/submd/ws/project1 git:(master) cat libs/lib2/lib2-features
 I'm lib2.
-</pre>
+```
 好了，到目前为止我们已经使用**git submodule add**命令为**project1**成功添加了两个公共类库（lib1、lib2），查看了当前的状态发现添加了一个新文件(**.gitmodules**)和两个文件夹(libs/lib1、libs/lib2)；那么新增的**.gitmodules**文件是做什么用的呢？我们查看一下文件内容便知晓了：
 <pre class="brush: shell">
 n@hy-hp  ~/submd/ws/project1 git:(master) ✗ cat .gitmodules 
@@ -226,7 +226,7 @@ n@hy-hp  ~/submd/ws/project1 git:(master) ✗ cat .gitmodules
 [submodule "libs/lib2"]
 	path = libs/lib2
 	url = /home/henryyan/submd/repos/lib2.git
-</pre>
+```
 原来如此，**.gitmodules**记录了每个submodule的引用信息，知道在当前项目的位置以及仓库的所在。
 
 好的，我们现在把更改提交到仓库。
@@ -247,7 +247,7 @@ Total 4 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (4/4), done.
 To /home/henryyan/submd/ws/../repos/project1.git
    45cbbcb..7157977  master -> master
-</pre>
+```
 
 	假如你是第一次引入公共类库的开发人员，那么项目组的其他成员怎么Clone带有Submodule的项目呢，下面我们再clone一个项目讲解如何操作。
 
@@ -263,7 +263,7 @@ done.
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) git submodule 
 -c22aff85be91eca442734dcb07115ffe526b13a1 libs/lib1
 -7290dce0062bd77df1d83b27dd3fa3f25a836b54 libs/lib2
-</pre>
+```
 看到submodules的状态是hash码和文件目录，但是注意前面有一个减号：**-**，含义是该子模块还没有检出。
 
 OK，检出project1-b的submodules……
@@ -278,7 +278,7 @@ Submodule path 'libs/lib1': checked out 'c22aff85be91eca442734dcb07115ffe526b13a
 Cloning into libs/lib2...
 done.
 Submodule path 'libs/lib2': checked out '7290dce0062bd77df1d83b27dd3fa3f25a836b54'
-</pre>
+```
 
 	读者可以查看：.git/config文件的内容，最下面有submodule的注册信息！
 
@@ -287,7 +287,7 @@ Submodule path 'libs/lib2': checked out '7290dce0062bd77df1d83b27dd3fa3f25a836b5
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) cat libs/lib1/lib1-features libs/lib2/lib2-features 
 I'm lib1.
 I'm lib2.
-</pre>
+```
 
 	上面的两个命令(git submodule init & update)其实可以简化，后面会讲到！
 
@@ -301,7 +301,7 @@ I'm lib2.
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b/libs/lib1  git status
 # Not currently on any branch.
 nothing to commit (working directory clean)
-</pre>
+```
 为什么是**Not currently on any branch**呢？不是应该默认在**master**分支吗？别急，一一解答！
 
 Git对于Submodule有特殊的处理方式，在一个主项目中引入了Submodule其实Git做了3件事情：
@@ -320,7 +320,7 @@ Git对于Submodule有特殊的处理方式，在一个主项目中引入了Submo
 c22aff85be91eca442734dcb07115ffe526b13a1
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b/libs/lib1  cat .git/refs/heads/master               
 c22aff85be91eca442734dcb07115ffe526b13a1
-</pre>
+```
 
 现在我们要修改lib1的文件需要先切换到**master**分支：
 <pre class="brush: shell">
@@ -330,7 +330,7 @@ Switched to branch 'master'
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b/libs/lib1 git:(master) ✗ git commit -a -m "update lib1-features by developer B"
 [master 36ad12d] update lib1-features by developer B
  1 files changed, 1 insertions(+), 0 deletions(-)
-</pre>
+```
 
 在主项目中修改Submodule提交到仓库稍微繁琐一点，在**git push**之前我们先看看**project1-b**状态：
 <pre class="brush: shell">
@@ -343,7 +343,7 @@ Switched to branch 'master'
 #	modified:   libs/lib1 (new commits)
 #
 no changes added to commit (use "git add" and/or "git commit -a")
-</pre>
+```
 
 **libs/lib1 (new commits)**状态表示**libs/lib1**有新的提交，这个比较特殊，看看**project1-b**的状态：
 <pre class="brush: shell">
@@ -355,7 +355,7 @@ index c22aff8..36ad12d 160000
 @@ -1 +1 @@
 -Subproject commit c22aff85be91eca442734dcb07115ffe526b13a1
 +Subproject commit 36ad12d40d8a41a4a88a64add27bd57cf56c9de2
-</pre>
+```
 
 从状态中可以看出**libs/lib1**的commit id由原来的**c22aff85be91eca442734dcb07115ffe526b13a1**更改为**36ad12d40d8a41a4a88a64add27bd57cf56c9de2**
 
@@ -363,7 +363,7 @@ index c22aff8..36ad12d 160000
 注意：如果现在执行了git submodule update操作那么libs/lib1的commit id又会还原到c22aff85be91eca442734dcb07115ffe526b13a1，
 
 这样的话刚刚的修改是不是就丢死了呢？不会，因为修改已经提交到了master分支，只要再git checkout master就可以了。
-</pre>
+```
 
 现在可以把**libs/lib1**的修改提交到仓库了：
 <pre class="brush: shell">
@@ -375,7 +375,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/repos/lib1.git
    c22aff8..36ad12d  master -> master
-</pre>
+```
 
 现在仅仅只完成了一步，下一步要提交**project1-b**引用submodule的commit id：
 <pre class="brush: shell">
@@ -393,7 +393,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/ws/../repos/project1.git
    7157977..c96838a  master -> master
-</pre>
+```
 
 OK，大功高成，我们完成了Submodule的修改并把**libs/lib1**的最新commit id提交到了仓库。
 
@@ -424,7 +424,7 @@ Fast-forward
 #	modified:   libs/lib1 (new commits)
 #
 no changes added to commit (use "git add" and/or "git commit -a")
-</pre>
+```
 
 我们运行了**git pull**命令和**git status**获取了最新的仓库源码，然后看到了状态时**modified**，这是为什么呢？
 
@@ -438,7 +438,7 @@ index 36ad12d..c22aff8 160000
 @@ -1 +1 @@
 -Subproject commit 36ad12d40d8a41a4a88a64add27bd57cf56c9de2
 +Subproject commit c22aff85be91eca442734dcb07115ffe526b13a1
-</pre>
+```
 
 从diff的结果分析出来时因为submodule的commit id更改了，我们前面刚刚讲了要在主项目更新submodule的内容首先要提交submdoule的内容，然后再更新主项目中引用的submodulecommit id；现在我们看到的不同就是因为刚刚更改了project1-b的submodule commit id；好的，我来学习一下怎么更新**project1**的公共类库。
 
@@ -455,7 +455,7 @@ follow me……
 #	modified:   libs/lib1 (new commits)
 #
 no changes added to commit (use "git add" and/or "git commit -a")
-</pre>
+```
 
 泥马，为什么没有更新？**git submodule update**命令不是更新子模块仓库的吗？
 
@@ -473,7 +473,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [branch "master"]
 	remote = origin
 	merge = refs/heads/master
-</pre>
+```
 
 我们说过**git submodule init**就是在**.git/config**中注册子模块的信息，下面我们试试注册之后再更新子模块：
 <pre class="brush: shell">
@@ -508,7 +508,7 @@ Submodule path 'libs/lib1': checked out '36ad12d40d8a41a4a88a64add27bd57cf56c9de
 ➜ henryyan@hy-hp  ~/submd/ws/project1 git:(master) cat libs/lib1/lib1-features 
 I'm lib1.
 add by developer B
-</pre>
+```
 
 上面的结果足以证明刚刚的推断，所以记得当需要更新子模块的内容时请先确保已经运行过**git submodule init**。
 
@@ -555,7 +555,7 @@ Unpacking objects: 100% (4/4), done.
 To /home/henryyan/submd/ws/../repos/project2.git
    6e15c68..8dc697f  master -> master
 
-</pre>
+```
 
 我们依次执行了添加submodule并commit和push到仓库，此阶段任务完成。
 
@@ -588,7 +588,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/repos/lib1.git
    36ad12d..8c666d8  master -> master
-</pre>
+```
 
 前面提到过现在仅仅只完成了一部分，我们需要在**project2**中再更新lib1的commit id：
 <pre class="brush: shell">
@@ -605,7 +605,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ➜ henryyan@hy-hp  ~/submd/ws/project2 git:(master) ✗ git commit -m "update lib1 to lastest commit id"
 [master ce1f3ba] update lib1 to lastest commit id
  1 files changed, 1 insertions(+), 1 deletions(-)
-</pre>
+```
 
 	我们暂时不push到仓库，等待和lib2的修改一起push。
 
@@ -672,7 +672,7 @@ Total 6 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (6/6), done.
 To /home/henryyan/submd/ws/../repos/project2.git
    8dc697f..df344c5  master -> master
-</pre>
+```
 
 ### 2.7 同步project2的lib1和lib2的修改到project1
 
@@ -682,7 +682,7 @@ To /home/henryyan/submd/ws/../repos/project2.git
 ➜ henryyan@hy-hp  ~/submd/ws/project2 git:(master) cd ../project1
 ➜ henryyan@hy-hp  ~/submd/ws/project1 git:(master) git pull
 Already up-to-date.
-</pre>
+```
 
 看看上面的结果对吗？为什么lib1和lib2更新了但是没有显示**new commits**呢？说到这里我记得刚刚开始学习的时候真得要晕死了，Git跟我玩捉迷藏游戏，为什么我明明提交了但是从**project1**更新不到任何改动呢？
 
@@ -697,7 +697,7 @@ Already up-to-date.
 ➜ henryyan@hy-hp  ~/submd/ws/project1 git:(master) git submodule 
  36ad12d40d8a41a4a88a64add27bd57cf56c9de2 libs/lib1 (remotes/origin/HEAD)
  7290dce0062bd77df1d83b27dd3fa3f25a836b54 libs/lib2 (heads/master)
-</pre>
+```
 
 两个项目有两个区别：
 
@@ -728,7 +728,7 @@ Fast-forward
  2 files changed, 2 insertions(+), 0 deletions(-)
  create mode 100644 README
 ➜ henryyan@hy-hp  ~/submd/ws/project1/libs/lib1 git:(master) 
-</pre>
+```
 
 果不其然，我们看到了刚刚在project2中修改的内容，同步到了project1中，当然现在更新了**project1**的**lib1**，commit id也会随之变动：
 <pre class="brush: shell">
@@ -750,7 +750,7 @@ index 36ad12d..8c666d8 160000
 @@ -1 +1 @@
 -Subproject commit 36ad12d40d8a41a4a88a64add27bd57cf56c9de2
 +Subproject commit 8c666d86531513dd1aebdf235f142adbac72c035
-</pre>
+```
 
 现在最新的commit id和project2目前的状态一致，说明真的同步了；好的，现在可以使用相同的办法更新**lib2**了：
 <pre class="brush: shell">
@@ -766,7 +766,7 @@ Updating 7290dce..e372b21
 Fast-forward
  lib2-features |    1 +
  1 files changed, 1 insertions(+), 0 deletions(-)
-</pre>
+```
 
 #### 2.7.2 更新project1的submodule引用
 
@@ -794,7 +794,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (3/3), done.
 To /home/henryyan/submd/ws/../repos/project1.git
    c96838a..8fcca50  master -> master
-</pre>
+```
 
 ### 2.8 更新project1-b项目的子模块(使用脚本)
 
@@ -821,7 +821,7 @@ Fast-forward
 #	modified:   libs/lib2 (new commits)
 #
 no changes added to commit (use "git add" and/or "git commit -a")
-</pre>
+```
 
 Git提示lib1和lib2有更新内容，这个判断的依据来源于submodule commit id的引用。
 
@@ -840,7 +840,7 @@ Git提示lib1和lib2有更新内容，这个判断的依据来源于submodule co
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ cat /tmp/study-git-submodule-dirs 
  libs/lib1
  libs/lib2
-</pre>
+```
 
 我们通过分析**.gitmodules**文件得出子模块的路径，然后就可以根据这些路径进行更新。
 
@@ -849,7 +849,7 @@ Git提示lib1和lib2有更新内容，这个判断的依据来源于submodule co
 <pre class="brush: shell">
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ mkdir bin
 ➜ henryyan@hy-hp  ~/submd/ws/project1-b git:(master) ✗ vi bin/update-submodules.sh
-</pre>
+```
 
 把下面的脚本复制到**bin/update-submodules.sh**中：
 <pre class="brush: shell">
@@ -862,7 +862,7 @@ do
 	echo $LINE
 	(cd ./$LINE && git checkout master && git pull)
 done < /tmp/study-git-submodule-dirs
-</pre>
+```
 
 稍微解释一下上面的脚本执行过程：
 
@@ -874,9 +874,9 @@ done < /tmp/study-git-submodule-dirs
 
 网友**@紫煌**给出了更好的办法，一个命令就可以代替上面的**bin/update-submodules.sh**的功能：
 
-<pre class="brush:shell">
+```shell
 git submodule foreach git pull
-</pre>
+```
 
 此命令也脚本一样，循环进入（enter）每个子模块的目录，然后执行**foreach**后面的命令。
 
@@ -928,7 +928,7 @@ Fast-forward
 #
 #	bin/
 nothing added to commit but untracked files present (use "git add" to track)
-</pre>
+```
 
 更新之后的两个变化：
 
@@ -952,7 +952,7 @@ Total 4 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (4/4), done.
 To /home/henryyan/submd/ws/../repos/project1.git
    8fcca50..756e788  master -> master
-</pre>
+```
 
 ### 2.9 新进员工加入团队，一次性Clone项目和Submodules
 
@@ -961,14 +961,14 @@ To /home/henryyan/submd/ws/../repos/project1.git
 git clone /path/to/repos/foo.git
 git submodule init
 git submodule update
-</pre>
+```
 
 	新员工不耐烦了，嘴上不说但是心里想：怎么那么麻烦？
 
 上面的命令简直弱暴了，直接一行命令搞定：
 <pre class="brush: shell">
 git clone --recursive /path/to/repos/foo.git
-</pre>
+```
 
 –**recursive**参数的含义：可以在clone项目时同时clone关联的submodules。
 
@@ -978,7 +978,7 @@ git help 对其解释：
    After the clone is created, initialize all submodules within, using their default settings. This is equivalent to running git
    submodule update --init --recursive immediately after the clone is finished. This option is ignored if the cloned repository
    does not have a worktree/checkout (i.e. if any of --no-checkout/-n, --bare, or --mirror is given)
-</pre>
+```
 
 #### 2.9.1 使用一键方式克隆project2
 
@@ -994,7 +994,7 @@ Submodule path 'libs/lib1': checked out '8c666d86531513dd1aebdf235f142adbac72c03
 Cloning into libs/lib2...
 done.
 Submodule path 'libs/lib2': checked out 'e372b21dffa611802c282278ec916b5418acebc2'
-</pre>
+```
 
 舒服……
 
@@ -1017,7 +1017,7 @@ done.
 Submodule path 'libs/lib2': checked out 'e372b21dffa611802c282278ec916b5418acebc2'
 ➜ henryyan@hy-hp  ~/submd/ws  cd !$
 ➜ henryyan@hy-hp  ~/submd/ws  cd project1-remove-submodules
-</pre>
+```
 
 ### 3.1 Step by
 
@@ -1027,13 +1027,13 @@ Submodule path 'libs/lib2': checked out 'e372b21dffa611802c282278ec916b5418acebc
 rm 'libs/lib1'
 rm 'libs/lib2'
 ➜ henryyan@hy-hp  ~/submd/ws/project1-remove-submodules git:(master) ✗ rm -rf libs
-</pre>
+```
 
 2、删除.gitmodules的内容（或者整个文件）
 因为本例只有两个子模块，直接删除文件：
 <pre class="brush: shell">
 ➜ henryyan@hy-hp  ~/submd/ws/project1-remove-submodules git:(master) ✗ rm .gitmodules
-</pre>
+```
 
 	如果仅仅删除某一个submodule那么打开.gitmodules文件编辑，删除对应submodule配置即可。
 
@@ -1055,7 +1055,7 @@ rm 'libs/lib2'
     url = /home/henryyan/submd/repos/lib1.git
 [submodule "libs/lib2"]
     url = /home/henryyan/submd/repos/lib2.git
-</pre>
+```
 
 删除后：
 <pre>
@@ -1070,7 +1070,7 @@ rm 'libs/lib2'
 [branch "master"]
     remote = origin
     merge = refs/heads/master
-</pre>
+```
 
 4、提交更改
 <pre class="brush: shell">
@@ -1104,7 +1104,7 @@ Total 2 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (2/2), done.
 To /home/henryyan/submd/ws/../repos/project1.git
    756e788..5e2ee71  master -> master
-</pre>
+```
 
 ## 4.结束语
 

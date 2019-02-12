@@ -32,7 +32,7 @@ Activiti的流程定义文件可以直接部署bpmn20.xml、zip、bar文件，�
 
 用ant脚本无非就是代替手动操作让工具自动根据配置打包，我在kft-activiti-demo（master分支）项目中添加了此功能，把里面的代码拿出来分享给大家。
 
-<pre class="brush:xml">
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="kft-activiti-demo" default="welcome">
 	<!-- properties from files -->
@@ -64,7 +64,7 @@ Activiti的流程定义文件可以直接部署bpmn20.xml、zip、bar文件，�
 	</target>
 </project>
 
-</pre>
+```
 
 ----
 熟悉Ant的读者很快就能看懂这些配置信息及其目的，对于不熟悉Ant的稍微介绍一下。
@@ -74,7 +74,7 @@ Activiti的流程定义文件可以直接部署bpmn20.xml、zip、bar文件，�
 * 第21~26行处才是重点，首先复制bpmn文件为bpmn20.xml，然后把bpmn20.xml和png文件打包成zip文件
 
 使用方法如下：
-<pre class="brush:shell">
+```shell
 ➜ henryyan@hy-mbp  ~kad git:(master) ✗ ant workflow.package.all 
 Buildfile: /Users/henryyan/work/projects/activiti/kft-activiti-demo/build.xml
 
@@ -94,7 +94,7 @@ workflow.package.all:
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
-</pre>
+```
 
 如果有外部form文件也可以加入到zip包中。
 

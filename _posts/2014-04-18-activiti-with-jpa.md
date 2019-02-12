@@ -30,19 +30,19 @@ Activiti除了核心的Engine之外对企业现有的技术、平台、架构都
 
 ### 2.2 Standalone模式的JPA配置
 
-<pre class="brush:xml">
+```xml
 	<property name="jpaPersistenceUnitName" value="kft-jpa-pu" />
 	<property name="jpaHandleTransaction" value="true"></property>
     <property name="jpaCloseEntityManager" value="true"></property>
-</pre>
+```
 
 ### 2.3 Spring（托管）模式的JPA配置
 
-<pre class="brush:xml">
+```xml
 	<property name="jpaEntityManagerFactory" ref="entityManagerFactory" />
 	<property name="jpaHandleTransaction" value="false"></property>
     <property name="jpaCloseEntityManager" value="false"></property>
-</pre>
+```
 
 ## 3. 实例分析
 
@@ -60,17 +60,17 @@ Activiti除了核心的Engine之外对企业现有的技术、平台、架构都
 
 在流程定义文件中定义了一个流程的**start**类型监听器：
 
-<pre class="brush:xml">
+```xml
 <extensionElements>
   <activiti:executionListener event="start" expression="${execution.setVariable('leave', leaveEntityManager.newLeave(execution))}"></activiti:executionListener>
 </extensionElements>
-</pre>
+```
 
 这个监听器的触发的时候会执行一个表达式，调用名称为**leaveEntityManager**的Spring Bean对象的**newLeave**方法，并且把引擎的**Execution**对象传递过去，得到一个LeaveJpaEntity对象后设置到引擎的变量中（名称为**leave**）。
 
 下面是LeaveEntityManager.java的代码：
 
-<pre class="brush:java">
+```java
 @Entity(name = "LEAVE_JPA")
 public class LeaveJpaEntity implements Serializable {
 
@@ -98,9 +98,9 @@ public class LeaveJpaEntity implements Serializable {
     
     ...
 }
-</pre>
+```
 
-<pre class="brush:java">
+```java
 @Service
 public class LeaveEntityManager {
 
@@ -127,7 +127,7 @@ public class LeaveEntityManager {
     }
 
 }
-</pre>
+```
 
 当启动流程后查看表**LEAVE_JPA**中的数据与表单填写的一致。
 
@@ -135,7 +135,7 @@ public class LeaveEntityManager {
 
 当**部门领导**或者**人事审批**节点完成时需要把审批结果更新到LeaveJpaEntity属性中（即更新表LEAVE_JPA），所以在这两个任务上添加一个**complete**类型的监听器，如下所示：
 
-<pre class="brush:xml">
+```xml
 <userTask id="deptLeaderAudit" name="部门领导审批" activiti:candidateGroups="deptLeader">
 	<extensionElements>
 		<activiti:taskListener event="complete" expression="${leave.setDeptLeaderApproved(deptLeaderApproved)}"></activiti:taskListener>
@@ -147,7 +147,7 @@ public class LeaveEntityManager {
 		<activiti:taskListener event="complete" expression="${leave.setHrApproved(hrApproved)}"></activiti:taskListener>
 	</extensionElements>
 </userTask>
-</pre>
+```
 
 ### 3.4 流程结束后删除表单数据
 
@@ -155,7 +155,7 @@ public class LeaveEntityManager {
 
 在最新版本的Demo中（1.10版本）添加了一个类用来执行SQL：
 
-<pre class="brush:java">
+```java
 @Component
 public class ActivitiDao {
 
@@ -174,11 +174,11 @@ public class ActivitiDao {
     }
 
 }
-</pre>
+```
 
 流程中定义了一个流程级别的结束监听器**me.kafeitu.demo.activiti.service.oa.leave.LeaveProcessEndListener**
 
-<pre class="brush:java">
+```java
 @Service
 @Transactional
 public class LeaveProcessEndListener implements ExecutionListener {
@@ -196,7 +196,7 @@ public class LeaveProcessEndListener implements ExecutionListener {
         logger.debug("清理了 {} 条历史表单数据", i);
     }
 }
-</pre>
+```
 
 ### 3.5 已知问题（未解决）
 

@@ -29,7 +29,7 @@ Activiti 5.10版本把原本独立的Activiti Modeler模块整合到了Activiti 
 2. **src/main/webapp**中的**api、editor、explorer、libs**到项目的webapp目录（与WEB-INF目录同级）
 
 ### 2.3 添加依赖
-<pre class="brush:xml">
+```xml
 <dependency>
 	<groupId>org.activiti</groupId>
 	<artifactId>activiti-explorer</artifactId>
@@ -54,13 +54,13 @@ Activiti 5.10版本把原本独立的Activiti Modeler模块整合到了Activiti 
 	<artifactId>activiti-modeler</artifactId>
 	<version>5.14</version>
 </dependency>
-</pre>
+```
 
 ### 2.4 添加Java类
 
 添加一个**ExplorerRestApplication.java**类保存到项目中，注册了一些REST路由。
 
-<pre class="brush:java">
+```java
 package org.activiti.explorer.rest.application;
 
 import org.activiti.editor.rest.application.ModelerServicesInit;
@@ -90,13 +90,13 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
   }
 
 }
-</pre>
+```
 
 ### 2.5 配置web.xml
 
 在web.xml文件中添加如下配置：
 
-<pre class="brush:xml">
+```xml
 <!-- Restlet adapter, used to expose modeler functionality through REST -->
 <servlet>
 	<servlet-name>RestletServlet</servlet-name>
@@ -113,13 +113,13 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
 	<servlet-name>RestletServlet</servlet-name>
 	<url-pattern>/service/*</url-pattern>
 </servlet-mapping>
-</pre>
+```
 
 ### 2.6 控制器
 
 使用Spring MVC做了一个简单的封装，也可以使用其他的MVC实现。
 
-<pre class="brush:java">
+```java
 package me.kafeitu.demo.activiti.web.workflow;
 
 import java.io.ByteArrayInputStream;
@@ -255,15 +255,15 @@ public class ModelController {
   }
 
 }
-</pre>
+```
 
 ### 2.7 注意事项
 
 如果使用Spring代理引擎，并且在项目中同时有activiti.cfg.xml文件（不管在main/resources还是test/resources目录），在activiti.cfg.xml里面的引擎中添加下面的配置参数，否则会导致打开Modeler的编辑页面时读取数据返回**204**状态码。
 
-<pre class="brush:xml">
+```xml
 <property name="processEngineName" value="test"></property>
-</pre>
+```
 
 引擎默认名称为default，ProcessEngines.getDefaultProcessEngine()查询时会先检索main/resources，然后再检索test/resources的activiti.cfg.xml和activiti-context.xml文件，所以当main/resources监测不到指定文件时就会导致该引擎被当做web应用的引擎对象，这样会导致有两个引擎，所以把引擎的名称改为非默认的“default”。
 

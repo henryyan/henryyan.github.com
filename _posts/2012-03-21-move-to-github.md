@@ -38,12 +38,12 @@ Github默认会开通yourname.github.com这个域名，所以只要创建一个y
 如若不然运行导出命令后在**_posts**目录生成的文件名会很长！！！
 
 #### gem and mysql
-我使用从数据库导出的方式，具体参考：[https://github.com/mojombo/jekyll/wiki/Blog-Migrations](https://github.com/mojombo/jekyll/wiki/Blog-Migrations)，在运行<pre>gem install mysql</pre>之前请先安装**libmysqlclient15-dev**，
-<pre>sudo apt-get install libmysqlclient15-dev</pre>
+我使用从数据库导出的方式，具体参考：[https://github.com/mojombo/jekyll/wiki/Blog-Migrations](https://github.com/mojombo/jekyll/wiki/Blog-Migrations)，在运行<pre>gem install mysql```之前请先安装**libmysqlclient15-dev**，
+<pre>sudo apt-get install libmysqlclient15-dev```
 否则会导致安装mysql失败，具体请参考[这里](http://stackoverflow.com/questions/9816745/convert-wordpress-to-jekyll-has-a-error-of-ruby-mysql/9821988#9821988)
 
 ## Jekyll使用提示
-运行Jekyll生成静态网页只需要使用<pre>jekyll --server</pre>即可，访问[http://localhost:4000](http://localhost:4000)即可，但是如果你在撰写的时候可能要写一部分看看效果，这个时候要在Shell中Ctrl+C然后再运行jekyll --server，能不能在文件被改动的时候自动生成呢？当然可以：<pre>jekyll --server --auto</pre>即可，控制台会输出如下内容：<pre>[2012-03-23 22:54:50] regeneration: 1 files changed</pre>，现在刷新网页就是最新编写的内容了。
+运行Jekyll生成静态网页只需要使用<pre>jekyll --server```即可，访问[http://localhost:4000](http://localhost:4000)即可，但是如果你在撰写的时候可能要写一部分看看效果，这个时候要在Shell中Ctrl+C然后再运行jekyll --server，能不能在文件被改动的时候自动生成呢？当然可以：<pre>jekyll --server --auto```即可，控制台会输出如下内容：<pre>[2012-03-23 22:54:50] regeneration: 1 files changed```，现在刷新网页就是最新编写的内容了。
 
 其他的选项参考[这里](https://github.com/mojombo/jekyll/wiki/configuration)
 

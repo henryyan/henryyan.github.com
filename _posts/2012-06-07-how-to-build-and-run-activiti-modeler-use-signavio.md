@@ -16,9 +16,9 @@ Activiti Modeler是用来设计BPMN2.0规范的可视化设计器，使用开源
 ## 2.下载Signavio
 
 Signavio托管在googlecode上，地址：[http://code.google.com/p/signavio-core-components/](http://code.google.com/p/signavio-core-components/)，可以通过Svn Checkout方式下载源码：
-<pre class="brush:shell">
+```shell
 svn checkout http://signavio-core-components.googlecode.com/svn/trunk/ signavio-core-components
-</pre>
+```
 
 ## 3.配置打包任务属性
 
@@ -41,7 +41,7 @@ Signavio是通过ant构建打包的，在打包之前需要更改一下build.pro
 ### 4.1 all-in-one方式
 
 这个也是最常用的方式，在signavio-core-components目录执行命令：
-<pre>ant build-all-in-one-war</pre>
+<pre>ant build-all-in-one-war```
 
 执行完命令之后在signavio-core-components/target目录就出生成**activiti-modeler.war**，现在就可以把这个war包部署到tomcat或者其他容器中运行了。
 
@@ -54,7 +54,7 @@ Signavio是通过ant构建打包的，在打包之前需要更改一下build.pro
 * **dir-jboss-webapps**：同dir-tomcat-webapps，只不过容器类型不同而已。
 
 可以通过如下命令直接打包+运行设计器：
-<pre>ant build-and-deploy-all-in-one-war-to-tomcat</pre>
+<pre>ant build-and-deploy-all-in-one-war-to-tomcat```
 等待任务结束之后在**dir-tomcat-】webapps**的属性值对应的目录中就看到了**activiti-modeler.war**文件了，现在你可以启动tomcat访问了。
 
 ## 4.3 Windows打包报错

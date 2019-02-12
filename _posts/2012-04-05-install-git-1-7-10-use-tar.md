@@ -16,7 +16,7 @@ tags:
 cd
 wget http://git-core.googlecode.com/files/git-1.7.10.rc4.tar.gz
 wget http://git-core.googlecode.com/files/git-manpages-1.7.10.rc4.tar.gz
-</pre>
+```
 
 上面命令下载了两个文件，一个是git-core的源码，第二个是git的man文档。
 
@@ -24,7 +24,7 @@ wget http://git-core.googlecode.com/files/git-manpages-1.7.10.rc4.tar.gz
 
 <pre class="brush: shell">
 sudo apt-get install libcurl4-gnutls-dev librtmp-dev libcurl4-openssl-dev libexpat1-dev gettext
-</pre>
+```
 
 ## 3.安装Git
 
@@ -33,7 +33,7 @@ sudo apt-get install libcurl4-gnutls-dev librtmp-dev libcurl4-openssl-dev libexp
 tar xzvf git-1.7.10.rc4.tar.gz
 cd git-1.7.10.rc4
 make prefix=/usr/local all
-</pre>
+```
 
 如果在make过程中遇到提示缺少依赖请读者自行Google，安装对应的lib包然后继续运行**make prefix=/usr/local all**。
 
@@ -41,13 +41,13 @@ make prefix=/usr/local all
 
 <pre class="brush: shell">
 sudo make prefix=/usr/local install
-</pre>
+```
 
 检查版本：
 <pre class="brush: shell">
 henryyan@hy-VB:~$ git --version
 git version 1.7.10.rc4
-</pre>
+```
 
 ### 3.3 新增的中文本地化
 
@@ -59,7 +59,7 @@ git version 1.7.10.rc4
 #
 #	修改：      README.md
 #
-</pre>
+```
 
 <pre class="brush: shell">
 ➜ henryyan@hy-VB  ~/henryyan.github.com git:(master) ✗ git commit -v
@@ -78,7 +78,7 @@ diff --git a/README.md b/README.md
 index ebfe47a..27291b3 100644
 --- a/README.md
 +++ b/README.md
-</pre>
+```
 
 ## 4. 安装Git Man Pages
 
@@ -87,12 +87,12 @@ index ebfe47a..27291b3 100644
 henryyan@hy-VB:~$ git help add
 没有 git-add 的手册页条目
 当没有手册页时，可以用 man 7 undocumented 命令来寻求帮助。
-</pre>
+```
 
 运行下面命令：
 <pre class="brush: shell">
 sudo tar xvz -C /usr/local/share/man -f git-manpages-1.7.10.rc4.tar.gz
-</pre>
+```
 
 再次运行：**git help add**就看到帮助文档了。
 

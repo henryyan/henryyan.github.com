@@ -32,20 +32,20 @@ tags:
 
 对于使用SSH或者其他的框架、插件的应用在src/main/resources下面肯定有不少的xml配置文件，今天的主题是应用级的配置管理，所以暂且抛开框架必须的XML配置文件，先来看看下面的XML配置文件内容。
 
-<pre class="brush:xml">
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SystemConfig>
 	<param code="SysName" name="系统名称" type="String" value="XXX后台系统"/>
 	<param code="SysVersion" name="系统版本" type="String" value="1.0"/>
 </SystemConfig>
-</pre>
+```
 
 这种方式在之前很受欢迎，也是系统属性的主要配置方式，不过使用起来总归不太简洁、灵活（不要和我争论XML与Properties）。
 
 ### 1.4 属性文件方式
 
 下面是kft-activiti-demo中**application.properties**文件的一部分:
-<pre class="brush:bash">
+```shell
 sql.type=h2
 
 jdbc.driver=org.h2.Driver
@@ -58,7 +58,7 @@ activiti.version=${activiti.version}
 
 export.diagram.path=${export.diagram.path}
 diagram.http.url=${diagram.http.url}
-</pre>
+```
 
 相比而言属性文件方式比XML方式要简洁一些，不用严格的XML标签包装即可设置属性的名称，对于多级配置可以用点号（.）分割的方式。
 
@@ -69,7 +69,7 @@ diagram.http.url=${diagram.http.url}
 ### 2.1 利用Maven资源过滤设置属性值
 
 简单来说就是利用Maven的Resource Filter功能，pom.xml中的build配置如下：
-<pre class="brush:xml">
+```xml
 <build>
 	<resources>
 		<resource>
@@ -78,7 +78,7 @@ diagram.http.url=${diagram.http.url}
 		</resource>
 	</resources>
 </build>
-</pre>
+```
 
 这样在编译时**src/main/resources**目录下面中文件（）只要有**${foo}**占位符就可以自动替换成实际的值了，例如1.4节中属性**system.version**使用的是一个占位符而非实际的值，${project.version}表示pom.xml文件中的**project**标签的**version**。
 
@@ -97,17 +97,17 @@ diagram.http.url=${diagram.http.url}
 ### 2.2 读取配置文件
 
 读取配置文件可以直接里面Java的Properties读取，下面的代码简单实现了读取属性集合：
-<pre class="brush:java">
+```java
 Properties props = new Properties();
 ResourceLoader resourceLoader = new DefaultResourceLoader();
 Resource resource = resourceLoader.getResource(location);
 InputStream is = resource.getInputStream();
 propertiesPersister.load(props, new InputStreamReader(is, "UTF-8"));
-</pre>
+```
 
 如果在把读取的属性集合保存在一个静态Map对象中就可以在任何可以执行Java代码的地方获取应用的属性了，工具类PropertiesFileUtil简单实现了属性缓存功能：
 
-<pre class="brush:java">
+```java
 public class PropertyFileUtil {
 	private static Properties properties;
 	public void loadProperties(String location) {
@@ -124,7 +124,7 @@ public class PropertyFileUtil {
         return propertyValue;
     }
 }
-</pre>
+```
 
 先*抛出*一个问题：属性文件中定义了属性的值和平台有关，团队中的成员使用的平台有Window、Linux、Mac，对于这样的情况目前只能修改**application.properties**文件，但是不能把更改提交到SCM上否则会影响其他人的使用……目前没有好办法，稍后给出解决办法。
 
@@ -138,7 +138,7 @@ public class PropertyFileUtil {
 
 在刚刚的PropertyFileUtil类中添加一个**loadProperties**方法，接收的参数是一个可变数组，循环读取属性文件。
 
-<pre class="brush:java">
+```java
 /**
  * 载入多个properties文件, 相同的属性在最后载入的文件中的值将会覆盖之前的载入.
  * 文件路径使用Spring Resource格式, 文件编码使用UTF-8.
@@ -154,7 +154,7 @@ public static Properties loadProperties(String... resourcesPaths) throws IOExcep
     }
     return props;
 }
-</pre>
+```
 
 有了这个方法我们可以这样调用这个工具类：
 > PropertyFileUtil.loadProperties("application.common.properties", "application.properties");
@@ -183,15 +183,15 @@ public static Properties loadProperties(String... resourcesPaths) throws IOExcep
 
 既然属性的值可以通过国占位符的方式替换，我们也可以顺藤摸瓜把读取文件的顺序也管理起来，所以又引入了一个属性文件：**application-file.properties**；它的配置如下：
 
-<pre class="brush:bash">
+```shell
 A=application.common.properties
 B=application.properties
 C=${env.prop.application.file}
-</pre>
+```
 
 占位符**env.prop.application.file**的值可以动态指定，可以利用Maven的Profile功能实现，例如针对开发环境配置一个ID为**dev**的profile并设置默认激活状态；对于部署到测试、生产环境可以在打包时添加-Ptest或者-Pproduct参数使用不同的Profile；关键在于每一个profile中配置的env.prop.application.file值不同，例如：
 
-<pre class="brush:xml">
+```xml
 <profile>
 	<id>dev</id>
 	<properties>
@@ -215,12 +215,12 @@ C=${env.prop.application.file}
 <activeProfiles>
     <activeProfile>dev</activeProfile>
 </activeProfiles>
-</pre>
+```
 
 而对于生产环境来说可以把**env.spring.application.file**改为**/etc/foo/application.properties**。
 
 ----
-<pre class="brush:java">
+```java
 <xmp>
 public class PropertyFileUtil {
 
@@ -289,7 +289,7 @@ public class PropertyFileUtil {
         }
     }
 </xmp>
-</pre>
+```
 
 > 默认的Properties类使用的是Hash算法故无序，为了保持多个配置文件的读取顺序与约定的一致
 > 所以需要一个自定义的有序Properties实现，参加：[LinkedProperties.java](https://github.com/henryyan/kft-activiti-demo/blob/master/src/main/java/me/kafeitu/demo/activiti/util/LinkedProperties.java#)
@@ -300,7 +300,7 @@ public class PropertyFileUtil {
 
 我们把这个Servlet命名为**PropertiesServlet**，映射路径为：/properties-servlet。
 
-<pre class="brush:java">
+```java
 import java.io.IOException;
 import java.util.Set;
 
@@ -373,7 +373,7 @@ public class PropertiesServlet extends HttpServlet {
     }
 
 }
-</pre>
+```
 
 Servlet发布之后就可以动态管理配置了，例如发布到生产环境后如果有配置需要更改（编辑服务器上保存的配置文件）可以访问下面的路径重载配置：
 > http://yourhost.com/appname/properties-servlet?action=reload
@@ -405,10 +405,10 @@ Servlet发布之后就可以动态管理配置了，例如发布到生产环境�
        <portableConfig>src/main/portable/test.xml</portableConfig>
      </configuration>
 </plugin>
-</pre>
+```
 
 **src/main/portable/test.xml**文件的内容就是需要替换的属性集合，下面列出了properties和xml的不同配置，xml替换使用XPATH规则。
-<pre class="brush:xml">
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <portable-config>
   <config-file path="WEB-INF/classes/db.properties">
@@ -416,15 +416,15 @@ Servlet发布之后就可以动态管理配置了，例如发布到生产环境�
     <replace key="database.jdbc.password">test_pwd</replace>
   </config-file>
 </portable-config>
-</pre>
-<pre class="brush:xml">
+```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <portable-config>
   <config-file path="WEB-INF/web.xml">
     <replace xpath="/web-app/display-name">awesome app</replace>
   </config-file>
 </portable-config>
-</pre>
+```
 
 当然你可以定义几个不同环境的profile来决定使用哪个替换规则，在打包（mvn package）时该插件会被激活执行替换动作。
 

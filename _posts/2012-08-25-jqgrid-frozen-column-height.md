@@ -77,7 +77,7 @@ function hackHeight(listId) {
         }
     });
 }
-</pre>
+```
 
 ### 2.2 冻结的列比未冻结的列高度高
 
@@ -108,7 +108,7 @@ $('#hackFrozenHeight1').click(function() {
         top: $('#gview_' + listId + ' .frozen-bdiv').position().top + bdivTop
     });
 });
-</pre>
+```
 
 ## 3.结束语
 

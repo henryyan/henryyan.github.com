@@ -67,7 +67,7 @@ public interface AccountService {
 	 */
 	public void deleteAllActivitiIdentifyData() throws Exception;
 }
-</pre>
+```
 
 #### 同步单个接口实现片段：
 <pre class="brush: java">
@@ -212,7 +212,7 @@ public class AccountServiceImpl implements AccountService {
 		}
 	}
 }
-</pre>
+```
 
 #### 同步全部数据接口实现片段：
 
@@ -261,7 +261,7 @@ public class ActivitiIdentifyCommonDao {
 	}
 
 }
-</pre>
+```
 
 ##### ActivitiIdentifyService.java
 <pre class="brush: java">
@@ -291,7 +291,7 @@ public class ActivitiIdentifyService extends AbstractBaseService {
 		activitiIdentifyCommonDao.deleteAllMemerShip();
 	}
 }
-</pre>
+```
 
 ##### AccountServiceImpl.java
 <pre class="brush: java">
@@ -350,7 +350,7 @@ public class AccountServiceImpl implements AccountService {
 		activitiIdentifyService.deleteAllUser();
 	}
 }
-</pre>
+```
 
 ## 方案二：自定义SessionFactory
 
@@ -362,7 +362,7 @@ public class AccountServiceImpl implements AccountService {
 
 下面是有关**customSessionFactories**的示例配置。
 
-<pre class="brush:xml">
+```xml
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration"> 
     ...
     <property name="customSessionFactories">
@@ -398,11 +398,11 @@ public class AccountServiceImpl implements AccountService {
         <bean class="me.kafeitu.activiti.xxx.impl.CustomRoleDaoImpl"></bean>
     </property>
 </bean>
-</pre>
+```
 
 以用户操作为例介绍一下如何自定义一个SessionFactory。
 
-<pre class="brush:java">
+```java
 public class CustomUserEntityManagerFactory implements SessionFactory {
 
     private CustomUserEntityManager customUserEntityManager;
@@ -421,9 +421,9 @@ public class CustomUserEntityManagerFactory implements SessionFactory {
         return customUserEntityManager;
     }
 }
-</pre>
+```
 
-<pre class="brush:java">
+```java
 public class CustomUserEntityManager extends UserEntityManager {
 
 	  // 这个Bean就是公司提供的统一身份访问接口，可以覆盖UserEntityManager的任何方法用公司内部的统一接口提供服务
@@ -439,7 +439,7 @@ public class CustomUserEntityManager extends UserEntityManager {
         this.customUserManager = customUserManager;
     }
 }
-</pre>
+```
 
 ## 方案三：用视图覆盖同名的ACT_ID_系列表
 
@@ -462,13 +462,13 @@ public class CustomUserEntityManager extends UserEntityManager {
 
 在引擎配置中设置属性**dbIdentityUsed**为**false**即可。
 
-<pre class="brush:xml">
+```xml
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	...
 	<property name="dbIdentityUsed" value="false"/>
 	...
 </bean>
-</pre>
+```
 
 ## 总结
 

@@ -290,7 +290,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 创建文件**WEB-INF/spring-mvc-rest.xml**：
 
-```xm
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:context="http://www.springframework.org/schema/context"

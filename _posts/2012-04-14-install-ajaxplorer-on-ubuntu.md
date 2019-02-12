@@ -41,7 +41,7 @@ tags:
 <pre class="brush: shell">
 sudo apt-get install php5-cgi
 sudo vi /etc/init.d/php-fastcgi
-</pre>
+```
 
 	fastcgi的php配置文件位于：/etc/php5/cgi/php.ini
 
@@ -88,18 +88,18 @@ case "$1" in
   ;;
 esac
 exit $RETVAL
-</pre>
+```
 
 #### 2.1.1启动fastcgi
 <pre class="brush: shell">
 sudo chmod +x /etc/init.d/php-fastcgi
 sudo service php-fastcgi start
-</pre>
+```
 
 #### 2.1.2随系统自动启动
 <pre class="brush: shell">
 sudo update-rc.d php-fastcgi defaults
-</pre>
+```
 
 ### 2.2 安装AjaXplorer的依赖组件
 
@@ -107,25 +107,25 @@ sudo update-rc.d php-fastcgi defaults
 在文件列表中选中一个图片后可以看到缩略图！
 <pre class="brush: shell">
 sudo apt-get install php5-gd
-</pre>
+```
 
 #### 支持公共链接
 生成一个用于分享(Share)的链接，例如团队内部分享单个文件。
 <pre class="brush: shell">
 sudo apt-get install php5-mcrypt
-</pre>
+```
 
 ##### 配置mcrypt
 <pre class="brush: shell">
 sudo vi /etc/php5/cgi/php.ini
-</pre>
+```
 
 删除**mcrypt.modes_dir**前面的分号(;);
 
 更改如下配置：
 <pre>
 mcrypt.modes_dir=/usr/lib/php5/20090626
-</pre>
+```
 
 ##### 设置上传文件的大小限制
 设置**/etc/php5/cgi/php.ini**的**upload_max_filesize**和**post_max_size**为所要设置的大小（100M、1G等）
@@ -151,7 +151,7 @@ Enter the new value, or press ENTER for the default
 	Home Phone []: 
 	Other []: 
 Is the information correct? [Y/n] y
-</pre>
+```
 
 ### 3.2 下载、解压
 通过网页下载：[http://sourceforge.net/projects/ajaxplorer/files/latest/download](http://sourceforge.net/projects/ajaxplorer/files/latest/download)
@@ -162,7 +162,7 @@ su ajaxplorer
 sudo unzip ajaxplorer-core-4.0.1.zip
 mv ajaxplorer-core-4.0.1 ajaxplorer
 exit
-</pre>
+```
 
 为ajaxplorer文件夹设置组**www-data**的**读写权限**
 <pre class="brush: shell">
@@ -174,17 +174,17 @@ total 6.3M
 drwxrwxr-x 6 ajaxplorer www-data   4.0K 2012-01-02 17:20 ajaxplorer-core-4.0.1
 -rw-r--r-- 1 root       root       6.3M 2012-04-14 23:14 ajaxplorer-core-4.0.1.zip
 -rw-r--r-- 1 ajaxplorer ajaxplorer  179 2012-04-14 23:06 examples.desktop
-</pre>
+```
 
 为了以后方便用当前的用户配置ajaxplorer可以把当前用户加入到**www-data**组中：
 <pre class="brush: shell">
 sudo usermod -a henryyan -G www-data
-</pre>
+```
 
 ### 3.3 配置Nginx
 <pre class="brush: shell">
 ➜ henryyan@hy-hp  ~  sudo vi /etc/nginx/sites-enabled/default
-</pre>
+```
 
 把下面的配置信息添加到**server**块中：
 <pre class="brush: shell">
@@ -204,7 +204,7 @@ location ~ ^/ajaxplorer/plugins {
 location ~ ^/ajaxplorer/data {
     root    /home/ajaxplorer;
 }
-</pre>
+```
 
 最终配置：
 <pre class="brush: text">
@@ -245,10 +245,10 @@ server {
     }
 
 }
-</pre>
+```
 
 现在可以启动Nginx访问AjaXplorer：
-<pre class="brush: shell">sudo service nginx restart</pre>
+<pre class="brush: shell">sudo service nginx restart```
 使用浏览器访问：[http://localhost/ajaxplorer/index.php](http://localhost/ajaxplorer/index.php)
 
 看到**AjaXplorer Diagnostic Tool**界面就算配置成功了，接下来再进行内部配置。

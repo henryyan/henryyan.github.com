@@ -12,14 +12,14 @@ tags:
 ## 1. 现有模式
 流程图可以方便用户浏览整个流程的处理过程，或者跟踪参与过的流程的处理状态（当前处于哪个节点、谁在办理、时间等信息），首先需要调用引擎的API读取流程图（二进制流形式），代码如下：
 
-<pre class="brush:java">
+```java
 InputStream resourceAsStream = repositoryService.getResourceAsStream(deploymentId, resourceName);
 byte[] b = new byte[1024];
 int len = -1;
 while ((len = resourceAsStream.read(b, 0, 1024)) != -1) {
   response.getOutputStream().write(b, 0, len);
 }
-</pre>
+```
 
 ### 1.1 性能问题
 对于上面的代码当经常需要读取图片资源时每次都需要在数据库读取上花费时间，用java输出二进制流也需要一定的时间消耗，所以在一定程度上影响了性能，导致图片读取**速度慢**甚至**超时**。
@@ -42,12 +42,12 @@ while ((len = resourceAsStream.read(b, 0, 1024)) != -1) {
 2. 读取该次部署的所有需要缓存的资源
 3. 把换成的资源二进制流保存（持久化）到硬盘上的某个目录（暂且称之为**diagrams**）
 4. 用Apache或者Nginx以目录**diagrams**开启一个目录服务（可以列出目录中的子目录和文件）
-5. 前端访问图片资源时直接从静态服务获取，访问资源的路径可以通过流程定义或许，例如：<pre>http://aws.kafeitu.me:10000/diagrams/leave-formkey/1/leave-formkey.png</pre> **leave-formkey**表示流程定义的**KEY**属性，**1**表示**版本号**，**leave-formkey.png**表示**资源名称**
+5. 前端访问图片资源时直接从静态服务获取，访问资源的路径可以通过流程定义或许，例如：<pre>http://aws.kafeitu.me:10000/diagrams/leave-formkey/1/leave-formkey.png``` **leave-formkey**表示流程定义的**KEY**属性，**1**表示**版本号**，**leave-formkey.png**表示**资源名称**
 
 ### 2.1 导出图片资源
 为大家提供一个通用方法可以导出已部署流程定义的流程图，保存到硬盘上的指定目录。
 
-<pre class="brush:java">
+```java
 /**
 * 导出图片文件到硬盘
 * 
@@ -92,7 +92,7 @@ public static String exportDiagramToFile(RepositoryService repositoryService,
 	FileUtils.writeByteArrayToFile(file, b, true);
 	return diagramPath;
 }
-</pre>
+```
 
 在部署流程时调用一下方法**exportDiagramToFile()**即可。
 
@@ -104,12 +104,12 @@ public static String exportDiagramToFile(RepositoryService repositoryService,
 **原来**的URL是这样拼接的：
 <pre class="brush:html">
 &lt;a target="_blank" href='${ctx }/workflow/resource/deployment?deploymentId=${process.deploymentId}&resourceName=${process.diagramResourceName }'>${process.diagramResourceName }</a>
-</pre>
+```
 
 **现在**是这样：
 <pre class="brush:html">
 &lt;a target="_blank" href='http://localhost:10000/${process.key}/${process.version}/${process.diagramResourceName }'>${process.diagramResourceName }</a>
-</pre>
+```
 
 > 性能提升大概在三倍左右，具体取决于使用的静态服务和网速。
 

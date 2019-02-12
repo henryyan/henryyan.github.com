@@ -36,7 +36,7 @@ tags:
     <activiti:formProperty id="setInFirstStep" name="SetInFirstStep" type="date"></activiti:formProperty>
   </extensionElements>
 </userTask>
-</pre>
+```
 
 下面是一个简单的动态表单的单元测试，读者可以下载运行以便更明确执行过程和判断动态表单能不能在企业项目中使用。
 
@@ -60,12 +60,12 @@ tags:
 Activiti Explorer就是使用的这种方式，表单信息都配置在流程定义文件中。
 
 代码片段：
-<pre class="brush:xml">
+```xml
 <process id="FormKey" name="FormKey">
     <startEvent id="startevent1" name="Start" activiti:formKey="diagrams/form/start.form"></startEvent>
     …
 </process>
-</pre>
+```
 
 同样也提供了单元测试：
 

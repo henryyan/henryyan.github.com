@@ -191,12 +191,12 @@ tags:
 ### 4.1 Maven仓库
 使用Maven的方式发布，托管在Github，在仓库中添加如下配置：
 
-<pre class="brush:xml">
+```xml
 <repository>
 	<id>henryyan-mavenrepo</id>
 	<url>https://raw.github.com/henryyan/mavenrepo/master/releases</url>
 </repository>
-</pre>
+```
 
 ### 4.2 直接下载源码
 

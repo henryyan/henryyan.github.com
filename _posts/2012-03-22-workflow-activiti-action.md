@@ -51,19 +51,19 @@ tags:
 
 #### 2.1.1 修改源代码方式
 
-修改源码<pre>org.activiti.engine.impl.bpmn.diagram.ProcessDiagramCanvas</pre>
+修改源码<pre>org.activiti.engine.impl.bpmn.diagram.ProcessDiagramCanvas```
 
-在构造方法<pre>public ProcessDiagramCanvas(int width, int height)</pre>
+在构造方法<pre>public ProcessDiagramCanvas(int width, int height)```
 中有一行代码是设置字体的，默认是用**Arial**字体，这就是乱码产生的原因，把字改为本地的中文字体即可，例如：
-<pre class="brush:java">Font font = new Font("WenQuanYi Micro Hei", Font.BOLD, 11);</pre>
+```javaFont font = new Font("WenQuanYi Micro Hei", Font.BOLD, 11);```
 
 当然如果你有配置文件读取工具那么可以设置在*.properties文件中，我就是这么做的：
-<pre class="brush:java">Font font = new Font(PropertyFileUtil.get("activiti.diagram.canvas.font"), Font.BOLD, 11);</pre>
+```javaFont font = new Font(PropertyFileUtil.get("activiti.diagram.canvas.font"), Font.BOLD, 11);```
 ----
 <font color='red'>从**5.12**版本开始支持设置字体名称，在引擎中添加如下设置，在生成图片时即可使用**微软雅黑**设置图片中的文字。</font>
-<pre class="brush:xml">
+```xml
 	<property name="activityFontName" value="微软雅黑"></property>
-</pre>
+```
 
 #### 2.1.2 使用压缩包方式部署
 
@@ -91,7 +91,7 @@ Activiti支持部署*.bpmn20.xml、bar、zip格式的流程定义。
 
 <script src="https://gist.github.com/2179177.js"> </script>
 
-这样当修改流程定义文件后只要运行ant命令就可以打包了：<pre>ant workflow.package.oa.leave</pre>
+这样当修改流程定义文件后只要运行ant命令就可以打包了：<pre>ant workflow.package.oa.leave```
 
 现在部署bar或者zip文件查看流程图图片就不是乱码了，而是你的压缩包里面的png文件。
 
@@ -124,10 +124,10 @@ Activiti官方的例子使用的就是在流程定义中设置每一个节点显
 javadoc对其说明：
 <pre>startProcessInstanceByKey(String processDefinitionKey, Map<String,Object> variables) 
           Starts a new process instance in the latest version of the process definition with the given key
-</pre>
+```
 
 其中**businessKey**就是业务ID，例如要申请请假，那么先填写登记信息，然后（保存+启动流程），因为请假是单独设计的数据表，所以保存后得到实体ID就可以把它传给**processInstanceBusinessKey**方法启动流程。当需要根据businessKey查询流程的时候就可以通过API查询:
-<pre class="brush: java">runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(processInstanceBusinessKey, processDefinitionKey)</pre>
+<pre class="brush: java">runtimeService.createProcessInstanceQuery().processInstanceBusinessKey(processInstanceBusinessKey, processDefinitionKey)```
 
 **建议数据库冗余设计**：在业务表设计的时候添加一列：**PROCESS_INSTANCE_ID varchar2(64)**，在流程启动之后把流程ID更新到业务表中，这样不管从业务还是流程都可以查询到对方！
 
@@ -138,7 +138,7 @@ javadoc对其说明：
 javadoc对其说明：
 <pre>startProcessInstanceById(String processDefinitionId, String businessKey, Map<String,Object> variables) 
           Starts a new process instance in the exactly specified version of the process definition with the given id.
-</pre>
+```
 
 **processDefinitionId**：这个参数的值可以通过**repositoryService.createProcessDefinitionQuery()**方法查询，对应数据库：**ACT_RE_PROCDEF**；每次部署一次流程定义就会添加一条数据，同名的版本号累加。
 
@@ -205,7 +205,7 @@ Activiti提供了两个流程设计工具，但是面向对象不同。
 public class CreatePaymentProcessListener implements ExecutionListener {
    ....
 }
-</pre>
+```
 
 ## 4.使用单元测试
 
@@ -213,7 +213,7 @@ public class CreatePaymentProcessListener implements ExecutionListener {
 <pre class="brush: java">
 @ContextConfiguration(locations = { "/applicationContext-test.xml" })
 @RunWith(SpringJUnit4ClassRunner.class)
-</pre>
+```
 
 虽然Activiti也提供了测试的一些超类，但是感觉不好用，所以自己封装了一些方法。
 
@@ -250,7 +250,7 @@ public TaskQuery createUnsignedTaskQuery(String userId) {
 			.taskCandidateUser(userId);
 	return taskCandidateUserQuery;
 }
-</pre>
+```
 
 ### 5.2 办理中(Task)
 
@@ -272,7 +272,7 @@ public TaskQuery createTodoTaskQuery(String userId) {
 	TaskQuery taskAssigneeQuery = taskService.createTaskQuery().processDefinitionKey(getProcessDefKey()).taskAssignee(userId);
 	return taskAssigneeQuery;
 }
-</pre>
+```
 
 ### 5.3 运行中(ProcessInstance)
 
@@ -293,7 +293,7 @@ public ProcessInstanceQuery createUnFinishedProcessInstanceQuery(String userId) 
 			.active();
 	return unfinishedQuery;
 }
-</pre>
+```
 
 ### 5.4 已完成(HistoricProcessInstance)
 
@@ -312,7 +312,7 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 			.processDefinitionKey(getProcessDefKey()).finished();
 	return finishedQuery;
 }
-</pre>
+```
 
 ### 5.5 查询时和业务关联
 
@@ -373,9 +373,9 @@ public HistoricProcessInstanceQuery createFinishedProcessInstanceQuery(String us
 
 ### 9.1 手动设置任务办理人
 
-<pre class="brush:xml">
+```xml
 <userTask id="hrAudit" name="人事审批" activiti:assignee="${hrUserId}"></userTask>
-</pre>
+```
 
 动态指定任务办理人是群里面询问比较多的问题之一，其实就是一层窗户纸，只要在任务完成的时候传递activiti:assignee属性中的变量即可。
 
@@ -392,15 +392,15 @@ taskService.complete(taskId, variables);
 ### 9.2 自动设置任务办理人
 
 下面的代码是利用initiator功能，设置一个名称（不是变量而是变量名）到启动事件上，并且在启动流程时调用一些下面的方法：
-<pre class="brush:java">
+```java
 identityService.setAuthenticatedUserId(currentUserId);
-</pre>
+```
 其中currentUserId表示当前用户，也就是启动流程的人，配置如下所示：
 
-<pre class="brush:xml">
+```xml
 <startEvent id="startevent1" name="Start" activiti:initiator="applyUserId"></startEvent>
 <userTask id="reportBack" name="销假" activiti:assignee="${applyUserId}"></userTask>
-</pre>
+```
 
 这样流程启动之后如果任务流转至"销假"节点则会自动把任务分配给启动流程的人。
 
@@ -408,15 +408,15 @@ identityService.setAuthenticatedUserId(currentUserId);
 
 如果在启动流程的时候调用了下面的代码：
 
-<pre class="brush:java">
+```java
 identityService.setAuthenticatedUserId(currentUserId);
-</pre>
+```
 引擎会记录启动人，即在ACT_HI_PROINST表的START_USER_ID字段，可以通过下面的代码获取。
 
-<pre class="brush:java">
+```java
 HistoricProcessInstance hi = historyService.createHistoricProcessInstanceQuery().singleResult();
 hi.getStartUserId();
-</pre>
+```
 
 ## 10. 任务代办
 

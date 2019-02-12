@@ -68,17 +68,17 @@ Activiti Modeler包含在**activiti-webapp-explorer2**模块中，读者可以�
 
 在终端中进入项目根目录，执行以下命令：
 
-<pre class="brush:shell">
+```shell
 mvn clean install -PbuildWebappDependencies
-</pre>
+```
 
 执行完成之后在modules/activiti-webapp-explorer2/target目录可以看到**activiti-webapp-explorer2-5.11-SNAPSHOT.war**，然后把这个文件重命名为**activiti-explorer.war**部署到tomcat或者其他的Web Server。
 
 ### 3.3 直接用Maven的Jetty插件启动应用
 
-<pre class="brush:shell">
+```shell
 ➜ ~/Activiti/modules/activiti-webapp-explorer2 (git) mvn clean package jetty:run
-</pre>
+```
 
 然后就可以访问Explorer了，地址：[http://localhost:8080/activiti-explorer2](http://localhost:8080/activiti-explorer2)
 

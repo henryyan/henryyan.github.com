@@ -40,11 +40,11 @@ REST接口的大部分功能都需要验证，默认使用[Basic Access Authenti
 
 可以在用户登陆之后把用户名和密码进行加密并设置到session中，这样在前端就可以直接通过Ajax方式获取资源了：
 
-<pre class="brush:java">
+```java
 import jodd.util.Base64;
 String base64Code = "Basic " + Base64.encodeToString(user.getId() + ":" + user.getPassword());
 session.setAttribute("BASE_64_CODE", base64Code);
-</pre>
+```
 
 ### 2.2 通过Ajax方式读取资源
 
@@ -67,7 +67,7 @@ $.ajax({
 		$form.attr('action', ctx + '/form/formkey/start-process/' + processDefinitionId);
 	}
 });
-</pre>
+```
 在第5行处设置了ajax请求的header信息，这样REST模块就可以通过header的信息进行身份认证，通过之后就可以执行资源请求并返回处理结果。
 
 ### 2.3 通过Java方式读取资源
@@ -90,4 +90,4 @@ $.ajax({
 
 <pre>
 activiti.rest.service.url=http://localhost:8080/activiti-rest/service/
-</pre>
+```

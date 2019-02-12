@@ -42,20 +42,20 @@ Activit默认提供了4中历史级别：
 ### 3.1 在XML中配置
 在引擎Bean**processEngineConfiguration**中配置：
 
-<pre class="brush:xml">
+```xml
 <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 	<property name="history" value="full" />
 </bean>
-</pre>
+```
 
 ### 3.2 动态配置
 
-<pre class="brush:java">
+```java
 ProcessEngine processEngine = ProcessEngineConfiguration
   .createProcessEngineConfigurationFromResourceDefault()
   .setHistory(ProcessEngineConfiguration.HISTORY_FULL)
   .buildProcessEngine();
-</pre>
+```
 
 ## 4.读取历史变量
 
@@ -65,31 +65,31 @@ ProcessEngine processEngine = ProcessEngineConfiguration
 
 ### 4.1 Java代码-5.10版本之前
 
-<pre class="brush:java">
+```java
 List<HistoricDetail> list = historyService.createHistoricDetailQuery().processInstanceId(processInstance.getId()).list();
 for (HistoricDetail historicDetail : list) {
 	HistoricVariableUpdate variable = (HistoricVariableUpdate) historicDetail;
     System.out.println("variable: " + variable.getVariableName() + " = " + variable.getValue());
 }
-</pre>
+```
 
 ### 4.2 Java代码-5.11版本之后
 5.11版本在变量保存方面做了变动，单独创建了一张表**ACT_HI_VARINST**保存变量，可以通过下面的代码读取变量。参见：[Activiti 5.11发布](/activiti/2012/12/05/activiti-5-11-release.html)
 
 ![5.11添加的表ACT_HI_VARINST](/files/2012/05/activiti-history-variable.png)
 
-<pre class="brush:java">
+```java
 List<HistoricVariableInstance> list = historyService.createHistoricVariableInstanceQuery().processInstanceId(processInstanceId).list();
 for (HistoricVariableInstance variableInstance : list) {
   System.out.println("variable: " + variable.getVariableName() + " = " + variable.getValue());
 }
-</pre>
+```
 
 ## 5.只读取表单字段
-<pre class="brush:java">
+```java
 List<HistoricDetail> formProperties = historyService.createHistoricDetailQuery().processInstanceId(processInstance.getId()).formProperties().list();
 for (HistoricDetail historicDetail : formProperties) {
   HistoricFormProperty field = (HistoricFormProperty) historicDetail;
   System.out.println("field id: " + field.getPropertyId() + ", value: " + field.getPropertyValue());
 }
-</pre>
+```

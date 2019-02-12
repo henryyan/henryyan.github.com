@@ -68,9 +68,9 @@ oh-my-zsh的官方github地址：[https://github.com/robbyrussell/oh-my-zsh](htt
 
 安装完成之后记得在~/.zshrc中启用maven插件：
 
-<pre class="brush:shell">
+```shell
 plugins=(ant mvn svn git git-flow)
-</pre>
+```
 
 	我已经给oh-my-zsh提交了合并请求，如果顺利接下来可能会合并到master分支。
 

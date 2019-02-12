@@ -38,7 +38,7 @@ Diagram Viewer是官方在5.12版本中添加的新组件，以[Raphaël](http:/
 
 REST路由类源码在官方的Activiti Explorer里面有提供，代码如下：
 
-<pre class="brush:java">
+```java
 package org.activiti.explorer.rest;
 
 import org.activiti.rest.common.api.DefaultResource;
@@ -69,11 +69,11 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
   }
 
 }
-</pre>
+```
 
 把这个路由配置到**web.xml**中：
 
-<pre class="brush:xml">
+```xml
 <servlet>
     <servlet-name>ExplorerRestletServlet</servlet-name>
     <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
@@ -88,7 +88,7 @@ public class ExplorerRestApplication extends ActivitiRestApplication {
 	<servlet-name>ExplorerRestletServlet</servlet-name>
 	<url-pattern>/service/*</url-pattern>
 </servlet-mapping>
-</pre>
+```
 
 ### 3.2 复制Diagram Viewer组件
 

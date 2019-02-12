@@ -16,7 +16,8 @@ generate-project脚本在springside3和springside4一样，请参考上面的地
 复制以下脚本保存为quick-start.sh
 </pre>
 <!--more-->
-<pre>
+
+```shell
 #!/bin/bash
 
 # 脚本名称：quick-start.sh
@@ -71,4 +72,4 @@ echo [INFO] 可访问以下演示网址:
 echo [INFO] http://localhost:8083/mini-service
 echo [INFO] http://localhost:8084/mini-web
 echo [INFO] http://localhost:8085/showcase
-</pre>
+```

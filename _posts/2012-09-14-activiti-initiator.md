@@ -40,7 +40,7 @@ Activiti为此专门在**startEvent**上扩展了一个属性**activiti:initiato
       </extensionElements>
     </userTask>
 </process>
-</pre>
+```
 
 **分步理解:**
 
@@ -52,10 +52,10 @@ Activiti为此专门在**startEvent**上扩展了一个属性**activiti:initiato
 
 在用户手册上其实专门讲解了这个属性的做作用以及使用方法，代码如下：
 
-<pre class="brush:java">
+```java
 identityService.setAuthenticatedUserId("kafeitu");
 runtimeService.startProcessInstanceByKey("leave");
-</pre>
+```
 
 * 第**1**行代码的作用就是设置当前的用户ID，**非常关键**，而且这行代码需要和**activiti:initiator**配合使用，不可分割……
 * 第**2**行代码启动一个流程，在启动流程的时候会判断有没有**activiti:initiator**属性，如果有把属性**activiti:initiator**的值作为一个变量添加到流程实例中，本文中也就是**applyUserId**，`不要以为applyUserId是一个特殊的变量，它就是一个普通的变量而已`。
