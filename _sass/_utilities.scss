@@ -468,3 +468,10 @@ a.reversefootnote {
   color: $danger-color;
   font-weight: bold;
 }
+
+/*
+   Custom
+   ========================================================================== */
+.page__content p, .page__content li, .page__content dl {
+  font-size: 16px !important;
+}
