@@ -11,7 +11,7 @@ title                    : "咖啡兔的博客"
 title_separator          : "-"
 name                     : &name "咖啡兔"
 description              : &description "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."
-url                      : "http://www.kafeitu.me" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://henryyan.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "henryyan/kft-activiti-demo"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -83,7 +83,7 @@ author:
   bio              : "技术沉淀"
   location         : "HangZhou Alibaba"
   email            :
-  uri              : "https://www.kafeitu.me"
+  uri              : "https://henryyan.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
